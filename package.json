@@ -5,6 +5,7 @@
   "main": "gulpfile.babel.js",
   "scripts": {
     "start": "gulp",
+    "build": "gulp --production",
     "lint": "eslint src/**"
   },
   "repository": {
