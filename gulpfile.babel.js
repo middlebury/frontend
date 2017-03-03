@@ -61,10 +61,12 @@ gulp.task('server', () => {
 
 gulp.task('styles', () => {
   gulp.src(paths.styles.src)
+    .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(sass({
       onError: browserSync.notify
     })).on('error', sass.logError)
     .pipe(autoprefixer(['> 2%', 'last 2 versions']))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(browserSync.stream());
 });
