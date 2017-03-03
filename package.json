@@ -35,5 +35,8 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "yargs": "^6.6.0"
+  },
+  "dependencies": {
+    "normalize.css": "^5.0.0"
   }
 }
