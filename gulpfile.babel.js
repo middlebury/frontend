@@ -54,7 +54,8 @@ gulp.task('server', () => {
     server: {
       baseDir: './dist',
     },
-    open: false
+    open: false,
+    directory: true,
   });
 });
 
