@@ -11,6 +11,7 @@ import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'gulp-autoprefixer';
 import plumber from 'gulp-plumber';
 import notify from 'gulp-notify';
+import eslint from 'gulp-eslint';
 import del from 'del';
 import babelify from 'babelify';
 import beeper from 'beeper';
@@ -71,6 +72,12 @@ gulp.task('styles', () => {
     .pipe(browserSync.stream());
 });
 
+gulp.task('scripts:lint', () => {
+  return gulp.src(paths.scripts.src)
+    .pipe(eslint())
+    .pipe(eslint.format());
+})
+
 gulp.task('scripts', function() {
   var b = browserify({
     entries: paths.scripts.src,
@@ -109,9 +116,9 @@ gulp.task('watch', () => {
   gulp.watch(paths.html.src, ['html']);
   gulp.watch(paths.html.src).on('change', browserSync.reload);
   gulp.watch(paths.styles.src, ['styles']);
-  gulp.watch(paths.scripts.src, ['scripts']);
+  gulp.watch(paths.scripts.src, ['scripts', 'scripts:lint']);
 });
 
-gulp.task('build', ['clean', 'html', 'styles', 'scripts']);
+gulp.task('build', ['clean', 'html', 'styles', 'scripts:lint', 'scripts']);
 
 gulp.task('default', ['build', 'watch', 'server']);
