@@ -24,8 +24,8 @@ const paths = {
     dest: './dist',
   },
   styles: {
-    src: './src/sass/**/*.scss',
-    dest: './dist/css'
+    src: './src/scss/**/*.scss',
+    dest: './dist/css/'
   },
   scripts: {
     // TODO: make this so browserify can process multiple files
