@@ -26,6 +26,7 @@
     "eslint-config-drupal": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
+    "gulp-csscomb-lint": "^0.0.2",
     "gulp-data": "^1.2.1",
     "gulp-eslint": "^3.0.1",
     "gulp-notify": "^3.0.0",
