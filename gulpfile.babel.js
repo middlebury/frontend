@@ -9,6 +9,8 @@ import gutil from 'gulp-util';
 import uglify from 'gulp-uglify';
 import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'gulp-autoprefixer';
+import plumber from 'gulp-plumber';
+import notify from 'gulp-notify';
 import del from 'del';
 import babelify from 'babelify';
 import beeper from 'beeper';
@@ -30,6 +32,15 @@ const paths = {
     src: './src/js/main.js',
     dest: './dist/js'
   }
+};
+
+const onError = function(err) {
+    notify.onError({
+      title:    "Gulp error in " + err.plugin,
+      message:  err.toString()
+    })(err);
+    beeper();
+    this.emit('end');
 };
 
 gulp.task('clean', () => {
@@ -82,6 +93,9 @@ gulp.task('scripts', function() {
 
 gulp.task('html', () => {
   gulp.src(paths.html.src)
+    .pipe(plumber({
+      errorHandler: onError
+    }))
     .pipe(twig({
       base: './src/templates'
     }))
