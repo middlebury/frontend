@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "main": "gulpfile.babel.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "lint": "eslint src/**"
   },
   "repository": {
     "type": "git",
