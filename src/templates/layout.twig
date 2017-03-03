@@ -8,8 +8,10 @@
   <script src="js/bundle.js"></script>
 </head>
 <body>
+  {% include 'partials/header.twig' %}
   <section>
     {% block page %}{% endblock %}
   </section>
+  {% include 'partials/footer.twig' %}
 </body>
 </html>

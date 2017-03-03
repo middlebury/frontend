@@ -20,7 +20,7 @@ const production = !!args.production;
 
 const paths = {
   html: {
-    src: './src/pages/**/*.twig',
+    src: './src/templates/**/*.twig',
     dest: './dist',
   },
   styles: {
