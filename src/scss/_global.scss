@@ -1,3 +1,7 @@
 body {
-  font-family: sans-serif;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+  font-size: $base-font-size;
+  color: $base-text-color;
+  background-color: $white;
 }
