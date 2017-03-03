@@ -82,7 +82,9 @@ gulp.task('scripts', function() {
 
 gulp.task('html', () => {
   gulp.src(paths.html.src)
-    .pipe(twig())
+    .pipe(twig({
+      base: './src/templates'
+    }))
     .pipe(gulp.dest(paths.html.dest));
 });
 
