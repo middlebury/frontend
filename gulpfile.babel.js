@@ -24,7 +24,7 @@ const production = !!args.production;
 const paths = {
   html: {
     src: './src/templates/**/*.twig',
-    dest: './dist',
+    dest: './dist'
   },
   styles: {
     src: './src/scss/**/*.scss',
@@ -38,12 +38,12 @@ const paths = {
 };
 
 const onError = function(err) {
-    notify.onError({
-      title:    "Gulp error in " + err.plugin,
-      message:  err.toString()
-    })(err);
-    beeper();
-    this.emit('end');
+  notify.onError({
+    title: 'Gulp error in ' + err.plugin,
+    message: err.toString()
+  })(err);
+  beeper();
+  this.emit('end');
 };
 
 gulp.task('clean', () => {
@@ -55,10 +55,10 @@ gulp.task('clean', () => {
 gulp.task('server', () => {
   browserSync.init({
     server: {
-      baseDir: './dist',
+      baseDir: './dist'
     },
     open: false,
-    directory: true,
+    directory: true
   });
 });
 
@@ -84,7 +84,7 @@ gulp.task('scripts', function() {
   var b = browserify({
     entries: paths.scripts.src,
     debug: true,
-    transform: [[babelify, { presets: ['es2015']}]]
+    transform: [[babelify, { presets: ['es2015'] }]]
   });
 
   return b.bundle()
@@ -113,7 +113,7 @@ gulp.task('html', () => {
       return yaml.safeLoad(fs.readFileSync('./src/data/data.yml', 'utf8'));
     }))
     .pipe(twig({
-      base: './src/templates'
+      base: './src/templates',
     }))
     .pipe(gulp.dest(paths.html.dest));
 });
