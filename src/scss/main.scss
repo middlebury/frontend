@@ -1,2 +1,17 @@
+// core
+@import 'functions';
 @import 'variables';
+@import 'mixins';
+
+// resets
+@import '../../node_modules/normalize.css/normalize';
+
+// base
 @import 'global';
+
+// components
+
+// layout
+// @import 'grid';
+// @import 'header';
+// @import 'footer';
