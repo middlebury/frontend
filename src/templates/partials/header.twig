@@ -1,3 +1,20 @@
-<header>
+<header class="site-header">
   <h1>MIIS</h1>
+
+  <nav class="site-header__nav">
+    {% for item in nav %}
+      <ul class="site-nav">
+        <li class="site-nav__item">
+          <a href="#">{{item.text}}</a>
+
+          <ul class="site-subnav">
+            {% for subitem in item.subnav %}
+              <li class="site-subnav__item">{{subitem.text}}</li>
+            {% endfor %}
+          </ul>
+
+        </li>
+      </ul>
+    {% endfor %}
+  </nav>
 </header>
