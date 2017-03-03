@@ -3,6 +3,9 @@
   "description": "Frontend files and build tools for new miis.edu and other projects to come",
   "version": "0.0.1",
   "main": "gulpfile.babel.js",
+  "scripts": {
+    "start": "gulp"
+  },
   "devDependencies": {
     "browser-sync": "^2.18.7",
     "gulp": "^3.9.1",
