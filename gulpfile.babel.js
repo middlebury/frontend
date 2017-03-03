@@ -10,8 +10,10 @@ import uglify from 'gulp-uglify';
 import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'gulp-autoprefixer';
 import plumber from 'gulp-plumber';
+import data from 'gulp-data';
 import notify from 'gulp-notify';
 import eslint from 'gulp-eslint';
+import yaml from 'js-yaml';
 import del from 'del';
 import babelify from 'babelify';
 import beeper from 'beeper';
@@ -105,6 +107,10 @@ gulp.task('html', () => {
   gulp.src(paths.html.src)
     .pipe(plumber({
       errorHandler: onError
+    }))
+    .pipe(data(function(file) {
+      // TODO: how to import a glob?
+      return yaml.safeLoad(fs.readFileSync('./src/data/data.yml', 'utf8'));
     }))
     .pipe(twig({
       base: './src/templates'
