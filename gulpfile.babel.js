@@ -9,6 +9,7 @@ import gutil from 'gulp-util';
 import uglify from 'gulp-uglify';
 import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'gulp-autoprefixer';
+import del from 'del';
 import babelify from 'babelify';
 import beeper from 'beeper';
 import { argv as args } from 'yargs';
@@ -30,6 +31,12 @@ const paths = {
     dest: './dist/js'
   }
 };
+
+gulp.task('clean', () => {
+  return del([
+    './dist/**/*'
+  ]);
+});
 
 gulp.task('server', () => {
   browserSync.init({
@@ -86,6 +93,6 @@ gulp.task('watch', () => {
   gulp.watch(paths.scripts.src, ['scripts']);
 });
 
-gulp.task('build', ['html', 'styles', 'scripts']);
+gulp.task('build', ['clean', 'html', 'styles', 'scripts']);
 
 gulp.task('default', ['build', 'watch', 'server']);
