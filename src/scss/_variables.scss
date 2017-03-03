@@ -1,0 +1,24 @@
+$screen-sm: em(380);
+$screen-md: em(768);
+$screen-lg: em(1024);
+$screen-xl: em(1280);
+
+$breakpoints: (
+  sm: $screen-sm,
+  md: $screen-md,
+  lg: $screen-lg,
+  xl: $screen-xl,
+);
+
+$brand-primary: #0d395f;
+$brand-secondary: #0d395f;
+
+$white: #fff;
+$black: #000;
+$gray: #666;
+
+$font-family-sans-serif: sans-serif;
+$font-family-serif: serif;
+
+$base-font-size: 16px;
+$base-line-height: 1.5;
