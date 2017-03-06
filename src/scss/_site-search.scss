@@ -1,0 +1,39 @@
+.site-search {
+  background-color: $brand-primary-dark;
+}
+
+.site-search__label {
+  @include sr-only();
+}
+
+.site-search__field {
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  color: $white;
+  padding: 20px;
+  width: 100%;
+
+  &::placeholder  {
+    color: $white;
+  }
+}
+
+.site-search__button {
+  background-color: transparent;
+  border: 0;
+  color: $white;
+  padding: 20px;
+}
+
+.input-group {
+  display: flex;
+
+  &__field {
+    flex: 1;
+  }
+
+  &__button {
+    flex: 0 1 auto;
+  }
+}
