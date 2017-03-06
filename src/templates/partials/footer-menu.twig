@@ -1,0 +1,10 @@
+<section class="footer-menu">
+  <h3 class="footer-menu__title">{{title}}</h3>
+  <nav class="footer-menu__nav">
+    <ul class="footer-menu__list">
+      {% for item in items %}
+        <li class="footer-menu__item"><a href="{{item.href}}" class="footer-menu__link">{{item.text}}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</section>
