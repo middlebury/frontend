@@ -1,0 +1,9 @@
+<div class="action-callout">
+  {% if preheader %}
+    <span class="action-callout__preheader">{{preheader}}</span>
+  {% endif %}
+  <h3 class="action-callout__title">{{title}}</h3>
+  {% if linkHref and linkText %}
+    <a href="{{linkHref}}" class="button button--secondary action-callout__button">{{linkText}}</a>
+  {% endif %}
+</div>
