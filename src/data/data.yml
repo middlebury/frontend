@@ -3,6 +3,13 @@ nav:
     subnav:
       - text: something
   - text: Leadership and impact
+secondary_footer_nav:
+  - text: Lorem ipsum
+  - text: Dolor site amet
+  - text: Adipsing
+  - text: Conssueretal Apidsing
+  - text: Lorem ipsum dolor sit
+
 social_links:
   - text: LinkedIn
     href: "#"
