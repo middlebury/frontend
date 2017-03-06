@@ -1,20 +1,64 @@
 <header class="site-header">
-  <h1>MIIS</h1>
+  <div class="site-header__brand">
+    <div class="site-header__logo">
+      <a href="/" class="site-header__home-link">
+        <!--  TODO: can we even use picture here or need an h1 with image replacement? -->
+        <picture>
+          <source srcset="img/miis-logo-left.png" media="(min-width: 0px)">
+          <source srcset="img/miis-logo.png" media="(min-width: 960px)">
+          <img src="img/miis-logo.png" alt="{{site_title}}">
+        </picture>
+      </a>
+    </div>
 
-  <nav class="site-header__nav">
-    {% for item in nav %}
-      <ul class="site-nav">
-        <li class="site-nav__item">
-          <a href="#">{{item.text}}</a>
+    <div class="site-header__menu-button">
+      <a href="#site-nav" data-toggle-target=".site-header__nav">
+        Menu <i class="icon icon--hamburger"></i>
+      </a>
+    </div>
+  </div>
 
-          <ul class="site-subnav">
-            {% for subitem in item.subnav %}
-              <li class="site-subnav__item">{{subitem.text}}</li>
-            {% endfor %}
-          </ul>
+  <div class="site-header__search">
+    <div class="site-search">
+      <form>
+        <div class="input-group">
+          <div class="input-group__field">
+              <label for="site-search" class="site-search__label">Search the Institute</label>
+              <input type="search" placeholder="Search the Institute" class="site-search__field" id="site-search">
+          </div>
+          <div class="input-group__button">
+            <button type="submit" class="site-search__button"><i class="icon icon--search">Search</i></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 
-        </li>
+  <div class="site-header__nav">
+    <nav class="site-nav">
+      <ul class="site-nav__list">
+        {% for item in site_nav %}
+          <li class="site-nav__item">
+            <a href="#" class="site-nav__link">{{item.text}}</a>
+
+            <nav class="site-subnav">
+
+              <ul class="site-subnav__list">
+                {% for subitem in item.items %}
+                  <li class="site-subnav__item">
+                    <a href="{{subitem.href}}" class="site-subnav__link">{{subitem.text}}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+
+              {% if item.button %}
+                <a href="{{item.button.href}}" class="button button--secondary site-subnav__button">{{item.button.text}}</a>
+              {% endif %}
+
+            </nav>
+          </li>
+        {% endfor %}
       </ul>
-    {% endfor %}
-  </nav>
+    </nav>
+  </div>
 </header>
