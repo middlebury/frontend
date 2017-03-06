@@ -3,6 +3,43 @@ nav:
     subnav:
       - text: something
   - text: Leadership and impact
+footer_nav:
+  - title: Information for
+    items:
+      - text: Students
+      - text: Alumni
+      - text: Faculty and Staff
+      - text: Employers
+      - text: Media
+      - text: Corporate Partners Donors
+  - title: Quick links
+    items:
+      - text: Emergency
+      - text: About
+      - text: Academic Calendar
+      - text: Contact Us
+      - text: Faculty and Staff directory Careers
+      - text: Privacy and Disclosures
+  - title: Resources
+    items:
+      - text: Course Directory
+      - text: Library
+      - text: BannerWeb
+      - text: Ethical Conduct WebMail
+      - text: META Lab
+      - text: DLC
+  - title: Site at a glance
+    items:
+      - text: Learning Approach
+      - text: Leadership and Impact
+      - text: Areas of Focus
+      - text: Advancing Your Career
+      - text: The Institute Experience Programs
+      - text: Admissions
+      - text: Research Centers
+      - text: News and Events
+      - text: Support the Institute
+
 secondary_footer_nav:
   - text: Lorem ipsum
   - text: Dolor site amet
