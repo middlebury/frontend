@@ -1,0 +1,42 @@
+.site-footer {
+  color: $white;
+  background-color: $brand-primary;
+  padding-top: 50px;
+
+  > .container {
+    @include media(md) {
+      display: flex;
+    }
+  }
+}
+
+.site-footer__content {
+  border-bottom: 1px solid $brand-primary-dark;
+}
+
+.site-footer__menus {
+  @include media(md) {
+    display: flex;
+  }
+
+  .footer-menu {
+
+  }
+}
+
+.secondary-footer {
+  background-color: $brand-primary-dark;
+  padding-top: 30px;
+}
+
+.secondary-footer__list {
+  display: flex;
+}
+
+.secondary-footer__item {
+
+}
+
+.secondary-footer__link {
+  color: $white;
+}
