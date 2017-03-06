@@ -1,8 +1,26 @@
-nav:
-  - text: Learning approach
-    subnav:
-      - text: something
-  - text: Leadership and impact
+
+site_nav:
+  - text: Learning Approach
+    button:
+      text: Do a thing
+      href: '#'
+    items:
+      - text: Cultural Fluency
+      - text: Immersive Learning
+      - text: Holistic Analysis
+      - text: Practical Innovation
+      - text: Collaborative Solutions
+  - text: Leadership and Impact
+  - text: Areas of Focus
+  - text: Advancing Your Career
+  - text: The Institute Experience
+  - text: Academics
+  - text: Admissions
+  - text: Engaged Research
+  - text: News and Events
+  - text: Student Services
+  - text: Support the Institute
+
 footer_nav:
   - title: Information for
     items:
