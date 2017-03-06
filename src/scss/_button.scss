@@ -1,0 +1,18 @@
+.button {
+  display: inline-block;
+  word-wrap: nowrap;
+  padding: 1em 2em;
+  font-size: 16px;
+  border-radius: 0;
+  border: 0;
+}
+
+.button--primary {
+  background-color: $brand-tertiary;
+  color: $white;
+}
+
+.button--secondary {
+  background-color: $white;
+  color: $brand-primary;
+}
