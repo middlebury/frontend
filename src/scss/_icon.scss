@@ -1,0 +1,38 @@
+.icon {
+  display: inline-block;
+}
+
+$hamburger-bar-height: 2px;
+$hamburger-spacing: 4px;
+$hamburger-bar-offset:  $hamburger-bar-height + $hamburger-spacing;
+
+.icon--hamburger {
+  position: relative;
+
+  &,
+  &:before,
+  &:after {
+    background-color: $white;
+    width: 20px;
+    height: $hamburger-bar-height;
+  }
+
+  &:before,
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+  }
+
+  &:before {
+    bottom: #{$hamburger-bar-offset * 2}
+  }
+
+  &:after {
+    bottom: #{$hamburger-bar-offset}
+  }
+}
+
+.icon--search {
+
+}
