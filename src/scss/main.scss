@@ -10,8 +10,15 @@
 @import 'global';
 
 // components
+@import 'button';
+@import 'icon';
+@import 'action-callout';
+@import 'footer-menu';
+@import 'site-search';
 
 // layout
-// @import 'grid';
-// @import 'header';
-// @import 'footer';
+@import 'grid';
+@import 'site-header';
+@import 'site-footer';
+@import 'site-nav';
+
