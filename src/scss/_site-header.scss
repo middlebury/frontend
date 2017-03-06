@@ -1,0 +1,36 @@
+.site-header {
+  background-color: $brand-primary;
+}
+
+.site-header__brand {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+}
+
+// TODO: wrap home link in a div and use flex on that
+// so the link doesnt have a near full width click zone
+.site-header__home-link {
+  flex: 1;
+}
+
+.site-header__menu-button {
+  // flex: 1;
+  align-items: flex-end;
+
+  a {
+    color: $white;
+    text-transform: uppercase;
+    font-weight: $font-weight-semibold;
+    font-size: 14px;
+  }
+}
+
+.site-header__nav {
+  &.has-toggler {
+    display: none;
+    &.is-toggled {
+      display: block;
+    }
+  }
+}
