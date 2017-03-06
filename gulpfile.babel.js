@@ -36,6 +36,9 @@ const paths = {
     src: './src/js/**/*.js',
     dest: './dist/js/'
   },
+  images: {
+    src: './src/img/*.{png,jpg,svg}',
+    dest: './dist/img/'
   }
 };
 
@@ -118,6 +121,14 @@ gulp.task('html', () => {
       base: './src/templates',
     }))
     .pipe(gulp.dest(paths.html.dest));
+});
+
+gulp.task('images', () => {
+  return gulp
+    .src(paths.images.src)
+    // TODO: compress images
+    .pipe(gulp.dest(paths.images.dest))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('watch', () => {
