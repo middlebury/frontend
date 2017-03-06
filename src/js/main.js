@@ -1,1 +1,1 @@
-console.log('yo')
+var Toggler = require('./toggler');
