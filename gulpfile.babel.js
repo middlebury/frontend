@@ -33,8 +33,9 @@ const paths = {
   },
   scripts: {
     // TODO: make this so browserify can process multiple files
-    src: './src/js/main.js',
-    dest: './dist/js'
+    src: './src/js/**/*.js',
+    dest: './dist/js/'
+  },
   }
 };
 
@@ -83,7 +84,7 @@ gulp.task('scripts:lint', () => {
 
 gulp.task('scripts', function() {
   var b = browserify({
-    entries: paths.scripts.src,
+    entries: './src/js/main.js',
     debug: true,
     transform: [[babelify, { presets: ['es2015'] }]]
   });
