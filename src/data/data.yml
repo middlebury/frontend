@@ -3,3 +3,16 @@ nav:
     subnav:
       - text: something
   - text: Leadership and impact
+social_links:
+  - text: LinkedIn
+    href: "#"
+    slug: linkedin
+  - text: Facebook
+    href: "#"
+    slug: facebook
+  - text: twitter
+    href: "#"
+    slug: twitter
+  - text: YouTube
+    href: "#"
+    slug: youtube
