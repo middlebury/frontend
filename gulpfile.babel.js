@@ -51,7 +51,7 @@ const onError = function(err) {
   this.emit('end');
 };
 
-gulp.task('clean', () => {
+gulp.task('clean', (done) => {
   return del([
     './dist/**/*'
   ]);
@@ -59,6 +59,7 @@ gulp.task('clean', () => {
 
 gulp.task('server', () => {
   browserSync.init({
+    notify: false,
     server: {
       baseDir: './dist'
     },
