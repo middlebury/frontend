@@ -53,8 +53,11 @@ const onError = function(err) {
 
 gulp.task('clean', (done) => {
   return del([
-    './dist/**/*'
-  ]);
+    './dist/**/*.html',
+    './dist/**/*.js',
+    './dist/**/*.css',
+    './dist/img/*'
+  ], done);
 });
 
 gulp.task('server', () => {
