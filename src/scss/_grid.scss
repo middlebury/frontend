@@ -1,0 +1,87 @@
+$grid-column-count: 12;
+$grid-gutter-width: 80px;
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media(md) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.row {
+  @include clearfix();
+  margin-left: -($grid-gutter-width / 2);
+  margin-right: -($grid-gutter-width / 2);
+}
+
+.row--lined {
+  > [class^="col-"]:not(:last-of-type) {
+    border-right: 1px solid $line-gray;
+  }
+}
+
+[class^="col-"] {
+  min-height: 1px;
+  position: relative;
+  padding-left: ($grid-gutter-width / 2);
+  padding-right: ($grid-gutter-width / 2);
+}
+
+@mixin grid($size, $columns: 12) {
+  @for $index from 1 through $columns {
+    @if $index == 12 {
+      .col-#{$size}-#{$index} {
+        width: percentage(($index / $columns));
+      }
+    } @else {
+      .col-#{$size}-#{$index} {
+        width: percentage(($index / $columns));
+        float: left;
+      }
+    }
+  }
+}
+
+// @mixin push($size, $columns: 12) {
+//   @for $index from 1 through $columns {
+//     .#{$grid-prefix}#{$size}-push-#{$index} {
+//       left: percentage(($index / $columns));
+//     }
+//   }
+// }
+
+// @mixin pull($size, $columns: 12) {
+//   @for $index from 1 through $columns {
+//     .#{$grid-prefix}#{$size}-pull-#{$index} {
+//       right: percentage(($index / $columns));
+//     }
+//   }
+// }
+
+@each $breakpoint-name, $breakpoint-size in $breakpoints {
+
+  // @if $breakpoint-name == "xs" {
+
+    // @include grid($breakpoint-name, $grid-columns);
+    // @include push($breakpoint-name, $grid-columns);
+    // @include pull($breakpoint-name, $grid-columns);
+
+  // } @else {
+
+    @include media($breakpoint-name) {
+
+      @include grid($breakpoint-name, $grid-column-count);
+      // @include push($breakpoint-name, $grid-columns);
+      // @include pull($breakpoint-name, $grid-columns);
+
+    }
+  // }
+
+}
