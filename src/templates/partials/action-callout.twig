@@ -3,6 +3,9 @@
     <span class="action-callout__preheader">{{preheader}}</span>
   {% endif %}
   <h3 class="action-callout__title">{{title}}</h3>
+  {% if subtext %}
+    <p class="action-callout__subtext">{{subtext}}</p>
+  {% endif %}
   {% if linkHref and linkText %}
     <a href="{{linkHref}}" class="button button--{{buttonModifier | default('primary')}} action-callout__button">{{linkText}}</a>
   {% endif %}
