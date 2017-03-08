@@ -139,6 +139,7 @@ gulp.task('watch', () => {
   gulp.watch(paths.html.src).on('change', browserSync.reload);
   gulp.watch('./src/templates/**/*.twig', ['html']);
   gulp.watch(paths.styles.src, ['styles']);
+  gulp.watch(paths.images.src, ['images']);
   gulp.watch(paths.scripts.src, ['scripts', 'scripts:lint']);
 });
 
