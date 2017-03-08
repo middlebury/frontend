@@ -1,0 +1,27 @@
+.site-menu-button {
+  color: $white;
+  font-size: 14px;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.site-menu-button__text {
+  display: none;
+  margin-right: 20px;
+
+  @include media(sm) {
+    display: inline-block;
+  }
+}
+
+.site-menu-button__icon {
+
+}
