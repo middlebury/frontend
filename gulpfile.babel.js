@@ -143,6 +143,13 @@ gulp.task('watch', () => {
   gulp.watch('./src/data/*.yml', ['html']);
 });
 
-gulp.task('build', ['clean', 'html', 'styles', 'scripts:lint', 'scripts']);
+gulp.task('build', [
+  'clean',
+  'html',
+  'images',
+  'styles',
+  'scripts:lint',
+  'scripts'
+]);
 
 gulp.task('default', ['build', 'watch', 'server']);
