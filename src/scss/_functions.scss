@@ -1,4 +1,4 @@
-@function em($target, $base:16) {
+@function em($target, $base: 16) {
   @return $target / $base * 1em;
 }
 
