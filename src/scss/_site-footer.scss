@@ -2,26 +2,10 @@
   color: $white;
   background-color: $brand-primary;
   padding-top: 50px;
-
-  > .container {
-    @include media(md) {
-      display: flex;
-    }
-  }
 }
 
 .site-footer__content {
   border-bottom: 1px solid $brand-primary-dark;
-}
-
-.site-footer__menus {
-  @include media(md) {
-    display: flex;
-  }
-
-  .footer-menu {
-
-  }
 }
 
 .secondary-footer {
@@ -30,7 +14,6 @@
 }
 
 .secondary-footer__list {
-  display: flex;
 }
 
 .secondary-footer__item {
