@@ -1,6 +1,6 @@
 <header class="site-header">
-  <div class="site-header__brand">
-    <div class="site-header__logo">
+  <div class="site-header__primary">
+    <div class="site-header__brand">
       <a href="/" class="site-header__home-link">
         <!--  TODO: can we even use picture here or need an h1 with image replacement? -->
         <picture>
@@ -12,29 +12,30 @@
     </div>
 
     <div class="site-header__menu-button">
-      <a href="#site-nav" data-toggle-target=".site-header__nav">
-        Menu <i class="icon icon--hamburger"></i>
+      <a href="#site-nav" class="site-menu-button" data-toggle-target=".site-header__nav">
+        <span class="site-menu-button__text">Menu</span>
+        <i class="site-menu-button__icon icon icon--hamburger"></i>
       </a>
     </div>
   </div>
 
-  <div class="site-header__search">
-    <div class="site-search">
-      <form>
-        <div class="input-group">
-          <div class="input-group__field">
+  <div class="site-header__nav">
+
+    <div class="site-header__search">
+      <div class="site-search">
+        <form>
+          <div class="input-group">
+            <div class="input-group__field">
               <label for="site-search" class="site-search__label">Search the Institute</label>
               <input type="search" placeholder="Search the Institute" class="site-search__field" id="site-search">
+            </div>
+            <div class="input-group__button">
+              <button type="submit" class="site-search__button"><i class="icon icon--search">Search</i></button>
+            </div>
           </div>
-          <div class="input-group__button">
-            <button type="submit" class="site-search__button"><i class="icon icon--search">Search</i></button>
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
-  </div>
-
-  <div class="site-header__nav">
 
     {% include 'partials/nav.twig' %}
   </div>

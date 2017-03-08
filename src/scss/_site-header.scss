@@ -2,28 +2,24 @@
   background-color: $brand-primary;
 }
 
-.site-header__brand {
+.site-header__primary {
   display: flex;
   padding: 20px;
+  align-content: center;
+}
+
+.site-header__brand {
+  flex: 1;
   align-items: center;
 }
 
-// TODO: wrap home link in a div and use flex on that
-// so the link doesnt have a near full width click zone
 .site-header__home-link {
-  flex: 1;
+
 }
 
 .site-header__menu-button {
-  // flex: 1;
-  align-items: flex-end;
-
-  a {
-    color: $white;
-    text-transform: uppercase;
-    font-weight: $font-weight-semibold;
-    font-size: 14px;
-  }
+  flex: 0 1 auto;
+  align-self: center;
 }
 
 .site-header__nav {
