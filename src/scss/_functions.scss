@@ -1,3 +1,7 @@
 @function em($target, $base:16) {
   @return $target / $base * 1em;
 }
+
+@function rem($target, $base: 16) {
+  @return $target / $base * 1rem;
+}
