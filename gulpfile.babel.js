@@ -141,6 +141,7 @@ gulp.task('watch', () => {
   gulp.watch(paths.styles.src, ['styles']);
   gulp.watch(paths.images.src, ['images']);
   gulp.watch(paths.scripts.src, ['scripts', 'scripts:lint']);
+  gulp.watch('./src/data/*.yml', ['html']);
 });
 
 gulp.task('build', ['clean', 'html', 'styles', 'scripts:lint', 'scripts']);
