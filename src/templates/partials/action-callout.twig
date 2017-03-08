@@ -4,6 +4,6 @@
   {% endif %}
   <h3 class="action-callout__title">{{title}}</h3>
   {% if linkHref and linkText %}
-    <a href="{{linkHref}}" class="button button--secondary action-callout__button">{{linkText}}</a>
+    <a href="{{linkHref}}" class="button button--{{buttonModifier | default('primary')}} action-callout__button">{{linkText}}</a>
   {% endif %}
 </div>

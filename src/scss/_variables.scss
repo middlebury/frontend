@@ -4,6 +4,7 @@ $screen-lg: em(1200);
 $screen-xl: em(1440);
 
 $breakpoints: (
+  xs: 0,
   sm: $screen-sm,
   md: $screen-md,
   lg: $screen-lg,
