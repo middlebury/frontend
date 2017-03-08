@@ -1,51 +1,69 @@
 <footer class="site-footer">
   <div class="container">
+    <div class="row row--lined row--lined-light">
+      <div class="col-lg-3">
 
-    <div class="site-footer__content">
+        <div class="site-footer__content">
+          {% include 'partials/action-callout.twig' with {
+            preheader: 'Help us help the world',
+            title: 'Support the Institute',
+            linkText: 'Make a Gift',
+            linkHref: '#',
+            buttonModifier: 'secondary'
+          } %}
 
-      {% include 'partials/action-callout.twig' with {
-        preheader: 'Help us help the world',
-        title: 'Support the Institute',
-        linkText: 'Make a Gift',
-        linkHref: '#',
-      } %}
+          <ul class="social-links">
+            {% for item in social_links %}
+              <li class="social-links__item">
+                <a href="{{item.href}}" class="social-links__link">
+                  <i class="icon icon--{{item.slug}}">{{item.text}}</i>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
 
-      <ul class="social-links">
-        {% for item in social_links %}
-          <li class="social-links__item">
-            <a href="{{item.href}}" class="social-links__link">
-              <i class="icon icon--{{item.slug}}">{{item.text}}</i>
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-
-    <div class="site-footer__menus">
-      {% for menu in footer_nav %}
-        {% include 'partials/footer-menu.twig' with menu %}
-      {% endfor %}
+      </div>
+      <div class="col-lg-9">
+        <div class="row">
+          {% for menu in footer_nav %}
+            <div class="col-sm-3">
+              {% include 'partials/footer-menu.twig' with menu %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="secondary-footer">
     <div class="container">
-      <div class="secondary-footer__brand">
-        <!-- TODO: use picture? -->
-        <img src="img/midd-logo.png" alt="Middlebury">
+      <div class="row">
+        <div class="col-md-3">
+
+          <div class="secondary-footer__brand">
+            <!-- TODO: use picture? -->
+            <img src="img/midd-logo.png" alt="Middlebury">
+          </div>
+
+        </div>
+        <div class="col-md-9">
+
+          <nav class="secondary-footer__nav">
+            <ul class="secondary-footer__list">
+              {% for item in secondary_footer_nav %}
+              <li class="secondary-footer__item"><a href="{{item.href}}" class="secondary-footer__link">{{item.text}}</a></li>
+              {% endfor %}
+            </ul>
+          </nav>
+
+          <a href="#top" class="to-top-link button button--primary">
+            <i class="icon icon--chevron-up">Back to top</i>
+          </a>
+
+        </div>
       </div>
-      <nav class="secondary-footer__nav">
-        <ul class="secondary-footer__list">
-          {% for item in secondary_footer_nav %}
-          <li class="secondary-footer__item"><a href="{{item.href}}" class="secondary-footer__link">{{item.text}}</a></li>
-          {% endfor %}
-        </ul>
-      </nav>
     </div>
   </div>
-
-  <a href="#top" class="to-top-link button button--primary">
-    <i class="icon icon--chevron-up">Back to top</i>
-  </a>
 
 </footer>
