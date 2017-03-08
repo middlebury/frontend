@@ -79,3 +79,49 @@ social_links:
   - text: YouTube
     href: "#"
     slug: youtube
+
+homepage:
+  latest_news:
+    - title: Undergraduate Interns Tackle Nonproliferation Issues
+      summary: The program aims to combat the spread of weapons of mass destruction
+    - title: Undergraduate Interns Tackle Nonproliferation Issues
+      summary: The program aims to combat the spread of weapons of mass destruction
+    - title: Alumni Play Important Role in Inauguration of First Female President of Taiwan
+      summary: “I can't express how proud I am to see our students perform so well and play a part in shaping this historic event in Taiwan.”
+  upcoming_events:
+    - date: Jul 12, 2016
+      time: 1:00 PM
+      title: Museum of Art Lecture Series
+      location: McCone Irvine Auditorium
+      link: '#'
+    - date: Jul 12, 2016
+      time: 1:00 PM
+      title: Museum of Art Lecture Series
+      location: McCone Irvine Auditorium
+      link: '#'
+    - date: Jul 12, 2016
+      time: 1:00 PM
+      title: Museum of Art Lecture Series
+      location: McCone Irvine Auditorium
+      link: '#'
+
+  projects:
+    - title: Peru Field Work
+      image: http://placehold.it/500x500
+      summary: Students are applying policy-research concepts learned in the Field Methods and Policy and Data Analysis courses to the design of a country-specific, client specified field-research project.
+    - title: Nepal Data Analysis
+      image: http://placehold.it/500x500
+      summary: A team of 15 students are using data- analytical techniques to assess the data they collected from three sites in Nepal.
+    - title: MPA Students Survey Digital Media in Cuba
+      image: http://placehold.it/500x500
+      summary: To support innovative analysis of ICT for development, students conduct 10 days of fieldwork in and around Havana
+
+  leaders_in_the_field:
+    - title: Institute Experts Contribute to Climate
+      image: http://placehold.it/500x500
+      summary: Students are applying policy-research concepts learned in the Field Methods and Policy and Data Analysis courses to the design of a country-specific, client specified field-research project
+    - title: “Romantic Computing” and the Future of Education
+      image: http://placehold.it/500x500
+      summary: “Romantic computing” is not about dating sites like Tinder, Professor Gardner Campbell assured a bi- coastal audience at the Middlebury Institute in Monterey and Middlebury
+    - title: Institute Co-Hosts U.S.-China Conference on Arms Control
+      summary: Students are applying policy-research concepts learned in the Field Methods and Policy and Data Analysis courses to the design of a country-specific, client specified field-research project
