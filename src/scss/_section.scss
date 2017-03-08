@@ -1,0 +1,35 @@
+.section {
+  margin-bottom: 100px;
+}
+
+.section__header {
+  display: flex;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+.section__title {
+  // TODO: need to use a heading element or class e.g. .h3
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  font-weight: $font-weight-semibold;
+  font-family: $font-family-sans-serif-condensed;
+  font-size: rem(16);
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.section__nav {
+  justify-content: flex-end;
+  text-align: right;
+  flex: 1;
+}
+
+.section__nav-link {
+  font-weight: $font-weight-medium;
+  border-bottom: 1px solid $middlebury-blue;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
