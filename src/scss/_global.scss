@@ -23,8 +23,28 @@ a {
 }
 
 p {
+  color: $text-gray;
+  font-family: $font-family-serif;
+  font-size: rem(16);
+  line-height: rem(28);
+  // font-weight: $font-weight-book;
   margin-top: 0;
   margin-bottom: 20px;
+
+  @include media(md) {
+    font-size: rem(18);
+    line-height: rem(30);
+  }
+}
+
+p.intro {
+  font-size: rem(20);
+  line-height: rem(28);
+
+  @include media(md) {
+    font-size: rem(22);
+    line-height: rem(32);
+  }
 }
 
 img {
