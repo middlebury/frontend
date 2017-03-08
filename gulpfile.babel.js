@@ -24,7 +24,7 @@ const production = !!args.production;
 
 const paths = {
   html: {
-    src: './src/templates/**/*.twig',
+    src: './src/templates/*.twig',
     dest: './dist'
   },
   styles: {
@@ -132,8 +132,8 @@ gulp.task('images', () => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch(paths.html.src, ['html']);
   gulp.watch(paths.html.src).on('change', browserSync.reload);
+  gulp.watch('./src/templates/**/*.twig', ['html']);
   gulp.watch(paths.styles.src, ['styles']);
   gulp.watch(paths.scripts.src, ['scripts', 'scripts:lint']);
 });
