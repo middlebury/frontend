@@ -1,5 +1,6 @@
 $grid-column-count: 12;
 $grid-gutter-width: 80px;
+$column-padding: $grid-gutter-width / 2;
 
 .container {
   max-width: 1440px;
@@ -10,15 +11,15 @@ $grid-gutter-width: 80px;
   margin-right: auto;
 
   @include media(md) {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: $column-padding;
+    padding-right: $column-padding;
   }
 }
 
 .row {
   @include clearfix();
-  margin-left: -($grid-gutter-width / 2);
-  margin-right: -($grid-gutter-width / 2);
+  margin-left: -($column-padding);
+  margin-right: -($column-padding);
 }
 
 .row--lined {
