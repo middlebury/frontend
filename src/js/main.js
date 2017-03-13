@@ -1,1 +1,2 @@
-var Toggler = require('./toggler');
+require('./toggler');
+require('./nav');
