@@ -1,8 +1,8 @@
 .site-nav {
   position: relative;
   z-index: 2;
-  // overflow: hidden;
-  // height: 100vh;
+  overflow: hidden;
+  height: 100vh;
 }
 
 .site-nav__list {
@@ -30,18 +30,20 @@
   font-size: 15px;
   color: $white;
   position: relative;
-  padding: 20px;
+  padding: 20px 30px;
 
   &:after {
-    content: '';
     display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 30px;
     width: 10px;
     height: 10px;
     border: 2px solid $brand-secondary;
     border-top-width: 0;
     border-left-width: 0;
-    transform: rotate(-45deg);
-    float: right;
+    transform: rotate(-45deg) translateY(-50%);
   }
 }
 
@@ -69,16 +71,24 @@
 }
 
 .site-subnav__back-link {
-  // display: none;
   color: $bright-green;
   display: block;
   font-size: 15px;
-  padding: 20px;
+  padding: 20px 30px 20px 70px;
+  position: relative;
 
   &:before {
-    content: '<';
-    display: inline-block;
-    margin-right: 10px;
+    display: block;
+    content: '';
+    position: absolute;
+    left: 35px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border: 2px solid $bright-green;
+    border-bottom-width: 0;
+    border-right-width: 0;
+    transform: rotate(-45deg) translateY(-50%);
   }
 }
 
@@ -90,7 +100,7 @@
   color: $white;
   display: block;
   padding: 20px;
-  padding-left: 40px;
+  padding-left: 70px;
   font-size: 15px;
 }
 
