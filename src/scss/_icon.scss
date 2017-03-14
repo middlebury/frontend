@@ -39,6 +39,8 @@ $hamburger-bar-offset:  $hamburger-bar-height + $hamburger-spacing;
 
 .icon--hamburger {
   position: relative;
+  top: -4px;
+  height: 16px;
 
   &,
   &:before,
@@ -46,6 +48,7 @@ $hamburger-bar-offset:  $hamburger-bar-height + $hamburger-spacing;
     background-color: $white;
     width: 20px;
     height: $hamburger-bar-height;
+    transition: transform .2s;
   }
 
   &:before,
@@ -56,11 +59,11 @@ $hamburger-bar-offset:  $hamburger-bar-height + $hamburger-spacing;
   }
 
   &:before {
-    bottom: #{$hamburger-bar-offset * 2}
+    bottom: $hamburger-bar-offset;
   }
 
   &:after {
-    bottom: #{$hamburger-bar-offset}
+    top: $hamburger-bar-offset;
   }
 }
 

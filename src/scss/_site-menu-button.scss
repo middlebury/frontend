@@ -22,6 +22,35 @@
   }
 }
 
-.site-menu-button__icon {
+.site-menu-button__text--open {
+  .site-menu-button.is-toggled & {
+    display: none;
+  }
+}
 
+.site-menu-button__text--close {
+  display: none;
+  .site-menu-button.is-toggled & {
+    @include media(sm) {
+      display: inline-block;
+    }
+  }
+}
+
+.site-menu-button__icon {
+  // TODO: need to toggle icon--close class on the icon with js instead.
+  // These styles should be in _icon.scss
+  .site-menu-button.is-toggled & {
+    background-color: transparent;
+
+    &:before {
+      bottom: 0;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  }
 }
