@@ -21,11 +21,7 @@
 }
 
 .site-nav__list {
-  transition: .2s;
 
-  &.is-open {
-    transform: translateX(-100vw);
-  }
 }
 
 .site-nav__item {
@@ -64,31 +60,23 @@
   }
 }
 
+.site-nav__link--back {
+  color: $bright-green;
+  position: relative;
+
+  &:after {
+    left: 35px;
+    border-color: $bright-green;
+    border-width: 2px 0 0 2px;
+  }
+}
+
 .site-nav__link--accent {
   color: $brand-secondary;
 }
 
 .site-nav__link--active {
 
-}
-
-.site-nav__link--back {
-  color: $bright-green;
-  position: relative;
-
-  &:after {
-    display: block;
-    content: '';
-    position: absolute;
-    left: 35px;
-    top: 50%;
-    width: 10px;
-    height: 10px;
-    border: 2px solid $bright-green;
-    border-bottom-width: 0;
-    border-right-width: 0;
-    transform: rotate(-45deg) translateY(-50%);
-  }
 }
 
 .site-nav__button {
