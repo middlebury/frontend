@@ -22,11 +22,18 @@
   align-self: center;
 }
 
-.site-header__nav {
+.site-header__secondary {
   &.has-toggler {
     display: none;
     &.is-toggled {
       display: block;
     }
   }
+}
+
+.site-header__nav {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  height: 100vh;
 }
