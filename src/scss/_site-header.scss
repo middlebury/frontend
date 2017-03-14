@@ -1,11 +1,23 @@
 .site-header {
   background-color: $brand-primary;
+
+  @include media(md) {
+    width: 315px;
+    height: 675px;
+    position: absolute;
+    z-index: 3;
+  }
 }
 
 .site-header__primary {
   display: flex;
-  padding: 20px 30px;
   align-content: center;
+  padding: 20px 30px;
+
+  @include media(md) {
+    padding: 30px;
+    padding-bottom: 70px;
+  }
 }
 
 .site-header__brand {
@@ -20,14 +32,30 @@
 .site-header__menu-button {
   flex: 0 1 auto;
   align-self: center;
+
+  @include media(md) {
+    display: none;
+  }
 }
 
 .site-header__secondary {
   &.has-toggler {
     display: none;
+
+    @include media(md) {
+      display: flex;
+      flex-direction: column;
+    }
+
     &.is-toggled {
       display: block;
     }
+  }
+}
+
+.site-header__search {
+  @include media(md) {
+    order: 2;
   }
 }
 
@@ -36,4 +64,11 @@
   z-index: 2;
   overflow: hidden;
   height: 100vh;
+
+  @include media(md) {
+    order: 1;
+    height: 100%;
+    overflow: visible;
+    position: static;
+  }
 }
