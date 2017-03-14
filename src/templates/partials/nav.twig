@@ -1,23 +1,23 @@
-<nav class="site-nav" data-nav>
+<nav class="site-nav site-nav--top" data-nav>
   <ul class="site-nav__list" data-nav-list>
     {% for item in site_nav %}
       <li class="site-nav__item">
-        <a href="{{item.href}}" class="site-nav__link" data-nav-link>{{item.text}}</a>
+        <a href="{{item.href}}" class="site-nav__link{% if loop.index >= 6 %} site-nav__link--accent{% endif %}" data-nav-link>{{item.text}}</a>
 
         {% if item.items %}
-          <div class="site-subnav" data-nav>
-            <a href="#" class="site-subnav__back-link" data-nav-back>{{item.text}}</a>
-            <ul class="site-subnav__list" data-nav-list>
+          <div class="site-nav site-nav--sub" data-nav>
+            <a href="#" class="site-nav__link site-nav__link--back" data-nav-back>{{item.text}}</a>
+            <ul class="site-nav__list" data-nav-list>
               {% for subitem in item.items %}
-                <li class="site-subnav__item">
-                  <a href="{{subitem.href}}" class="site-subnav__link" data-nav-link>{{subitem.text}}</a>
+                <li class="site-nav__item">
+                  <a href="{{subitem.href}}" class="site-nav__link" data-nav-link>{{subitem.text}}</a>
                   {% if subitem.items %}
-                    <div class="site-subnav" data-nav>
-                      <a href="#" class="site-subnav__back-link" data-nav-back>{{subitem.text}}</a>
-                      <ul class="site-subnav__list">
+                    <div class="site-nav site-nav--sub" data-nav>
+                      <a href="#" class="site-nav__link site-nav__link--back" data-nav-back>{{subitem.text}}</a>
+                      <ul class="site-nav__list">
                         {% for subitem in subitem.items %}
-                        <li class="site-subnav__item">
-                          <a href="{{subitem.href}}" class="site-subnav__link" data-nav-link>{{subitem.text}}</a>
+                        <li class="site-nav__item">
+                          <a href="{{subitem.href}}" class="site-nav__link" data-nav-link>{{subitem.text}}</a>
                         </li>
                         {% endfor %}
                       </ul>
@@ -28,7 +28,7 @@
             </ul>
 
             {% if item.button %}
-              <a href="{{item.button.href}}" class="button button--secondary site-subnav__button">{{item.button.text}}</a>
+              <a href="{{item.button.href}}" class="button button--secondary site-nav__button">{{item.button.text}}</a>
             {% endif %}
           </div>
         {% endif %}
