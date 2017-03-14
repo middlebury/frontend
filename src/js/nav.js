@@ -1,8 +1,6 @@
 class Navigation {
   constructor(elem) {
     this.elem = elem;
-    // only gets first nav
-    this.subnav = null;
     this.backButton = this.elem.querySelector('[data-nav-back]');
     // TODO: need to only get first level of items for this list and not any sub navs
     this.items = this.elem.querySelectorAll('[data-nav-list] > li > [data-nav-link]');
@@ -28,17 +26,16 @@ class Navigation {
   }
 
   open(subnav) {
+    this.isOpen = true;
     this.elem.classList.add(this.navActiveClass);
-    this.subnav = subnav;
 
-    if (this.subnav) {
-      this.subnav.classList.add(this.subnavActiveClass);
-    }
+    subnav.classList.add(this.subnavActiveClass);
   }
 
   close() {
     this.elem.classList.remove(this.navActiveClass);
     this.elem.classList.remove(this.subnavActiveClass);
+    this.isOpen = false;
   }
 
   handleBackClick(e) {
@@ -47,15 +44,10 @@ class Navigation {
   }
 
   handleItemClick(e) {
-    e.preventDefault();
-
-    if (this.isOpen) {
-      return this.close();
-    }
-
     const subnav = e.target.nextElementSibling;
 
     if (subnav && subnav.hasAttribute('data-nav')) {
+      e.preventDefault();
       this.open(subnav);
     }
   }
