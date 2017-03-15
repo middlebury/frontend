@@ -124,7 +124,8 @@ gulp.task('html', () => {
     .pipe(twig({
       base: './src/templates',
     }))
-    .pipe(gulp.dest(paths.html.dest));
+    .pipe(gulp.dest(paths.html.dest))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('images', () => {
