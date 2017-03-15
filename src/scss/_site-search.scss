@@ -1,5 +1,11 @@
 .site-search {
   background-color: $brand-primary-dark;
+
+  @include media(md) {
+    background: none;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
 }
 
 .site-search__label {
@@ -16,17 +22,31 @@
   font-size: 15px; // We should use 16 since it does not cause a zoom effect when zoomed
   width: 100%;
 
+  @include media(md) {
+    padding: 0;
+    font-size: 14px;
+
+    &:focus {
+      // padding: 5px;
+      // background-color: $white;
+      // color: $black;
+    }
+  }
+
   &::placeholder  {
     color: $white;
+
+    @include media(md) {
+      color: $light-blue;
+    }
   }
 }
 
 .site-search__button {
-  background-color: transparent;
   color: $white;
   padding: 20px 30px;
-}
 
-
+  @include media(md) {
+    padding: 0;
   }
 }
