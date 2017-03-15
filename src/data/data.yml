@@ -2,42 +2,50 @@ site_title: Middlebury Institute of International Studies at Monterey
 
 site_nav:
   - text: Learning Approach
-    button:
-      text: Do a thing
-      href: '#'
     items:
       - text: Cultural Fluency
-        items:
-          - text: sub nav item
-          - text: sub nav item
-          - text: sub nav item
-          - text: sub nav item
-          - text: sub nav item
-          - text: sub nav item
       - text: Immersive Learning
       - text: Holistic Analysis
       - text: Practical Innovation
       - text: Collaborative Solutions
   - text: Leadership and Impact
     items:
-      - text: Under leadership and impact
-        items:
-          - text: sub nav item
-          - text: sub nav item
-          - text: sub nav item
-          - text: sub nav item
-          - text: sub nav item
-          - text: sub nav item
-      - text: sub nav item
-      - text: sub nav item
-      - text: sub nav item
-      - text: sub nav item
-      - text: sub nav item
-      - text: sub nav item
-  - text: Areas of Focus
+      - text: About the Institute
+      - text: Faculty in the Field
+      - text: Global Projects and Partnerships
+      - text: Latest Thinking
   - text: Advancing Your Career
   - text: The Institute Experience
   - text: Academics
+    button:
+      text: Explore & Compare Programs
+      href: '#'
+    items:
+      - text: Degree Programs
+        items_heading: Degree Programs
+        items:
+          - text: International Policy and Development
+          - text: Master of Public Administration
+          - text: Master of Business Administration in Global Impact Management
+          - text: International Education Management
+          - text: International Environmental Policy
+          - text: International Trade and Economic Diplomacy
+          - text: Nonproliferation and Terrorism Studies
+          - text: Teaching English to Speakers of Other Languages
+          - text: Teaching Foreign Language
+          - text: Translation; Translation and Interpretation;Conference Interpretation
+        secondary_items_heading: Joint Degrees
+        secondary_items:
+          - text: Translation and Localization Management
+          - text: MBA/MA In International Environmental Policy
+          - text: MBA/MA in International Policy and Development
+          - text: MPA/MA in International Education Management
+          - text: BA / MA in International Policy and Development
+          - text: BA / MA in Nonproliferation and Terrorism Studies
+          - text: BA / Master of Public Administration
+      - text: Non-degree programs
+      - text: Centers & Initiatives
+      - text: Faculty & Staff Directory
   - text: Admissions
   - text: Engaged Research
   - text: News and Events
