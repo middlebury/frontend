@@ -6,14 +6,32 @@
   border-radius: 0;
   border: 0;
   cursor: pointer;
+  transition: .2s;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 }
 
 .button--primary {
   background-color: $brand-tertiary;
-  color: $white;
+  color: $brand-primary;
+
+  &:hover,
+  &:focus {
+    background-color: $brand-primary;
+    color: $white;
+  }
 }
 
 .button--secondary {
   background-color: $white;
   color: $brand-primary;
+
+  &:hover,
+  &:focus {
+    background-color: #022543; // TODO: move me to variable
+    color: $white;
+  }
 }
