@@ -1,0 +1,19 @@
+{% embed 'partials/modal.twig' with {
+  id: 'mission-modal'
+} %}
+  {% block header %}
+    <h1>What&rsquo;s Your Mission?</h1>
+    <span>I want to</span>
+  {% endblock %}
+  {% block content %}
+
+    <ul>
+      {% for mission in missions %}
+        <li>
+          <a href="#">{{mission.text}}</a>
+        </li>
+      {% endfor %}
+    </ul>
+
+  {% endblock %}
+{% endembed %}
