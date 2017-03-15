@@ -110,6 +110,14 @@ social_links:
     href: "#"
     slug: youtube
 
+missions:
+  - text: I want to take on the world’s most important sustainability challenges.
+  - text: I want to create positive social change in international business
+  - text: I want to teach English to students around the world.
+  - text: I want to help people find hope after loss.
+  - text: I want to cultivate the self-worth of women around the world.
+  - text: I want to create positive social change in international business
+
 homepage:
   latest_news:
     - title: Undergraduate Interns Tackle Nonproliferation Issues
