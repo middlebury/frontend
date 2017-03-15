@@ -1,0 +1,11 @@
+<div class="modal" id="{{id}}" role="dialog">
+  <div class="modal__header">
+    {% block header %}{% endblock %}
+    <button type="button" class="button button--secondary button--circle modal__close-button" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal__body">
+    {% block content %}{% endblock %}
+  </div>
+</div>
