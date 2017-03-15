@@ -85,6 +85,7 @@ h1,
   font-size: rem(20);
   line-height: rem(24);
   font-family: $font-family-sans-serif;
+  font-weight: $font-weight-semibold;
 
   @include media(md) {
     font-size: rem(30);
