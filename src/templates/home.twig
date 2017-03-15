@@ -5,7 +5,9 @@
   <div class="container">
 
     <section class="section">
-      {% include 'partials/mission-selector.twig' %}
+      {% include 'partials/mission-selector.twig' with {
+        overlap: true
+      } %}
     </section>
 
     <section class="section">

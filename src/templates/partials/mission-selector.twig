@@ -1,0 +1,15 @@
+<div class="mission-selector{% if overlap %} mission-selector--overlap{% endif %}">
+  <form action="" class="mission-selector__form" data-fullscreen-select data-fs-select-prefix="I want to">
+    <div class="mission-selector__form-group">
+      <label class="mission-selector__label">What&rsquo;s Your Mission?</label>
+      <select name="mission" class="mission-selector__select" data-toggle-target="#mission-modal">
+        {% for mission in missions %}
+          <option value="{{mission.text}}">{{mission.text}}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="mission-selector__actions">
+      <input type="submit" class="mission-selector__button button button--secondary" value="Show Me How">
+    </div>
+  </form>
+</div>

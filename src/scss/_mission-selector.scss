@@ -1,0 +1,73 @@
+.mission-selector {
+  background-color: $brand-secondary;
+  padding: 50px 30px;
+
+  @include media(md) {
+    padding: 50px;
+  }
+}
+
+.mission-selector--overlap {
+  margin-top: -20px;
+  z-index: 3;
+  position: relative;
+}
+
+.mission-selector__form {
+  @include media(md) {
+    display: flex;
+  }
+}
+
+.mission-selector__form-group {
+  @include media(md) {
+    flex: 0 1 auto;
+    padding-right: 50px;
+  }
+}
+
+.mission-selector__actions {
+  @include media(md) {
+    flex: 1;
+    align-self: flex-end;
+  }
+}
+
+.mission-selector__label {
+  font-family: $font-family-serif;
+  font-size: 14px;
+  font-style: italic;
+  display: block;
+  // margin-bottom: 20px;
+
+  @include media(md) {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.mission-selector__select {
+  color: $brand-primary;
+  font-family: $font-family-serif;
+  font-size: 22px;
+  background-color: transparent;
+  white-space: normal;
+  width: 100%;
+  height: auto;
+  border: 0;
+  appearance: none;
+  background-image: url($data-uri-double-arrow);
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  margin-bottom: 20px;
+  padding: 15px 40px 15px 0;
+
+  @include media(md) {
+    font-size: 26px;
+    margin-bottom: 0;
+  }
+}
+
+.mission-selector__button {
+
+}
