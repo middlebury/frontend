@@ -1,0 +1,12 @@
+<div class="callout">
+  {% if preheader %}
+    <span class="callout__preheader">{{preheader}}</span>
+  {% endif %}
+  <h3 class="callout__title">{{title}}</h3>
+  {% if subtext %}
+    <p class="callout__subtext">{{subtext}}</p>
+  {% endif %}
+  {% if linkHref and linkText %}
+    <a href="{{linkHref}}" class="button button--{{buttonModifier | default('primary')}} callout__button">{{linkText}}</a>
+  {% endif %}
+</div>
