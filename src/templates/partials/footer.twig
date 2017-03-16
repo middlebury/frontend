@@ -1,26 +1,29 @@
 <footer class="site-footer">
   <div class="container">
-    <div class="row row--lined row--lined-light">
+    <div class="row row--dividers row--dividers-light">
       <div class="col-lg-3">
 
         <div class="site-footer__content">
-          {% include 'partials/callout.twig' with {
+          {% embed 'partials/callout.twig' with {
             preheader: 'Help us help the world',
             title: 'Support the Institute',
-            linkText: 'Make a Gift',
-            linkHref: '#',
-            buttonModifier: 'secondary'
+            social_links: social_links
           } %}
-
-          <ul class="social-links">
-            {% for item in social_links %}
-              <li class="social-links__item">
-                <a href="{{item.href}}" class="social-links__link">
-                  <i class="icon icon--social icon--{{item.slug}}">{{item.text}}</i>
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
+            {% block body %}
+              <a href="" class="button button--secondary">Make a Gift</a>
+            {% endblock %}
+            {% block footer %}
+              <ul class="social-links">
+                {% for item in social_links %}
+                  <li class="social-links__item">
+                    <a href="{{item.href}}" class="social-links__link">
+                      <i class="icon icon--social icon--{{item.slug}}">{{item.text}}</i>
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endblock %}
+          {% endembed %}
         </div>
 
       </div>
@@ -39,7 +42,7 @@
   <div class="secondary-footer">
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-lg-3">
 
           <div class="secondary-footer__brand">
             <!-- TODO: use picture? -->
@@ -47,22 +50,24 @@
           </div>
 
         </div>
-        <div class="col-md-9">
+        <div class="col-lg-9">
 
-          <nav class="secondary-footer__nav">
-            <ul class="secondary-footer__list">
-              {% for item in secondary_footer_nav %}
-              <li class="secondary-footer__item"><a href="{{item.href}}" class="secondary-footer__link">{{item.text}}</a></li>
-              {% endfor %}
-            </ul>
-          </nav>
-
-          <a href="#top" class="to-top-link button button--primary">
-            <i class="icon icon--chevron-up">Back to top</i>
-          </a>
+          <ul class="secondary-footer__list">
+            {% for item in secondary_footer_nav %}
+              <li class="secondary-footer__item">
+                <a href="{{item.href}}" class="secondary-footer__link">{{item.text}}</a>
+              </li>
+            {% endfor %}
+          </ul>
 
         </div>
       </div>
+    </div>
+
+    <div class="secondary-footer__button">
+      <a href="#top" class="button button--primary" aria-label="Back to top">
+        <i class="icon icon--chevron-up"></i>
+      </a>
     </div>
   </div>
 
