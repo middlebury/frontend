@@ -2,9 +2,29 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  height: 100%;
 
-  @include media(md) {
+  @include media(lg) {
     text-align: left;
+  }
+}
+
+.callout__header {
+  flex: 0 1 auto;
+  padding-bottom: 20px;
+}
+
+.callout__body {
+  flex: 1;
+}
+
+.callout__footer {
+  flex: 0 1 auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  @include media(lg) {
+    padding: 0;
   }
 }
 
@@ -20,12 +40,11 @@
   font-size: 40px;
   font-weight: $font-weight-book;
   line-height: 1.3;
-  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.callout__subtitle {
-  margin-top: 0;
-  margin-bottom: 20px;
+.callout__subtext {
+  margin-bottom: 0;
 }
 
 .callout__button {
