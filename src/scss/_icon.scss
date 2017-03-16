@@ -66,3 +66,20 @@ $hamburger-bar-offset:  $hamburger-bar-height + $hamburger-spacing;
     top: $hamburger-bar-offset;
   }
 }
+
+$icons-social: ('facebook', 'twitter', 'youtube', 'linkedin');
+
+.icon--social {
+  display: block;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 27px;
+  background-position: left center;
+}
+
+@each $icon in $icons-social {
+  .icon--#{$icon} {
+    background-image: url('/img/icon-#{$icon}.svg');
+  }
+}

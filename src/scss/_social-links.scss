@@ -1,3 +1,23 @@
 .social-links {
 
+
+}
+
+.social-links__item {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.social-links__link {
+  display: inline-block;
+  color: $white;
+  transition: .2s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
 }

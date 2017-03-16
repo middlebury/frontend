@@ -98,16 +98,16 @@ secondary_footer_nav:
 
 social_links:
   - text: LinkedIn
-    href: "#"
+    href: http://go.miis.edu/linkedin
     slug: linkedin
   - text: Facebook
-    href: "#"
+    href: http://go.miis.edu/facebook
     slug: facebook
   - text: twitter
-    href: "#"
+    href: http://go.miis.edu/twitter
     slug: twitter
   - text: YouTube
-    href: "#"
+    href: http://go.miis.edu/youtube
     slug: youtube
 
 missions:
