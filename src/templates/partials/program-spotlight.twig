@@ -1,0 +1,43 @@
+<div class="program-spotlight u-bg-primary" data-carousel>
+  <div class="row row--no-gutters">
+    <div class="col-sm-4">
+      {% embed 'partials/callout.twig' with {
+        light: true,
+        title: 'Program Spotlight',
+      } %}
+        {% block body %}
+          <a href="" class="button button--secondary">Explore our Programs</a>
+        {% endblock %}
+        {% block footer %}
+          <button class="button button--secondary button--circle" aria-label="Next" data-carousel-next disabled>
+            <i class="icon icon--chevron icon--chevron-right" aria-hidden="true">Next</i>
+          </button>
+          <button class="button button--secondary button--circle" aria-label="Previous" data-carousel-prev>
+            <i class="icon icon--chevron icon--chevron-left" aria-hidden="true">Previous</i>
+          </button>
+        {% endblock %}
+      {% endembed %}
+    </div>
+    <div class="col-sm-8">
+
+      <div class="carousel">
+        <div class="carousel__container" data-carousel-container>
+
+          <div class="row row--no-gutters">
+            {% for program in programs %}
+              <div class="col-sm-4" data-carousel-item>
+                <div class="program-spotlight__item">
+                  <img src="{{program.image}}" alt="{{program.image_alt}}">
+                  <h3 class="h4"><a href="{{program.href}}">{{program.title}}</a></h3>
+                  <p>{{program.blurb}}</p>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
