@@ -90,12 +90,23 @@
     } %}
       {% block content %}
 
-        <div class="row">
-          {% for project in home.projects %}
-            <div class="col-md-4">
-              {{project.title}}
-              {{project.summary}}
-            </div>
+        <div class="row row--dividers">
+          {% for project in homepage.projects %}
+
+            {% if loop.index == 1 %}
+              <div class="col-md-6">
+                <img src="{{project.image}}" alt="{{project.image_alt}}">
+                <h3><a href="{{project.link}}">{{project.title}}</a></h3>
+                <p>{{project.summary}}</p>
+              </div>
+            {% else %}
+              <div class="col-md-3">
+                <img src="{{project.image}}" alt="{{project.image_alt}}">
+                <h3><a href="{{project.link}}">{{project.title}}</a></h3>
+                <p>{{project.summary}}</p>
+              </div>
+            {% endif %}
+
           {% endfor %}
         </div>
 
