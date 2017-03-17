@@ -1,6 +1,17 @@
 body.has-modal {
   overflow: hidden;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .modal {
   display: none;
   background-color: $brand-primary;
@@ -10,6 +21,7 @@ body.has-modal {
   width: 100%;
   height: 100%;
   z-index: 20;
+  animation: fadeIn .2s;
 
   &.is-toggled {
     display: block;
