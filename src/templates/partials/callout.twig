@@ -12,8 +12,8 @@
     {% block body %}{% endblock %}
   </div>
   <div class="callout__footer">
-    {% if linkHref and linkText %}
-      <a href="{{linkHref}}" class="button button--{{buttonModifier | default('primary')}} callout__button">{{linkText}}</a>
+    {% if buttonHref and buttonText %}
+      <a href="{{buttonHref}}" class="button button--{{buttonModifier | default('primary')}} callout__button">{{buttonText}}</a>
     {% endif %}
     {% block footer %}{% endblock %}
   </div>
