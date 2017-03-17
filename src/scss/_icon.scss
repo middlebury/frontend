@@ -4,6 +4,24 @@
   text-indent: -9999px;
 }
 
+.icon--chevron {
+  height: 16px;
+  width: 16px;
+  transform: rotate(-45deg);
+  border: 2px solid $brand-primary;
+  border-left-width: 0;
+  border-bottom-width: 0;
+  top: 6px;
+}
+
+.icon--chevron-right {
+
+}
+
+.icon--chevron-left {
+
+}
+
 .icon--chevron-up {
   height: 16px;
   width: 16px;
