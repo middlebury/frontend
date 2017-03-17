@@ -17,6 +17,7 @@
 @import 'mission-selector';
 @import 'mission-modal';
 @import 'section';
+@import 'input-group';
 @import 'callout';
 @import 'footer-menu';
 @import 'site-search';
@@ -51,14 +52,7 @@
     height: auto;
   }
 }
-.input-group {
-  display: flex;
 
-  &__field {
-    flex: 1;
-  }
 
-  &__button {
-    flex: 0 1 auto;
   }
 }
