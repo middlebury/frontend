@@ -1,12 +1,12 @@
 .icon {
   display: inline-block;
+  position: relative;
+  text-indent: -9999px;
 }
 
 .icon--search {
-  position: relative;
   width: 16px;
   height: 16px;
-  text-indent: -9999px;
 
   &:before,
   &:after {
@@ -38,7 +38,6 @@ $hamburger-spacing: 4px;
 $hamburger-bar-offset:  $hamburger-bar-height + $hamburger-spacing;
 
 .icon--hamburger {
-  position: relative;
   top: -4px;
   height: 16px;
 
@@ -70,8 +69,6 @@ $hamburger-bar-offset:  $hamburger-bar-height + $hamburger-spacing;
 $icons-social: ('facebook', 'twitter', 'youtube', 'linkedin');
 
 .icon--social {
-  display: block;
-  text-indent: -9999px;
   background-repeat: no-repeat;
   height: 20px;
   width: 27px;
