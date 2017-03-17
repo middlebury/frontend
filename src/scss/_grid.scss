@@ -46,8 +46,18 @@ $gutters: (
 }
 
 .row--dividers {
+
   > [class^="col-"]:not(:last-of-type) {
-    border-right: 1px solid $line-gray;
+    border-bottom: 1px solid $line-gray;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    @include media(md) {
+      border-bottom: 0;
+      margin-bottom: 0;
+      margin-top: 0;
+      border-right: 1px solid $line-gray;
+    }
   }
 }
 
