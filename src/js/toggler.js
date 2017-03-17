@@ -55,4 +55,4 @@ const togglers = document.querySelectorAll('[data-toggle-target]');
 // TODO: use forEach helper as Array.from is lacking browser support
 Array.from(togglers).forEach(elem => new Toggler(elem));
 
-module.exports = Toggler;
+export default Toggler;
