@@ -1,17 +1,18 @@
 {% embed 'partials/modal.twig' with {
   id: 'mission-modal',
+  className: 'mission-modal',
   missions: missions
 } %}
   {% block header %}
-    <h1>What&rsquo;s Your Mission?</h1>
-    <span>I want to</span>
+    <h1 class="mission-modal__title">What&rsquo;s Your Mission?</h1>
+    <span class="mission-modal__prefix">I want to</span>
   {% endblock %}
   {% block content %}
 
-    <ul>
+    <ul class="mission-modal__list">
       {% for mission in missions %}
-        <li>
-          <a href="#">{{mission.text}}</a>
+        <li class="mission-modal__item">
+          <a href="#" class="mission-modal__link">{{mission.text | replace({'I want to': ''})}}</a>
         </li>
       {% endfor %}
     </ul>

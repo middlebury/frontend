@@ -1,0 +1,44 @@
+.mission-modal {
+
+}
+
+.mission-modal__title {
+  font-style: italic;
+  font-size: 20px;
+  font-family: $font-family-serif;
+  font-weight: $font-weight-book;
+  margin-bottom: 0;
+}
+
+.mission-modal__prefix {
+  font-size: 60px;
+  font-family: $font-family-serif;
+}
+
+.mission-modal__list {
+
+}
+
+.mission-modal__item {
+
+}
+
+.mission-modal__link {
+  display: block;
+  text-align: center;
+  padding: 30px;
+  color: $white;
+  font-size: 18px;
+  font-family: $font-family-serif;
+  transition: .2s;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: $brand-primary-dark;
+  }
+
+  @include media(lg) {
+    font-size: 26px;
+  }
+}
