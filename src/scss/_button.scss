@@ -18,6 +18,8 @@
 
 .button--circle {
   border-radius: 50%;
+  height: 50px; // TODO: remove magic numbers
+  width: 50px;
 }
 
 .button--sm {
