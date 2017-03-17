@@ -121,6 +121,17 @@ missions:
   - text: I want to cultivate the self-worth of women around the world.
   - text: I want to create positive social change in international business
 
+programs:
+  - title: International Environmental Policy
+    image: http://placehold.it/400x400
+    blurb: Develop the critical knowledge and skills to tackle complex environmental challenges, especially those posed by climate change.
+  - title: Nonproliferation and Terrorism Studies
+    image: http://placehold.it/400x400
+    blurb: Develop the knowledge and skills to address the spread of weapons of mass destruction (WMD) and respond effectively to terrorism.
+  - title: Translation & Localization Management
+    image: http://placehold.it/400x400
+    blurb: Learn translation, consecutive and simultaneous interpretation to enhance cross-cultural understanding and communication.
+
 homepage:
   latest_news:
     - title: Undergraduate Interns Tackle Nonproliferation Issues
