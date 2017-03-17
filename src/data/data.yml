@@ -148,13 +148,16 @@ homepage:
 
   projects:
     - title: Peru Field Work
-      image: http://placehold.it/500x500
+      image: http://placehold.it/500x375
+      image_alt: alt text
       summary: Students are applying policy-research concepts learned in the Field Methods and Policy and Data Analysis courses to the design of a country-specific, client specified field-research project.
     - title: Nepal Data Analysis
-      image: http://placehold.it/500x500
+      image: http://placehold.it/500x375
+      image_alt: alt text
       summary: A team of 15 students are using data- analytical techniques to assess the data they collected from three sites in Nepal.
     - title: MPA Students Survey Digital Media in Cuba
-      image: http://placehold.it/500x500
+      image: http://placehold.it/500x375
+      image_alt: alt text
       summary: To support innovative analysis of ICT for development, students conduct 10 days of fieldwork in and around Havana
 
   leaders_in_the_field:
