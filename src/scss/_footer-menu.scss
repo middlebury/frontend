@@ -1,5 +1,11 @@
 .footer-menu {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+
+  @include media(lg) {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
 }
 
 .footer-menu__title {
