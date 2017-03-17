@@ -1,2 +1,2 @@
-require('./toggler');
-require('./nav');
+import './toggler';
+import './nav';
