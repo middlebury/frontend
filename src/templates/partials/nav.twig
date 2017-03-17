@@ -44,11 +44,6 @@
   </div>
 {% endmacro %}
 
-            </div>
+{% import _self as navs %}
 
-          </div>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-</nav>
+{{ navs.nav(site_nav, 'top') }}
