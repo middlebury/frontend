@@ -2,7 +2,7 @@
   background-color: $brand-primary;
 
   @include media(md) {
-    width: 315px;
+    width: $header-width;
     height: 675px;
     position: absolute;
     z-index: 3;
