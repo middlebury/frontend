@@ -36,7 +36,7 @@ p {
   margin-top: 0;
   margin-bottom: 20px;
 
-  @include media(md) {
+  @include media(xl) {
     font-size: rem(18);
     line-height: rem(30);
   }
