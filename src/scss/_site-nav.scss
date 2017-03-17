@@ -1,6 +1,6 @@
 .site-nav {
   // height: 100%;
-  min-width: 100%;
+  // min-width: 100%;
   // white-space: nowrap;
 }
 
@@ -12,14 +12,15 @@
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 100%;
+  width: 100%;
   background-color: $middlebury-blue;
   height: 100%;
 
   @include media(md) {
-    height: 100%;
-    padding-bottom: 50px;
+    padding-bottom: 90px;
     left: 100%;
+    width: calc((100vw - #{$header-width}) * .33);
+    max-width: calc((#{$grid-container-width} - #{$header-width}) * .33);
   }
 
   &.is-active {
@@ -37,17 +38,19 @@
   & & {
     @include media(md) {
       padding-top: 70px;
+      width: calc((100vw - #{$header-width}) * .67);
+      max-width: calc((#{$grid-container-width} - #{$header-width}) * .67);
     }
   }
 }
 
 .site-nav__content {
-  display: flex;
-  height: 100%;
   // width: 100%;
-  flex-direction: column;
 
   @include media(md) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     padding-left: 70px;
 
     .site-nav--sub & {
