@@ -28,8 +28,10 @@
 .section__nav-link {
   font-weight: $font-weight-medium;
   border-bottom: 1px solid $middlebury-blue;
+
   &:hover,
   &:focus {
     text-decoration: none;
+    border: 0;
   }
 }
