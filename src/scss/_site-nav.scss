@@ -1,31 +1,10 @@
 .site-nav {
   // height: 100%;
-
-  @include media(md) {
-  }
+  min-width: 100%;
+  // white-space: nowrap;
 }
 
-.site-nav__body {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  flex-direction: column;
-
-  @include media(md) {
-    border-left: 1px solid $brand-secondary-dark;
-  }
-}
-
-.site-nav__main {
-  flex: 1;
-
-  @include media(md) {
-    display: flex;
-  }
-}
-
-.site-nav__footer {
-  flex: 0 1 auto;
+.site-nav--top {
 }
 
 .site-nav--sub {
@@ -33,7 +12,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  min-width: 100%;
   background-color: $middlebury-blue;
   height: 100%;
 
@@ -48,19 +27,48 @@
     display: block;
     z-index: 5;
   }
-}
 
-.site-nav--secondary {
-  @include media(md) {
-    padding-top: 214px; // TODO: find a solution w/o a magic number
+  &:first-of-type {
+    @include media(md) {
+      padding-top: 214px; // TODO: find a solution w/o a magic number
+    }
+  }
+
+  & & {
+    @include media(md) {
+      padding-top: 70px;
+    }
   }
 }
 
-.site-nav--tertiary {
+.site-nav__content {
+  display: flex;
+  height: 100%;
+  // width: 100%;
+  flex-direction: column;
+
   @include media(md) {
-    padding-top: 70px;
+    padding-left: 70px;
+
+    .site-nav--sub & {
+      border-left: 1px solid $brand-secondary-dark;
+      padding-left: 12%;
+    }
   }
 }
+
+.site-nav__body {
+  flex: 1;
+
+  @include media(md) {
+    display: flex;
+  }
+}
+
+.site-nav__footer {
+  flex: 0 1 auto;
+}
+
 
 .site-nav__col {
   @include media(md) {
@@ -73,7 +81,11 @@
   color: $light-blue;
   font-weight: $font-weight-bold;
   font-size: 12px;
-  display: block;
+  display: none;
+
+  @include media(md) {
+    display: block;
+  }
 }
 
 .site-nav__list {
@@ -82,14 +94,13 @@
 
 .site-nav__item {
   @include media(md) {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-right: 12%;
   }
 
   &:hover {
     @include media(md) {
       & > .site-nav {
-        display: flex;
+        display: block;
       }
     }
   }
@@ -104,10 +115,9 @@
 
   .site-nav--sub & {
     border-top: 1px solid $brand-secondary-dark;
+
     @include media(md) {
       border-top: 0;
-      padding-left: 0;
-      padding-right: 0;
     }
   }
 }
@@ -164,7 +174,7 @@
     padding-left: 70px;
 
     @include media(md) {
-      // padding-left: 0;
+      padding-left: 0;
     }
   }
 }
@@ -197,7 +207,5 @@
 
   @include media(md) {
     display: block;
-    // padding-left: 70px;
-    // padding-right: 70px;
   }
 }
