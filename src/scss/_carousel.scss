@@ -1,11 +1,13 @@
 .carousel {
-
-}
-
-.carousel__item {
-
+  @include media(sm) {
+    overflow: hidden;
+  }
 }
 
 .carousel__container {
+  transition: transform .2s;
+}
+
+.carousel__item {
 
 }

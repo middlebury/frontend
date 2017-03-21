@@ -1,39 +1,56 @@
-<div class="program-spotlight u-bg-primary" data-carousel>
+<div class="program-spotlight" data-carousel='{"show":{"580px":2,"960px":3}}'>
   <div class="row row--no-gutters">
-    <div class="col-sm-4">
-      {% embed 'partials/callout.twig' with {
-        light: true,
-        title: 'Program Spotlight',
-      } %}
-        {% block body %}
-          <a href="" class="button button--secondary">Explore our Programs</a>
-        {% endblock %}
-        {% block footer %}
-          <button class="button button--secondary button--circle" aria-label="Next" data-carousel-next disabled>
-            <i class="icon icon--chevron icon--chevron-right" aria-hidden="true">Next</i>
-          </button>
-          <button class="button button--secondary button--circle" aria-label="Previous" data-carousel-prev>
-            <i class="icon icon--chevron icon--chevron-left" aria-hidden="true">Previous</i>
-          </button>
-        {% endblock %}
-      {% endembed %}
+    <div class="col-sm-4 col-md-3">
+      <div class="program-spotlight__header">
+        {% embed 'partials/callout.twig' with {
+          light: true,
+          title: 'Program Spotlight',
+        } %}
+          {% block body %}
+            <a href="" class="button button--secondary">Explore our Programs</a>
+          {% endblock %}
+          {% block footer %}
+            <div class="program-spotlight__controls" aria-label="carousel controls" role="navigation">
+              <button class="button button--secondary button--circle" aria-label="Previous" data-carousel-prev>
+                <i class="icon icon--chevron icon--chevron-left" aria-hidden="true">Previous</i>
+              </button>
+              <button class="button button--secondary button--circle" aria-label="Next" data-carousel-next>
+                <i class="icon icon--chevron icon--chevron-right" aria-hidden="true">Next</i>
+              </button>
+            </div>
+          {% endblock %}
+        {% endembed %}
+      </div>
     </div>
-    <div class="col-sm-8">
+    <div class="col-sm-8 col-md-9">
 
       <div class="carousel">
         <div class="carousel__container" data-carousel-container>
 
-          <div class="row row--no-gutters">
-            {% for program in programs %}
-              <div class="col-sm-4" data-carousel-item>
-                <div class="program-spotlight__item">
-                  <img src="{{program.image}}" alt="{{program.image_alt}}">
-                  <h3 class="h4"><a href="{{program.href}}">{{program.title}}</a></h3>
-                  <p>{{program.blurb}}</p>
+          {% for program in programs %}
+            <div class="carousel__item" data-carousel-item>
+              <article class="spotlight-item{% if program.light == true %} spotlight-item--light{% endif %}">
+                <figure class="spotlight-item__image">
+                  <picture>
+                    <source srcset="{{program.image_md}} 1x, {{program.image_md_2x}} 2x" media="(min-width: 580px)">
+                    <source srcset="{{program.image_xs}} 1x, {{program.image_xs_2x}} 2x" media="(min-width: 0)">
+                    <img src="{{program.image_md}}" alt="{{program.image_alt}}">
+                  </picture>
+                </figure>
+                <div class="spotlight-item__content">
+                  <div class="spotlight-item__body">
+                    <h3 class="spotlight-item__title">
+                      <a href="{{program.href}}" class="spotlight-item__link">{{program.title}}</a>
+                    </h3>
+                    <p class="spotlight-item__blurb">{{program.blurb}}</p>
+                  </div>
+                  <footer class="spotlight-item__footer">
+                    <a href="#" class="button button--secondary button--circle">&rdquo;</a>
+                  </footer>
                 </div>
-              </div>
-            {% endfor %}
-          </div>
+              </article>
+            </div>
+          {% endfor %}
 
         </div>
       </div>

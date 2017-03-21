@@ -1,0 +1,66 @@
+.program-spotlight {
+  .carousel__container {
+    @include media(sm) {
+      display: flex;
+    }
+  }
+
+  .carousel__item {
+
+    &:nth-of-type(n+4) {
+      display: none;
+      @include media(sm) {
+        display: block;
+      }
+    }
+
+    @include media(sm) {
+      min-width: 50%;
+      height: 600px;
+    }
+
+    @include media(md) {
+      min-width: 33.33%;
+    }
+  }
+}
+
+.program-spotlight__header {
+  height: 100%;
+  padding: 50px;
+  background-color: $brand-primary;
+
+  .callout__title {
+    font-size: 30px;
+
+    @include media(md) {
+      font-size: 40px;
+    }
+  }
+
+  @include media(sm) {
+    padding-top: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+  }
+
+  @include media(md) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+.program-spotlight__controls {
+  display: none;
+
+  @include media(sm) {
+    display: block;
+  }
+}
+
+.program-spotlight__content {
+  @include media(sm) {
+    // display: flex;
+  }
+}
