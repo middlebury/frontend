@@ -92,21 +92,29 @@
 
         <div class="row row--dividers">
           {% for project in homepage.projects %}
+            <div class="{% if project.featured %}col-md-6{% else %}col-md-3{% endif %}">
+              <img src="{{project.image}}" alt="{{project.image_alt}}">
+              <h3><a href="{{project.link}}">{{project.title}}</a></h3>
+              <p>{{project.blurb}}</p>
+            </div>
+          {% endfor %}
+        </div>
 
-            {% if loop.index == 1 %}
-              <div class="col-md-6">
-                <img src="{{project.image}}" alt="{{project.image_alt}}">
-                <h3><a href="{{project.link}}">{{project.title}}</a></h3>
-                <p>{{project.summary}}</p>
-              </div>
-            {% else %}
-              <div class="col-md-3">
-                <img src="{{project.image}}" alt="{{project.image_alt}}">
-                <h3><a href="{{project.link}}">{{project.title}}</a></h3>
-                <p>{{project.summary}}</p>
-              </div>
-            {% endif %}
+      {% endblock %}
+    {% endembed %}
 
+    {% embed 'partials/section.twig' with {
+      title: 'Leaders in the Field'
+    } %}
+      {% block content %}
+
+        <div class="row row--dividers">
+          {% for item in homepage.leaders_in_the_field %}
+            <div class="{% if item.featured %}col-md-6{% else %}col-md-3{% endif %}">
+              <img src="{{item.image}}" alt="{{item.image_alt}}">
+              <h3><a href="{{item.link}}">{{item.title}}</a></h3>
+              <p>{{item.blurb}}</p>
+            </div>
           {% endfor %}
         </div>
 
