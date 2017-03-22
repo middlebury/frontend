@@ -14,6 +14,10 @@
   &:focus {
     text-decoration: none;
   }
+
+  &[disabled] {
+    opacity: .5;
+  }
 }
 
 .button--circle {
