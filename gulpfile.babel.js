@@ -14,6 +14,7 @@ import plumber from 'gulp-plumber';
 import data from 'gulp-data';
 import notify from 'gulp-notify';
 import eslint from 'gulp-eslint';
+import prettify from 'gulp-prettify';
 import yaml from 'js-yaml';
 import del from 'del';
 import babelify from 'babelify';
@@ -124,6 +125,7 @@ gulp.task('html', () => {
     .pipe(twig({
       base: './src/templates',
     }))
+    .pipe(prettify())
     .pipe(gulp.dest(paths.html.dest))
     .pipe(browserSync.stream());
 });
