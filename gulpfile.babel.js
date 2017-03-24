@@ -19,7 +19,7 @@ import yaml from 'js-yaml';
 import del from 'del';
 import babelify from 'babelify';
 import beeper from 'beeper';
-import { argv as args } from 'yargs';
+import {argv as args} from 'yargs';
 
 const production = !!args.production;
 
@@ -43,7 +43,7 @@ const paths = {
   }
 };
 
-const onError = function(err) {
+const onError = function (err) {
   notify.onError({
     title: 'Gulp error in ' + err.plugin,
     message: err.toString()
@@ -52,13 +52,11 @@ const onError = function(err) {
   this.emit('end');
 };
 
-gulp.task('clean', (done) => {
-  return del([
-    './dist/**/*.html',
-    './dist/**/*.js',
-    './dist/**/*.css',
-    './dist/img/*'
-  ], done);
+gulp.task('clean', done => {
+  return del(
+    ['./dist/**/*.html', './dist/**/*.js', './dist/**/*.css', './dist/img/*'],
+    done
+  );
 });
 
 gulp.task('server', () => {
@@ -73,11 +71,15 @@ gulp.task('server', () => {
 });
 
 gulp.task('styles', () => {
-  gulp.src(paths.styles.src)
-    .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(sass({
-      onError: browserSync.notify
-    })).on('error', sass.logError)
+  gulp
+    .src(paths.styles.src)
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(
+      sass({
+        onError: browserSync.notify
+      })
+    )
+    .on('error', sass.logError)
     .pipe(autoprefixer(['> 2%', 'last 2 versions']))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.styles.dest))
@@ -85,27 +87,26 @@ gulp.task('styles', () => {
 });
 
 gulp.task('scripts:lint', () => {
-  return gulp.src(paths.scripts.src)
-    .pipe(eslint())
-    .pipe(eslint.format());
-})
+  return gulp.src(paths.scripts.src).pipe(eslint()).pipe(eslint.format());
+});
 
-gulp.task('scripts', function() {
+gulp.task('scripts', function () {
   var b = browserify({
     entries: './src/js/main.js',
     debug: true,
-    transform: [[babelify, { presets: ['es2015'] }]]
+    transform: [[babelify, {presets: ['es2015']}]]
   });
 
-  return b.bundle()
-    .on('error', function(err) {
+  return b
+    .bundle()
+    .on('error', function (err) {
       console.error(err.message);
       beeper();
       this.emit('end');
     })
     .pipe(source('bundle.js'))
     .pipe(buffer())
-    .pipe(sourcemaps.init({ loadMaps: true }))
+    .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(uglify())
     .on('error', gutil.log)
     .pipe(sourcemaps.write('./'))
@@ -114,28 +115,37 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('html', () => {
-  gulp.src(paths.html.src)
-    .pipe(plumber({
-      errorHandler: onError
-    }))
-    .pipe(data(function(file) {
-      // TODO: how to import a glob?
-      return yaml.safeLoad(fs.readFileSync('./src/data/data.yml', 'utf8'));
-    }))
-    .pipe(twig({
-      base: './src/templates',
-    }))
+  gulp
+    .src(paths.html.src)
+    .pipe(
+      plumber({
+        errorHandler: onError
+      })
+    )
+    .pipe(
+      data(function (file) {
+        // TODO: how to import a glob?
+        return yaml.safeLoad(fs.readFileSync('./src/data/data.yml', 'utf8'));
+      })
+    )
+    .pipe(
+      twig({
+        base: './src/templates'
+      })
+    )
     .pipe(prettify())
     .pipe(gulp.dest(paths.html.dest))
     .pipe(browserSync.stream());
 });
 
 gulp.task('images', () => {
-  return gulp
-    .src(paths.images.src)
-    // TODO: compress images
-    .pipe(gulp.dest(paths.images.dest))
-    .pipe(browserSync.stream());
+  return (
+    gulp
+      .src(paths.images.src)
+      // TODO: compress images
+      .pipe(gulp.dest(paths.images.dest))
+      .pipe(browserSync.stream())
+  );
 });
 
 gulp.task('watch', () => {
