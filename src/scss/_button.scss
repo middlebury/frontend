@@ -20,6 +20,11 @@
   }
 }
 
+.button--block {
+  display: block;
+  width: 100%;
+}
+
 .button--circle {
   border-radius: 50%;
   height: 50px; // TODO: remove magic numbers
