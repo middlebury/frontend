@@ -1,0 +1,43 @@
+.projects {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.projects__item {
+  position: relative;
+  margin-bottom: 80px;
+  text-align: center;
+
+  &:not(:last-of-type) {
+    &:after {
+      content: '';
+      display: block;
+      width: 50px;
+      background-color: $white;
+      height: 2px;
+      position: absolute;
+      left: 50%;
+      bottom: -50px;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.projects__title {
+
+}
+
+.projects__link {
+  color: $white;
+}
+
+.projects__blurb {
+  color: $line-gray;
+  max-width: 550px;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.projects__footer {
+  text-align: center;
+}
