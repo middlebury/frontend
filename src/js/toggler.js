@@ -1,12 +1,19 @@
+import forEach from './utils/forEach';
+
 class Toggler {
   constructor(elem) {
-    const target = elem.getAttribute('data-toggle-target');
+    // this.isToggled = false;
+    this.elem = elem;
+    this.target = this.getTarget(this.elem);
 
-    this.isToggled = false;
     this.activeClass = 'is-toggled';
     this.enabledClass = 'has-toggler';
-    this.target = document.querySelector(target);
-    this.elem = elem;
+
+    const linked = elem.getAttribute('data-toggle-linked');
+    this.linked = linked ? `[data-toggle-linked="${linked}"]` : false;
+
+    const group = elem.getAttribute('data-toggle-group');
+    this.group = group ? `[data-toggle-group="${group}"]` : false;
 
     this.handleElemClick = this.handleElemClick.bind(this);
 
@@ -31,22 +38,67 @@ class Toggler {
     this.elem.addEventListener('click', this.handleElemClick);
   }
 
+  getTarget(elem) {
+    const target = elem.getAttribute('data-toggle-target');
+    return document.querySelector(target);
+  }
+
   handleElemClick(e) {
     e.preventDefault();
     this.toggle();
   }
 
+  closeGroup() {
+    const items = document.querySelectorAll(this.group);
+    if (items) {
+      forEach(items, item => {
+        const target = this.getTarget(item);
+        this.close(item, target);
+      });
+    }
+  }
+
+  toggleLinked() {
+    const items = document.querySelectorAll(this.linked);
+    if (items) {
+      forEach(items, item => {
+        const target = this.getTarget(item);
+        if (this.isToggled(item)) {
+          return this.close(item, target);
+        }
+        this.open(item, target);
+      });
+    }
+  }
+
+  open(elem, target) {
+    target.classList.add(this.activeClass);
+    elem.classList.add(this.activeClass);
+  }
+
+  close(elem, target) {
+    target.classList.remove(this.activeClass);
+    elem.classList.remove(this.activeClass);
+  }
+
+  isToggled(elem) {
+    return elem.classList.contains(this.activeClass);
+  }
+
   toggle() {
-    if (this.toggled) {
-      this.toggled = false;
-      this.target.classList.remove(this.activeClass);
-      this.elem.classList.remove(this.activeClass);
-      return;
+    if (!this.isToggled(this.elem)) {
+      if (this.group) {
+        this.closeGroup();
+      }
+
+      if (this.linked) {
+        this.toggleLinked();
+      }
+
+      return this.open(this.elem, this.target);
     }
 
-    this.toggled = true;
-    this.target.classList.add(this.activeClass);
-    this.elem.classList.add(this.activeClass);
+    this.close(this.elem, this.target);
   }
 }
 
