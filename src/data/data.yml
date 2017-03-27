@@ -128,6 +128,10 @@ programs:
     image_md: http://placehold.it/360x720
     image_md_2x: http://placehold.it/720x1440
     blurb: Develop the critical knowledge and skills to tackle complex environmental challenges, especially those posed by climate change.
+    card:
+      body: lorem ipsum dolor set
+      link_text: Learn more
+      link_href: '#'
   - title: Nonproliferation and Terrorism Studies
     light: true
     image_xs: http://placehold.it/580x435/000
