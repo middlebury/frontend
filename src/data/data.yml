@@ -123,13 +123,38 @@ missions:
 
 programs:
   - title: International Environmental Policy
-    image: http://placehold.it/400x400
+    image_xs: http://placehold.it/580x435
+    image_xs_2x: http://placehold.it/1160x870
+    image_md: http://placehold.it/360x720
+    image_md_2x: http://placehold.it/720x1440
     blurb: Develop the critical knowledge and skills to tackle complex environmental challenges, especially those posed by climate change.
   - title: Nonproliferation and Terrorism Studies
-    image: http://placehold.it/400x400
+    light: true
+    image_xs: http://placehold.it/580x435/000
+    image_xs_2x: http://placehold.it/1158x869/000
+    image_md: http://placehold.it/360x720/000
+    image_md_2x: http://placehold.it/720x1440/000
     blurb: Develop the knowledge and skills to address the spread of weapons of mass destruction (WMD) and respond effectively to terrorism.
   - title: Translation & Localization Management
-    image: http://placehold.it/400x400
+    light: true
+    image_xs: http://placehold.it/580x435/222
+    image_xs_2x: http://placehold.it/1158x869/222
+    image_md: http://placehold.it/360x720/222
+    image_md_2x: http://placehold.it/720x1440/222
+    blurb: Learn translation, consecutive and simultaneous interpretation to enhance cross-cultural understanding and communication.
+  - title: Translation & Localization Management
+    light: true
+    image_xs: http://placehold.it/580x435/222
+    image_xs_2x: http://placehold.it/1158x869/222
+    image_md: http://placehold.it/360x720/222
+    image_md_2x: http://placehold.it/720x1440/222
+    blurb: Learn translation, consecutive and simultaneous interpretation to enhance cross-cultural understanding and communication.
+  - title: Translation & Localization Management
+    light: true
+    image_xs: http://placehold.it/580x435/222
+    image_xs_2x: http://placehold.it/1158x869/222
+    image_md: http://placehold.it/360x720/222
+    image_md_2x: http://placehold.it/720x1440/222
     blurb: Learn translation, consecutive and simultaneous interpretation to enhance cross-cultural understanding and communication.
 
 homepage:
