@@ -1,21 +1,12 @@
-$grid-column-count: 12;
-$grid-gutter-width: 80px;
-$column-padding: $grid-gutter-width / 2;
-
-$gutters: (
-  xs: 32px,
-  md: 80px
-);
-
 .container {
   max-width: $grid-container-width;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 
-  @each $breakpoint in map-keys($gutters) {
+  @each $breakpoint in map-keys($grid-gutters) {
     @include media($breakpoint) {
-      $gutter: map-get($gutters, $breakpoint);
+      $gutter: map-get($grid-gutters, $breakpoint);
       padding-right: ($gutter / 2);
       padding-left:  ($gutter / 2);
     }
@@ -26,9 +17,9 @@ $gutters: (
   display: flex;
   flex-wrap: wrap;
 
-  @each $breakpoint in map-keys($gutters) {
+  @each $breakpoint in map-keys($grid-gutters) {
     @include media($breakpoint) {
-      $gutter: map-get($gutters, $breakpoint);
+      $gutter: map-get($grid-gutters, $breakpoint);
       margin-right: ($gutter / -2);
       margin-left:  ($gutter / -2);
     }
@@ -72,9 +63,9 @@ $gutters: (
   width: 100%;
   min-height: 1px;
 
-  @each $breakpoint in map-keys($gutters) {
+  @each $breakpoint in map-keys($grid-gutters) {
     @include media($breakpoint) {
-      $gutter: map-get($gutters, $breakpoint);
+      $gutter: map-get($grid-gutters, $breakpoint);
       padding-right: ($gutter / 2);
       padding-left:  ($gutter / 2);
     }

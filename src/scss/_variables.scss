@@ -12,6 +12,11 @@ $breakpoints: (
 );
 
 $grid-container-width: 1440px;
+$grid-column-count: 12;
+$grid-gutters: (
+  xs: 32px,
+  md: 80px
+);
 
 $header-width: 315px;
 
