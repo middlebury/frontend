@@ -51,9 +51,9 @@ class Toggler {
   closeGroup() {
     const items = document.querySelectorAll(this.group);
     if (items) {
-      forEach(items, item => {
-        const target = this.getTarget(item);
-        this.close(item, target);
+      forEach(items, elem => {
+        const target = this.getTarget(elem);
+        this.close(elem, target);
       });
     }
   }
@@ -61,12 +61,12 @@ class Toggler {
   toggleLinked() {
     const items = document.querySelectorAll(this.linked);
     if (items) {
-      forEach(items, item => {
-        const target = this.getTarget(item);
-          return this.close(item, target);
+      forEach(items, elem => {
+        const target = this.getTarget(elem);
         if (this.isToggled(target)) {
+          return this.close(elem, target);
         }
-        this.open(item, target);
+        this.open(elem, target);
       });
     }
   }
