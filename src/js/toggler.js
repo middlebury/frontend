@@ -63,8 +63,8 @@ class Toggler {
     if (items) {
       forEach(items, item => {
         const target = this.getTarget(item);
-        if (this.isToggled(item)) {
           return this.close(item, target);
+        if (this.isToggled(target)) {
         }
         this.open(item, target);
       });
@@ -86,7 +86,7 @@ class Toggler {
   }
 
   toggle() {
-    if (!this.isToggled(this.elem)) {
+    if (!this.isToggled(this.target)) {
       if (this.group) {
         this.closeGroup();
       }
