@@ -72,6 +72,23 @@
   }
 }
 
+.flex-first {
+  order: -1;
+}
+
+.flex-last {
+  order: 1;
+}
+
+@mixin order($size) {
+  .flex-#{$size}-first {
+    order: -1;
+  }
+  .flex-#{$size}-last {
+    order: 1;
+  }
+}
+
 @mixin grid($size, $columns: 12) {
   @for $index from 1 through $columns {
     .col-#{$size}-#{$index} {
@@ -112,6 +129,7 @@
       @include grid($breakpoint-name, $grid-column-count);
       // @include push($breakpoint-name, $grid-columns);
       // @include pull($breakpoint-name, $grid-columns);
+      @include order($breakpoint-name);
 
     }
   // }
