@@ -98,21 +98,21 @@
   }
 }
 
-// @mixin push($size, $columns: 12) {
-//   @for $index from 1 through $columns {
-//     .#{$grid-prefix}#{$size}-push-#{$index} {
-//       left: percentage(($index / $columns));
-//     }
-//   }
-// }
+@mixin push($size, $columns: 12) {
+  @for $index from 1 through $columns {
+    .col-#{$size}-push-#{$index} {
+      left: percentage(($index / $columns));
+    }
+  }
+}
 
-// @mixin pull($size, $columns: 12) {
-//   @for $index from 1 through $columns {
-//     .#{$grid-prefix}#{$size}-pull-#{$index} {
-//       right: percentage(($index / $columns));
-//     }
-//   }
-// }
+@mixin pull($size, $columns: 12) {
+  @for $index from 1 through $columns {
+    .col-#{$size}-pull-#{$index} {
+      right: percentage(($index / $columns));
+    }
+  }
+}
 
 @each $breakpoint-name, $breakpoint-size in $breakpoints {
 
@@ -127,8 +127,8 @@
     @include media($breakpoint-name) {
 
       @include grid($breakpoint-name, $grid-column-count);
-      // @include push($breakpoint-name, $grid-columns);
-      // @include pull($breakpoint-name, $grid-columns);
+      @include push($breakpoint-name, $grid-column-count);
+      @include pull($breakpoint-name, $grid-column-count);
       @include order($breakpoint-name);
 
     }
