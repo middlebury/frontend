@@ -1,0 +1,127 @@
+.homepage-hero {
+  position: relative;
+  height: 442px;
+  overflow: hidden;
+
+  @include media(sm) {
+    height: auto;
+    padding-top: 75%;
+  }
+
+  @include media(md) {
+    height: 675px;
+    padding-top: 0;
+    width: calc(100% - 315px);
+    margin-left: 315px;
+  }
+
+  @include media(lg) {
+    // height: auto;
+    // padding-top: 75%;
+  }
+}
+
+.homepage-hero__background {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+
+  @include media(sm) {
+    left: 0;
+    width: 100%;
+  }
+
+  @include media(md) {
+    left: -50%;
+    width: 200%;
+  }
+
+  @include media(lg) {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.homepage-hero__image {}
+
+.homepage-hero__content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(black, .5), transparent);
+
+  @include media(md) {
+    display: flex;
+  }
+}
+
+.homepage-hero__body {
+  padding: 30px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+
+  @include media(md) {
+    flex: 1;
+  }
+}
+
+.homepage-hero__title {
+  // font-size: rem(30);
+}
+
+.homepage-hero__link {
+  color: $white;
+}
+
+.homepage-hero__blurb {
+  color: $white;
+  display: none;
+
+  @include media(sm) {
+    display: block;
+  }
+}
+
+.homepage-hero__more-link {
+  display: none;
+
+  @include media(sm) {
+    display: block;
+  }
+}
+
+.homepage-hero__card-controls {
+  margin-top: 50px;
+}
+
+.homepage-hero__card {
+  background-color: $white;
+  padding: 30px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: calc(100% - #{map-get($grid-gutters, 'xs') / 2});
+  // width: $header-width;
+
+  @include media(sm) {
+  }
+
+  @include media(md) {
+    position: relative;
+    width: auto;
+    flex: 0 1 $header-width;
+  }
+
+  .homepage-hero__content.has-toggler & {
+    display: none;
+  }
+
+  .homepage-hero__content.is-toggled & {
+    display: block;
+  }
+}
