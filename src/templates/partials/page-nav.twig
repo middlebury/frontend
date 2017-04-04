@@ -1,0 +1,37 @@
+<nav class="page-nav" id="page-nav">
+  <ul class="page-nav__list">
+    {% for item in items %}
+
+      <li class="page-nav__item">
+        <a href="#" class="page-nav__link">{{item.text}}</a>
+
+        {% if item.items %}
+
+        <ul class="page-nav__list">
+          {% for item in items %}
+
+            <li class="page-nav__item">
+              <a href="#" class="page-nav__link">{{item.text}}</a>
+            </li>
+
+          {% endfor %}
+        </ul>
+
+        {% endif %}
+      </li>
+
+    {% endfor %}
+  </ul>
+
+  {% if callouts %}
+
+    <ul class="page-nav__list page-nav__list--callouts">
+      {% for item in callouts %}
+        <li class="page-nav__item">
+          <a href="#" class="page-nav__link">{{item.text}}</a>
+        </li>
+      {% endfor %}
+    </ul>
+
+  {% endif %}
+</nav>
