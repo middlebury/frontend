@@ -1,0 +1,31 @@
+.page-callout {
+  display: flex;
+  background-color: $bright-green;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @include media(md) {
+    background-color: transparent;
+  }
+}
+
+.page-callout__title {
+  flex: 1;
+  padding: 16px;
+  border-right: 1px solid #0bab92;
+
+  @include media(md) {
+    padding: 30px;
+    border-right: 0;
+  }
+
+  @include media(md) {
+    padding: 0;
+    padding-right: 30px;
+  }
+}
+
+.page-callout__button {
+  flex: 0 1 auto;
+}
+
