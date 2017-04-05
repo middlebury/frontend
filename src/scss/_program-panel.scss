@@ -1,0 +1,123 @@
+.program-panel {
+  position: relative;
+  background-color: $gray;
+
+  // HACK: need to use classes for this or a component
+  blockquote {
+    p {
+      font-family: $font-family-sans-serif;
+      color: $white;
+      line-height: 1.5;
+    }
+
+    > p {
+      margin-bottom: 50px;
+      text-indent: -.4em;
+
+      @include media(sm) {
+        font-size: 22px;
+      }
+
+      @include media(lg) {
+        font-size: 24px;
+      }
+    }
+  }
+
+  @include media(md) {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+  }
+}
+
+.program-panel__media {
+  @include media(md) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: .8;
+  }
+
+  img {
+    display: block;
+  }
+}
+
+.program-panel__content {
+  @include media(sm) {
+    display: flex;
+  }
+
+  @include media(md) {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.program-panel__item {
+  padding: 30px;
+  text-align: center;
+
+  @include media(sm) {
+    padding: 60px;
+    flex: 1;
+  }
+
+  @include media(md) {
+    background-color: transparent !important;
+    max-width: 40%;
+  }
+
+  @include media(lg) {
+    max-width: 33.33%;
+  }
+}
+
+// These modifiers have to be before panel item so background color becomes transparent on medium and up
+.program-panel__item--primary {
+  background-color: $teal;
+
+  @include media(md) {
+    text-align: left;
+  }
+}
+
+.program-panel__item--secondary {
+  background-color: $middlebury-blue;
+}
+
+.program-panel__stats-title {
+  color: $white;
+  margin-bottom: 40px;
+}
+
+.program-panel__stat-label {
+  display: block;
+  font-size: 40px;
+  font-style: normal;
+  font-family: $font-family-serif;
+  line-height: 1;
+  margin-bottom: 10px;
+  color: $white;
+}
+
+.program-panel__stat-text {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  color: $white;
+  font-size: 18px;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid $white;
+  }
+}
