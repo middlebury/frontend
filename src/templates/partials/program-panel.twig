@@ -1,0 +1,46 @@
+<figure class="program-panel">
+  <div class="program-panel__media">
+
+    <picture>
+      <source srcset="/img/program-panel-xl.jpg" media="(min-width: 960px)">
+      <source srcset="/img/program-panel-lg.jpg" media="(min-width: 580px)">
+      <source srcset="/img/program-panel-md.jpg" media="(min-width: 320px)">
+      <source srcset="/img/program-panel-xs.jpg">
+      <img src="/img/program-panel-xl.jpg" alt="">
+    </picture>
+
+  </div>
+  {#should this be the figcaption?#}
+  <div class="program-panel__content">
+
+    <figcaption class="program-panel__item program-panel__item--primary">
+      <blockquote>
+        <p>&ldquo;I liked the Institute’s focused approach — there was nothing unnecessary or outdated in the curriculum. And we were all empowered to help influence and evolve the curriculum ourselves. My degree was a great combination of working and studying.&rdquo;</p>
+        <footer>
+          <p><strong>James Peter</strong><br>
+          Alumnus</p>
+        </footer>
+      </blockquote>
+    </figcaption>
+    <div class="program-panel__item program-panel__item--secondary">
+
+      <h3 class="program-panel__stats-title">Class of 2016</h3>
+
+      {% set stats = [
+        { label: '81%', text: 'Using Language &amp; Cultural Skills' },
+        { label: '85%', text: 'Pursing Career Passions' },
+        { label: '88%', text: 'Living Aligned with Values' }
+      ] %}
+
+      <dl>
+        {% for item in stats %}
+          <dt class="program-panel__stat-label">{{item.label}}</dt>
+          <dd class="program-panel__stat-text">{{item.text}}</dd>
+        {% endfor %}
+      </dl>
+
+      <a href="#" class="program-panel__stats-button button button--secondary">View Employment Report</a>
+
+    </div>
+  </div>
+</figure>
