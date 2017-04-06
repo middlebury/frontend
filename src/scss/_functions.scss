@@ -5,3 +5,7 @@
 @function rem($target, $base: 16) {
   @return $target / $base * 1rem;
 }
+
+@function aspect-ratio($width, $height) {
+  @return ($height / $width) * 100%;
+}
