@@ -1,0 +1,27 @@
+<header class="page-header">
+
+  <div class="row">
+    <div class="col-md-7 col-lg-8 flex-last flex-md-first">
+
+      {% include 'partials/breadcrumb.twig' with { items: breadcrumb } %}
+
+      <div class="row">
+        <div class="col-8 col-md-12">
+          <h1>{{title}}</h1>
+        </div>
+        <div class="col-auto u-hide-md">
+          <a href="#page-nav" role="button" aria-label="Toggle page navigation" aria-controls="page-nav" data-toggle-target="#page-nav">
+            <span aria-hidden="true">&darr;</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-5 col-lg-4 flex-first flex-md-last">
+      <div class="page-callout">
+        <span class="page-callout__title">Application for Spring 2017 Now Open</span>
+        <a href="#" class="page-callout__button button button--primary">Apply Now</a>
+      </div>
+    </div>
+  </div>
+</header>
