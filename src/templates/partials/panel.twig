@@ -1,0 +1,27 @@
+{#TODO: change panel to use grid for panel__body and panel__footer#}
+<section class="panel{% if modifier %} panel--{{modifier}}{% endif %}">
+  <div class="panel__media">
+  </div>
+  <div class="panel__content">
+    <div class="panel__body">
+      <h1 class="panel__label">{{label}}</h1>
+      <h2 class="panel__title"><a href="{{link_url}}" class="panel__link">{{title}} <span aria-hidden="true">&rsaquo;</span></a></h2>
+      <div class="panel__blurb">
+        {{blurb}}
+      </div>
+      <a href="{{link_url}}" class="panel__button button button--secondary">{{link_text}}</a>
+    </div>
+    {% if list %}
+      <div class="panel__footer">
+        <ul class="panel__list">
+          {% for item in list %}
+            <li class="panel__list-item">
+              <a href="{{item.url}}" class="panel__list-link">{{item.text}}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        <a href="{{list_more_link_url}}" class="panel__more-link">{{list_more_link_text}}</a>
+      </div>
+    {% endif %}
+  </div>
+</section>
