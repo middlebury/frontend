@@ -31,4 +31,6 @@ function main(select) {
 
 const select = document.querySelector('.js-mission-selector');
 
-main(select);
+if (select) {
+  main(select);
+}
