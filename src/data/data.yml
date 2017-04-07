@@ -219,3 +219,59 @@ global_projects:
     blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
   - title: Teach for America
     blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
+
+six_articles:
+  - title: Environmental Sustainability
+    image: http://placehold.it/500x500
+    image_xs: http://placehold.it/85x65
+    image_md: http://placehold.it/155x115
+    image_lg: http://placehold.it/536x402
+    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
+  - title: Environmental Sustainability
+    image: http://placehold.it/500x500
+    image_xs: http://placehold.it/85x65
+    image_md: http://placehold.it/155x115
+    image_lg: http://placehold.it/536x402
+    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
+  - title: Environmental Sustainability
+    image: http://placehold.it/500x500
+    image_xs: http://placehold.it/85x65
+    image_md: http://placehold.it/155x115
+    image_lg: http://placehold.it/536x402
+    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
+  - title: Environmental Sustainability
+    image: http://placehold.it/500x500
+    image_xs: http://placehold.it/85x65
+    image_md: http://placehold.it/155x115
+    image_lg: http://placehold.it/536x402
+    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
+  - title: Environmental Sustainability
+    image: http://placehold.it/500x500
+    image_xs: http://placehold.it/85x65
+    image_md: http://placehold.it/155x115
+    image_lg: http://placehold.it/536x402
+    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
+  - title: Environmental Sustainability
+    image: http://placehold.it/500x500
+    image_xs: http://placehold.it/85x65
+    image_md: http://placehold.it/155x115
+    image_lg: http://placehold.it/536x402
+    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
+
+three_articles:
+  - title: Environmental Sustainability
+    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
+  - title: Environmental Sustainability
+    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
+  - title: Environmental Sustainability
+    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
+
+four_articles:
+  - title: Environmental Sustainability
+    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
+  - title: Environmental Sustainability
+    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
+  - title: Environmental Sustainability
+    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
+  - title: Environmental Sustainability
+    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
