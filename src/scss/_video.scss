@@ -1,0 +1,23 @@
+.video {
+  position: relative;
+  padding-top: aspect-ratio(16, 9);
+  overflow: hidden;
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.video__controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.video__icon {
+  font-size: 10px;
+}
