@@ -1,0 +1,28 @@
+.card {
+  margin-bottom: 50px;
+  @include clearfix();
+
+  @include media(sm) {
+
+  }
+}
+
+.card__header {
+  @include media(sm) {
+
+  }
+}
+
+.card__media {
+  float: right;
+
+  @include media(sm) {
+
+  }
+}
+
+.card__body {
+  @include media(sm) {
+
+  }
+}
