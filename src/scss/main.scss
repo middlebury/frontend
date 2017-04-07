@@ -5,6 +5,8 @@
 
 // resets
 @import '../../node_modules/normalize.css/normalize';
+@import '../../node_modules/bootstrap/scss/mixins/breakpoints';
+@import '../../node_modules/bootstrap/scss/mixins/grid';
 @import '../../node_modules/bootstrap/scss/mixins/screen-reader';
 @import '../../node_modules/bootstrap/scss/mixins/clearfix';
 
