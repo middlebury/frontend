@@ -1,0 +1,76 @@
+{% extends "layout.twig" %}
+
+{% block page %}
+  <article class="page">
+
+    {% include 'partials/page-header.twig' with {
+      title: 'Areas of Focus'
+    } %}
+
+    <section class="section">
+      <figure>
+        <picture>
+          <source srcset="//placehold.it/1440x570 1x, //placehold.it/2880x1140 2x" media="(min-width: 580px)">
+          <source srcset="//placehold.it/720x285 1x, //placehold.it/2880x1140 2x">
+          <img src="//placehold.it/2880x1140" alt="">
+        </picture>
+        <figcaption>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-push-1 col-md-8">
+                <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum a nulla magni molestias? Natus itaque adipisci molestiae mollitia voluptatum fugit illum hic reiciendis, omnis fugiat sapiente vitae, quia nobis eaque!</p>
+              </div>
+            </div>
+          </div>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-push-1 col-md-10">
+            <div class="row row--dividers">
+              {% for i in 0..5 %}
+                <div class="col-sm-6 col-md-4">
+                  {% include 'partials/card.twig' with {
+                    title: 'Human Rights & Social Change',
+                    blurb: '<p>Donec gravida posuere arcu. Nulla facilisi. Phasellus imperdiet. Vestibulum at metus. Integer euismod. Nullam placerat rhoncus sapien. Ut euismod. Praesent libero. Morbi pellentesque libero sit amet ante. Maecenas tellus</p>'
+                  } %}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        {% include 'partials/mission-selector.twig' %}
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="video">
+              <video src="" poster="//placehold.it/788x444"></video>
+              <div class="video__controls">
+                <button class="button button--primary">Play <span class="video__icon" aria-hidden="true">&#9658;</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p class="tag">Sustainable Development</p>
+            <h3><a href="#">Sustainable Agriculture in the Sacred Valley</a></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi laboriosam id mollitia et in nulla, repellendus minus dignissimos eligendi laudantium ab accusamus fugit odio, nostrum saepe. Numquam nisi, alias nobis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% include 'partials/callout-group.twig' %}
+  </article>
+{% endblock %}

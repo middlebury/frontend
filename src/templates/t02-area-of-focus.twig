@@ -1,0 +1,61 @@
+{% extends "layout.twig" %}
+
+{% block page %}
+
+  {% include 'partials/pageheader.twig' with {
+    title: 'Sustainable Development',
+    breadcrumb: [
+      { text: 'Areas of Focus' },
+    ]
+  } %}
+
+  <section class="section">
+    {% embed 'partials/page-hero.twig' %}
+      {% block content %}
+        <h3>We reach across boundaries and marry principles with real-world engagement</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit facilis adipisci quod neque ab, dicta laudantium, repudiandae optio dignissimos necessitatibus dolorem possimus, tenetur consequuntur deleniti eligendi omnis, porro eveniet nemo.</p>
+        <p>Accusamus doloribus beatae tenetur, consectetur hic laboriosam, voluptates, nesciunt officiis minima obcaecati id. Amet quidem doloremque odit delectus illum illo, ea expedita aut eius natus, impedit sed iste maxime libero.</p>
+      {% endblock %}
+    {% endembed %}
+  </section>
+
+  <div class="container">
+    {% embed 'partials/section.twig' with {
+      title: 'Latest Thinking',
+      moreLinkText: 'View all'
+    } %}
+      {% block content %}
+          <div class="row row--dividers">
+            {% for i in 0..3 %}
+              <div class="col-md-3">
+                {% include 'partials/card.twig' with {
+                  title: 'test',
+                  blurb: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam asperiores consectetur, voluptate, officiis nisi magni quasi reprehenderit.</p>'
+                } %}
+              </div>
+            {% endfor %}
+          </div>
+      {% endblock %}
+    {% endembed %}
+  </div>
+
+  {% include 'partials/panel.twig' with {
+    label: 'Program Spotlight',
+    title: 'International Environmental Policy',
+    link_text: 'Explore and Compare Programs',
+    link_url: '#',
+    modifier: 'primary',
+    blurb: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quia a amet maiores modi illum nisi quidem fugit quo totam. Minus odio harum maxime, sapiente aspernatur eligendi, quidem eaque tenetur.</p>',
+    list: [
+      { text: 'Master of Public Administration (MPA)', url: '#' },
+      { text: 'Master of Public Administration (MPA)', url: '#' },
+      { text: 'Master of Public Administration (MPA)', url: '#' },
+      { text: 'Master of Public Administration (MPA)', url: '#' },
+    ],
+    list_more_link_text: 'View all Sustainable Development Programs',
+    list_more_link_url: '#'
+  } %}
+
+  {% include 'partials/callout-group.twig' %}
+
+{% endblock %}
