@@ -1,29 +1,12 @@
 .container {
   max-width: $grid-container-width;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
 
-  @each $breakpoint in map-keys($grid-gutters) {
-    @include media($breakpoint) {
-      $gutter: map-get($grid-gutters, $breakpoint);
-      padding-right: ($gutter / 2);
-      padding-left:  ($gutter / 2);
-    }
-  }
+  @include make-container();
 }
 
 .row {
-  display: flex;
-  flex-wrap: wrap;
-
-  @each $breakpoint in map-keys($grid-gutters) {
-    @include media($breakpoint) {
-      $gutter: map-get($grid-gutters, $breakpoint);
-      margin-right: ($gutter / -2);
-      margin-left:  ($gutter / -2);
-    }
-  }
+  @include make-row();
 }
 
 .row--no-gutters {
@@ -59,17 +42,7 @@
 }
 
 [class^="col-"] {
-  position: relative;
-  width: 100%;
-  min-height: 1px;
-
-  @each $breakpoint in map-keys($grid-gutters) {
-    @include media($breakpoint) {
-      $gutter: map-get($grid-gutters, $breakpoint);
-      padding-right: ($gutter / 2);
-      padding-left:  ($gutter / 2);
-    }
-  }
+  @include make-col-ready();
 }
 
 .flex-first {
@@ -92,8 +65,7 @@
 @mixin grid($size, $columns: 12) {
   @for $index from 1 through $columns {
     .col-#{$size}-#{$index} {
-      flex: 0 0 percentage($index / $columns);
-      max-width: percentage($index / $columns);
+      @include make-col($index);
     }
   }
 }
@@ -101,7 +73,7 @@
 @mixin push($size, $columns: 12) {
   @for $index from 1 through $columns {
     .col-#{$size}-push-#{$index} {
-      left: percentage(($index / $columns));
+      @include make-col-push($index);
     }
   }
 }
@@ -109,29 +81,19 @@
 @mixin pull($size, $columns: 12) {
   @for $index from 1 through $columns {
     .col-#{$size}-pull-#{$index} {
-      right: percentage(($index / $columns));
+      @include make-col-pull($index);
     }
   }
 }
 
-@each $breakpoint-name, $breakpoint-size in $breakpoints {
+@each $breakpoint-name, $breakpoint-size in $grid-breakpoints {
+  @include media($breakpoint-name) {
 
-  // @if $breakpoint-name == "xs" {
+    @include grid($breakpoint-name, $grid-columns);
+    @include push($breakpoint-name, $grid-columns);
+    @include pull($breakpoint-name, $grid-columns);
+    @include order($breakpoint-name);
+    @include auto($breakpoint-name);
 
-    // @include grid($breakpoint-name, $grid-columns);
-    // @include push($breakpoint-name, $grid-columns);
-    // @include pull($breakpoint-name, $grid-columns);
-
-  // } @else {
-
-    @include media($breakpoint-name) {
-
-      @include grid($breakpoint-name, $grid-column-count);
-      @include push($breakpoint-name, $grid-column-count);
-      @include pull($breakpoint-name, $grid-column-count);
-      @include order($breakpoint-name);
-
-    }
-  // }
-
+  }
 }

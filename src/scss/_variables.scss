@@ -1,9 +1,16 @@
-$screen-sm: em(580);
-$screen-md: em(960);
-$screen-lg: em(1200);
-$screen-xl: em(1440);
+$screen-sm: 580px;
+$screen-md: 960px;
+$screen-lg: 1200px;
+$screen-xl: 1440px;
 
-$breakpoints: (
+// need to remove this somehow
+$grid-container-width: 1440px;
+
+// variable names based on bootstrap v4 grid variables
+$grid-columns: 12;
+$grid-gutter-base-width: 30px;
+
+$grid-breakpoints: (
   xs: 0,
   sm: $screen-sm,
   md: $screen-md,
@@ -11,12 +18,16 @@ $breakpoints: (
   xl: $screen-xl,
 );
 
-$grid-container-width: 1440px;
-$grid-column-count: 12;
-$grid-gutters: (
+$grid-gutter-widths: (
   xs: 32px,
-  md: 80px
+  sm: 60px
 );
+
+$container-max-widths: (
+  sm: 1440px,
+);
+
+// custom configs
 
 $header-width: 315px;
 

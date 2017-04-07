@@ -1,7 +1,7 @@
-
-@mixin media($breakpoint) {
+// TODO: remove me and use BS v4 media-breakpoint-up mixin
+@mixin media($breakpoint, $breakpoints: $grid-breakpoints) {
   @if map-has-key($breakpoints, $breakpoint) {
-    @media screen and (min-width: #{map-get($breakpoints, $breakpoint)}) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
       @content;
     }
   }
