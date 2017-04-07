@@ -21,6 +21,9 @@ class Toggler {
   }
 
   init() {
+    if (!this.target) {
+      return;
+    }
     this.addListeners();
     this.elem.classList.add(this.enabledClass);
     this.target.classList.add(this.enabledClass);
@@ -72,13 +75,21 @@ class Toggler {
   }
 
   open(elem, target) {
-    target.classList.add(this.activeClass);
-    elem.classList.add(this.activeClass);
+    if (target) {
+      target.classList.add(this.activeClass);
+    }
+    if (elem) {
+      elem.classList.add(this.activeClass);
+    }
   }
 
   close(elem, target) {
-    target.classList.remove(this.activeClass);
-    elem.classList.remove(this.activeClass);
+    if (target) {
+      target.classList.remove(this.activeClass);
+    }
+    if (elem) {
+      elem.classList.remove(this.activeClass);
+    }
   }
 
   isToggled(elem) {
