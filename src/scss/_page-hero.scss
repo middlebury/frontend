@@ -1,0 +1,33 @@
+.page-hero {
+  @include media(md) {
+    position: relative;
+    padding-top: aspect-ratio(4, 3);
+    overflow: hidden;
+  }
+}
+
+.page-hero__media {
+  position: relative;
+  margin-left: -#{map-get($grid-gutter-widths, xs) / 2};
+  margin-right: -#{map-get($grid-gutter-widths, xs) / 2};
+  z-index: 1;
+
+  @include media(md) {
+    @include absolute();
+  }
+}
+
+.page-hero__content {
+  position: relative;
+  z-index: 2;
+  background-color: $white;
+  margin-top: -130px;
+  padding: 20px;
+
+  @include media(md) {
+    padding: 50px;
+    max-width: 500px;
+    margin-top: 0;
+    @include absolute(30px, 30px, auto, auto);
+  }
+}
