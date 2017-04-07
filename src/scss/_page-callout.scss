@@ -1,31 +1,29 @@
 .page-callout {
-  display: flex;
   background-color: $bright-green;
-  align-items: center;
-  margin-bottom: 20px;
+  display: flex;
 
   @include media(md) {
     background-color: transparent;
   }
 }
 
-.page-callout__title {
+.page-callout__content {
   flex: 1;
-  padding: 16px;
   border-right: 1px solid #0bab92;
+  align-items: center;
+  display: flex;
+  @include make-gutters();
 
   @include media(md) {
-    padding: 30px;
     border-right: 0;
-  }
-
-  @include media(md) {
-    padding: 0;
-    padding-right: 30px;
+    padding-left: 0;
   }
 }
 
+.page-callout__action {
+}
+
 .page-callout__button {
-  flex: 0 1 auto;
+  // flex: 0 1 auto;
 }
 
