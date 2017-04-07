@@ -1,0 +1,20 @@
+<article class="card">
+  {% if image %}
+    <div class="card__media">
+      <a href={{href}}>
+        <picture>
+          <source srcset="{{image_lg}} 1x" media="(min-width: 960px)">
+          <source srcset="{{image_md}} 1x" media="(min-width: 580px)">
+          <source srcset="{{image_xs}} 1x">
+          <img src="{{image_lg}}" alt="">
+        </picture>
+      </a>
+    </div>
+  {% endif %}
+  <header class="card__header">
+    <h3><a href="{{href}}">{{title}}</a></h3>
+  </header>
+  <div class="card__body">
+    {{blurb}}
+  </div>
+</article>
