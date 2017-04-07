@@ -105,7 +105,7 @@
   right: 0;
   top: 0;
   height: 100%;
-  width: calc(100% - #{map-get($grid-gutters, 'xs') / 2});
+  width: calc(100% - #{map-get($grid-gutter-widths, 'xs') / 2});
   // width: $header-width;
 
   @include media(sm) {
