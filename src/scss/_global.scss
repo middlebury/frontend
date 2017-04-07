@@ -18,6 +18,14 @@ figure {
   margin: 0;
 }
 
+blockquote {
+  margin: 0;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
 dl,
 dt,
 dd {
