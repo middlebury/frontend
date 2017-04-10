@@ -1,0 +1,24 @@
+<article class="event-teaser">
+  <figure class="event-teaser__media">
+    <a href="{{url}}">
+      <picture>
+        <source srcset="http:////quickimage.it/160x120" media="(min-width: 580px)">
+        <source srcset="http:////quickimage.it/100x75">
+        <img src="http:////quickimage.it/160x120" srcset="" alt="" class="event-teaser__img">
+      </picture>
+    </a>
+  </figure>
+  <div class="event-teaser__body">
+    <p class="event-teaser__meta"><strong>{{date}}</strong></p>
+    <p class="event-teaser__meta"><span>{{time}}</span>, <span>{{local}}</span></p>
+    <h3 class="event-teaser__title"><a href="#">{{title}}</a></h3>
+    <div class="event-teaser__blurb">
+      {{blurb}}
+    </div>
+    <ul class="event-teaser__metalist">
+      {% for item in metalist %}
+        <li class="event-teaser__metaitem"><em>{{item.text}}</em></li>
+      {% endfor %}
+    </ul>
+  </div>
+</article>

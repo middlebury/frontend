@@ -1,0 +1,75 @@
+.event-teaser {
+  @include clearfix;
+  margin-bottom: 30px;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid $line-gray;
+  }
+
+  @include media(md) {
+    display: flex;
+  }
+}
+
+.event-teaser__media {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 20px;
+
+  @include media(md) {
+    float: none;
+    flex: 0 0 auto;
+    order: 1;
+    margin-bottom: 0;
+  }
+}
+
+.event-teaser__body {
+  @include media(md) {
+    flex: 1;
+    order: -1;
+  }
+}
+
+.event-teaser__title {
+
+}
+
+.event-teaser__meta {
+  color: $black;
+  font-size: 18px;
+  font-family: $font-family-sans-serif;
+  margin-bottom: 0;
+
+  &:last-of-type {
+    margin-bottom: 20px;
+  }
+
+  @include media(md) {
+    font-size: 20px;
+  }
+}
+
+.event-teaser__date {
+
+}
+
+.event-teaser__metalist {
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.event-teaser__metaitem {
+  color: $gray;
+  font-size: 14px;
+
+  &:not(:first-of-type) {
+    margin-right: 5px;
+    margin-left: 5px;
+
+    &:before {
+      content: '|';
+    }
+  }
+}
+
