@@ -59,11 +59,11 @@
   position: relative;
 }
 
-.element-invisible {
+.sr-only {
   @include sr-only();
 }
 
-.element-focusable {
+.sr-focusable {
   @include sr-only-focusable();
 }
   }
