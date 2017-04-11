@@ -41,6 +41,10 @@ a {
   }
 }
 
+strong {
+  font-weight: $font-weight-semibold;
+}
+
 p {
   color: $text-gray;
   font-family: $font-family-serif;
