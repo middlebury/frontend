@@ -4,9 +4,39 @@
 
 <article class="page">
 
-  {% include 'partials/pageheader.twig' with {
+  {% include 'partials/page-header.twig' with {
     title: 'Events',
+    callout_link_text: 'Sign up for events email',
+    callout_link_url: '#',
   } %}
+
+  <div class="container">
+    <div class="row row--dividers">
+      <div class="col-md-push-1 col-md-7">
+
+        {% for i in 0..7 %}
+          {% include 'partials/event-teaser.twig' with {
+            title: 'Building a Sustainable Career in Social Impact – Breaking into the Field',
+            link: '#',
+            time: '6:00 PM',
+            date: 'Mon Jul 25, 2016',
+            local: 'McCone Irvine Auditorium',
+            blurb: '<p>Four guest speakers will bring to light realities of the true costs of war experienced by today\'s veteran and military community.</p>',
+            metalist: [
+              { text: 'Closed to the Public' },
+              { text: 'Lorem ipsum dolor set' },
+            ]
+          } %}
+        {% endfor %}
+
+        {% include 'partials/pagination.twig' %}
+
+      </div>
+      <div class="col-md-push-1 col-md-4">
+        sidebar
+      </div>
+    </div>
+  </div>
 
 </article>
 
