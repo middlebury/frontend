@@ -15,6 +15,7 @@ import data from 'gulp-data';
 import notify from 'gulp-notify';
 import eslint from 'gulp-eslint';
 import prettify from 'gulp-prettify';
+import imagemin from 'gulp-imagemin';
 import yaml from 'js-yaml';
 import del from 'del';
 import babelify from 'babelify';
@@ -142,7 +143,7 @@ gulp.task('images', () => {
   return (
     gulp
       .src(paths.images.src)
-      // TODO: compress images
+      .pipe(imagemin())
       .pipe(gulp.dest(paths.images.dest))
       .pipe(browserSync.stream())
   );

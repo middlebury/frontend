@@ -29,6 +29,7 @@
     "gulp-csscomb-lint": "^0.0.2",
     "gulp-data": "^1.2.1",
     "gulp-eslint": "^3.0.1",
+    "gulp-imagemin": "^3.2.0",
     "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.1.0",
     "gulp-prettify": "^0.5.0",
