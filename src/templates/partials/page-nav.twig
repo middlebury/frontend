@@ -2,7 +2,7 @@
   <ul class="page-nav__list">
     {% for item in items %}
 
-      <li class="page-nav__item">
+      <li class="page-nav__item{% if item.active %} page-nav__item--active{% endif %}">
         <a href="#" class="page-nav__link">{{item.text}}</a>
 
         {% if item.items %}
