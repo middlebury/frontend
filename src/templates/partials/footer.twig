@@ -8,17 +8,18 @@
             light: true,
             preheader: 'Help us help the world',
             title: 'Support the Institute',
-            social_links: social_links
+            social_links: social_links,
+            icons: icons
           } %}
             {% block body %}
               <a href="" class="button button--secondary">Make a Gift</a>
             {% endblock %}
             {% block footer %}
-              <ul class="social-links">
+              <ul class="social-links social-links--light">
                 {% for item in social_links %}
                   <li class="social-links__item">
                     <a href="{{item.href}}" class="social-links__link">
-                      <i class="icon icon--social icon--{{item.slug}}">{{item.text}}</i>
+                      {{icons[item.slug]}}
                     </a>
                   </li>
                 {% endfor %}

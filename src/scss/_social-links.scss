@@ -1,6 +1,4 @@
 .social-links {
-
-
 }
 
 .social-links__item {
@@ -18,6 +16,21 @@
 
   &:hover,
   &:focus {
-    opacity: 0.5;
+    .social-links--light & {
+      opacity: 0.5;
+    }
+
+    svg {
+      fill: $middlebury-blue;
+    }
+  }
+
+  svg {
+    fill: $bright-green;
+    transition: .2s;
+
+    .social-links--light & {
+      fill: $white;
+    }
   }
 }

@@ -1,0 +1,9 @@
+<ul class="social-links">
+  {% for item in items %}
+    <li class="social-links__item">
+      <a href="{{item.href}}" class="social-links__link">
+        {{icons[item.slug]}}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
