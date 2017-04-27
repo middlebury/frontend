@@ -1,18 +1,15 @@
 <header class="site-header">
   <div class="site-header__primary">
     <div class="site-header__brand">
-      <a href="/" class="site-header__home-link">
-        <!--  TODO: can we even use picture here or need an h1 with image replacement? -->
-        <picture>
-          <source srcset="img/miis-logo.png" media="(min-width: 960px)">
-          <source srcset="img/miis-logo-left.png">
-          <img src="img/miis-logo-left.png" alt="{{site_title}}">
-        </picture>
-      </a>
+      <h1 class="site-header__title">
+        <a href="/" class="site-header__home-link">
+          <span class="site-header__logo">{{site_title}}</span>
+        </a>
+      </h1>
     </div>
 
     <div class="site-header__menu-button">
-      <a href="#site-nav" class="site-menu-button" data-toggle-target=".site-header__secondary">
+      <a href="#site-nav" class="site-menu-button" data-toggle-target=".site-header">
         <span class="site-menu-button__text site-menu-button__text--open">Menu</span>
         <span class="site-menu-button__text site-menu-button__text--close">Close</span>
         <i class="site-menu-button__icon icon icon--hamburger"></i>
