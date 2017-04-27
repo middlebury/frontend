@@ -113,6 +113,14 @@ social_links:
     href: http://go.miis.edu/youtube
     slug: youtube
 
+contact_social_links:
+  - text: Google Plus
+    href: http://go.miis.edu/googleplus
+    slug: googleplus
+  - text: Instagram
+    href: http://go.miis.edu/instagram
+    slug: instagram
+
 missions:
   - text: I want to take on the world’s most important sustainability challenges.
   - text: I want to create positive social change in international business
