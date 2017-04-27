@@ -275,6 +275,67 @@ four_articles:
     blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
   - title: Environmental Sustainability
     blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
+
+quicklinks:
+  - title: New Students
+    items:
+    - text: Course Registration
+    - text: Degree Maps
+    - text: Financial Aid
+    - text: Moving to Monterey
+    - text: Orientation
+    - text: International Students
+
+  - title: Internatonal Studies
+    items:
+    - text: Scholarships & Financial Aid
+    - text: Maintaining Visa Status
+    - text: Visas
+    - text: Work Authorization
+    - text: Driver's License
+    - text: Social Security Number
+
+  - title: Campus Security
+    items:
+    - text: Bicycle Registration
+    - text: Emergency Response
+    - text: Guidelines (PDF)
+    - text: Lost & Found
+    - text: Parking
+    - text: Upload Photo ID Picture
+
+  - title: Academic Resources
+    items:
+    - text: Academic Calendar
+    - text: Course Catalog
+    - text: Course Schedules
+    - text: iLearn (Moodle)
+    - text: Institutional Review Board
+    - text: Library
+    - text: Policies & Standards Manual
+    - text: Writing Center
+
+  - title: Online Resources
+    items:
+    - text: BannerWeb
+    - text: Directory
+    - text: Events Calendar
+    - text: GSIPM Course Syllabi
+    - text: Canvas
+    - text: iLearn (Moodle)
+    - text: Library
+
+  - title: Career Services
+    items:
+    - text: CACS Resources
+    - text: Explore Careers by Field
+    - text: Meet Your Advisor
+    - text: Attend Career Events
+    - text: Find Internships
+    - text: Search for Jobs
+    - text: Zócalo
+
+
 icons:
   linkedin: <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>social-linkedin</title><path d="M18.5 0h-17C.7 0 0 .6 0 1.4v17.1c0 .9.7 1.5 1.5 1.5h17c.8 0 1.5-.6 1.5-1.4V1.4c0-.8-.7-1.4-1.5-1.4zM6.1 16.7H3v-9h3v9h.1zM4.6 6.5c-1 0-1.7-.7-1.7-1.6 0-.9.7-1.6 1.7-1.6s1.7.7 1.7 1.6c0 .9-.7 1.6-1.7 1.6zM17 16.7h-3v-4.8c0-1.2-.4-2-1.5-2-.8 0-1.3.6-1.5 1.1-.1.2-.1.5-.1.7v5h-3v-9h3V9c.4-.6 1.1-1.5 2.7-1.5 2 0 3.5 1.3 3.5 4.1v5.1H17zM10.8 9c-.1 0-.1 0 0 0z"  fill-rule="evenodd"/></svg>
   facebook: <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>social-facebook</title><path d="M18.9 0H1.1C.5 0 0 .5 0 1.1v17.8c0 .6.5 1.1 1.1 1.1h9.6v-7.7H8.1v-3h2.6V7c0-2.6 1.6-4 3.9-4 1.1 0 2.1.1 2.3.1v2.7h-1.6c-1.3 0-1.5.6-1.5 1.5v1.9h3l-.4 3h-2.6V20h5.1c.6 0 1.1-.5 1.1-1.1V1.1c0-.6-.5-1.1-1.1-1.1z" /></svg>
