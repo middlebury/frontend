@@ -1,0 +1,143 @@
+{% extends "layout.twig" %}
+
+{% block page %}
+  <article class="page">
+
+    {% include 'partials/page-header.twig' with {
+      title: 'Information for New Students',
+      breadcrumb: [
+        { text: 'Student Services', href: '#' }
+      ]
+    } %}
+
+    {% embed 'partials/page-hero.twig' %}
+      {% block content %}
+        <h3>Course Selection required by September 13, 2017</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ratione exercitationem reiciendis sit quo recusandae, eos minus repellendus quisquam aut, ab expedita, ut possimus eius accusantium natus illum veniam.</p>
+      {% endblock %}
+    {% endembed %}
+
+    <div class="container">
+      {% embed 'partials/section.twig' with {
+        title: 'We’re here to help you no matter where in the world you are'
+      } %}
+        {% block content %}
+          <div class="row row--dividers">
+            {% for i in 0..3 %}
+              <div class="col-md-3">
+                {% include 'partials/card.twig' with {
+                  image: 'http://placehold.it/536x402',
+                  image_lg: 'http://placehold.it/536x402',
+                  title: 'Student Services',
+                  blurb: '<p>Donec gravida posuere arcu. Nulla facilisi. Phasellus imperdiet. Vestibulum at metus. Integer euismod. Nullam placerat rhoncus sapien. Ut euismod. Praesent libero. Morbi pellentesque libero sit amet ante. Maecenas tellus.</p>'
+                } %}
+              </div>
+            {% endfor %}
+          </div>
+        {% endblock %}
+      {% endembed %}
+    </div>
+
+    <div class="container">
+      {% embed 'partials/section.twig' with {
+        title: 'Quick Links and Resources'
+      } %}
+        {% block content %}
+          {% for section in quicklinks %}
+            {% include 'partials/callout-links.twig' with section %}
+          {% endfor %}
+        {% endblock %}
+      {% endembed %}
+    </div>
+
+    <div class="container">
+      {% embed 'partials/section.twig' with {
+        title: 'Upcoming Events'
+      } %}
+        {% block content %}
+          <div class="row row--dividers">
+            {% for i in 0..3 %}
+              <div class="col-md-3">
+                <article>
+                  <p><span>Jul 12, 2016</span> | <span>1:00 PM</span></p>
+                  <h3><a href="#">SILP Cultural Exposition</a></h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa quaerat reiciendis, enim, mollitia quibusdam eos neque tenetur eum earum nihil illo at, optio facilis fugit dolorum accusantium quas cupiditate alias.</p>
+                  <ul>
+                    <li>Open to the Public</li>
+                    <li>Holland Student Center</li>
+                  </ul>
+                </article>
+              </div>
+            {% endfor %}
+          </div>
+        {% endblock %}
+      {% endembed %}
+    </div>
+
+    <div class="container">
+      <section class="section">
+        <div class="row row--dividers">
+          <div class="col-md-3">
+            <header>
+              <h1 class="h3">The latest from our student blogs</h1>
+            </header>
+          </div>
+          <div class="col-md-8">
+
+            {% embed 'partials/media-object.twig' %}
+              {% block media %}
+                <a href="{{url}}">
+                  <picture>
+                    <source srcset="http://placehold.it/160x120" media="(min-width: 580px)">
+                    <source srcset="http://placehold.it/100x75">
+                    <img src="http://placehold.it/160x120" srcset="" alt="" class="media-object__img">
+                  </picture>
+                </a>
+              {% endblock %}
+              {% block body %}
+                <h3><a href="#">DPMI DC: An East Coaster Returns Home | GSIPM Blog</a></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit vel culpa sapiente adipisci beatae architecto recusandae dolore eveniet. Rem dolore provident similique blanditiis quod, asperiores quae numquam sequi minus ex.</p>
+              {% endblock %}
+            {% endembed %}
+
+            {% embed 'partials/media-object.twig' %}
+              {% block media %}
+                <a href="{{url}}">
+                  <picture>
+                    <source srcset="http://placehold.it/160x120" media="(min-width: 580px)">
+                    <source srcset="http://placehold.it/100x75">
+                    <img src="http://placehold.it/160x120" srcset="" alt="" class="media-object__img">
+                  </picture>
+                </a>
+              {% endblock %}
+              {% block body %}
+                <h3><a href="#">DPMI DC: An East Coaster Returns Home | GSIPM Blog</a></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit vel culpa sapiente adipisci beatae architecto recusandae dolore eveniet. Rem dolore provident similique blanditiis quod, asperiores quae numquam sequi minus ex.</p>
+              {% endblock %}
+            {% endembed %}
+
+            {% embed 'partials/media-object.twig' %}
+              {% block media %}
+                <a href="{{url}}">
+                  <picture>
+                    <source srcset="http://placehold.it/160x120" media="(min-width: 580px)">
+                    <source srcset="http://placehold.it/100x75">
+                    <img src="http://placehold.it/160x120" srcset="" alt="" class="media-object__img">
+                  </picture>
+                </a>
+              {% endblock %}
+              {% block body %}
+                <h3><a href="#">DPMI DC: An East Coaster Returns Home | GSIPM Blog</a></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit vel culpa sapiente adipisci beatae architecto recusandae dolore eveniet. Rem dolore provident similique blanditiis quod, asperiores quae numquam sequi minus ex.</p>
+              {% endblock %}
+            {% endembed %}
+
+          </div>
+        </div>
+      </section>
+    </div>
+
+    {#TODO: PSD has pagination/load more button but do we want that?#}
+
+  </article>
+{% endblock %}
