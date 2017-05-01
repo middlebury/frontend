@@ -1,0 +1,13 @@
+.u-is-toggled-show {
+  display: none;
+
+  .is-toggled > & {
+    display: block;
+  }
+}
+
+.u-is-toggled-hide {
+  .is-toggled > & {
+    display: none;
+  }
+}

@@ -2,24 +2,25 @@
   .carousel__container {
     @include media(sm) {
       display: flex;
+      height: 600px;
     }
   }
 
   .carousel__item {
-
     &:nth-of-type(n+4) {
       display: none;
+
       @include media(sm) {
         display: block;
+        flex: 1;
       }
     }
 
-    @include media(sm) {
+    @include media(md) {
       min-width: 50%;
-      height: 600px;
     }
 
-    @include media(md) {
+    @include media(lg) {
       min-width: 33.33%;
     }
   }

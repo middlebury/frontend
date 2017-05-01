@@ -11,6 +11,10 @@
   &:focus {
     text-decoration: none;
   }
+
+  @include media(md) {
+    text-align: center;
+  }
 }
 
 .site-menu-button__text {
@@ -19,6 +23,12 @@
 
   @include media(sm) {
     display: inline-block;
+  }
+
+  @include media(md) {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }
 

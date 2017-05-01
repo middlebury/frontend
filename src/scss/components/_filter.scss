@@ -1,0 +1,76 @@
+.filter {
+  &:not(:last-of-type) {
+    border-bottom: 1px solid $line-gray;
+  }
+
+  &:first-of-type {
+    border-top: 1px solid $line-gray;
+  }
+}
+
+.filter__button {
+  display: block;
+  padding: 40px 30px;
+  font-size: 18px;
+  color: $black;
+  transition: background-color .2s;
+
+  &:hover,
+  &.is-toggled {
+    background-color: $teal;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.filter__button-icon {
+  transition: transform .2s;
+
+  .filter__button:hover &,
+  .filter__button.is-toggled & {
+    svg {
+      fill: white;
+    }
+  }
+
+  .filter__button.is-toggled & {
+    transform: rotate(-180deg);
+  }
+}
+
+.filter__content {
+  padding: 40px 30px;
+
+  &.has-toggler {
+    display: none;
+  }
+
+  &.is-toggled {
+    display: block;
+  }
+}
+
+.filter__group {
+  &:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+}
+
+.filter__label {
+  cursor: pointer;
+}
+
+.filter__control {
+  appearance: none;
+}
+
+.filter__text {
+  padding-left: 30px;
+
+  .filter__control:checked + & {
+    color: $teal;
+    background-image: url('/img/icon-filter-select.svg');
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+}

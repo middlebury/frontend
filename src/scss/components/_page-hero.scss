@@ -1,4 +1,6 @@
 .page-hero {
+  margin-bottom: 60px;
+
   @include media(md) {
     position: relative;
     padding-top: aspect-ratio(4, 3);

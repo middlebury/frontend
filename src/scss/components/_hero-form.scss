@@ -1,0 +1,68 @@
+.hero-form {
+  position: relative;
+}
+
+.hero-form__media {
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 30px;
+  }
+}
+
+.hero-form__content {
+  @include media(md) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 40px;
+  }
+
+  @include media(lg) {
+    padding-top: 115px;
+  }
+}
+
+.hero-form__text {
+  font-size: 20px;
+  color: $gray;
+
+  @include media(md) {
+    color: $white;
+    font-size: 22px;
+  }
+}
+
+.hero-form__group {
+  display: flex;
+}
+
+.hero-form__control {
+  padding: 20px;
+  font-size: 20px;
+  font-family: $font-family-serif;
+  flex: 1;
+  border: 0;
+  background-color: $warm-gray;
+
+  @include media(md) {
+    background-color: $white;
+  }
+}
+
+.hero-form__label {
+
+}
+
+.hero-form__button {
+  flex: 0 0 auto;
+  background-color: transparent;
+  border: 0;
+  padding: 20px;
+  line-height: inherit;
+  cursor: pointer;
+  background-color: $warm-gray;
+
+  @include media(md) {
+    background-color: $white;
+  }
+}

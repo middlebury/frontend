@@ -1,9 +1,10 @@
 .button {
   display: inline-block;
   font-family: $font-family-sans-serif;
-  white-space: nowrap;
   text-align: center;
+  // white-space: nowrap; // removed for program spotlight button
   padding: 13px 20px;
+  // height: 50px;
   font-size: 16px;
   border-radius: 0;
   border: 0;
@@ -19,6 +20,7 @@
 
   &[disabled] {
     opacity: .5;
+    pointer-events: none;
   }
 }
 
@@ -28,13 +30,17 @@
 }
 
 .button--circle {
-  border-radius: 50%;
-  height: 50px; // TODO: remove magic numbers
-  width: 50px;
+  border-radius: 10em;
+  // height: 50px; // TODO: remove magic numbers
+  // width: 50px;
 }
 
 .button--sm {
   font-size: 14px;
+}
+
+.button--xl {
+  padding: 40px 30px; // matches .filter__button sizes
 }
 
 .button--primary {
@@ -57,4 +63,9 @@
     background-color: #022543; // TODO: move me to variable
     color: $white;
   }
+}
+
+.button--tertiary {
+  background-color: $middlebury-blue;
+  color: $white;
 }

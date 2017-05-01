@@ -4,34 +4,6 @@
   text-indent: -9999px;
 }
 
-.icon--chevron {
-  height: 16px;
-  width: 16px;
-  transform: rotate(-45deg);
-  border: 2px solid $brand-primary;
-  border-left-width: 0;
-  border-bottom-width: 0;
-  top: 6px;
-}
-
-.icon--chevron-right {
-
-}
-
-.icon--chevron-left {
-
-}
-
-.icon--chevron-up {
-  height: 16px;
-  width: 16px;
-  transform: rotate(-45deg);
-  border: 2px solid $brand-primary;
-  border-left-width: 0;
-  border-bottom-width: 0;
-  top: 6px;
-}
-
 .icon--search {
   width: 16px;
   height: 16px;
@@ -91,20 +63,5 @@ $hamburger-bar-offset:  $hamburger-bar-height + $hamburger-spacing;
 
   &:after {
     top: $hamburger-bar-offset;
-  }
-}
-
-$icons-social: ('facebook', 'twitter', 'youtube', 'linkedin');
-
-.icon--social {
-  background-repeat: no-repeat;
-  height: 20px;
-  width: 27px;
-  background-position: left center;
-}
-
-@each $icon in $icons-social {
-  .icon--#{$icon} {
-    background-image: url('/img/icon-#{$icon}.svg');
   }
 }

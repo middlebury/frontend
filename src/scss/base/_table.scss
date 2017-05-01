@@ -1,0 +1,76 @@
+table {
+  width: 100%;
+  margin-bottom: 50px;
+  border-top: 5px solid $line-gray;
+
+  @include media(md) {
+    border-top: 0;
+    border-collapse: collapse;
+  }
+}
+
+thead {}
+
+th {
+  display: none;
+  border-bottom: 5px solid $line-gray;
+  font-size: 14px;
+  font-weight: $font-weight-semibold;
+  text-align: left;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @include media(md) {
+    display: table-cell;
+    white-space: nowrap;
+
+    &:not(:last-of-type) {
+      padding-right: 20px;
+    }
+  }
+}
+
+tr {
+  &:not(:last-of-type) {
+
+    td {
+
+      &:last-of-type {
+        border-bottom: 1px solid $line-gray;
+      }
+
+      @include media(md) {
+        border-bottom: 1px solid $line-gray;
+      }
+    }
+
+  }
+}
+
+td {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: $font-family-serif;
+  color: $text-gray;
+
+  &:before {
+    content: attr(data-th);
+    font-size: 14px;
+    font-weight: $font-weight-semibold;
+    display: block;
+
+    @include media(md) {
+      display: none;
+    }
+  }
+
+  @include media(md) {
+    vertical-align: top;
+    display: table-cell;
+
+    &:not(:last-of-type) {
+      padding-right: 20px;
+    }
+  }
+}

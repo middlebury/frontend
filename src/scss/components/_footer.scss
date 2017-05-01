@@ -8,6 +8,14 @@
   height: 100%;
   text-align: center;
 
+  .callout {
+    // text-align: center; // TODO: Change me to a text align util class e.g. text-xs-center, text-lg-left
+
+    @include media(lg) {
+      // text-align: left;
+    }
+  }
+
   @include media(lg) {
     text-align: left;
     border-bottom: 0;

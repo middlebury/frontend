@@ -1,5 +1,5 @@
 .card {
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
   @include clearfix();
 
   @include media(sm) {
@@ -13,11 +13,23 @@
   }
 }
 
+.card__title {
+  font-size: 22px;
+}
+
+.card__title--lg {
+  @include media(lg) {
+    font-size: 38px;
+    line-height: 44px;
+  }
+}
+
 .card__media {
   float: right;
 
   @include media(sm) {
-
+    margin-bottom: 20px;
+    float: none;
   }
 }
 

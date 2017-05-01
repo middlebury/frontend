@@ -1,0 +1,21 @@
+.page {
+  min-height: 800px;
+}
+
+.page__nav {
+  @include media(md) {
+    float: right;
+    position: relative;
+    // faked grid column
+    // we can't use @include make-col() because it generates flexbox code, which we don't want.
+    width: percentage(3 / $grid-columns);
+    margin-left: percentage(1 / $grid-columns);
+    margin-right: percentage(1 / $grid-columns);
+  }
+
+  @include media(lg) {
+    // padding-right: 100px;
+    // margin-left: 75px;
+  }
+}
+

@@ -1,0 +1,56 @@
+.typography {
+  ul,
+  ol {
+    margin-bottom: 20px;
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+
+  li {
+    font-family: $font-family-serif;
+    color: $gray;
+
+    &:not(:last-of-type) {
+      margin-bottom: 5px;
+    }
+  }
+
+  dl {
+    margin-bottom: 50px;
+
+    @include media(md) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  dt {
+    font-weight: $font-weight-semibold;
+    padding-top: 20px;
+
+    @include media(md) {
+      padding-bottom: 20px;
+      flex: 0 0 50%;
+
+      &:not(:last-of-type) {
+        border-bottom: 1px solid $line-gray;
+      }
+    }
+  }
+
+  dd {
+    color: $gray;
+    font-family: $font-family-serif;
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $line-gray;
+    }
+
+    @include media(md) {
+      flex: 0 0 50%;
+      padding-top: 20px;
+    }
+  }
+}

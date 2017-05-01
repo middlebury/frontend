@@ -1,8 +1,10 @@
 .container {
-  max-width: $grid-container-width;
-  width: 100%;
-
   @include make-container();
+
+  @include media(lg) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
 
 .row {
@@ -13,36 +15,60 @@
   margin-left: 0;
   margin-right: 0;
 
-  > [class^="col-"] {
+  > [class^="col"] {
     padding-right: 0;
     padding-left: 0;
   }
 }
 
 .row--dividers {
+  // margin-bottom: 20px;
+  // margin-top: 20px;
 
-  > [class^="col-"]:not(:last-of-type) {
+  > [class^="col"]:not(:last-of-type) {
     border-bottom: 1px solid $line-gray;
-    margin-bottom: 20px;
-    margin-top: 20px;
+  }
 
-    @include media(md) {
+  @include media(md) {
+    > [class^="col"]:not(:last-of-type) {
       border-bottom: 0;
-      margin-bottom: 0;
-      margin-top: 0;
       border-right: 1px solid $line-gray;
     }
   }
 }
 
+@mixin dividers($breakpoint) {
+  .row-#{$breakpoint}-dividers-y {
+    @include media-breakpoint-only($breakpoint) {
+      > [class^="col"]:not(:last-of-type) {
+        border-bottom: 1px solid $line-gray;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .row-#{$breakpoint}-dividers-x {
+    @include media-breakpoint-only($breakpoint) {
+      > [class^="col"]:not(:last-of-type) {
+        border-right: 1px solid $line-gray;
+      }
+    }
+  }
+}
+
 .row--dividers-light {
-  > [class^="col-"]:not(:last-of-type) {
+  > [class^="col"]:not(:last-of-type) {
     border-color: $brand-secondary-dark;
   }
 }
 
-[class^="col-"] {
+[class^="col"] {
   @include make-col-ready();
+}
+
+.col--collapse {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .flex-first {
@@ -53,12 +79,24 @@
   order: 1;
 }
 
+.col-collapse {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 @mixin order($size) {
   .flex-#{$size}-first {
     order: -1;
   }
   .flex-#{$size}-last {
     order: 1;
+  }
+}
+
+@mixin auto($size) {
+  .col-#{$size}-auto {
+    flex: 0 0 auto;
+    width: auto;
   }
 }
 
@@ -94,6 +132,6 @@
     @include pull($breakpoint-name, $grid-columns);
     @include order($breakpoint-name);
     @include auto($breakpoint-name);
-
+    @include dividers($breakpoint-name);
   }
 }

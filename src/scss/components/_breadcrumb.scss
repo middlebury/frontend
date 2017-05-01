@@ -4,21 +4,29 @@
 
 .breadcrumb__list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .breadcrumb__item {
   &:not(:last-of-type) {
-    display: none;
     margin-right: 5px;
 
     &:after {
       content: '/';
     }
+  }
 
-    @include media(sm) {
-      display: block;
-    }
+  display: none;
+
+  @include media(md) {
+    display: block;
+  }
+
+  &:last-child {
+    display: block;
   }
 }
 
-.breadcrumb__link {}
+.breadcrumb__link {
+  font-size: 14px;
+}
