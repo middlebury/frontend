@@ -6,8 +6,11 @@
     flex-direction: column;
     display: flex;
     height: 100%;
-    min-height: 270px;
     text-align: left;
+  }
+
+  @include media(lg) {
+    min-height: 270px;
   }
 }
 
