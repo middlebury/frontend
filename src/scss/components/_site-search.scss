@@ -12,19 +12,20 @@
   @include sr-only();
 }
 
-.site-search__field {
-  font-family: $font-family-sans-serif;
-  appearance: none;
-  background-color: transparent;
+.site-search__control {
   border: 0;
   color: $white;
   padding: 20px 30px;
-  font-size: 15px; // We should use 16 since it does not cause a zoom effect when zoomed
-  width: 100%;
+  background-color: $brand-primary-dark;
+
+  &:focus {
+    background-color: $brand-primary-dark;
+  }
 
   @include media(md) {
     padding: 0;
     font-size: 14px;
+    background-color: transparent;
 
     &:focus {
       // padding: 5px;
@@ -44,7 +45,12 @@
 
 .site-search__button {
   color: $white;
+  font-size: 16px;
   padding: 20px 30px;
+
+  svg {
+    fill: $white;
+  }
 
   @include media(md) {
     padding: 0;
