@@ -16,7 +16,7 @@
       {% endif %}
     </div>
 
-    {% if callout_title %}
+    {% if callout_title or callout_link_text %}
       <div class="page-header__secondary">
         {% include 'partials/page-callout.twig' with {
           title: callout_title,
