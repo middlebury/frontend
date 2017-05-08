@@ -64,6 +64,10 @@
   &:focus {
     background-color: #022543; // TODO: move me to variable
     color: $white;
+
+    svg {
+      fill: $white;
+    }
   }
 }
 
