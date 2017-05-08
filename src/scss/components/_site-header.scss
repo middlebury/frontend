@@ -49,20 +49,20 @@
 // TODO: change to svg
 .site-header__logo {
   display: block;
-  background-image: url('/img/miis-logo-left.png');
+  background-image: url('/images/miis-logo-left.png');
   background-repeat: no-repeat;
   background-position: center;
   width: 213px;
   height: 40px;
 
   @include media(md) {
-    background-image: url('/img/miis-logo-shield.png');
+    background-image: url('/images/miis-logo-shield.png');
     width: 53px;
     height: 59px;
 
     .home &,
     .site-header.is-toggled & {
-      background-image: url('/img/miis-logo.png');
+      background-image: url('/images/miis-logo.png');
       width: 244px;
       height: 107px;
     }

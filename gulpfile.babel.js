@@ -39,8 +39,8 @@ const paths = {
     dest: './dist/js/'
   },
   images: {
-    src: './src/img/*.{png,jpg,svg}',
-    dest: './dist/img/'
+    src: './src/images/*.{png,jpg,svg}',
+    dest: './dist/images/'
   }
 };
 
@@ -55,7 +55,12 @@ const onError = function (err) {
 
 gulp.task('clean', done => {
   return del(
-    ['./dist/**/*.html', './dist/**/*.js', './dist/**/*.css', './dist/img/*'],
+    [
+      './dist/**/*.html',
+      './dist/**/*.js',
+      './dist/**/*.css',
+      './dist/images/*'
+    ],
     done
   );
 });
