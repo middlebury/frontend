@@ -9,15 +9,21 @@
 }
 
 .panel--primary {
-  background-color: $middlebury-blue;
+  @include media-breakpoint-down(md) {
+    background-color: $middlebury-blue;
+  }
 }
 
 .panel--secondary {
-  background-color: $teal;
+  @include media-breakpoint-down(md) {
+    background-color: $teal;
+  }
 }
 
 .panel--tertiary {
-  background-color: $dark-green;
+  @include media-breakpoint-down(md) {
+    background-color: $dark-green;
+  }
 }
 
 .panel__media {
