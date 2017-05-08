@@ -140,13 +140,11 @@ gulp.task('html', () => {
 });
 
 gulp.task('images', () => {
-  return (
-    gulp
-      .src(paths.images.src)
-      .pipe(imagemin())
-      .pipe(gulp.dest(paths.images.dest))
-      .pipe(browserSync.stream())
-  );
+  return gulp
+    .src(paths.images.src)
+    .pipe(imagemin())
+    .pipe(gulp.dest(paths.images.dest))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('watch', () => {
