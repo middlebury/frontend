@@ -30,9 +30,11 @@
 }
 
 .button--circle {
-  border-radius: 10em;
-  // height: 50px; // TODO: remove magic numbers
-  // width: 50px;
+  border-radius: 100%;
+}
+
+.button--pill {
+  border-radius: 9999px;
 }
 
 .button--sm {
