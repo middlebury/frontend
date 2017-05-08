@@ -3,7 +3,9 @@ class Navigation {
     this.elem = elem;
     this.backButton = this.elem.querySelector('[data-nav-back]');
     // TODO: need to only get first level of items for this list and not any sub navs
-    this.items = this.elem.querySelectorAll('[data-nav-list] > li > [data-nav-link]');
+    this.items = this.elem.querySelectorAll(
+      '[data-nav-list] > li > [data-nav-link]'
+    );
 
     this.handleItemClick = this.handleItemClick.bind(this);
     this.handleBackClick = this.handleBackClick.bind(this);
@@ -21,7 +23,9 @@ class Navigation {
   }
 
   addListeners() {
-    this.items.forEach(item => item.addEventListener('click', this.handleItemClick));
+    this.items.forEach(item =>
+      item.addEventListener('click', this.handleItemClick)
+    );
     this.backButton.addEventListener('click', this.handleBackClick);
   }
 
