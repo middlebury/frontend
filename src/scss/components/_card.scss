@@ -44,4 +44,8 @@
   @include media(sm) {
 
   }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
