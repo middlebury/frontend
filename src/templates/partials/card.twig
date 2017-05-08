@@ -12,7 +12,8 @@
     </div>
   {% endif %}
   <header class="card__header">
-    <h3><a href="{{href}}">{{title}}</a></h3>
+    {% if tag %}<p class="card__tag">{{tag}}</p>{% endif %}
+    <h3 class="card__title {% if image_lg is empty %}card__title--lg{% endif %}"><a href="{{href}}" class="card__link">{{title}}</a></h3>
   </header>
   <div class="card__body">
     {{blurb}}
