@@ -1,0 +1,59 @@
+<form action="">
+
+  {% include 'partials/filter.twig' with {
+    id: 'view-filter',
+    label: 'View All',
+    items: [
+      {
+        id: 'view-filter-all',
+        value: 'view-all',
+        label: 'View all',
+        active: true
+      },
+      {
+        id: 'view-filter-public',
+        value: 'public',
+        label: 'Open to Public'
+      },
+      {
+        id: 'view-filter-private',
+        value: 'private',
+        label: 'Closed to Public'
+      },
+    ]
+  } %}
+
+  {% include 'partials/filter.twig' with {
+    id: 'upcoming-filter',
+    label: 'Upcoming',
+    items: [
+      {
+        value: 'view-all',
+        label: 'All Events'
+      }
+    ]
+  } %}
+
+  {% include 'partials/filter.twig' with {
+    id: 'date-filter',
+    label: 'All Dates',
+    items: [
+      {
+        value: 'view-all',
+        label: 'All Dates'
+      }
+    ]
+  } %}
+
+  {% include 'partials/filter.twig' with {
+    id: 'topic-filter',
+    label: 'All Topics',
+    items: [
+      {
+        value: 'view-all',
+        label: 'All Topics'
+      }
+    ]
+  } %}
+
+</form>
