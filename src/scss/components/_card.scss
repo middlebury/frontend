@@ -1,5 +1,5 @@
 .card {
-  // margin-bottom: 50px;
+  margin-bottom: 50px;
   @include clearfix();
 
   @include media(sm) {
