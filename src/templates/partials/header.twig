@@ -24,10 +24,12 @@
           <div class="input-group">
             <div class="input-group__field">
               <label for="site-search" class="site-search__label">Search the Institute</label>
-              <input type="search" placeholder="Search the Institute" class="site-search__field" id="site-search">
+              <input type="search" placeholder="Search the Institute" class="site-search__control form__control" id="site-search">
             </div>
             <div class="input-group__button">
-              <button type="submit" class="button site-search__button"><i class="icon icon--search">Search</i></button>
+              <button type="submit" class="button site-search__button">
+                <span aria-hidden="true">{{icons.search_md}}</span>
+              </button>
             </div>
           </div>
         </form>
