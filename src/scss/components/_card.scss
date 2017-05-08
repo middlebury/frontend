@@ -13,6 +13,13 @@
   }
 }
 
+.card__tag {
+  font-family: $font-family-sans-serif;
+  font-weight: $font-weight-medium;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
 .card__title {
   font-size: 22px;
 }
