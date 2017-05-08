@@ -1,9 +1,11 @@
 <section class="section{% if class %} {{class}}{% endif %}">
   <header class="section__header">
     <h2 class="section__title">{{title}}</h2>
+    {% if moreLinkHref and moreLinkText %}
     <div class="section__nav">
       <a href="{{moreLinkHref}}" class="section__nav-link">{{moreLinkText}}</a>
     </div>
+    {% endif %}
   </header>
   {% block content %}{% endblock %}
 </section>
