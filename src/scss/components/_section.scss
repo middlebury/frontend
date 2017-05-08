@@ -2,6 +2,19 @@
   margin-bottom: 100px;
 }
 
+.section--aside {
+  margin-bottom: 80px;
+
+  .section__header {
+    margin-bottom: 25px;
+  }
+
+  .section__title {
+    color: $gray;
+    font-size: 13px;
+  }
+}
+
 .section--projects {
   background-image: url('/img/projects-bg.jpg');
   background-size: cover;
