@@ -100,7 +100,7 @@
   }
 }
 
-@mixin grid($size, $columns: 12) {
+@mixin grid($size, $columns: $grid-columns) {
   @for $index from 1 through $columns {
     .col-#{$size}-#{$index} {
       @include make-col($index);
@@ -108,7 +108,7 @@
   }
 }
 
-@mixin push($size, $columns: 12) {
+@mixin push($size, $columns: $grid-columns) {
   @for $index from 1 through $columns {
     .col-#{$size}-push-#{$index} {
       @include make-col-push($index);
@@ -116,7 +116,7 @@
   }
 }
 
-@mixin pull($size, $columns: 12) {
+@mixin pull($size, $columns: $grid-columns) {
   @for $index from 1 through $columns {
     .col-#{$size}-pull-#{$index} {
       @include make-col-pull($index);
