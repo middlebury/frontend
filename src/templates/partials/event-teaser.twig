@@ -11,10 +11,8 @@
   <div class="event-teaser__body">
     <p class="event-teaser__meta"><strong>{{date}}</strong></p>
     <p class="event-teaser__meta"><span>{{time}}</span>, <span>{{local}}</span></p>
-    <h3 class="event-teaser__title"><a href="#">{{title}}</a></h3>
-    <div class="event-teaser__blurb">
-      {{blurb}}
-    </div>
+    <h3 class="event-teaser__title"><a href="{{url}}">{{title}}</a></h3>
+    <div class="event-teaser__blurb">{{blurb}}</div>
     <ul class="event-teaser__metalist">
       {% for item in metalist %}
         <li class="event-teaser__metaitem"><em>{{item.text}}</em></li>
