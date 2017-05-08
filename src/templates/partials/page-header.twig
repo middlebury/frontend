@@ -8,12 +8,12 @@
       <div class="page-header__content">
         <h1 class="page-header__title">{{title}}</h1>
       </div>
-      <div class="page-header__controls">
-        <a href="#page-nav" role="button" aria-label="Toggle page navigation" aria-controls="page-nav" data-toggle-target="#page-nav">
-          <span aria-hidden="true" class="u-is-toggled-show">&uarr;</span>
-          <span aria-hidden="true" class="u-is-toggled-hide">&darr;</span>
-        </a>
-      </div>
+      {% set _block = block('controls') %}
+      {% if _block is not empty %}
+        <div class="page-header__controls">
+          {{_block}}
+        </div>
+      {% endif %}
     </div>
 
     {% if callout_title %}
