@@ -5,11 +5,17 @@
   width: 100vw;
   height: 100vh;
   z-index: 3;
+  display: none;
+
+  &.is-toggled {
+    display: block;
+  }
 
   @include media(md) {
     position: relative;
     width: auto;
     height: auto;
+    display: block;
   }
 }
 
