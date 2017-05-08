@@ -182,17 +182,17 @@ homepage:
       time: 1:00 PM
       title: Museum of Art Lecture Series
       location: McCone Irvine Auditorium
-      link: '#'
+      url: '#'
     - date: Jul 12, 2016
       time: 1:00 PM
       title: Museum of Art Lecture Series
       location: McCone Irvine Auditorium
-      link: '#'
+      url: '#'
     - date: Jul 12, 2016
       time: 1:00 PM
       title: Museum of Art Lecture Series
       location: McCone Irvine Auditorium
-      link: '#'
+      url: '#'
 
   projects:
     - title: Peru Field Work
