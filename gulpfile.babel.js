@@ -155,6 +155,18 @@ gulp.task('watch', () => {
   gulp.watch('./src/data/*.yml', ['html']);
 });
 
+gulp.task('deploy', () => {
+  const dest = args.themeDir || '';
+  if (!args.themeDir) {
+    return console.error('No `--themeDir` argument passed');
+  }
+  return gulp
+    .src(['./dist/css/main.css', './dist/js/bundle.js', './dist/img/*'], {
+      base: './dist'
+    })
+    .pipe(gulp.dest(dest));
+});
+
 gulp.task('build', [
   'clean',
   'html',
