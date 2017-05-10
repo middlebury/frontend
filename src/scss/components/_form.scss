@@ -6,6 +6,17 @@
   margin-bottom: 30px;
 }
 
+.form__group--has-error {
+  .form__control {
+    border-color: #e60000;
+  }
+}
+
+.form__error-message {
+  color: #e60000;
+  font-size: 14px;
+}
+
 .form__label {
   display: block;
   font-family: $font-family-serif;
