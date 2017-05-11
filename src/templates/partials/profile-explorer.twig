@@ -1,0 +1,29 @@
+<div class="profile-explorer">
+  <div class="profile-explorer__controls">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-push-1 col-md-7">
+          <form action="">
+            <div class="profile-explorer__form-group">
+              <label for="" class="form__label profile-explorer__label">Explore Faculty by</label>
+              <select name="" id="" class="form__control profile-explorer__control">
+                <option value="" selected>Department</option>
+              </select>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="profile-explorer__results">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-push-1 col-md-11">
+          {% for i in 0..3 %}
+            {% include 'partials/profile.twig' %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
