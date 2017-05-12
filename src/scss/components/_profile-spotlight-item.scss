@@ -1,0 +1,38 @@
+.profile-spotlight-item {
+  display: flex;
+  flex-direction: row;
+
+  @include media(md) {
+    flex-direction: column;
+  }
+}
+
+.profile-spotlight-item__content {
+  flex: 1;
+}
+
+.profile-spotlight-item__name {
+  margin-bottom: 10px;
+}
+
+.profile-spotlight-item__title {
+
+}
+
+.profile-spotlight-item__blurb {
+
+}
+
+.profile-spotlight-item__media {
+  margin-left: 10px;
+  flex: 0 0 auto;
+
+  @include media(sm) {
+    margin-left: 40px;
+  }
+
+  @include media(md) {
+    margin-left: 0;
+    flex: 1;
+  }
+}
