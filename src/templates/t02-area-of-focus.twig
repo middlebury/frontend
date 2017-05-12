@@ -22,14 +22,16 @@
   <div class="container">
     {% embed 'partials/section.twig' with {
       title: 'Latest Thinking',
-      moreLinkText: 'View all'
+      moreLinkText: 'View all',
+      moreLinkHref: '#'
     } %}
       {% block content %}
           <div class="row row--dividers">
             {% for i in 0..3 %}
               <div class="col-md-3">
                 {% include 'partials/card.twig' with {
-                  title: 'test',
+                  tag: 'Sustainable Agriculture',
+                  title: 'Sustainable Agriculture in the Sacred Valley',
                   blurb: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam asperiores consectetur, voluptate, officiis nisi magni quasi reprehenderit.</p>'
                 } %}
               </div>
@@ -39,21 +41,42 @@
     {% endembed %}
   </div>
 
+  <section class="section">
+    {% include 'partials/panel.twig' with {
+      label: 'Program Spotlight',
+      title: 'International Environmental Policy',
+      link_text: 'Explore and Compare Programs',
+      link_url: '#',
+      modifier: 'primary',
+      blurb: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quia a amet maiores modi illum nisi quidem fugit quo totam. Minus odio harum maxime, sapiente aspernatur eligendi, quidem eaque tenetur.</p>',
+      list: [
+        { text: 'Master of Public Administration (MPA)', url: '#' },
+        { text: 'Master of Public Administration (MPA)', url: '#' },
+        { text: 'Master of Public Administration (MPA)', url: '#' },
+        { text: 'Master of Public Administration (MPA)', url: '#' },
+      ],
+      list_more_link_text: 'View all Sustainable Development Programs',
+      list_more_link_url: '#'
+    } %}
+  </section>
+
+  <div class="container">
+    {% embed 'partials/section.twig' with {
+      title: 'International Environmental Policy'
+    } %}
+      {% block content %}
+        test
+      {% endblock %}
+    {% endembed %}
+  </div>
+
   {% include 'partials/panel.twig' with {
-    label: 'Program Spotlight',
-    title: 'International Environmental Policy',
-    link_text: 'Explore and Compare Programs',
+    label: 'Campus Spotlight',
+    title: 'The Sustainability Council',
+    link_text: 'Learn more',
     link_url: '#',
-    modifier: 'primary',
+    modifier: 'secondary',
     blurb: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quia a amet maiores modi illum nisi quidem fugit quo totam. Minus odio harum maxime, sapiente aspernatur eligendi, quidem eaque tenetur.</p>',
-    list: [
-      { text: 'Master of Public Administration (MPA)', url: '#' },
-      { text: 'Master of Public Administration (MPA)', url: '#' },
-      { text: 'Master of Public Administration (MPA)', url: '#' },
-      { text: 'Master of Public Administration (MPA)', url: '#' },
-    ],
-    list_more_link_text: 'View all Sustainable Development Programs',
-    list_more_link_url: '#'
   } %}
 
   {% include 'partials/callout-group.twig' %}
