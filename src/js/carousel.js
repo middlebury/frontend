@@ -199,6 +199,6 @@ class Carousel {
 
 const carousels = document.querySelectorAll('[data-carousel]');
 
-Array.from(carousels).forEach(elem => new Carousel(elem));
+forEach(carousels, elem => new Carousel(elem));
 
 export default Carousel;

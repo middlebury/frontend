@@ -1,3 +1,5 @@
+import forEach from './utils/forEach';
+
 class Navigation {
   constructor(elem) {
     this.elem = elem;
@@ -59,7 +61,6 @@ class Navigation {
 
 const navs = document.querySelectorAll('[data-nav]');
 
-// TODO: use forEach helper as Array.from is lacking browser support
-Array.from(navs).forEach(elem => new Navigation(elem));
+forEach(navs, elem => new Navigation(elem));
 
 module.exports = Navigation;
