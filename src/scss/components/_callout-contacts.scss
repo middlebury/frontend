@@ -1,0 +1,41 @@
+.callout-contacts {
+  @include media(md) {
+    display: flex;
+  }
+}
+
+.callout-contacts__title {
+  color: #e60000;
+  font-family: $font-family-sans-serif;
+  font-weight: $font-weight-semibold;
+  font-size: 18px;
+
+  @include media(md) {
+    flex: 1;
+    border-right: 1px solid $line-gray;
+    padding-right: 20px;
+  }
+}
+
+.callout-contacts__item {
+  font-family: $font-family-sans-serif;
+  margin-bottom: 0;
+
+  @include media(md) {
+    padding-left: 20px;
+    padding-right: 20px;
+    flex: 1;
+    text-align: center;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $line-gray;
+
+    @include media(md) {
+      border-bottom: 0;
+      border-right: 1px solid $line-gray;
+    }
+  }
+}

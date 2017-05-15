@@ -18,6 +18,12 @@
     {% endembed %}
 
     <div class="container">
+      <section class="section">
+        {% include 'partials/callout-contacts.twig' %}
+      </section>
+    </div>
+
+    <div class="container">
       {% embed 'partials/section.twig' with {
         title: 'We’re here to help you no matter where in the world you are'
       } %}
