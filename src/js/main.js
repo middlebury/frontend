@@ -1,7 +1,6 @@
 import './toggler';
 import './nav';
 import './mission-selector';
-// import './carousel';
 
 import Swiper from 'swiper';
 
