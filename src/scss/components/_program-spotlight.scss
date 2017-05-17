@@ -1,28 +1,6 @@
 .program-spotlight {
-  .carousel__container {
-    @include media(sm) {
-      display: flex;
-      height: 600px;
-    }
-  }
-
-  .carousel__item {
-    &:nth-of-type(n+4) {
-      display: none;
-
-      @include media(sm) {
-        display: block;
-        flex: 1;
-      }
-    }
-
-    @include media(md) {
-      min-width: 50%;
-    }
-
-    @include media(lg) {
-      min-width: 33.33%;
-    }
+  @include media(sm) {
+    height: 600px;
   }
 }
 
@@ -60,8 +38,21 @@
   }
 }
 
+.program-spotlight__container {
+  height: 100%;
+}
+
 .program-spotlight__content {
-  @include media(sm) {
-    // display: flex;
+  height: 100%;
+  display: flex;
+  height: 600px;
+}
+
+.program-spotlight__item {
+  // only shows the first 3 items on mobile
+  &:nth-of-type(n+4) {
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
 }

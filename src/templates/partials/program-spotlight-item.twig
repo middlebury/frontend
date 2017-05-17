@@ -1,0 +1,51 @@
+<article class="spotlight-item{% if program.light == true %} spotlight-item--light{% endif %} js-spotlight-item-{{id}}">
+
+  <figure class="spotlight-item__image">
+    <picture>
+      <source srcset="{{program.image_md}} 1x, {{program.image_md_2x}} 2x" media="(min-width: 580px)">
+      <source srcset="{{program.image_xs}} 1x, {{program.image_xs_2x}} 2x" media="(min-width: 0)">
+      <img src="{{program.image_md}}" alt="{{program.image_alt}}">
+    </picture>
+  </figure>
+
+  <div class="spotlight-item__content">
+    <div class="spotlight-item__side spotlight-item__side--front">
+
+      <div class="spotlight-item__body">
+        <h3 class="spotlight-item__title">
+          <a href="{{program.href}}" class="spotlight-item__link">{{program.title}}</a>
+        </h3>
+        <p class="spotlight-item__blurb">{{program.blurb}}</p>
+      </div>
+      <footer class="spotlight-item__footer">
+        <a href="#"
+          class="button button--secondary button--circle"
+          data-toggle-target=".js-spotlight-item-{{id}}"
+          data-toggle-linked="spotlight-item-{{id}}"
+          data-toggle-group="spotlight-items">
+          &plus;
+        </a>
+      </footer>
+
+    </div>
+    <aside class="spotlight-item__side spotlight-item__side--back">
+
+      <a href="#"
+        class="spotlight-item__close-button"
+        role="button"
+        aria-label="Close"
+        data-toggle-target=".js-spotlight-item-{{id}}"
+        data-toggle-linked="spotlight-item-{{id}}">
+        <span aria-hidden="true">&times;</span>
+      </a>
+
+      <div class="spotlight-item__body">
+        <p>{{program.card.body}}</p>
+      </div>
+      <footer class="spotlight-item__footer">
+        <a href="{{program.card.link_href}}" class="button button--secondary button--pill button--block">{{program.card.link_text}}</a>
+      </footer>
+
+    </aside>
+  </div>
+</article>

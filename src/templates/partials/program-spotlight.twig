@@ -1,6 +1,7 @@
-<div class="program-spotlight" data-carousel='{"minWidth":580,"show":{"580":2,"960":3}}'>
+<div class="program-spotlight">
   <div class="row row--no-gutters">
     <div class="col-sm-4 col-lg-3">
+
       <div class="program-spotlight__header">
         {% embed 'partials/callout.twig' with {
           light: true,
@@ -11,70 +12,26 @@
           {% endblock %}
           {% block footer %}
             <div class="program-spotlight__controls" aria-label="carousel controls" role="navigation">
-              <button class="button button--secondary button--circle carousel__prev-button" aria-label="Previous" data-carousel-prev>
+              <button class="button button--secondary button--circle js-program-spotlight-prev-button" aria-label="Previous">
                 <span aria-hidden="true">&lsaquo;</span>
               </button>
-              <button class="button button--secondary button--circle carousel__next-button" aria-label="Next" data-carousel-next>
+              <button class="button button--secondary button--circle js-program-spotlight-next-button" aria-label="Next">
                 <span aria-hidden="true">&rsaquo;</span>
               </button>
             </div>
           {% endblock %}
         {% endembed %}
       </div>
+
     </div>
     <div class="col-sm-8 col-lg-9">
-
-      <div class="carousel">
-        <div class="carousel__container" data-carousel-container>
+      <div class="program-spotlight__container swiper-container js-program-spotlight">
+        <div class="program-spotlight__content swiper-wrapper">
 
           {% for program in programs %}
-            <div class="carousel__item" data-carousel-item>
-              <article class="spotlight-item{% if program.light == true %} spotlight-item--light{% endif %} js-spotlight-item-{{loop.index}}">
-
-                <figure class="spotlight-item__image">
-                  <picture>
-                    <source srcset="{{program.image_md}} 1x, {{program.image_md_2x}} 2x" media="(min-width: 580px)">
-                    <source srcset="{{program.image_xs}} 1x, {{program.image_xs_2x}} 2x" media="(min-width: 0)">
-                    <img src="{{program.image_md}}" alt="{{program.image_alt}}">
-                  </picture>
-                </figure>
-
-                <div class="spotlight-item__content">
-                  <div class="spotlight-item__side spotlight-item__side--front">
-
-                    <div class="spotlight-item__body">
-                      <h3 class="spotlight-item__title">
-                        <a href="{{program.href}}" class="spotlight-item__link">{{program.title}}</a>
-                      </h3>
-                      <p class="spotlight-item__blurb">{{program.blurb}}</p>
-                    </div>
-                    <footer class="spotlight-item__footer">
-                      <a href="#"
-                        class="button button--secondary button--circle"
-                        data-toggle-target=".js-spotlight-item-{{loop.index}}"
-                        data-toggle-linked="spotlight-item-{{loop.index}}"
-                        data-toggle-group="spotlight-items">
-                        &plus;
-                      </a>
-                    </footer>
-
-                  </div>
-                  <aside class="spotlight-item__side spotlight-item__side--back">
-
-                    <a href="#" class="spotlight-item__close-button" role="button" aria-label="Close" data-toggle-target=".js-spotlight-item-{{loop.index}}" data-toggle-linked="spotlight-item-{{loop.index}}">
-                      <span aria-hidden="true">&times;</span>
-                    </a>
-
-                    <div class="spotlight-item__body">
-                      <p>{{program.card.body}}</p>
-                    </div>
-                    <footer class="spotlight-item__footer">
-                      <a href="{{program.card.link_href}}" class="button button--secondary button--pill button--block">{{program.card.link_text}}</a>
-                    </footer>
-
-                  </aside>
-                </div>
-              </article>
+            <div class="program-spotlight__item swiper-slide">
+              {% set item = program|merge({ id: loop.index }) %}
+              {% include 'partials/program-spotlight-item.twig' with item %}
             </div>
           {% endfor %}
 

@@ -25,3 +25,21 @@ if (pubSwiperElem) {
   });
 }
 
+const programSwiperElem = document.querySelector('.js-program-spotlight');
+
+if (programSwiperElem) {
+  const programSwiper = new Swiper(programSwiperElem, {
+    buttonDisabledClass: 'button--disabled',
+    slidesPerView: 3,
+    nextButton: '.js-program-spotlight-next-button',
+    prevButton: '.js-program-spotlight-prev-button',
+    breakpoints: {
+      580: {
+        slidesPerView: 1
+      },
+      960: {
+        slidesPerView: 2
+      }
+    }
+  });
+}
