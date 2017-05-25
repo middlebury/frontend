@@ -1,0 +1,49 @@
+{% extends "layout.twig" %}
+
+{% block page %}
+  <section class="page">
+
+    {% include 'partials/page-header.twig' with {
+      breadcrumb: [
+        { text: 'Leadership and Impact' },
+        { text: 'Faculty in the Field' },
+      ]
+    } %}
+
+    <div class="col-md-push-1 col-md-7">
+
+      <article>
+        <figure>
+          <pictue>
+            <source srcset="//placehold.it/244x340" media="(min-width: 960px)">
+            <source srcset="//placehold.it/155x216" media="(min-width: 580px)">
+            <source srcset="//placehold.it/86x119">
+            <img src="//placehold.it/244x340" alt="">
+          </pictue>
+        </figure>
+        <h1>Beryl Levinger</h1>
+        <p>Program Chair, Master of Public Administration and International Policy and Development</p>
+        <dl class="profile-info">
+          <dt class="profile-info__title">Office</dt>
+          <dd class="profile-info__text">E6-364</dd>
+          <dt class="profile-info__title">Tel</dt>
+          <dd class="profile-info__text"><a href="tel:6173247535">617-324-7535</a></dd>
+          <dt class="profile-info__title">Email</dt>
+          <dd class="profile-info__text"><a href="mailto:blevinger@middlebury.edu">blevinger@middlebury.edu</a></dd>
+          <dt class="profile-info__title">Office Hours</dt>
+          <dd class="profile-info__text">Tuesdays 3-4pm<br>Thursdays 11am-12pm</dd>
+          <dt class="profile-info__title sr-only">CV</dt>
+          <dd class="profile-info__text"><a href="#">Download CV</a></dd>
+          <dt class="profile-info__title sr-only">Elsewhere</dt>
+          <dd class="profile-info__text">
+            {% include 'partials/social-links.twig' with {
+              items: social_links
+            } %}
+          </dd>
+        </dl>
+      </article>
+
+    </div>
+
+  </section>
+{% endblock %}

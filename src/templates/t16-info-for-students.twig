@@ -1,7 +1,7 @@
 {% extends "layout.twig" %}
 
 {% block page %}
-  <article class="page">
+  <section class="page">
 
     {% include 'partials/page-header.twig' with {
       title: 'Information for New Students',
@@ -16,6 +16,12 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ratione exercitationem reiciendis sit quo recusandae, eos minus repellendus quisquam aut, ab expedita, ut possimus eius accusantium natus illum veniam.</p>
       {% endblock %}
     {% endembed %}
+
+    <div class="container">
+      <section class="section">
+        {% include 'partials/callout-contacts.twig' %}
+      </section>
+    </div>
 
     <div class="container">
       {% embed 'partials/section.twig' with {
@@ -139,5 +145,5 @@
 
     {#TODO: PSD has pagination/load more button but do we want that?#}
 
-  </article>
+  </section>
 {% endblock %}

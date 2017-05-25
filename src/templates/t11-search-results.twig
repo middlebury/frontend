@@ -1,0 +1,44 @@
+{% extends "layout.twig" %}
+
+{% block page %}
+
+  <section class="page">
+
+    {% include 'partials/page-header.twig' with {
+      title: 'Search Results'
+    } %}
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-push-1 col-md-7">
+
+          <div class="u-mb-6">
+            {% include 'partials/search-form.twig' %}
+          </div>
+
+          <h2 class="u-mb-6 u-sans-serif">183 results for “water scarcity”</h2>
+
+          {% for i in 0..7 %}
+
+            <article class="search-results-item">
+              <figure class="search-results-item__media">
+                <a href="#">
+                  <img src="//placehold.it/148x148" alt="">
+                </a>
+              </figure>
+              <div class="search-results-item__content">
+                <h3><a href="#">Lorem ipsum dolor set</a></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, saepe, excepturi! Maxime esse ipsum, reiciendis, hic natus neque. Animi ipsa quisquam amet praesentium commodi doloribus, accusamus dolores iste provident est.</p>
+              </div>
+            </article>
+
+          {% endfor %}
+
+          {% include 'partials/pagination.twig' %}
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

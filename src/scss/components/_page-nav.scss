@@ -8,6 +8,12 @@
     display: block;
   }
 
+  &.has-toggler {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
   &.is-toggled {
     display: block;
   }

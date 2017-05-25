@@ -2,17 +2,60 @@
 
 {% block page %}
 
-<article class="page">
+<section class="page">
 
-  {% include 'partials/page-header.twig' with {
+  {% embed 'partials/page-header.twig' with {
     title: 'Events',
     callout_link_text: 'Sign up for events email',
     callout_link_url: '#',
   } %}
+    {% block controls %}
+      <a href="#filters-drawer" data-toggle-target="#filters-drawer" data-toggle-linked="filters-drawer" aria-label="Toggle filters">
+        <span aria-hidden="true">{{icons.search_lg}}</span>
+      </a>
+    {% endblock %}
+  {% endembed %}
 
   <div class="container">
-    <div class="row row--dividers">
-      <div class="col-md-push-1 col-md-7">
+    {#TODO: needs dividers#}
+    <div class="row">
+      <div class="col-md-push-1 col-md-3 col--collapse flex-md-last">
+
+        <div class="col">
+          {% embed 'partials/section.twig' with {
+            title: 'Featured Event',
+            class: 'section--aside'
+          } %}
+            {% block content %}
+              <div class="card">
+                <div class="card__media">
+                  <div class="video">
+                    <video src="" poster="http://placehold.it/320x180"></video>
+                    <div class="video__controls">
+                      <button class="video__button button button--primary">Play</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__body">
+                  <h3 class="card__title"><a href="#">Middlebury Institute’s TESOL/TFL Program: Innovations in Language Learning</a></h3>
+                </div>
+              </div>
+            {% endblock %}
+          {% endembed %}
+        </div>
+
+        {% embed 'partials/drawer.twig' with { id: 'filters-drawer' } %}
+          {% block content %}
+              {% include 'partials/filters.twig' %}
+
+              {% include 'partials/sidebar-search.twig' %}
+
+              <a href="#" class="button button--tertiary button--xl button--block u-text-left u-clearfix">View Academic Calendar <span class="u-float-right" aria-hidden="true">&rsaquo;</span></a>
+          {% endblock %}
+        {% endembed %}
+
+      </div>
+      <div class="col-md-push-1 col-md-8 flex-md-first">
 
         {% for i in 0..7 %}
           {% include 'partials/event-teaser.twig' with {
@@ -28,16 +71,12 @@
             ]
           } %}
         {% endfor %}
-
         {% include 'partials/pagination.twig' %}
 
-      </div>
-      <div class="col-md-push-1 col-md-4">
-        sidebar
       </div>
     </div>
   </div>
 
-</article>
+</section>
 
 {% endblock %}

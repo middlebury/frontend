@@ -1,0 +1,20 @@
+.search-results-item {
+  @include clearfix();
+  margin-bottom: 60px;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid $line-gray;
+    padding-bottom: 60px;
+  }
+}
+
+.search-results-item__media {
+  float: right;
+  margin-left: 20px;
+}
+
+.search-results-item__content {
+  p:last-of-type {
+    margin: 0;
+  }
+}

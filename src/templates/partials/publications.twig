@@ -1,0 +1,33 @@
+<div class="publications">
+  <div class="container">
+    {% embed 'partials/section.twig' with {
+      title: 'Latest publications by our faculty',
+      moreLinkText: 'View all',
+      moreLinkHref: '#'
+    } %}
+      {% block content %}
+        <div class="publications__list swiper-container js-publications-swiper">
+          <div class="swiper-wrapper">
+            {% for i in 0..7 %}
+              <div class="publications__item swiper-slide">
+                <figure class="publications__cover">
+                  <a href="#">
+                    <img src="//placehold.it/148x184" alt="">
+                  </a>
+                </figure>
+                <h3 class="publications__title"><a href="#">An Economic Justification for the Development and Establishment of Seascapes in the Coral Triangle</a></h3>
+              </div>
+            {% endfor %}
+          </div>
+
+          <button
+            class="publications__button publications__button--prev js-publications-prev-button"
+            aria-label="Previous publication">{{icons.chevron_left}}</button>
+          <button
+            class="publications__button publications__button--next js-publications-next-button"
+            aria-label="Next publication">{{icons.chevron_right}}</button>
+        </div>
+      {% endblock %}
+    {% endembed %}
+  </div>
+</div>

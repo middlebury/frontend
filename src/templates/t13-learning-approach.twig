@@ -1,0 +1,84 @@
+{% extends "layout.twig" %}
+
+{% block page %}
+  <section class="page">
+
+    {% include 'partials/page-header.twig' with {
+      title: 'Learning Approach',
+    } %}
+
+    <figure class="u-mb-6">
+      <picture>
+        <source srcset="//placehold.it/1440x715" media="(min-width: 1200px)">
+        <source srcset="//placehold.it/1200x475">
+        <img src="//placehold.it/1440x715" alt="">
+      </picture>
+    </figure>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-push-1 col-md-7">
+          <div class="u-mb-6">
+            <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores officia culpa, qui corrupti facere ipsum dolor praesentium odit quod, distinctio harum in quaerat adipisci vero. Omnis voluptates quo architecto totam.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-push-1 col-md-11">
+
+          <div class="section">
+            <div class="row row--dividers">
+              {% for i in 0..4 %}
+                <div class="col-md-4">
+                  {% include 'partials/card.twig' with {
+                    image_lg: '//placehold.it/212x159',
+                    image: '//placehold.it/212x159',
+                    title: 'Immersive Learning',
+                    link: '#',
+                    blurb: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>'
+                  } %}
+                </div>
+              {% endfor %}
+
+              <div class="col-md-4">
+                {% embed 'partials/callout.twig' with {
+                  preheader: 'Explore',
+                  title: 'Our Programs',
+                } %}
+                  {% block body %}
+                    <a href="#" class="button button--primary">Get Started</a>
+                  {% endblock %}
+                {% endembed %}
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      {% embed 'partials/section.twig' with {
+        title: 'Latest Thinking',
+        moreLinkText: 'View all',
+        moreLinkHref: '#'
+      } %}
+        {% block content %}
+            <div class="row row--dividers">
+              {% for i in 0..3 %}
+                <div class="col-md-3">
+                  {% include 'partials/card.twig' with {
+                    tag: 'Sustainable Agriculture',
+                    title: 'Sustainable Agriculture in the Sacred Valley',
+                    blurb: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam asperiores consectetur, voluptate, officiis nisi magni quasi reprehenderit.</p>'
+                  } %}
+                </div>
+              {% endfor %}
+            </div>
+        {% endblock %}
+      {% endembed %}
+    </div>
+
+    {% include 'partials/callout-group.twig' %}
+  </section>
+{% endblock %}
