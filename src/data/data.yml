@@ -198,6 +198,7 @@ homepage:
     - title: Peru Field Work
       featured: true
       image: http://placehold.it/500x375
+      image_lg: http://placehold.it/63000x375
       image_alt: alt text
       blurb: Students are applying policy-research concepts learned in the Field Methods and Policy and Data Analysis courses to the design of a country-specific, client specified field-research project.
     - title: Nepal Data Analysis
