@@ -1,0 +1,102 @@
+{% extends "layout.twig" %}
+
+{% block page %}
+  <section class="page">
+
+    {% include 'partials/page-header.twig' with {
+      breadcrumb: [
+        { text: 'Events' }
+      ]
+    } %}
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-push-1 col-md-7">
+          <header>
+            <h2>Museum of Art Lecture Series</h2>
+            <div class="row">
+              <div class="col-md-6">
+                <p><span>Thursday, August 18<span> <span>6 - 8:30PM</span></p>
+                <p>Open to the Public</p>
+              </div>
+              <div class="col-md-6">
+                <span>Share:
+                  <ul class="share">
+                    <li class="share__item">
+                      <a href="#">{{icons.facebook}}</a></li>
+                    <li class="share__item">
+                      <a href="#">{{icons.twitter}}</a>
+                    </li>
+                    <li class="share__item">
+                      <a href="#">{{icons.email}}</a>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </header>
+
+          <picture>
+            <img src="//placehold.it/800x500" alt="" class="u-mb-6">
+          </picture>
+
+          <div class="typography u-mb-6">
+            <p>The Old Monterey Foundation, a California non-profit, public benefit corporation, was formed on February 14, 2011, with the specific mission and purpose of promoting, supporting and enhancing the artistic, cultural and historic environment of historic Downtown Monterey, California.</p>
+
+            <p>Since 2013, Old Monterey Foundation has continued its promotion of local history and art with the 2014 Jules Tavernier Lecture Series and the 2015 Marcia Devoe Lecture Series, and the Art in the Gardens Plein Aire event.</p>
+          </div>
+
+          <div class="u-mb-6">
+            <div class="row">
+              <div class="col-sm-6">
+
+              <h3>Where</h3>
+
+              <p>McCone Irvine Auditorium<br>
+              460 Pierce St<br>
+              Monterey, CA 93940</p>
+
+              <ul class="list u-mb-6">
+                <li class="list__item">
+                  <span class="list__icon">{{icons.map}}</span>
+                  <a href="#" class="u-link-border">View in Google Maps</a>
+                </li>
+                <li class="list__item">
+                  <span class="list__icon">{{icons.calendar}}</span>
+                  <a href="#" class="u-link-border">Add to my calendar</a>
+                </li>
+              </ul>
+
+              <p><a href="#" class="button button--primary">Contact Organizer</a></p>
+
+              </div>
+              <div class="col-sm-6">
+                <picture>
+                  <img src="http://placehold.it/300x300" srcset="http://placehold.it/300x300 1x, http://placehold.it/600x600 2x" alt="">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-push-1 col-md-3">
+          {% embed 'partials/section.twig' with {
+            title: 'Speakers',
+            class: 'section--aside'
+          } %}
+            {% block content %}
+              <div class="row">
+                <div class="col-sm-6 col-md-12">
+                  {% include 'partials/speaker.twig' %}
+                </div>
+                <div class="col-sm-6 col-md-12">
+                  {% include 'partials/speaker.twig' %}
+                </div>
+              </div>
+            {% endblock %}
+          {% endembed %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
