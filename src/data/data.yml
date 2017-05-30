@@ -24,28 +24,24 @@ site_nav:
         href: '#'
       items:
         - text: Degree Programs
-          menus:
-            - title: Degree Programs
-              items:
-                - text: International Policy and Development
-                - text: Master of Public Administration
-                - text: Master of Business Administration in Global Impact Management
-                - text: International Education Management
-                - text: International Environmental Policy
-                - text: International Trade and Economic Diplomacy
-                - text: Nonproliferation and Terrorism Studies
-                - text: Teaching English to Speakers of Other Languages
-                - text: Teaching Foreign Language
-                - text: Translation; Translation and Interpretation; Conference Interpretation
-            - title: Joint Degrees
-              items:
-                - text: Translation and Localization Management
-                - text: MBA/MA In International Environmental Policy
-                - text: MBA/MA in International Policy and Development
-                - text: MPA/MA in International Education Management
-                - text: BA / MA in International Policy and Development
-                - text: BA / MA in Nonproliferation and Terrorism Studies
-                - text: BA / Master of Public Administration
+          items:
+            - text: International Policy and Development
+            - text: Master of Public Administration
+            - text: Master of Business Administration in Global Impact Management
+            - text: International Education Management
+            - text: International Environmental Policy
+            - text: International Trade and Economic Diplomacy
+            - text: Nonproliferation and Terrorism Studies
+            - text: Teaching English to Speakers of Other Languages
+            - text: Teaching Foreign Language
+            - text: Translation; Translation and Interpretation; Conference Interpretation
+            - text: Translation and Localization Management
+            - text: MBA/MA In International Environmental Policy
+            - text: MBA/MA in International Policy and Development
+            - text: MPA/MA in International Education Management
+            - text: BA / MA in International Policy and Development
+            - text: BA / MA in Nonproliferation and Terrorism Studies
+            - text: BA / Master of Public Administration
         - text: Non-degree programs
         - text: Centers & Initiatives
         - text: Faculty & Staff Directory
