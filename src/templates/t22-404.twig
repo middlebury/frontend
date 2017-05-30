@@ -23,16 +23,18 @@
               moreLinkHref: '#'
             } %}
               {% block content %}
-                {% for i in 0..2 %}
-
-
-                {% endfor %}
+                <ol class="list list--lg">
+                  {% for i in 0..2 %}
+                    <li class="list__item">
                       <article class="story-teaser-lite">
                         <h3 class="story-teaser-lite__title"><a href="#">Undergraduate Interns Tackle Nonproliferation Issues</a></h3>
                         <div class="story-teaser-lite__blurb">
                           <p>The Liberian Senate recently appointed Middlebury Institute alumnus Jacob Jallah MAIEM ’15 as assistant minister for technical services for Liberia’s Ministry of Information, Cultural Affairs and Tourism.</p>
                         </div>
                       </article>
+                    </li>
+                  {% endfor %}
+                </ol>
               {% endblock %}
             {% endembed %}
 
@@ -45,16 +47,18 @@
               moreLinkHref: '#'
             } %}
               {% block content %}
-                {% for i in 0..2 %}
-
-                  {% include 'partials/event-teaser-lite.twig' with {
-                    date: 'Jul 12, 2016',
-                    time: '1:00 PM',
-                    title: 'Museum of Art Lecture Series',
-                    location: 'McCone Irvine Auditorium'
-                  } %}
-
-                {% endfor %}
+                <ol class="list list--lg">
+                  {% for i in 0..2 %}
+                    <li class="list__item">
+                      {% include 'partials/event-teaser-lite.twig' with {
+                        date: 'Jul 12, 2016',
+                        time: '1:00 PM',
+                        title: 'Museum of Art Lecture Series',
+                        location: 'McCone Irvine Auditorium'
+                      } %}
+                    </li>
+                  {% endfor %}
+                </ol>
               {% endblock %}
             {% endembed %}
 
