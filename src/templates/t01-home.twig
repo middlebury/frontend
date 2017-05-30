@@ -49,36 +49,45 @@
         <div class="col-md-6">
           {% embed 'partials/section.twig' with {
             title: 'Latest News',
+            class: 'u-mb-0',
             moreLinkHref: '#',
             moreLinkText: 'More News'
           } %}
             {% block content %}
-              {% for item in homepage.latest_news %}
-                <article class="story-teaser">
-                  <h3 class="story-teaser__title">
-                    <a href="{{item.href}}" class="story-teaser__link">{{item.title}}</a>
-                  </h3>
-                  <p class="story-teaser__summary">{{item.summary}}</p>
-                </article>
-              {% endfor %}
+              <ol class="list list--lg">
+                {% for item in homepage.latest_news %}
+                  <li class="list__item">
+                    {% include 'partials/story-teaser-lite.twig' with {
+                      title: item.title,
+                      link: '#',
+                      blurb: item.summary
+                    } %}
+                  </li>
+                {% endfor %}
+              </ol>
             {% endblock %}
           {% endembed %}
         </div>
         <div class="col-md-6">
           {% embed 'partials/section.twig' with {
             title: 'Upcoming Events',
+            class: 'u-mb-0',
             moreLinkHref: '#',
             moreLinkText: 'More Events'
           } %}
             {% block content %}
-              {% for item in homepage.upcoming_events %}
-                <article class="story-teaser">
-                  <h3 class="story-teaser__title">
-                    <a href="{{item.href}}" class="story-teaser__link">{{item.title}}</a>
-                  </h3>
-                  <p class="story-teaser__location">{{item.location}}</p>
-                </article>
-              {% endfor %}
+              <ol class="list list--lg">
+                {% for item in homepage.upcoming_events %}
+                  <li class="list__item">
+                    {% include 'partials/event-teaser-lite.twig' with {
+                      date: 'Jul 12, 2016',
+                      time: '1:00 PM',
+                      title: 'Museum of Art Lecture Series',
+                      location: 'McCone Irvine Auditorium'
+                    } %}
+                  </li>
+                {% endfor %}
+              </ol>
             {% endblock %}
           {% endembed %}
         </div>

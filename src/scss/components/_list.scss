@@ -1,9 +1,15 @@
 .list {
-  margin-bottom: 60px;
+  // margin-bottom: 60px;
 }
 
 .list__item {
-  margin-bottom: 30px;
+  &:not(:last-of-type) {
+    margin-bottom: 30px;
+
+    .list--lg & {
+      margin-bottom: 60px;
+    }
+  }
 }
 
 .list__icon {

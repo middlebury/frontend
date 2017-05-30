@@ -23,14 +23,16 @@
               moreLinkHref: '#'
             } %}
               {% block content %}
-                {% for i in 0..2 %}
-
-                  <article class="{% if not loop.last %}u-mb-6{% endif %}">
-                    <h3><a href="#">Undergraduate Interns Tackle Nonproliferation Issues</a></h3>
-                    <p>The Liberian Senate recently appointed Middlebury Institute alumnus Jacob Jallah MAIEM ’15 as assistant minister for technical services for Liberia’s Ministry of Information, Cultural Affairs and Tourism.</p>
-                  </article>
-
-                {% endfor %}
+                <ol class="list list--lg">
+                  {% for i in 0..2 %}
+                    <li class="list__item">
+                      {% include 'partials/story-teaser-lite.twig' with {
+                        title: 'Undergraduate Interns Tackle Nonproliferation Issues',
+                        link: '#',
+                        blurb: "<p>The Liberian Senate recently appointed Middlebury Institute alumnus Jacob Jallah MAIEM ’15 as assistant minister for technical services for Liberia’s Ministry of Information, Cultural Affairs and Tourism.</p>"
+                      } %}
+                  {% endfor %}
+                </ol>
               {% endblock %}
             {% endembed %}
 
@@ -43,16 +45,18 @@
               moreLinkHref: '#'
             } %}
               {% block content %}
-                {% for i in 0..2 %}
-
-                  {% include 'partials/event-teaser-lite.twig' with {
-                    date: 'Jul 12, 2016',
-                    time: '1:00 PM',
-                    title: 'Museum of Art Lecture Series',
-                    location: 'McCone Irvine Auditorium'
-                  } %}
-
-                {% endfor %}
+                <ol class="list list--lg">
+                  {% for i in 0..2 %}
+                    <li class="list__item">
+                      {% include 'partials/event-teaser-lite.twig' with {
+                        date: 'Jul 12, 2016',
+                        time: '1:00 PM',
+                        title: 'Museum of Art Lecture Series',
+                        location: 'McCone Irvine Auditorium'
+                      } %}
+                    </li>
+                  {% endfor %}
+                </ol>
               {% endblock %}
             {% endembed %}
 
