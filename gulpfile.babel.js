@@ -16,6 +16,7 @@ import notify from 'gulp-notify';
 import eslint from 'gulp-eslint';
 import prettify from 'gulp-prettify';
 import imagemin from 'gulp-imagemin';
+import replace from 'gulp-replace';
 import yaml from 'js-yaml';
 import del from 'del';
 import babelify from 'babelify';
@@ -160,13 +161,21 @@ gulp.task('watch', () => {
   gulp.watch('./src/data/*.yml', ['html']);
 });
 
-gulp.task('deploy', () => {
+gulp.task('replace:imageurls', () => {
+  const imagesDir = args.imagesDir || '/images/';
+  return gulp
+    .src('./dist/css/*.css')
+    .pipe(replace('/images/', imagesDir))
+    .pipe(gulp.dest('./dist/css'));
+});
+
+gulp.task('deploy', ['replace:imageurls'], () => {
   const dest = args.themeDir || '';
   if (!args.themeDir) {
     return console.error('No `--themeDir` argument passed');
   }
   return gulp
-    .src(['./dist/css/main.css', './dist/js/bundle.js', './dist/img/*'], {
+    .src(['./dist/css/main.css', './dist/js/bundle.js', './dist/images/*'], {
       base: './dist'
     })
     .pipe(gulp.dest(dest));
