@@ -1,0 +1,23 @@
+.speaker {
+  margin-bottom: 60px;
+}
+
+.speaker__photo {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.speaker__name {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: $font-family-sans-serif;
+  margin-bottom: 0;
+  // line-height: 1;
+}
+
+.speaker__content {
+  p {
+    font-family: $font-family-sans-serif;
+    font-size: 14px;
+  }
+}
