@@ -35,6 +35,7 @@
     }
   }
 
+  // third tier
   & & {
     @include media(md) {
       padding-top: 70px;
@@ -93,6 +94,13 @@
 
 .site-nav__list {
   width: 100%;
+  height: 100%;
+
+  // third tier
+  .site-nav--sub .site-nav--sub & {
+    column-count: 2;
+    column-fill: auto;
+  }
 }
 
 .site-nav__item {
