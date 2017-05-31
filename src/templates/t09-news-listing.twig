@@ -1,0 +1,34 @@
+{% extends "layout.twig" %}
+
+{% block page %}
+  <section class="page">
+
+    {% include 'partials/page-header.twig' with {
+      title: 'Latest Thinking',
+      breadcrumb: [
+        { text: 'Leadership and Impact' }
+      ]
+    } %}
+
+    <div class="page__content">
+
+      <article>
+        <figure>
+          <picture>
+            <img src="http://placehold.it/800x500" alt="">
+          </picture>
+        </figure>
+        <div>
+          <h1>Lorem ipsum dolor sit amet, consectetuer adipiscing </h1>
+          <p>By Author Name</p>
+          <ul>
+            <li>tag name her</li>
+          </ul>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas suscipit suscipit aliquet. Vivamus faucibus vel purus vel malesuada. Vivamus gravida erat eu mollis porta. Nulla interdum sit amet magna eu gravida. Phasellus scelerisque est id erat ornare, ut egestas vulputate.</p>
+        </div>
+      </article>
+
+    </div>
+
+  </section>
+{% endblock %}
