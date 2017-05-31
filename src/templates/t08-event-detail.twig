@@ -27,11 +27,18 @@
                   <ul class="share__list">
                     <li class="share__item">
                       <a href="https://www.facebook.com/sharer.php?u={{pageUrl}}" target="_blank" class="share__link">{{icons.facebook}}</a></li>
+                        <span aria-hidden="true">{{icons.facebook}}</span>
+                      </a>
+                    </li>
                     <li class="share__item">
                       <a href="http://twitter.com/share?text={{title}}&url={{pageUrl}}" target="_blank" class="share__link">{{icons.twitter}}</a>
+                        <span aria-hidden="true">{{icons.twitter}}</span>
+                      </a>
                     </li>
                     <li class="share__item">
                       <a href="mailto:?subject={{title}}&body={{pageUrl}}" class="share__link">{{icons.email}}</a>
+                        <span aria-hidden="true">{{icons.email}}</span>
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -62,11 +69,11 @@
 
                 <ul class="list u-mb-6">
                   <li class="list__item">
-                    <span class="list__icon">{{icons.map}}</span>
+                    <span class="list__icon" aria-hidden="true">{{icons.map}}</span>
                     <a href="#" class="u-link-border">View in Campus Map</a>
                   </li>
                   <li class="list__item">
-                    <span class="list__icon">{{icons.calendar}}</span>
+                    <span class="list__icon" aria-hidden="true">{{icons.calendar}}</span>
                     <a href="#" class="u-link-border">Add to my calendar</a>
                   </li>
                 </ul>
