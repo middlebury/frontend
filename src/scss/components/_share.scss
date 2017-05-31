@@ -1,0 +1,30 @@
+.share {
+  display: flex;
+}
+
+.share__label {
+  flex: 0 0 auto;
+}
+
+.share__list {
+  display: flex;
+  flex: 1;
+}
+
+.share__item {
+  margin-left: 20px;
+}
+
+.share__link {
+  svg {
+    fill: $bright-green;
+    transition: .2s;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: $middlebury-blue;
+    }
+  }
+}
