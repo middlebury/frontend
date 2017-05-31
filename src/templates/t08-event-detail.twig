@@ -9,94 +9,107 @@
       ]
     } %}
 
-    <div class="container">
-      <div class="row">
+    <article class="event-detail">
+      <div class="container">
+        <div class="row">
 
-        <div class="col-md-push-1 col-md-7">
-          <header>
-            <h2>Museum of Art Lecture Series</h2>
-            <div class="row">
-              <div class="col-md-6">
-                <p><span>Thursday, August 18<span> <span>6 - 8:30PM</span></p>
-                <p>Open to the Public</p>
+          <div class="col-md-push-1 col-md-7">
+            <header class="event-detail__header">
+              <h2 class="event-detail__title">Museum of Art Lecture Series</h2>
+              <div class="event-detail__meta">
+                <p class="event-detail__datetime"><time datetime=""><strong class="event-detail__date">Thursday, August 18</strong> <span class="event-detail__time">6 - 8:30PM</span></time></p>
+                <p class="event-detail__access">Open to the Public</p>
               </div>
-              <div class="col-md-6">
-                <span>Share:
-                  <ul class="share">
+
+              <div class="event-detail__share">
+                <div class="share">
+                  <span class="share__label">Share:</span>
+                  <ul class="share__list">
                     <li class="share__item">
-                      <a href="#">{{icons.facebook}}</a></li>
-                    <li class="share__item">
-                      <a href="#">{{icons.twitter}}</a>
+                      <a href="https://www.facebook.com/sharer.php?u={{pageUrl}}" target="_blank" title="Share on Facebook" class="share__link">
+                        <span aria-hidden="true">{{icons.facebook}}</span>
+                      </a>
                     </li>
                     <li class="share__item">
-                      <a href="#">{{icons.email}}</a>
+                      <a href="http://twitter.com/share?text={{title}}&url={{pageUrl}}" target="_blank" title="Share on Twitter" class="share__link">
+                        <span aria-hidden="true">{{icons.twitter}}</span>
+                      </a>
+                    </li>
+                    <li class="share__item">
+                      <a href="mailto:?subject={{title}}&body={{pageUrl}}" title="Share via email" class="share__link">
+                        <span aria-hidden="true">{{icons.email}}</span>
+                      </a>
                     </li>
                   </ul>
+                </div>
               </div>
+            </header>
+
+            <div class="event-detail__media">
+              <picture>
+                <img src="//placehold.it/800x500" alt="">
+              </picture>
             </div>
-          </header>
 
-          <picture>
-            <img src="//placehold.it/800x500" alt="" class="u-mb-6">
-          </picture>
+            <div class="event-detail__body typography">
+              <p>The Old Monterey Foundation, a California non-profit, public benefit corporation, was formed on February 14, 2011, with the specific mission and purpose of promoting, supporting and enhancing the artistic, cultural and historic environment of historic Downtown Monterey, California.</p>
 
-          <div class="typography u-mb-6">
-            <p>The Old Monterey Foundation, a California non-profit, public benefit corporation, was formed on February 14, 2011, with the specific mission and purpose of promoting, supporting and enhancing the artistic, cultural and historic environment of historic Downtown Monterey, California.</p>
-
-            <p>Since 2013, Old Monterey Foundation has continued its promotion of local history and art with the 2014 Jules Tavernier Lecture Series and the 2015 Marcia Devoe Lecture Series, and the Art in the Gardens Plein Aire event.</p>
-          </div>
-
-          <div class="u-mb-6">
-            <div class="row">
-              <div class="col-sm-6">
-
-              <h3>Where</h3>
-
-              <p>McCone Irvine Auditorium<br>
-              460 Pierce St<br>
-              Monterey, CA 93940</p>
-
-              <ul class="list u-mb-6">
-                <li class="list__item">
-                  <span class="list__icon">{{icons.map}}</span>
-                  <a href="#" class="u-link-border">View in Google Maps</a>
-                </li>
-                <li class="list__item">
-                  <span class="list__icon">{{icons.calendar}}</span>
-                  <a href="#" class="u-link-border">Add to my calendar</a>
-                </li>
-              </ul>
-
-              <p><a href="#" class="button button--primary">Contact Organizer</a></p>
-
-              </div>
-              <div class="col-sm-6">
-                <picture>
-                  <img src="http://placehold.it/300x300" srcset="http://placehold.it/300x300 1x, http://placehold.it/600x600 2x" alt="">
-                </picture>
-              </div>
+              <p>Since 2013, Old Monterey Foundation has continued its promotion of local history and art with the 2014 Jules Tavernier Lecture Series and the 2015 Marcia Devoe Lecture Series, and the Art in the Gardens Plein Aire event.</p>
             </div>
-          </div>
-        </div>
 
-        <div class="col-md-push-1 col-md-3">
-          {% embed 'partials/section.twig' with {
-            title: 'Speakers',
-            class: 'section--aside'
-          } %}
-            {% block content %}
+            <div class="event-detail__contact">
               <div class="row">
-                <div class="col-sm-6 col-md-12">
-                  {% include 'partials/speaker.twig' %}
+                <div class="col-sm-6">
+
+                <h3>Where</h3>
+
+                <address>McCone Irvine Auditorium<br>
+                460 Pierce St<br>
+                Monterey, CA 93940</address>
+
+                <ul class="list u-mb-6">
+                  <li class="list__item">
+                    <span class="list__icon" aria-hidden="true">{{icons.map}}</span>
+                    <a href="#" class="u-link-border">View in Campus Map</a>
+                  </li>
+                  <li class="list__item">
+                    <span class="list__icon" aria-hidden="true">{{icons.calendar}}</span>
+                    <a href="#" class="u-link-border">Add to my calendar</a>
+                  </li>
+                </ul>
+
+                <p><a href="#" class="button button--primary">Contact Organizer</a></p>
+
                 </div>
-                <div class="col-sm-6 col-md-12">
-                  {% include 'partials/speaker.twig' %}
+                <div class="col-sm-6">
+                  <picture>
+                    <img src="http://placehold.it/300x300" srcset="http://placehold.it/300x300 1x, http://placehold.it/600x600 2x" alt="">
+                  </picture>
                 </div>
               </div>
-            {% endblock %}
-          {% endembed %}
+            </div>
+          </div>
+
+          <div class="col-md-push-1 col-md-3">
+            {% embed 'partials/section.twig' with {
+              title: 'Speakers',
+              class: 'section--aside'
+            } %}
+              {% block content %}
+                <div class="row">
+                  <div class="col-sm-6 col-md-12">
+                    {% include 'partials/speaker.twig' %}
+                  </div>
+                  <div class="col-sm-6 col-md-12">
+                    {% include 'partials/speaker.twig' %}
+                  </div>
+                </div>
+              {% endblock %}
+            {% endembed %}
+          </div>
         </div>
       </div>
-    </div>
+    </article>
+
   </section>
 {% endblock %}
