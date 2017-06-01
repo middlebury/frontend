@@ -67,8 +67,10 @@
 
   // third tier
   .site-nav--sub .site-nav--sub & {
-    column-count: 2;
-    column-fill: auto;
+    @include media(lg) {
+      column-count: 2;
+      column-fill: auto;
+    }
   }
 }
 
