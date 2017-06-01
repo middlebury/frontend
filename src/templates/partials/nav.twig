@@ -1,45 +1,23 @@
 {% macro list(menu, modifier) %}
-  <div class="site-nav__col">
-    {% if menu.title %}
-      <span class="site-nav__items-heading">{{menu.title}}</span>
-    {% endif %}
-    <ul class="site-nav__list" data-nav-list>
-      {% for item in menu.items %}
-        <li class="site-nav__item">
-          <a href="{{item.href}}" class="site-nav__link{% if modifier == 'top' and loop.index >= 6 %} site-nav__link--accent{% endif %}" data-nav-link>{{item.text}}</a>
-          {% if item.items or item.menus %}
-            {{ _self.nav(item, 'sub') }}
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
+  <ul class="site-nav__list" data-nav-list>
+    {% for item in menu.items %}
+      <li class="site-nav__item">
+        <a href="{{item.href}}" class="site-nav__link{% if modifier == 'top' and loop.index >= 6 %} site-nav__link--accent{% endif %}" data-nav-link>{{item.text}}</a>
+        {% if item.items or item.menus %}
+          {{ _self.nav(item, 'sub') }}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
 {% endmacro %}
 
 {% macro nav(menu, modifier) %}
   <div class="site-nav{% if modifier %} site-nav--{{modifier}}{% endif %}" data-nav>
     <div class="site-nav__content">
       {% if menu.text %}
-        <div class="site-nav__header">
-          <a href="#" class="site-nav__link site-nav__link--back" data-nav-back>{{menu.text}}</a>
-        </div>
+        <a href="#" class="site-nav__link site-nav__link--back" data-nav-back>{{menu.text}}</a>
       {% endif %}
-      <div class="site-nav__body">
-        {% if menu.menus %}
-          {% for menu in menu.menus %}
-            {{ _self.list(menu) }}
-          {% endfor %}
-        {% elseif menu.items %}
-          {{ _self.list(menu, modifier) }}
-        {% endif %}
-      </div>
-      {% if menu.button %}
-        <div class="site-nav__footer">
-          <div class="site-nav__button">
-            <a href="{{menu.button.href}}" class="button button--secondary button--sm">{{menu.button.text}}</a>
-          </div>
-        </div>
-      {% endif %}
+      {{ _self.list(menu, modifier) }}
     </div>
   </div>
 {% endmacro %}
