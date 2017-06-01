@@ -1,22 +1,22 @@
 <form action="">
 
   {% include 'partials/filter.twig' with {
-    id: 'view-filter',
+    id: 'midd-view-filter',
     label: 'View All',
     items: [
       {
-        id: 'view-filter-all',
+        id: 'midd-view-filter-all',
         value: 'view-all',
         label: 'View all',
         active: true
       },
       {
-        id: 'view-filter-public',
+        id: 'midd-view-filter-public',
         value: 'public',
         label: 'Open to Public'
       },
       {
-        id: 'view-filter-private',
+        id: 'midd-view-filter-private',
         value: 'private',
         label: 'Closed to Public'
       },
@@ -24,7 +24,7 @@
   } %}
 
   {% include 'partials/filter.twig' with {
-    id: 'upcoming-filter',
+    id: 'midd-upcoming-filter',
     label: 'Upcoming',
     items: [
       {
@@ -35,7 +35,7 @@
   } %}
 
   {% include 'partials/filter.twig' with {
-    id: 'date-filter',
+    id: 'midd-date-filter',
     label: 'All Dates',
     items: [
       {
@@ -46,7 +46,7 @@
   } %}
 
   {% include 'partials/filter.twig' with {
-    id: 'topic-filter',
+    id: 'midd-topic-filter',
     label: 'All Topics',
     items: [
       {

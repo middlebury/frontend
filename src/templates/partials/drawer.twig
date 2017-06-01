@@ -1,4 +1,4 @@
-<div class="drawer" id="{{id}}">
+<div class="drawer{% if class %} {{class}}{% endif %}" id="{{id}}">
   <div class="drawer__content">
     {% block content %}
     {% endblock %}

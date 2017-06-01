@@ -10,7 +10,7 @@
     callout_link_url: '#',
   } %}
     {% block controls %}
-      <a href="#filters-drawer" data-toggle-target="#filters-drawer" data-toggle-linked="filters-drawer" aria-label="Toggle filters">
+      <a href="#midd-filters-drawer" data-toggle-target=".js-filters-drawer" data-toggle-linked="filters-drawer" aria-label="Toggle filters">
         <span aria-hidden="true">{{icons.search_lg}}</span>
       </a>
     {% endblock %}
@@ -44,7 +44,10 @@
           {% endembed %}
         </div>
 
-        {% embed 'partials/drawer.twig' with { id: 'filters-drawer' } %}
+        {% embed 'partials/drawer.twig' with {
+          id: 'midd-filters-drawer',
+          class: 'js-filters-drawer'
+        } %}
           {% block content %}
               {% include 'partials/filters.twig' %}
 
