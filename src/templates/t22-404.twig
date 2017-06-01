@@ -1,17 +1,17 @@
 {% extends "layout.twig" %}
 
 {% block page %}
-  <section class="page">
+  <section class="page" aria-labelledby="midd-page-header-label">
 
     {% include 'partials/page-header.twig' with {
       title: 'Page Not Found',
     } %}
 
-    <section class="section">
+    <section class="section" aria-labelledby="midd-hero-form-label">
       {% include 'partials/hero-form.twig' %}
     </section>
 
-    <section class="section">
+    <section class="section" aria-label="Latest News and Events">
 
       <div class="container">
         <div class="row row--dividers">
@@ -20,7 +20,8 @@
               title: 'Latest News',
               class: 'u-mb-0',
               moreLinkText: 'More News',
-              moreLinkHref: '#'
+              moreLinkHref: '#',
+              labelledby: 'midd-latest-news-label'
             } %}
               {% block content %}
                 <ol class="list list--lg">
@@ -42,7 +43,8 @@
               title: 'Upcoming Events',
               class: 'u-mb-0',
               moreLinkText: 'More Events',
-              moreLinkHref: '#'
+              moreLinkHref: '#',
+              labelledby: 'midd-upcoming-events-label'
             } %}
               {% block content %}
                 <ol class="list list--lg">
