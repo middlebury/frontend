@@ -1,7 +1,7 @@
 {% extends "layout.twig" %}
 
 {% block page %}
-  <section class="page">
+  <section class="page" aria-labelledby="midd-page-header-label">
 
     {% include 'partials/page-header.twig' with {
       breadcrumb: [
@@ -9,16 +9,16 @@
       ]
     } %}
 
-    <article class="event-detail">
+    <article class="event-detail" aria-labelledby="midd-event-label">
       <div class="container">
         <div class="row">
 
           <div class="col-md-push-1 col-md-7">
-            <header class="event-detail__header">
-              <h2 class="event-detail__title">Museum of Art Lecture Series</h2>
+            <header class="event-detail__header" aria-labelledby="midd-event-label">
+              <h2 class="event-detail__title" id="midd-event-label">Museum of Art Lecture Series</h2>
               <div class="event-detail__meta">
                 <p class="event-detail__datetime">
-                  <time datetime="">Thursday, August 18, 6&ndash;8:30PM</time>
+                  <time datetime="">Thursday, August 18, 6</time>&ndash;<time datetime="">8:30PM</time>
                 </p>
                 <p class="event-detail__admission">TESOL Members $175; Non-members $225</p>
                 <p class="event-detail__access">Open to the Public</p>
@@ -49,9 +49,15 @@
             </header>
 
             <div class="event-detail__media">
-              <picture>
-                <img src="//placehold.it/800x500" alt="">
-              </picture>
+              <figure>
+                <picture>
+                  <img src="//placehold.it/800x500" alt="">
+                </picture>
+                <figcaption>
+                  This is a caption for this image.
+                  <span class="media__credit">Credit</span>
+                </figcaption>
+              </figure>
             </div>
 
             <div class="event-detail__body typography">
@@ -84,8 +90,8 @@
                 <h3>Contact Organizer</h3>
 
                 <p>Priscilla Lorenzo<br>
-                  <a href="#">plorenzo@middlebury.edu</a><br>
-                  <a href="tel:">802-555-0000</a>
+                  <a href="#" class="u-link-border">plorenzo@middlebury.edu</a><br>
+                  <a href="tel:" class="u-link-border">802-555-0000</a>
                 </p>
 
                 </div>
