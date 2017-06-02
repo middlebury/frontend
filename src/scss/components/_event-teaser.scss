@@ -1,6 +1,5 @@
 .event-teaser {
   @include clearfix;
-  margin-bottom: 30px;
 
   &:not(:last-of-type) {
     border-bottom: 1px solid $line-gray;
@@ -57,7 +56,6 @@
 }
 
 .event-teaser__metalist {
-  margin-bottom: 30px;
   display: flex;
 }
 
