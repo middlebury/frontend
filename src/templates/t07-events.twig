@@ -60,20 +60,25 @@
       </div>
       <div class="col-md-push-1 col-md-8 flex-md-first">
 
-        {% for i in 0..7 %}
-          {% include 'partials/event-teaser.twig' with {
-            title: 'Building a Sustainable Career in Social Impact – Breaking into the Field',
-            link: '#',
-            time: '6:00 PM',
-            date: 'Mon Jul 25, 2016',
-            local: 'McCone Irvine Auditorium',
-            blurb: '<p>Four guest speakers will bring to light realities of the true costs of war experienced by today\'s veteran and military community.</p>',
-            metalist: [
-              { text: 'Closed to the Public' },
-              { text: 'Lorem ipsum dolor set' },
-            ]
-          } %}
-        {% endfor %}
+        <ol class="list list--dividers u-mb-6">
+          {% for i in 0..7 %}
+            <li class="list__item">
+              {% include 'partials/event-teaser.twig' with {
+                title: 'Building a Sustainable Career in Social Impact – Breaking into the Field',
+                link: '#',
+                time: '6:00 PM',
+                date: 'Mon Jul 25, 2016',
+                local: 'McCone Irvine Auditorium',
+                blurb: '<p>Four guest speakers will bring to light realities of the true costs of war experienced by today\'s veteran and military community.</p>',
+                metalist: [
+                  { text: 'Closed to the Public' },
+                  { text: 'Lorem ipsum dolor set' },
+                ]
+              } %}
+            </li>
+          {% endfor %}
+        </ol>
+
         {% include 'partials/pagination.twig' %}
 
       </div>
