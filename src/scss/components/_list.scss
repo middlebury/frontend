@@ -9,6 +9,11 @@
     .list--lg & {
       margin-bottom: 60px;
     }
+
+    .list--dividers & {
+      border-bottom: 1px solid $line-gray;
+      padding-bottom: 30px;
+    }
   }
 }
 
