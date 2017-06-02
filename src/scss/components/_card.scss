@@ -1,16 +1,8 @@
 .card {
   margin-bottom: 50px;
-  @include clearfix();
-
-  @include media(sm) {
-
-  }
 }
 
 .card__header {
-  @include media(sm) {
-
-  }
 }
 
 .card__tag {
@@ -32,19 +24,10 @@
 }
 
 .card__media {
-  float: right;
-
-  @include media(sm) {
-    margin-bottom: 20px;
-    float: none;
-  }
+  margin-bottom: 20px;
 }
 
 .card__body {
-  @include media(sm) {
-
-  }
-
   p:last-child {
     margin-bottom: 0;
   }
