@@ -23,18 +23,19 @@
   margin-bottom: 20px;
 }
 
-.event-detail__date {
-  margin-right: 10px;
-}
-
-.event-detail__time {
+.event-detail__admission {
+  font-family: $font-family-sans-serif;
+  font-size: 16px;
+  margin-bottom: 0;
+  line-height: 24px;
 }
 
 .event-detail__access {
   font-family: $font-family-sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   font-style: italic;
   margin-bottom: 20px;
+  line-height: 24px;
 
   @include media(md) {
     margin-bottom: 0;
