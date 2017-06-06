@@ -28,10 +28,12 @@ function match() {
 }
 
 function unmatch() {
-  swiperInstance.destroy(
-    true, // deleteInstancee
-    true // cleanupStyles
-  );
+  if (swiperInstance instanceof Swiper) {
+    swiperInstance.destroy(
+      true, // deleteInstancee
+      true // cleanupStyles
+    );
+  }
 }
 
 enquire.register(mq, {
