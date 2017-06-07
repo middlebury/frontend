@@ -10,40 +10,95 @@
       ]
     } %}
 
-    <div class="col-md-push-1 col-md-7">
+    <article class="profile-detail">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-push-1 col-md-10">
 
-      <article>
-        <figure>
-          <pictue>
-            <source srcset="//placehold.it/244x340" media="(min-width: 960px)">
-            <source srcset="//placehold.it/155x216" media="(min-width: 580px)">
-            <source srcset="//placehold.it/86x119">
-            <img src="//placehold.it/244x340" alt="">
-          </pictue>
-        </figure>
-        <h1>Beryl Levinger</h1>
-        <p>Program Chair, Master of Public Administration and International Policy and Development</p>
-        <dl class="profile-info">
-          <dt class="profile-info__title">Office</dt>
-          <dd class="profile-info__text">E6-364</dd>
-          <dt class="profile-info__title">Tel</dt>
-          <dd class="profile-info__text"><a href="tel:6173247535">617-324-7535</a></dd>
-          <dt class="profile-info__title">Email</dt>
-          <dd class="profile-info__text"><a href="mailto:blevinger@middlebury.edu">blevinger@middlebury.edu</a></dd>
-          <dt class="profile-info__title">Office Hours</dt>
-          <dd class="profile-info__text">Tuesdays 3-4pm<br>Thursdays 11am-12pm</dd>
-          <dt class="profile-info__title sr-only">CV</dt>
-          <dd class="profile-info__text"><a href="#">Download CV</a></dd>
-          <dt class="profile-info__title sr-only">Elsewhere</dt>
-          <dd class="profile-info__text">
-            {% include 'partials/social-links.twig' with {
-              items: social_links
-            } %}
-          </dd>
-        </dl>
-      </article>
+            <header class="u-mb-4">
+              <h2 class="profile-detail__name">Beryl Levinger</h2>
+              <p class="profile-detail__title">Program Chair, Master of Public Administration and International Policy and Development</p>
+            </header>
 
-    </div>
+            <div class="row">
+              <div class="col-md-4 flex-md-last">
+
+                <div class="row">
+                  <div class="col-xs-6 col-md-12 flex-last flex-md-first u-text-right">
+                    <figure class="u-mb-4">
+                      <pictue>
+                        <source srcset="//placehold.it/244x340" media="(min-width: 960px)">
+                        <source srcset="//placehold.it/155x216" media="(min-width: 580px)">
+                        <source srcset="//placehold.it/86x119">
+                        <img src="//placehold.it/244x340" alt="">
+                      </pictue>
+                    </figure>
+                  </div>
+                  <div class="col-xs-6 col-md-12 flex-first flex-md-last">
+                    <dl class="profile-info">
+                      <dt class="profile-info__title">Office</dt>
+                      <dd class="profile-info__text">E6-364</dd>
+                      <dt class="profile-info__title">Tel</dt>
+                      <dd class="profile-info__text"><a href="tel:6173247535">617-324-7535</a></dd>
+                      <dt class="profile-info__title">Email</dt>
+                      <dd class="profile-info__text"><a href="mailto:blevinger@middlebury.edu">blevinger@middlebury.edu</a></dd>
+                      <dt class="profile-info__title">Office Hours</dt>
+                      <dd class="profile-info__text">Tuesdays 3-4pm<br>Thursdays 11am-12pm</dd>
+                      <dt class="profile-info__title sr-only">CV</dt>
+                      <dd class="profile-info__text"><a href="#">Download CV</a></dd>
+                      <dt class="profile-info__title sr-only">Elsewhere</dt>
+                      <dd class="profile-info__text">
+                        {% include 'partials/social-links.twig' with {
+                          items: social_links
+                        } %}
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-md-8 flex-md-first">
+
+                <div class="profile-detail__content">
+
+                  <div class="typography">
+                    <p>Pellentesque nibh felis, eleifend id, commodo in, interdum vitae, leo. Praesent eu elit. Ut eu ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Maecenas elementum augue nec nisl. Proinauctor lorem at nibh. Curabitur nulla purus, feugiat id, elementum in, lobortis quis, pede. Vivamus sodales adipiscing sapien. Vestibulum posuere nulla eget wisi.</p>
+                    <p>Integer volutpat ligula eget enim. Suspendisse vitae arcu. Pellentesque nibh felis, eleifend id, commodo in, interdum vitae, leo. Praesent eu elit. Ut eu ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Maecenas elementum augue nec nisl. Proin auctor lorem at nibh. Curabitur nulla purus, feugiat id, elementum in, lobortis quis, pede. Vivamus sodales adipiscing sapien. Vestibulum posuere nulla eget wisi.</p>
+                  </div>
+
+                  <section class="profile-section">
+                    <h3 class="profile-section__title">Courses Taught</h3>
+                    <ul class="profile-section__list">
+                      <li class="list__item">Lorem ipsum dolor sit amet</li>
+                      <li class="list__item">Nihil amet dolore ea reprehenderit voluptate beatae quod</li>
+                    </ul>
+                  </section>
+
+                  <section class="profile-section">
+                    <h3 class="profile-section__title">Courses Taught</h3>
+                    <ul class="profile-section__list">
+                      <li class="list__item">Lorem ipsum dolor sit amet</li>
+                      <li class="list__item">Nihil amet dolore ea reprehenderit voluptate beatae quod</li>
+                    </ul>
+                  </section>
+
+                  <section class="profile-section">
+                    <h3 class="profile-section__title">Courses Taught</h3>
+                    <ul class="profile-section__list">
+                      <li class="list__item">Lorem ipsum dolor sit amet</li>
+                      <li class="list__item">Nihil amet dolore ea reprehenderit voluptate beatae quod</li>
+                    </ul>
+                  </section>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </article>
 
   </section>
 {% endblock %}
