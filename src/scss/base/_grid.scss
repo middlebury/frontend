@@ -9,7 +9,8 @@
 
 .row {
   @include make-row();
-  height: 100%;
+  // TODO: need a util for where this is needed? mostly around callouts
+  // height: 100%;
 }
 
 .row--no-gutters {
