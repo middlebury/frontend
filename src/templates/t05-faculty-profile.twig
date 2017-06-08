@@ -10,40 +10,127 @@
       ]
     } %}
 
-    <div class="col-md-push-1 col-md-7">
+    <article class="profile-detail">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-push-1 col-md-11">
 
-      <article>
-        <figure>
-          <pictue>
-            <source srcset="//placehold.it/244x340" media="(min-width: 960px)">
-            <source srcset="//placehold.it/155x216" media="(min-width: 580px)">
-            <source srcset="//placehold.it/86x119">
-            <img src="//placehold.it/244x340" alt="">
-          </pictue>
-        </figure>
-        <h1>Beryl Levinger</h1>
-        <p>Program Chair, Master of Public Administration and International Policy and Development</p>
-        <dl class="profile-info">
-          <dt class="profile-info__title">Office</dt>
-          <dd class="profile-info__text">E6-364</dd>
-          <dt class="profile-info__title">Tel</dt>
-          <dd class="profile-info__text"><a href="tel:6173247535">617-324-7535</a></dd>
-          <dt class="profile-info__title">Email</dt>
-          <dd class="profile-info__text"><a href="mailto:blevinger@middlebury.edu">blevinger@middlebury.edu</a></dd>
-          <dt class="profile-info__title">Office Hours</dt>
-          <dd class="profile-info__text">Tuesdays 3-4pm<br>Thursdays 11am-12pm</dd>
-          <dt class="profile-info__title sr-only">CV</dt>
-          <dd class="profile-info__text"><a href="#">Download CV</a></dd>
-          <dt class="profile-info__title sr-only">Elsewhere</dt>
-          <dd class="profile-info__text">
-            {% include 'partials/social-links.twig' with {
-              items: social_links
-            } %}
-          </dd>
-        </dl>
-      </article>
+            <header class="profile-detail__header">
+              <h2 class="profile-detail__name">Beryl Levinger</h2>
+              <p class="profile-detail__title">Program Chair, Master of Public Administration and International Policy and Development</p>
+            </header>
 
-    </div>
+            <div class="profile-detail__body">
+              <div class="profile-detail__card">
+                <div class="row">
+
+                  <div class="profile-detail__photo">
+                    <img src="//placehold.it/306x426" srcset="//placehold.it/306x426 1x, //placehold.it/612x852 2x" alt="">
+                  </div>
+
+                  <div class="profile-detail__info">
+                    <dl class="profile-info">
+                      <dt class="profile-info__title">Office</dt>
+                      <dd class="profile-info__text">E6-364</dd>
+                      <dt class="profile-info__title">Tel</dt>
+                      <dd class="profile-info__text"><a href="tel:6173247535">617-324-7535</a></dd>
+                      <dt class="profile-info__title">Email</dt>
+                      <dd class="profile-info__text"><a href="mailto:blevinger@middlebury.edu">blevinger@middlebury.edu</a></dd>
+                      <dt class="profile-info__title">Office Hours</dt>
+                      <dd class="profile-info__text">Tuesdays 3-4pm<br>Thursdays 11am-12pm</dd>
+                      <dt class="profile-info__title sr-only">CV</dt>
+                      <dd class="profile-info__text"><a href="#">Download CV</a></dd>
+                      <dt class="profile-info__title sr-only">Elsewhere</dt>
+                      <dd class="profile-info__text">
+                        {% include 'partials/social-links.twig' with {
+                          items: social_links
+                        } %}
+                      </dd>
+                    </dl>
+                  </div>
+
+                </div>
+              </div>
+              <div class="profile-detail__content">
+
+                <div class="typography">
+                  <p>Pellentesque nibh felis, eleifend id, commodo in, interdum vitae, leo. Praesent eu elit. Ut eu ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Maecenas elementum augue nec nisl. Proinauctor lorem at nibh. Curabitur nulla purus, feugiat id, elementum in, lobortis quis, pede. Vivamus sodales adipiscing sapien. Vestibulum posuere nulla eget wisi.</p>
+                  <p>Integer volutpat ligula eget enim. Suspendisse vitae arcu. Pellentesque nibh felis, eleifend id, commodo in, interdum vitae, leo. Praesent eu elit. Ut eu ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Maecenas elementum augue nec nisl. Proin auctor lorem at nibh. Curabitur nulla purus, feugiat id, elementum in, lobortis quis, pede. Vivamus sodales adipiscing sapien. Vestibulum posuere nulla eget wisi.</p>
+                </div>
+
+                <section class="profile-section" aria-labelledby="midd-profile-section-courses-label">
+                  <h3 class="profile-section__title" id="midd-profile-section-courses-label">Courses Taught</h3>
+                  <ul class="profile-section__list">
+                    <li class="profile-section__item"><a href="#">Lorem ipsum dolor sit amet</a></li>
+                    <li class="profile-section__item"><a href="">Nihil amet dolore ea reprehenderit voluptate beatae quo</a>d</li>
+                  </ul>
+                </section>
+
+                <section class="profile-section" aria-labelledby="midd-profile-section-interests-label">
+                  <h3 class="profile-section__title" id="midd-profile-section-interests-label">Areas of Interest</h3>
+                  <ul class="profile-section__list">
+                    <li class="profile-section__item">Lorem ipsum dolor sit amet</li>
+                    <li class="profile-section__item">Nihil amet dolore ea reprehenderit voluptate beatae quod</li>
+                  </ul>
+                </section>
+
+                <section class="profile-section" aria-labelledby="midd-profile-section-centers-label">
+                  <h3 class="profile-section__title" id="midd-profile-section-centers-label">Research Centers</h3>
+                  <ul class="profile-section__list">
+                    <li class="profile-section__item"><a href="">Lorem ipsum dolor sit amet</a></li>
+                    <li class="profile-section__item"><a href="">Nihil amet dolore ea reprehenderit voluptate beatae quod</a></li>
+                  </ul>
+                </section>
+
+                <section class="profile-section" aria-labelledby="midd-profile-section-degrees-label">
+                  <h3 class="profile-section__title" id="midd-profile-section-degrees-label">Academic Degrees</h3>
+                  <ul class="profile-section__list">
+                    <li class="profile-section__item">Lorem ipsum dolor sit amet</li>
+                    <li class="profile-section__item">Nihil amet dolore ea reprehenderit voluptate beatae quod</li>
+                  </ul>
+                </section>
+
+                <section class="profile-section" aria-labelledby="midd-profile-section-pubs-label">
+                  <h3 class="profile-section__title" id="midd-profile-section-pubs-label">Latest Publication</h3>
+
+                  <article>
+                    <h4 class="h3"><a href="#">Islam, Islamism, and Politics in Eurasia Report</a></h4>
+                    <p>Pellentesque nibh felis, eleifend id, commodo in, interdum vitae, leo. Praesent eu elit. Ut eu ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.</p>
+                  </article>
+                </section>
+
+                <section class="profile-section" aria-labelledby="midd-profile-section-events-label">
+                  <h3 class="profile-section__title" id="midd-profile-section-events-label">Upcoming Event</h3>
+
+                  {% include 'partials/event-teaser-lite.twig' with {
+                    title: 'Museum of Art Lecture Series',
+                    date: 'Jun 12',
+                    time: '4:00 PM',
+                    location: 'McCone Irvine Auditoriumh'
+                  } %}
+                </section>
+
+                <section class="profile-section" aria-labelledby="midd-profile-section-news-label">
+                  <h3 class="profile-section__title" id="midd-profile-section-news-label">Beryl Levinger News Feed</h3>
+
+                  <ul class="list list--lg">
+                    {% for i in 0..1 %}
+                      <li class="list__item">
+                        {% include 'partials/story-teaser.twig' %}
+                      </li>
+                    {% endfor %}
+                  </ul>
+
+                </section>
+
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </article>
 
   </section>
 {% endblock %}

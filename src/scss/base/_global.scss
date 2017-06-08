@@ -55,7 +55,7 @@ fieldset {
   border: 0;
 }
 
-p {
+%p {
   color: $text-gray;
   font-family: $font-family-serif;
   font-size: 16px;
@@ -63,15 +63,14 @@ p {
   // font-weight: $font-weight-book;
   margin-top: 0;
   margin-bottom: 20px;
+}
 
-  @include media(xl) {
-    // font-size: rem(18);
-    // line-height: rem(30);
-  }
+p {
+  @extend %p;
 }
 
 address {
-  @extend p;
+  @extend %p;
   font-style: normal;
 }
 

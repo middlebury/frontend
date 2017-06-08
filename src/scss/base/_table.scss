@@ -58,7 +58,10 @@ td {
     content: attr(data-th);
     font-size: 14px;
     font-weight: $font-weight-semibold;
+    font-family: $font-family-sans-serif;
+    color: $black;
     display: block;
+    margin-bottom: 5px;
 
     @include media(md) {
       display: none;
