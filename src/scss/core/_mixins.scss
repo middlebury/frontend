@@ -1,14 +1,7 @@
 // TODO: remove me and use BS v4 media-breakpoint-up mixin
-@mixin media($breakpoint, $breakpoints: $grid-breakpoints) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
-      @content;
-    }
-  }
-
-  @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-        + "Please make sure it is defined in `$breakpoints` map.";
+@mixin media($breakpoint) {
+  @include media-breakpoint-up($breakpoint) {
+    @content;
   }
 }
 
