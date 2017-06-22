@@ -27,19 +27,7 @@
             class: 'section--aside'
           } %}
             {% block content %}
-              <div class="card">
-                <div class="card__media">
-                  <div class="video">
-                    <video src="" poster="http://placehold.it/320x180"></video>
-                    <div class="video__controls">
-                      <button class="video__button button button--primary">Play</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="card__body">
-                  <h3 class="card__title"><a href="#">Middlebury Institute’s TESOL/TFL Program: Innovations in Language Learning</a></h3>
-                </div>
-              </div>
+              {% include 'partials/event-card.twig' %}
             {% endblock %}
           {% endembed %}
         </div>
