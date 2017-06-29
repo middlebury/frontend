@@ -3,7 +3,7 @@
 {% block page %}
   <section class="page">
 
-  {% include 'partials/page-header.twig' with {
+  {% embed 'partials/page-header.twig' with {
     title: 'MPA Curriculum',
     callout_title: 'Application for Spring 2017 Now Open',
     callout_link_text: 'Apply Now',
@@ -13,6 +13,10 @@
       { text: 'Masters of Public Administration' },
     ]
   } %}
+    {% block controls %}
+      {% include 'partials/page-nav-button.twig' %}
+    {% endblock %}
+  {% endembed %}
 
   <div class="container">
     <div class="row">
