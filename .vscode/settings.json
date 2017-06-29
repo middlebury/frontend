@@ -48,5 +48,6 @@
   },
   "[javascript]": {
     "editor.formatOnSave": true
-  }
+  },
+  "prettier.eslintIntegration": true
 }
