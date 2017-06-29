@@ -34,7 +34,9 @@
 
         {% embed 'partials/drawer.twig' with {
           id: 'midd-filters-drawer',
-          class: 'js-filters-drawer'
+          class: 'js-filters-drawer',
+          toggle_linked: 'filters-drawer',
+          toggle_target: '.js-filters-drawer'
         } %}
           {% block content %}
               {% include 'partials/filters.twig' %}
