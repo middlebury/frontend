@@ -1,19 +1,17 @@
 .page-nav {
   margin-bottom: 60px;
-  // display: none;
-  // margin-left: -16px;
-  // margin-right: -16px;
 
-  @include media(md) {
-    display: block;
-  }
+  @include media-breakpoint-down(sm) {
+    // use make-row to add the negative marins, so the borders line up with sides of viewport
+    // @include make-row();
 
-  &.has-toggler {
-    @include media-breakpoint-down(md) {
+    // hide the nav on small screens so it can be toggled open/closed
+    &.has-toggler {
       display: none;
     }
   }
 
+  // show the page nav when it is toggled on
   &.is-toggled {
     display: block;
   }
@@ -25,7 +23,19 @@
   }
 }
 
-.page-nav__list--callouts {}
+.page-nav__list--sub {
+  display: none;
+  margin-left: 20px;
+  margin-bottom: 10px;
+
+  .page-nav__item--active > & {
+    display: block;
+  }
+}
+
+.page-nav__list--callouts {
+
+}
 
 .page-nav__item {
   border-bottom: 1px solid $line-gray;
@@ -41,35 +51,51 @@
       border-bottom: 0;
     }
   }
+
+  // nested items
+  .page-nav__list--sub & {
+    border-bottom: 0;
+  }
 }
 
 .page-nav__link {
   display: block;
   padding-top: 20px;
   padding-bottom: 20px;
-  font-size: 15px;
   color: $gray;
 
   @include make-gutters();
 
   @include media(md) {
+    color: $middlebury-blue;
     padding-left: 0;
     padding-right: 0;
-    color: $middlebury-blue;
   }
 
-  .page-nav__item--active & {
+  .page-nav__item--active > & {
     color: $bright-green;
+    font-weight: $font-weight-semibold;
   }
 
   .page-nav__list--callouts & {
-    font-weight: $font-weight-semibold;
     color: $middlebury-blue;
+    font-weight: $font-weight-semibold;
 
     @include media(md) {
       padding: 0;
-      display: inline-block;
+      display: inline;
       @include link-border();
+    }
+  }
+
+  .page-nav__list--sub & {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: $text-gray;
+
+    @include media(md) {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }
