@@ -1,14 +1,4 @@
 .page-header {
-  @include make-container();
-  margin-bottom: 30px;
-
-  @include media(md) {
-    margin-bottom: 50px;
-  }
-}
-
-.page-header__row {
-  @include make-row();
 }
 
 .page-header__primary {
@@ -19,25 +9,22 @@
   @include make-col-ready();
 
   @include media(md) {
-    @include make-col(7);
-    @include make-col-push(1);
-    display: block;
+    @include make-col(8);
   }
 }
 
 .page-header__secondary {
-  order: -1;
   @include make-col-ready();
+  order: -1;
 
   @include media-breakpoint-down(sm) {
     padding: 0;
   }
 
   @include media(md) {
-    order: 0;
     padding-top: 20px;
+    order: 1;
     @include make-col(4);
-    @include make-col-push(1);
   }
 }
 
@@ -56,8 +43,15 @@
 }
 
 .page-header__title {
-  margin: 0;
   font-family: $font-family-sans-serif;
   font-weight: $font-weight-semibold;
+  font-size: 20px;
+  margin-bottom: 40px;
+
+  @include media(md) {
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
 }
 
