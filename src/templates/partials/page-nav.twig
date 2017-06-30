@@ -8,10 +8,10 @@
         {% if item.items %}
 
         <ul class="page-nav__list">
-          {% for item in items %}
+          {% for subitem in item.items %}
 
             <li class="page-nav__item">
-              <a href="#" class="page-nav__link">{{item.text}}</a>
+              <a href="{{subitem.href}}" class="page-nav__link">{{subitem.text}}</a>
             </li>
 
           {% endfor %}
