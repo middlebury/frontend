@@ -41,6 +41,12 @@
   }
 }
 
+.row--dividers-reverse {
+  > [class^="col"]:not(:last-of-type) {
+    border-left: 1px solid $line-gray;
+  }
+}
+
 .row--dividers-light {
   > [class^="col"]:not(:last-of-type) {
     border-color: $brand-secondary-dark;
