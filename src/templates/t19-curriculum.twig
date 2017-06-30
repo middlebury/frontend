@@ -22,99 +22,112 @@
     <div class="row">
       <div class="col-md-push-1 col-md-11">
 
-        <div class="page__nav">
-          {% include 'partials/page-nav.twig' with {
-            items: [
-              { text: 'Curriculum', href: '#', active: true },
-              { text: 'Faculty', href: '#' },
-              { text: 'Financing Your Education', href: '#' },
-            ],
-            callouts: [
-              { text: 'Request Information', href: '#' },
-              { text: 'Apply by July 10 for Fall 2017', href: '#' },
-            ]
-          } %}
-        </div>
+        <div class="page__main">
 
-        <article class="page__content typography">
+          <div class="page__nav">
+            {% include 'partials/page-nav.twig' with {
+              items: [
+                { text: 'Curriculum', href: '#' },
+                {
+                  text: 'Faculty',
+                  active: true,
+                  href: '#',
+                  items: [
+                    { text: 'Faculty sub page 1', href: '#' },
+                    { text: 'Faculty sub page 2', href: '#' },
+                    { text: 'Faculty sub page 3', href: '#' },
+                    { text: 'Faculty sub page 4', href: '#' },
+                  ]
+                },
+                { text: 'Financing Your Education', href: '#' },
+              ],
+              callouts: [
+                { text: 'Request Information', href: '#' },
+                { text: 'Apply by July 10 for Fall 2017', href: '#' },
+              ]
+            } %}
+          </div>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut veritatis sit cumque minus ratione, velit doloremque. Ad dolorem asperiores dolor odio ratione veniam, vel possimus praesentium quas molestiae non cum!</p>
+          <article class="page__content typography">
 
-            <dl>
-              <dt>Duration</dt>
-              <dd>Two years, full time</dd>
-              <dt>State Dates</dt>
-              <dd>August or January</dd>
-              <dt>Accelerated Programs</dt>
-              <dd>Two or three Semesters</dd>
-              <dt>Credits</dt>
-              <dd>60</dd>
-              <dt>Thesis or Practicum</dt>
-              <dd>Practicum Required</dd>
-              <dt>Language Competency</dt>
-              <dd>Required</dd>
-            </dl>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut veritatis sit cumque minus ratione, velit doloremque. Ad dolorem asperiores dolor odio ratione veniam, vel possimus praesentium quas molestiae non cum!</p>
 
-            <h2>Core Course Work</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates itaque, deleniti aliquam eius explicabo libero quaerat, fugit voluptatibus quisquam voluptate quod fugiat consequuntur impedit mollitia hic error porro aut quasi.</p>
+              <dl>
+                <dt>Duration</dt>
+                <dd>Two years, full time</dd>
+                <dt>State Dates</dt>
+                <dd>August or January</dd>
+                <dt>Accelerated Programs</dt>
+                <dd>Two or three Semesters</dd>
+                <dt>Credits</dt>
+                <dd>60</dd>
+                <dt>Thesis or Practicum</dt>
+                <dd>Practicum Required</dd>
+                <dt>Language Competency</dt>
+                <dd>Required</dd>
+              </dl>
 
-            <table>
-              <thead>
-                <th>Course</th>
-                <th>Number</th>
-                <th>Overview</th>
-                <th>Professors and Instructors</th>
-              </thead>
-              <tbody>
-                {% for i in 0..3 %}
-                <tr>
-                  <td data-th="Course">Economics</td>
-                  <td data-th="Number">15.02</td>
-                  <td data-th="Overview">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae eos necessitatibus, quasi nobis minus minima ex dolorem illum in fuga, ea rem explicabo optio porro non. Aliquid quos, reiciendis minima?</p>
-                    <ul>
-                      <li>Lorem ipsum dolor sit amet</li>
-                      <li>Consequatur suscipit</li>
-                      <li>Labore nam, iure mollitia error</li>
-                      <li>Quisquam commodi ea veritatis</li>
-                    </ul>
-                  </td>
-                  <td data-th="Professors and Instructors">
-                    <strong class="u-sans-serif">Jeff Dayton-Johnson</strong>
-                  </td>
-                </tr>
-                {% endfor %}
-              </tbody>
-            </table>
+              <h2>Core Course Work</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates itaque, deleniti aliquam eius explicabo libero quaerat, fugit voluptatibus quisquam voluptate quod fugiat consequuntur impedit mollitia hic error porro aut quasi.</p>
 
-            <h2>Optional Concentrations</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe natus, doloribus vero eligendi, fugiat ipsam illum sint. Ipsum iure repellendus sint modi delectus, nesciunt vitae assumenda, dolorum voluptates sequi atque?</p>
+              <table>
+                <thead>
+                  <th>Course</th>
+                  <th>Number</th>
+                  <th>Overview</th>
+                  <th>Professors and Instructors</th>
+                </thead>
+                <tbody>
+                  {% for i in 0..3 %}
+                  <tr>
+                    <td data-th="Course">Economics</td>
+                    <td data-th="Number">15.02</td>
+                    <td data-th="Overview">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae eos necessitatibus, quasi nobis minus minima ex dolorem illum in fuga, ea rem explicabo optio porro non. Aliquid quos, reiciendis minima?</p>
+                      <ul>
+                        <li>Lorem ipsum dolor sit amet</li>
+                        <li>Consequatur suscipit</li>
+                        <li>Labore nam, iure mollitia error</li>
+                        <li>Quisquam commodi ea veritatis</li>
+                      </ul>
+                    </td>
+                    <td data-th="Professors and Instructors">
+                      <strong class="u-sans-serif">Jeff Dayton-Johnson</strong>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
 
-            <table>
-              <thead>
-                <th>Course</th>
-                <th>Overview</th>
-              </thead>
-              <tbody>
-                {% for i in 0..3 %}
-                <tr>
-                  <td data-th="Course">
-                    Complexity and Systems Thinking
-                  </td>
-                  <td data-th="Overview">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis voluptate maiores excepturi laboriosam, reiciendis eos adipisci. Ipsa fugit dolorem in, voluptates sit expedita, tempora delectus excepturi praesentium nisi, architecto quae.</p>
-                    <ul>
-                      <li>Lorem ipsum dolor sit amet</li>
-                      <li>Labore nam, iure mollitia error</li>
-                      <li>Quisquam commodi ea veritatis</li>
-                    </ul>
-                  </td>
-                </tr>
-                {% endfor %}
-              </tbody>
-            </table>
-          </article>
+              <h2>Optional Concentrations</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe natus, doloribus vero eligendi, fugiat ipsam illum sint. Ipsum iure repellendus sint modi delectus, nesciunt vitae assumenda, dolorum voluptates sequi atque?</p>
 
+              <table>
+                <thead>
+                  <th>Course</th>
+                  <th>Overview</th>
+                </thead>
+                <tbody>
+                  {% for i in 0..3 %}
+                  <tr>
+                    <td data-th="Course">
+                      Complexity and Systems Thinking
+                    </td>
+                    <td data-th="Overview">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis voluptate maiores excepturi laboriosam, reiciendis eos adipisci. Ipsa fugit dolorem in, voluptates sit expedita, tempora delectus excepturi praesentium nisi, architecto quae.</p>
+                      <ul>
+                        <li>Lorem ipsum dolor sit amet</li>
+                        <li>Labore nam, iure mollitia error</li>
+                        <li>Quisquam commodi ea veritatis</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </article>
+
+          </div>
         </div>
       </div>
     </div>

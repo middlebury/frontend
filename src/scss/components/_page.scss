@@ -6,16 +6,22 @@
   @include media(md) {
     float: right;
     position: relative;
-    // faked grid column
-    // we can't use @include make-col() because it generates flexbox code, which we don't want.
-    width: percentage(3 / $grid-columns);
-    margin-left: percentage(1 / $grid-columns);
-    margin-right: percentage(1 / $grid-columns);
+    @include make-col-ready();
+    @include make-col(4);
   }
 
   @include media(lg) {
-    // padding-right: 100px;
-    // margin-left: 75px;
+    @include make-col(3);
+    margin-left: percentage(1 / $grid-columns);
+    margin-right: percentage(1 / $grid-columns);
   }
 }
 
+.page__main {
+  @include make-row();
+  display: block;
+}
+
+.page__content {
+  @include make-gutters();
+}
