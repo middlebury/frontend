@@ -80,7 +80,19 @@ class Toggler {
     }
     if (elem) {
       elem.classList.add(this.activeClass);
+      this.toggleAriaExpanded(elem);
     }
+  }
+
+  toggleAriaExpanded(elem) {
+    if (!elem.hasAttribute('aria-expanded')) {
+      return;
+    }
+    const expanded = elem.getAttribute('aria-expanded');
+    if (expanded === 'true') {
+      return elem.setAttribute('aria-expanded', false);
+    }
+    elem.setAttribute('aria-expanded', true);
   }
 
   close(elem, target) {
@@ -89,6 +101,7 @@ class Toggler {
     }
     if (elem) {
       elem.classList.remove(this.activeClass);
+      this.toggleAriaExpanded(elem);
     }
   }
 
