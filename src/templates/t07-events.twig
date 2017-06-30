@@ -24,7 +24,8 @@
         <div class="col">
           {% embed 'partials/section.twig' with {
             title: 'Featured Event',
-            class: 'section--aside'
+            class: 'section--aside',
+            labelledby: 'midd-featured-event'
           } %}
             {% block content %}
               {% include 'partials/event-card.twig' %}
