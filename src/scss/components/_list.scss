@@ -4,7 +4,11 @@
 
 .list__item {
   &:not(:last-of-type) {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+
+    .list--md & {
+      margin-bottom: 30px;
+    }
 
     .list--lg & {
       margin-bottom: 60px;
@@ -26,4 +30,9 @@
   svg {
     fill: $bright-green;
   }
+}
+
+.list--unordered {
+  list-style-type: disc;
+  margin-left: 20px;
 }
