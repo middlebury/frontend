@@ -22,6 +22,10 @@
     opacity: .5;
     pointer-events: none;
   }
+
+  svg {
+    transition: .2s;
+  }
 }
 
 .button--block {
@@ -53,6 +57,10 @@
   &:focus {
     background-color: $brand-primary;
     color: $white;
+
+    svg {
+      fill: $white;
+    }
   }
 }
 
