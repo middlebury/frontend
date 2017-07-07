@@ -1,23 +1,49 @@
 .video {
+  margin-bottom: 20px;
+  margin-top: 60px;
   position: relative;
-  padding-top: aspect-ratio(16, 9);
-  overflow: hidden;
+}
 
-  video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
+.video__content {
+  margin-bottom: 20px;
+  position: relative;
+
+  .video.has-video & {
+    padding-top: aspect-ratio(16, 9);
+    overflow: hidden;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
-.video__controls {
+.video__link {
+
+}
+
+.video__image {
+  display: block;
+}
+
+.video__button {
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
-.video__icon {
-  font-size: 10px;
+.video__title {
+  font-size: 28px;
+  color: $brand-primary;
+  margin-bottom: 20px;
+  font-weight: $font-weight-medium;
 }
+
+.video__blurb {
+
+}
+

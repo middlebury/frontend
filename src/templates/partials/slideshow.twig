@@ -1,0 +1,29 @@
+{#G5 slideshow#}
+<div class="slideshow">
+  <h3 class="slideshow__title">Slideshow title</h3>
+  <div class="slideshow__container swiper-container js-slideshow">
+    <div class="slideshow__content swiper-wrapper">
+      {% for i in 0..2 %}
+        <figure class="slideshow__item swiper-slide">
+          <img data-src="//placehold.it/1280x720" alt="" class="swiper-lazy">
+          <figcaption class="slideshow__caption">Lorem ipsum dolor sit amet consectetur adipisicing elit</figcaption>
+        </figure>
+      {% endfor %}
+        <figure class="slideshow__item swiper-slide">
+          <img data-src="//placehold.it/1280x720/000" alt="" class="swiper-lazy">
+          <figcaption class="slideshow__caption">Lorem ipsum dolor sit amet consectetur adipisicing elit</figcaption>
+        </figure>
+    </div>
+    <div class="slideshow__footer">
+      <div class="slideshow__controls">
+        <button class="slideshow__button slideshow__button--prev js-slideshow-prev" aria-label="Previous slide">
+          <span aria-hidden="true">{{icons.chevron_left}}</span>
+        </button>
+        <div class="slideshow__pagination js-slideshow-pagination"></div>
+        <button class="slideshow__button slideshow__button--next js-slideshow-next" aria-label="Next slide">
+          <span aria-hidden="true">{{icons.chevron_right}}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
