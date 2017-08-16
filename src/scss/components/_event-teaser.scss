@@ -34,25 +34,26 @@
   font-family: $font-family-serif;
   font-weight: normal;
   font-size: 22px;
+  margin-bottom: 10px;
 }
 
-.event-teaser__meta {
+.event-teaser__datetime,
+.event-teaser__local {
   color: $black;
   font-size: 18px;
   font-family: $font-family-sans-serif;
-  margin-bottom: 0;
-
-  &:last-of-type {
-    margin-bottom: 20px;
-  }
 
   @include media(md) {
     font-size: 20px;
   }
 }
 
-.event-teaser__date {
+.event-teaser__local {
+  margin-bottom: 20px;
+}
 
+.event-teaser__blurb {
+  margin-bottom: 20px;
 }
 
 .event-teaser__metalist {
