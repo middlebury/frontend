@@ -1,10 +1,14 @@
 .slideshow {
-  margin-top: 60px;
   margin-bottom: 60px;
 }
 
 .slideshow__title {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
 
+.slideshow__container {
+  background-color: $teal;
 }
 
 .slideshow__content {
@@ -18,15 +22,15 @@
 }
 
 .slideshow__caption {
-  background-color: $teal;
   color: $white;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 20px;
+  font-family: $font-family-serif;
+  font-size: 18px;
 }
 
 .slideshow__footer {
-  background-color: $teal;
   padding: 20px;
   text-align: right;
 }
