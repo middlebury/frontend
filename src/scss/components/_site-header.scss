@@ -23,8 +23,13 @@
   @include media(md) {
     display: block;
     height: auto;
-    padding: 30px;
+    padding: 20px;
     padding-bottom: 70px;
+  }
+
+  @include media(lg) {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
