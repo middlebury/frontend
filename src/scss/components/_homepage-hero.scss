@@ -70,7 +70,14 @@
 }
 
 .homepage-hero__title {
-  // font-size: rem(30);
+  font-size: 22px;
+  font-family: $font-family-sans-serif;
+  font-weight: $font-weight-semibold;
+  margin-bottom: 20px;
+
+  @include media(md) {
+    font-size: 30px;
+  }
 }
 
 .homepage-hero__link {
@@ -80,6 +87,7 @@
 .homepage-hero__blurb {
   color: $white;
   display: none;
+  margin-bottom: 20px;
 
   @include media(sm) {
     display: block;

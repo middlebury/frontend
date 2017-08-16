@@ -15,7 +15,5 @@
     {% if tag %}<p class="card__tag">{{tag}}</p>{% endif %}
     <h3 class="card__title {% if lg %}card__title--lg{% endif %}"><a href="{{href}}" class="card__link">{{title}}</a></h3>
   </header>
-  <div class="card__body">
-    {{blurb}}
-  </div>
+  <p class="card__blurb">{{blurb}}</p>
 </article>

@@ -25,6 +25,12 @@
 
 .projects__title {
   font-family: $font-family-serif;
+  font-size: 22px;
+  margin-bottom: 20px;
+
+  @include media(lg) {
+    font-size: 28px;
+  }
 }
 
 .projects__link {

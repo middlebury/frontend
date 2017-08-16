@@ -14,6 +14,7 @@
 
 .card__title {
   font-size: 22px;
+  margin-bottom: 20px;
 }
 
 .card__title--lg {
@@ -27,8 +28,5 @@
   margin-bottom: 20px;
 }
 
-.card__body {
-  p:last-child {
-    margin-bottom: 0;
-  }
+.card__blurb {
 }

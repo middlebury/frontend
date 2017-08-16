@@ -1,17 +1,15 @@
 .event-teaser-lite {
-  &:not(:last-of-type) {
-    margin-bottom: 60px;
-  }
 }
 
 .event-teaser-lite__meta {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .event-teaser-lite__title {
-
+  font-size: 22px;
+  margin-bottom: 20px;
 }
 
 .event-teaser-lite__local {
-  margin-bottom: 0;
+  // margin-bottom: 0;
 }
