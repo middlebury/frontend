@@ -2,26 +2,33 @@
   min-height: 800px;
 }
 
+.page__main {
+  @include make-row();
+
+  @include media(md) {
+    flex-direction: row-reverse;
+  }
+}
+
 .page__nav {
   @include media(md) {
-    float: right;
-    position: relative;
     @include make-col-ready();
     @include make-col(4);
   }
 
   @include media(lg) {
-    @include make-col(3);
-    margin-left: percentage(1 / $grid-columns);
-    margin-right: percentage(1 / $grid-columns);
+    // @include make-col(3);
   }
 }
 
-.page__main {
-  @include make-row();
-  display: block;
-}
-
 .page__content {
-  @include make-gutters();
+  @include make-col-ready();
+
+  @include media(md) {
+    @include make-col(8);
+  }
+
+  @include media(lg) {
+    // @include make-col(9);
+  }
 }
