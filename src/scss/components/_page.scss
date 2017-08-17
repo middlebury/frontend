@@ -2,7 +2,7 @@
   min-height: 800px;
 }
 
-.page__main {
+.page__row {
   @include make-row();
 
   @include media(md) {
