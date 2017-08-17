@@ -1,0 +1,25 @@
+{% extends "layout.twig" %}
+
+{% block page %}
+<div class="page">
+  {% include 'partials/page-header.twig' with page_header %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-11 col-md-push-1">
+
+        <div class="page__main">
+          <div class="page__nav">
+            {% include 'partials/page-nav.twig' with page_nav %}
+          </div>
+          <div class="page__content">
+            {% block content %}
+            {% endblock %}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

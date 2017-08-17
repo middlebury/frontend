@@ -18,6 +18,11 @@
                 {{_block}}
               </div>
             {% endif %}
+            {% if show_controls %}
+              <div class="page-header__controls">
+                {% include 'partials/page-nav-button.twig' %}
+              </div>
+            {% endif %}
           </div>
 
           {% if callout_title or callout_link_text %}

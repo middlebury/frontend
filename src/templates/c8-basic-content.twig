@@ -1,95 +1,77 @@
-{% extends "layout.twig" %}
+{% extends "layout-c8.twig" %}
 
-{% block page %}
-  <section class="page">
+{% set page_header = {
+  title: 'Basic content page',
+  callout_title: 'Application for Spring 2017 Now Open',
+  callout_link_text: 'Apply Now',
+  breadcrumb: [
+    { text: 'Academics' },
+    { text: 'Degree Programs' },
+    { text: 'Masters of Public Administration' },
+  ],
+  show_controls: true
+} %}
 
-  {% embed 'partials/page-header.twig' with {
-    title: 'MPA Curriculum',
-    callout_title: 'Application for Spring 2017 Now Open',
-    callout_link_text: 'Apply Now',
-    breadcrumb: [
-      { text: 'Academics' },
-      { text: 'Degree Programs' },
-      { text: 'Masters of Public Administration' },
-    ]
-  } %}
-    {% block controls %}
-      {% include 'partials/page-nav-button.twig' %}
-    {% endblock %}
-  {% endembed %}
+{% set page_nav = {
+  items: [
+    { text: 'Curriculum', href: '#' },
+    {
+      text: 'Faculty',
+      active: true,
+      href: '#',
+      items: [
+        { text: 'Faculty sub page 1', href: '#' },
+        { text: 'Faculty sub page 2', href: '#' },
+        { text: 'Faculty sub page 3', href: '#' },
+        { text: 'Faculty sub page 4', href: '#' },
+      ]
+    },
+    { text: 'Financing Your Education', href: '#' },
+  ],
+  callouts: [
+    { text: 'Request Information', href: '#' },
+    { text: 'Apply by July 10 for Fall 2017', href: '#' },
+  ]
+} %}
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-push-1 col-md-11">
+{% block content %}
 
-        <div class="page__main">
+  {# G1 text paragraph #}
+  <div class="typography">
+    <h2>Some headline here</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
+    <h3>Some headline here</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
+    <h4>Some headline here</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
+    <h5>Some headline here</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
+    <h6>Some headline here</h6>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
+  </div>
 
-          <div class="page__nav">
-            {% include 'partials/page-nav.twig' with {
-              items: [
-                { text: 'Curriculum', href: '#' },
-                {
-                  text: 'Faculty',
-                  active: true,
-                  href: '#',
-                  items: [
-                    { text: 'Faculty sub page 1', href: '#' },
-                    { text: 'Faculty sub page 2', href: '#' },
-                    { text: 'Faculty sub page 3', href: '#' },
-                    { text: 'Faculty sub page 4', href: '#' },
-                  ]
-                },
-                { text: 'Financing Your Education', href: '#' },
-              ],
-              callouts: [
-                { text: 'Request Information', href: '#' },
-                { text: 'Apply by July 10 for Fall 2017', href: '#' },
-              ]
-            } %}
-          </div>
+  {# G3 image paragraph #}
+  <figure class="media media--image">
+    <picture>
+      <img src="//placehold.it/1280x720" alt="">
+    </picture>
+    <figcaption class="media__caption">Caption text here</figcaption>
+  </figure>
 
-          <article class="page__content">
-
-            <div class="typography">
-              <h2>Some headline here</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
-              <h3>Some headline here</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
-              <h4>Some headline here</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
-              <h5>Some headline here</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
-              <h6>Some headline here</h6>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
-            </div>
-
-            <figure class="media media--image">
-              <picture>
-                <img src="//placehold.it/1280x720" alt="">
-              </picture>
-              <figcaption class="media__caption">Caption text here</figcaption>
-            </figure>
-
-            {#G2 two column text#}
-            <div class="row row--dividers u-mb-6">
-              <div class="col-md-6 typography">
-                <h2>Some headline</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe facilis cum doloribus similique dolores doloremque voluptate hic iste quisquam necessitatibus iure quos illo porro voluptates distinctio, obcaecati rem, sapiente labore.</p>
-              </div>
-              <div class="col-md-6 typography">
-                <h2>Some headline</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe facilis cum doloribus similique dolores doloremque voluptate hic iste quisquam necessitatibus iure quos illo porro voluptates distinctio, obcaecati rem, sapiente labore.</p>
-              </div>
-            </div>
-
-            {% include 'partials/video.twig' %}
-
-            {% include 'partials/slideshow.twig' %}
-
-          </div>
-        </div>
-      </div>
+  {#G2 two column text. May change later to a component name like two-col-text #}
+  <div class="row row--dividers u-mb-6">
+    <div class="col-md-6 typography">
+      <h2>Some headline</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe facilis cum doloribus similique dolores doloremque voluptate hic iste quisquam necessitatibus iure quos illo porro voluptates distinctio, obcaecati rem, sapiente labore.</p>
     </div>
+    <div class="col-md-6 typography">
+      <h2>Some headline</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe facilis cum doloribus similique dolores doloremque voluptate hic iste quisquam necessitatibus iure quos illo porro voluptates distinctio, obcaecati rem, sapiente labore.</p>
+    </div>
+  </div>
 
-  </section>
+  {% include 'partials/video.twig' %}
+
+  {% include 'partials/slideshow.twig' %}
+
 {% endblock %}
