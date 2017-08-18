@@ -1,0 +1,59 @@
+.grid-nav {
+  margin-bottom: 100px;
+}
+
+.grid-nav__list {
+  @include media(md) {
+    @include make-row();
+  }
+}
+
+.grid-nav__item {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid $line-gray;
+  }
+
+  @include media(md) {
+    @include make-col-ready();
+    @include make-col(6);
+    margin-bottom: 0;
+    padding-bottom: 70px;
+
+    &:not(:last-of-type) {
+      border-bottom: 0;
+    }
+  }
+
+  @include media-breakpoint-only(md) {
+    &:not(:nth-of-type(2n)) {
+      border-right: 1px solid $line-gray;
+    }
+  }
+
+  @include media(lg) {
+    @include make-col(4);
+
+    &:not(:nth-of-type(3n)) {
+      border-right: 1px solid $line-gray;
+    }
+  }
+}
+
+
+.grid-nav__title {
+  display: inline-block;
+  font-size: 22px;
+  font-family: $font-family-serif;
+  margin-bottom: 20px;
+
+  @include media(md) {
+    font-size: 28px;
+  }
+}
+
+.grid-nav__text {
+
+}
