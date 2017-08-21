@@ -7,6 +7,10 @@
   margin-bottom: 20px;
   position: relative;
 
+  img {
+    display: block;
+  }
+
   .video.has-video & {
     padding-top: aspect-ratio(16, 9);
     overflow: hidden;
@@ -23,10 +27,6 @@
 
 .video__link {
 
-}
-
-.video__image {
-  display: block;
 }
 
 .video__button {
