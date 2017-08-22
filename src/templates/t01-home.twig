@@ -6,13 +6,11 @@
 
   {% include 'partials/homepage-hero.twig' %}
 
-  <div class="container">
+  {% include 'partials/mission-selector.twig' with {
+    overlap: true
+  } %}
 
-    <section class="section">
-      {% include 'partials/mission-selector.twig' with {
-        overlap: true
-      } %}
-    </section>
+  <div class="container">
 
     <section class="section">
       <div class="row row--dividers">
