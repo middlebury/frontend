@@ -1,0 +1,103 @@
+{% extends "layout.twig" %}
+
+{% set page_header = {
+  title: 'Undergraduate Interns Tackle Nonproliferation Issues',
+  breadcrumb: [
+    { text: 'News' }
+  ]
+} %}
+
+{% block page %}
+<article class="story-detail">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-push-1 col-md-7">
+
+        <header class="story-detail__header">
+          <div class="story-detail__meta">
+            <p class="story-detail__pubdate"><time>August 24, 2017</time></p>
+            <p class="story-detail__author">by Michael Green</p>
+          </div>
+          <div class="story-detail__share">
+            {% include 'partials/share.twig' %}
+          </div>
+        </header>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-push-1 col-md-9">
+
+        <div class="story-detail__image">
+          {% include 'paragraphs/image.twig' %}
+        </div>
+
+        <div class="story-detail__body">
+
+          {% include 'paragraphs/slideshow.twig' %}
+
+          {% include 'paragraphs/text.twig' %}
+
+          {% include 'paragraphs/quote.twig' %}
+
+          {% include 'paragraphs/text.twig' %}
+
+          {% include 'paragraphs/video.twig' %}
+
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-push-1 col-md-7">
+
+        <div class="story-detail__media-contact">
+          <div class="callout-info">
+            <h3 class="callout-info__title">For More Information</h3>
+            <p class="callout-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio. Veritatis, esse. At ad a architecto eum voluptates in inventore placeat culpa nemo! Minus voluptates cupiditate quasi, laudantium in quam?</p>
+          </div>
+        </div>
+
+        <div class="story-detail__tags">
+          <div class="tags">
+            <span class="tags__label">Tags:</span>
+            <ul class="tags__list">
+              {% for i in 0..3 %}
+                <li class="tags__item">
+                  <a href="#" class="tags__link">Some tag</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-push-1 col-md-9">
+
+        {% embed 'partials/section.twig' with {
+          title: 'Further Reading'
+        } %}
+          {% block content %}
+            <div class="row row--dividers">
+              {% for i in 0..2 %}
+                <div class="col-md-4">
+                  <article class="card">
+                    <h3 class="card__title"><a href="#">Lorem ipsum</a></h3>
+                    <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, nam? Repellat consequatur expedita dolorum soluta, ipsam illum magni dicta, corrupti beatae ratione est quaerat a tenetur, quo impedit quod, perferendis.</p>
+                  </article>
+                </div>
+              {% endfor %}
+            </div>
+          {% endblock %}
+        {% endembed %}
+
+      </div>
+    </div>
+  </div>
+
+</article>
+
+{% endblock %}
