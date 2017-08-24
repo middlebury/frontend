@@ -50,6 +50,8 @@
 }
 
 .story-detail__body {
+  @include clearfix();
+
   .typography {
     max-width: 640px;
   }
