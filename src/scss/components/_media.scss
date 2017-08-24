@@ -2,8 +2,15 @@
   margin-bottom: 60px;
 }
 
-.media--image {}
-.media--video {}
+.media--image {
+  img {
+    display: block;
+  }
+}
+
+.media--video {
+
+}
 
 .media__caption {
   font-family: $font-family-serif;
