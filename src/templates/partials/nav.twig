@@ -1,8 +1,8 @@
 {% macro list(menu, modifier) %}
   <ul class="site-nav__list" data-nav-list>
     {% for item in menu.items %}
-      <li class="site-nav__item">
-        <a href="{{item.href}}" class="site-nav__link{% if modifier == 'top' and loop.index >= 6 %} site-nav__link--accent{% endif %}" data-nav-link>{{item.text}}</a>
+      <li class="site-nav__item{% if item.items %} site-nav__item--has-sub{% endif %}">
+        <a href="{{item.href}}" class="site-nav__link" data-nav-link>{{item.text}}</a>
         {% if item.items or item.menus %}
           {{ _self.nav(item, 'sub') }}
         {% endif %}

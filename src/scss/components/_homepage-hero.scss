@@ -11,8 +11,8 @@
   @include media(md) {
     height: 675px;
     padding-top: 0;
-    width: calc(100% - 315px);
-    margin-left: 315px;
+    width: calc(100% - $header-width);
+    margin-left: $header-width;
   }
 
   @include media(lg) {

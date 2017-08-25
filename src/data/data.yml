@@ -2,13 +2,6 @@ site_title: Middlebury Institute of International Studies at Monterey
 
 site_nav:
   items:
-    - text: Learning Approach
-      items:
-        - text: Cultural Fluency
-        - text: Immersive Learning
-        - text: Holistic Analysis
-        - text: Practical Innovation
-        - text: Collaborative Solutions
     - text: Leadership and Impact
       items:
         - text: About the Institute
@@ -19,9 +12,6 @@ site_nav:
     - text: Advancing Your Career
     - text: The Institute Experience
     - text: Academics
-      button:
-        text: Explore & Compare Programs
-        href: '#'
       items:
         - text: Degree Programs
           items:
@@ -46,7 +36,6 @@ site_nav:
         - text: Centers & Initiatives
         - text: Faculty & Staff Directory
     - text: Admissions
-    - text: Engaged Research
     - text: News and Events
     - text: Student Services
     - text: Support the Institute

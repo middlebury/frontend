@@ -1,10 +1,11 @@
 .site-search {
-  background-color: $brand-primary-dark;
+  // background-color: $brand-primary-dark;
+  // padding: 10px;
 
   @include media(md) {
-    background: none;
-    padding-left: 70px;
-    padding-right: 70px;
+    // background: none;
+    // padding-left: 70px;
+    // padding-right: 70px;
   }
 }
 
@@ -15,7 +16,7 @@
 .site-search__control {
   border: 0;
   color: $white;
-  padding: 20px 30px;
+  padding: 10px;
   background-color: $brand-primary-dark;
 
   &:focus {
@@ -23,9 +24,8 @@
   }
 
   @include media(md) {
-    padding: 0;
-    font-size: 14px;
-    background-color: transparent;
+    // font-size: 14px;
+    // background-color: transparent;
 
     &:focus {
       // padding: 5px;
@@ -38,7 +38,7 @@
     color: $white;
 
     @include media(md) {
-      color: $light-blue;
+      // color: $light-blue;
     }
   }
 }
@@ -46,13 +46,15 @@
 .site-search__button {
   color: $white;
   font-size: 16px;
-  padding: 20px 30px;
+  padding: 5px 10px;
+  height: 100%;
+  background-color: $brand-primary-dark;
 
   svg {
     fill: $white;
   }
 
   @include media(md) {
-    padding: 0;
+    // padding: 0;
   }
 }

@@ -18,18 +18,20 @@
   align-content: center;
   padding-left: 30px;
   padding-right: 30px;
-  height: 70px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  // height: 70px;
 
   @include media(md) {
     display: block;
-    height: auto;
-    padding: 20px;
-    padding-bottom: 70px;
+    // height: auto;
+    // padding: 20px;
+    // padding-bottom: 70px;
   }
 
   @include media(lg) {
-    padding-left: 30px;
-    padding-right: 30px;
+    // padding-left: 50px;
+    // padding-right: 50px;
   }
 }
 
@@ -61,15 +63,15 @@
   height: 40px;
 
   @include media(md) {
-    background-image: url('/images/miis-logo-shield.png');
-    width: 53px;
-    height: 59px;
+    background-image: url('/images/miis-shield.svg');
+    width: 52px;
+    height: 58px;
 
     .home &,
     .site-header.is-toggled & {
-      background-image: url('/images/miis-logo.png');
-      width: 244px;
-      height: 107px;
+      background-image: url('/images/miis-logo.svg');
+      width: 305px;
+      height: 58px;
     }
   }
 }
@@ -79,18 +81,21 @@
   align-self: center;
 
   @include media(md) {
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    // text-align: center;
+    // position: absolute;
+    // left: 50%;
+    // transform: translateX(-50%);
 
     .home & {
-      display: none;
+      visibility: hidden;
     }
   }
 }
 
 .site-header__secondary {
+  padding-left: 30px;
+  padding-right: 30px;
+
   .site-header.has-toggler & {
     display: none;
   }
@@ -125,5 +130,6 @@
     height: 100%;
     overflow: visible;
     position: static;
+    margin-bottom: 80px;
   }
 }
