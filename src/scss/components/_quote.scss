@@ -1,0 +1,46 @@
+.quote {
+  // margin-top: 60px;
+  // margin-bottom: 60px;
+
+  // @include media(md) {
+  //   float: right;
+  //   width: 400px;
+  //   margin-top: 0;
+  //   padding-left: 40px;
+  // }
+}
+
+.quote__text {
+  color: $black;
+  font-size: 24px;
+  line-height: 34px;
+  margin-bottom: 24px;
+  quotes: "“" "”";
+
+  .quote--light & {
+    color: $white;
+  }
+
+  .quote--marks & {
+    position: relative;
+
+    &:before {
+      content: open-quote;
+      position: absolute;
+      top: 0;
+      right: 100%;
+    }
+
+    &:after {
+      content: close-quote;
+    }
+  }
+}
+
+.quote__cite {
+  color: $black;
+
+  .quote--light & {
+    color: $white;
+  }
+}

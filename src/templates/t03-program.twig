@@ -1,29 +1,24 @@
 {% extends "layout.twig" %}
 
+{% set page_header = {
+  title: 'Masters in Public Administration',
+  breadcrumb: [
+    {
+      text: 'Academics',
+      href: '#',
+    },
+    {
+      text: 'Degree Programs',
+      href: '#',
+    }
+  ],
+  show_controls: true,
+  callout_title: 'Application for Spring 2017 Now Open',
+  callout_link_url: '#',
+  callout_link_text: 'Apply Now'
+} %}
+
 {% block page %}
-
-<article class="page">
-
-  {% embed 'partials/page-header.twig' with {
-    title: 'Masters in Public Administration',
-    breadcrumb: [
-      {
-        text: 'Academics',
-        href: '#',
-      },
-      {
-        text: 'Degree Programs',
-        href: '#',
-      }
-    ],
-    callout_title: 'Application for Spring 2017 Now Open',
-    callout_link_url: '#',
-    callout_link_text: 'Apply Now'
-  } %}
-    {% block controls %}
-      {% include 'partials/page-nav-button.twig' %}
-    {% endblock %}
-  {% endembed %}
 
   <div class="container">
     <div class="row">
@@ -43,16 +38,14 @@
       <div class="col-md-push-1 col-md-7 flex-md-first">
 
         <section class="section">
-          <p class="intro">The Middlebury Institute Master of Public Administration (MPA) is designed for those who want to make a difference in confronting critical social problems, including hunger, poverty, disease, joblessness, and powerlessness.</p>
-          <p>Through hands-on experience, applied learning, practical tools, and community support, this program prepares graduates to be effective leaders and managers in international development for social change organizations, NGOs, nonprofits and government agencies around the world. The four-semester 60-credit program includes core coursework and optional areas of concentration, as well as courses taught in a student’s chosen language of study and a professional practicum.</p>
 
-          <figure>
-            <figcaption>
-              <video src=""></video>
-              <h3>Practical Skills for Positive Change</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi commodi, soluta quia aliquam sunt maxime beatae quisquam ex laboriosam, perspiciatis, voluptatem atque ut earum! Non modi, unde amet eaque.</p>
-            </figcaption>
-          </figure>
+          <div class="typography">
+            <p class="intro">The Middlebury Institute Master of Public Administration (MPA) is designed for those who want to make a difference in confronting critical social problems, including hunger, poverty, disease, joblessness, and powerlessness.</p>
+            <p>Through hands-on experience, applied learning, practical tools, and community support, this program prepares graduates to be effective leaders and managers in international development for social change organizations, NGOs, nonprofits and government agencies around the world. The four-semester 60-credit program includes core coursework and optional areas of concentration, as well as courses taught in a student’s chosen language of study and a professional practicum.</p>
+          </div>
+
+          {% include 'paragraphs/video.twig' %}
+
         </section>
 
       </div>
@@ -103,7 +96,5 @@
   {% include 'partials/program-panel.twig' %}
 
   {% include 'partials/callout-group.twig' %}
-
-</article>
 
 {% endblock %}
