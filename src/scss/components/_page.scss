@@ -7,10 +7,9 @@
 }
 
 .page__nav {
-  flex: 1;
+  @include make-col-ready();
 
   @include media(md) {
-    @include make-col-ready();
     @include make-col(4);
     order: 1;
   }
