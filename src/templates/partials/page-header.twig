@@ -6,23 +6,8 @@
         <div class="row">
 
           <div class="page-header__primary">
-            <div class="page-header__breadcrumb">
-              {% include 'partials/breadcrumb.twig' with { items: breadcrumb } %}
-            </div>
-            <div class="page-header__content">
-              <h1 class="page-header__title" id="midd-page-header-label">{{title}}</h1>
-            </div>
-            {% set _block = block('controls') %}
-            {% if _block is not empty %}
-              <div class="page-header__controls">
-                {{_block}}
-              </div>
-            {% endif %}
-            {% if show_controls %}
-              <div class="page-header__controls">
-                {% include 'partials/page-nav-button.twig' %}
-              </div>
-            {% endif %}
+            {% include 'partials/breadcrumb.twig' with { items: breadcrumb } %}
+            <h1 class="page-header__title" id="midd-page-header-label">{{title}}</h1>
           </div>
 
           {% if callout_title or callout_link_text %}
