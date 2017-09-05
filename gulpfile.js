@@ -22,6 +22,7 @@ const del = require('del');
 const babelify = require('babelify');
 const beeper = require('beeper');
 const args = require('yargs').argv;
+const svgSprites = require('gulp-svg-sprites');
 
 const production = !!args.production;
 
@@ -75,6 +76,17 @@ gulp.task('server', () => {
     open: false,
     directory: true
   });
+});
+
+gulp.task('svg', () => {
+  return gulp
+    .src('./src/images/*.svg')
+    .pipe(
+      svgSprites({
+        mode: 'symbols'
+      })
+    )
+    .pipe(gulp.dest('./dist/svg'));
 });
 
 gulp.task('styles', () => {
