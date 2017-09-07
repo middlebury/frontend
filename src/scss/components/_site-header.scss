@@ -1,5 +1,8 @@
 .site-header {
   background-color: $brand-primary;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
 
   @include media(md) {
     height: 675px;
@@ -20,18 +23,9 @@
   padding-right: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
-  // height: 70px;
 
   @include media(md) {
     display: block;
-    // height: auto;
-    // padding: 20px;
-    // padding-bottom: 70px;
-  }
-
-  @include media(lg) {
-    // padding-left: 50px;
-    // padding-right: 50px;
   }
 }
 
@@ -50,7 +44,6 @@
 }
 
 .site-header__home-link {
-
 }
 
 // TODO: change to svg
@@ -79,6 +72,11 @@
 .site-header__menu-button {
   flex: 0 1 auto;
   align-self: center;
+  text-align: center;
+
+  .site-header.is-toggled & {
+    text-align: left;
+  }
 
   @include media(md) {
     // text-align: center;
@@ -93,8 +91,7 @@
 }
 
 .site-header__secondary {
-  padding-left: 30px;
-  padding-right: 30px;
+  flex: 1;
 
   .site-header.has-toggler & {
     display: none;
@@ -114,6 +111,11 @@
 }
 
 .site-header__search {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
   @include media(md) {
     order: 2;
   }
@@ -122,14 +124,17 @@
 .site-header__nav {
   position: relative;
   z-index: 2;
-  overflow: hidden;
-  height: 100vh;
+  // overflow: hidden;
+  // height: 100vh;
+  // padding-left: 30px;
+  // padding-right: 30px;
 
   @include media(md) {
     order: 1;
-    height: 100%;
+    flex: 1;
+    // height: 100%;
     overflow: visible;
     position: static;
-    margin-bottom: 80px;
+    // margin-bottom: 80px;
   }
 }
