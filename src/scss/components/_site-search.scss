@@ -14,13 +14,15 @@
 }
 
 .site-search__control {
-  border: 0;
+  border: 1px solid transparent;
   color: $white;
   padding: 10px;
   background-color: $brand-primary-dark;
 
   &:focus {
     background-color: $brand-primary-dark;
+    border-color: $white;
+    outline: 0;
   }
 
   @include media(md) {
@@ -44,11 +46,16 @@
 }
 
 .site-search__button {
+  border: 1px solid transparent;
   color: $white;
-  font-size: 16px;
   padding: 5px 10px;
   height: 100%;
   background-color: $brand-primary-dark;
+
+  &:focus {
+    border-color: $white;
+    outline: 0;
+  }
 
   svg {
     fill: $white;
