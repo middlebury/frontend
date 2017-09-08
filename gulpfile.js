@@ -24,6 +24,7 @@ const beeper = require('beeper');
 const args = require('yargs').argv;
 const svgSprites = require('gulp-svg-sprites');
 const gulpIf = require('gulp-if');
+const slug = require('slug');
 
 const production = !!args.production;
 
@@ -153,7 +154,15 @@ gulp.task('html', () => {
     )
     .pipe(
       twig({
-        base: './src/templates'
+        base: './src/templates',
+        filters: [
+          {
+            name: 'slugify',
+            func: function (args) {
+              return slug(args, {lower: true});
+            }
+          }
+        ]
       })
     )
     .pipe(prettify())
