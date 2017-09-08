@@ -2,43 +2,169 @@ site_title: Middlebury Institute of International Studies at Monterey
 
 site_nav:
   items:
-    - text: Leadership and Impact
+    - text: Institute Experience
+      url: /institute/institute-experience
       items:
+        - text: Intercultural Competence
+          url: /institute/institute-experience/intercultural-competence
+        - text: Learning in Language
+          url: /institute/institute-experience/learning-language
+        - text: Immersive Experience
+          url: /institute-experience/immersive-experience
         - text: About the Institute
+          url: /institute-experience/about
+    - text: Leadership and Impact
+      url: /institute/leadership-impact
+      items:
         - text: Faculty in the Field
-        - text: Global Projects and Partnerships
-        - text: Latest Thinking
+          url: /institute/leadership-impact/faculty-in-field
+        - text: Alumni in the Field
+          url: /institute/leadership-impact/alumni-in-field
+        - text: Global Partnerships
+          url: /institute/leadership-impact/global-partnerships
+        - text: Sustainable Campus
+          url: /institute/leadership-impact/sustainable-campus
     - text: Areas of Focus
+      url: /institute
+      items:
+        - text: Human Rights and Social Change
+          url: /institute/areas-of-focus/human-rights-social-change
+        - text: International Security
+          url: /institute/areas-of-focus/international-security
+        - text: Language and Culture
+          url: /institute/areas-of-focus/language-culture
+        - text: Sustainable Development
+          url: /institute/areas-of-focus/sustainable-development
+        - text: Global Management
+          url: /institute/areas-of-focus/global-policy-management
     - text: Advancing Your Career
-    - text: The Institute Experience
+      url: /institute/student-services/advising-career-services
     - text: Academics
+      url: /institute/academics
       items:
         - text: Degree Programs
+          url: /institute/academics/degree-programs
           items:
-            - text: International Policy and Development
-            - text: Master of Public Administration
-            - text: Master of Business Administration in Global Impact Management
             - text: International Education Management
+              url: /institute/academics/degree-programs/international-education-management
             - text: International Environmental Policy
+              url: /institute/academics/degree-programs/international-environmental-policy
+            - text: International Policy and Development
+              url: /institute/academics/degree-programs/international-policy-and-development/
             - text: International Trade and Economic Diplomacy
+              url: /institute/academics/degree-programs/international-trade-economic-diplomacy
             - text: Nonproliferation and Terrorism Studies
+              url: /institute/academics/degree-programs/nonproliferation-terrorism-studies
             - text: Teaching English to Speakers of Other Languages
+              url: /institute/academics/degree-programs/language-education
             - text: Teaching Foreign Language
+              url: /institute/academics/degree-programs/language-education
             - text: Translation; Translation and Interpretation; Conference Interpretation
+              url: /institute/academics/degree-programs/translation-interpretation
             - text: Translation and Localization Management
-            - text: MBA/MA In International Environmental Policy
-            - text: MBA/MA in International Policy and Development
-            - text: MPA/MA in International Education Management
-            - text: BA / MA in International Policy and Development
-            - text: BA / MA in Nonproliferation and Terrorism Studies
-            - text: BA / Master of Public Administration
-        - text: Non-degree programs
-        - text: Centers & Initiatives
-        - text: Faculty & Staff Directory
+              url: /institute/academics/degree-programs/translation-localization-management
+            - text: Master of Public Administration
+              url: /institute/academics/degree-programs/public-administration
+            - text: Joint MPA/MA in International Education Management
+              url: /institute/academics/degree-programs/joint-mpa-iem-overview
+            - text: Joint BA/MA Degrees
+              url: /institute/academics/degree-programs/joint-ba-ma
+        - text: Additional Programs
+          url: /institute/academics/additional-programs
+        - text: Study Abroad
+          url: /institute/academics/study-abroad
+        - text: University Partnerships
+          url: /institute/academics/university-partnerships
+        - text: Centers and Initiatives
+          url: /institute/academics/centers-initiatives
+          items:
+            - text: Center for the Blue Economy
+              url: /institute/academics/centers-initiatives/blue-economy
+            - text: Center for Conflict Studies
+              url: /institute/academics/centers-initiatives/conflict-studies
+            - text: Graduate Initiative in Russian Studies
+              url: /institute/centers-initiatives/russian-studies
+            - text: James Martin Center for Nonproliferation Studies
+              url: /institute/academics/centers-initiatives/nonproliferation-studies
+        - text: Academic Resources
+          url: /institute/academics/academic-resources
+        - text: Library Resources
+          url: /institute/academics/library-resources
+        - text: Course Catalog
+          url: /institute/academics/catalog
     - text: Admissions
-    - text: News and Events
+      url: /institute/admissions
+      items:
+        - text: Request Information
+          url: http://learn.middlebury.edu/l/74172/2017-07-11/8b37zj#_ga=2.118319945.1724926458.1504802435-1564157331.1473439940
+        - text: Why the Institute
+          url: http://viewbook.miis.edu/
+        - text: Visit
+          url: /institute/admissions/visit
+        - text: Meet Our Students
+          url: /institute/admissions/meet-students
+        - text: Events
+          url: /institute/admissions/events
+        - text: Application Instructions
+          url: /institute/admissions/application-instructions
+        - text: Apply
+          url: https://miis.force.com/application/tx_communitieshome#_ga=2.119341769.1724926458.1504802435-1564157331.1473439940
+        - text: Tuition and Fees
+          url: /institute/admissions/tuition-fees
+        - text: Scholarships and Fellowships
+          url: /institute/admissions/scholarships
+        - text: Financial Aid
+          url: /institute/admissions/financial-aid
+        - text: Admissions Team
+          url: /institute/admissions/team
+    - text: News
+      url: /institute/news
+    - text: Events
+      url: /institute/events
     - text: Student Services
+      url: /institute/student-services
+      items:
+        - text: New Students
+          url: /institute/student-services/new-students
+        - text: International Students
+          url: /institute/student-services/international
+        - text: Veterans
+          url: /institute/student-services//veterans
+        - text: Center for Advising and Career Services
+          url: /institute/student-services/advising-career-services
+        - text: Health and Wellness
+          url: /institute/student-services/health-wellness
+        - text: Office of Student Accounts
+          url: /institute/student-services/student-accounts
+        - text: Office of Student Records (Registrar)
+          url: /institute/student-services/student-records
+        - text: Life in Monterey
+          url: /institute/student-services/life-in-monterey
+        - text: Student Life
+          url: /institute/student-services/student-life
+        - text: Security
+          url: /institute/student-services/security
+        - text: Technology Support
+          url: /institute/student-services/technology-support
+        - text: Annual Events
+          url: /institute/student-services/annual-events
     - text: Support the Institute
+      url: /institute/support
+      items:
+        - text: Ways to Give
+          url: /institute/support/ways-to-give
+        - text: Annual Fund
+          url: /institute/support/annual-fund
+        - text: Volunteer
+          url: /institute/support/annual-fund/volunteer
+        - text: Donor Recognition
+          url: /institute/support/donor-recognition
+        - text: Plan Your Legacy
+          url: /institute/support/plan-your-legacy
+        - text: Ways to Give
+          url: /institute/support/carl-fehlandt-scholarship
+        - text: Meet the Team
+          url: /institute/support/team
 
 footer_nav:
   - title: Information for
