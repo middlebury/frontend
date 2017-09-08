@@ -23,6 +23,7 @@ const babelify = require('babelify');
 const beeper = require('beeper');
 const args = require('yargs').argv;
 const svgSprites = require('gulp-svg-sprites');
+const gulpIf = require('gulp-if');
 
 const production = !!args.production;
 
@@ -126,7 +127,7 @@ gulp.task('scripts', function () {
     .pipe(source('bundle.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(uglify())
+    .pipe(gulpIf(production, uglify()))
     .on('error', gutil.log)
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.scripts.dest))
