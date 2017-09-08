@@ -107,7 +107,10 @@ gulp.task('styles', () => {
 });
 
 gulp.task('scripts:lint', () => {
-  return gulp.src(paths.scripts.src).pipe(eslint()).pipe(eslint.format());
+  return gulp
+    .src(paths.scripts.src)
+    .pipe(eslint())
+    .pipe(eslint.format());
 });
 
 gulp.task('scripts', function () {
