@@ -19,10 +19,9 @@
 .site-header__primary {
   display: flex;
   align-content: center;
-  padding-left: 30px;
-  padding-right: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
+  @include make-gutters();
 
   @include media(md) {
     display: block;
@@ -73,6 +72,7 @@
   flex: 0 1 auto;
   align-self: center;
   text-align: center;
+  min-height: 60px;
 
   .site-header.is-toggled & {
     text-align: left;
@@ -111,13 +111,13 @@
 }
 
 .site-header__search {
-  padding-left: 30px;
-  padding-right: 30px;
   padding-top: 30px;
   padding-bottom: 30px;
+  @include make-gutters();
 
   @include media(md) {
     order: 2;
+    padding-bottom: 60px;
   }
 }
 

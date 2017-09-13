@@ -93,7 +93,9 @@
   font-size: 16px;
   color: $white;
   position: relative;
-  padding: 20px 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include make-gutters();
 
   &:hover {
     color: $bright-green;
@@ -103,8 +105,6 @@
   @include media(md) {
     padding-top: 5px;
     padding-bottom: 5px;
-    padding-left: 30px;
-    padding-right: 30px;
     font-size: 14px;
   }
 
@@ -113,7 +113,15 @@
   }
 
   .site-nav__list--sub > .site-nav__item > & {
-    padding-left: 50px;
+    padding-left: 40px;
+
+    @include media(sm) {
+      padding-left: 80px;
+    }
+
+    @include media(md) {
+      padding-left: 40px;
+    }
   }
 }
 
