@@ -19,7 +19,6 @@ class Navigation {
 
     this.subnavActiveClass = 'is-active';
 
-    this.init();
   }
 
   init() {
@@ -67,33 +66,30 @@ const navs = document.querySelectorAll('[data-nav]');
 
 const headerNav = document.querySelector('.site-header__nav');
 
-forEach(
-  navs,
-  elem =>
-    new Navigation(elem, {
-      onClose: nav => {
-        // headerNav.removeAttribute('style');
-      },
-      onOpen: nav => {
-        const children = nav.querySelectorAll('.site-nav__content');
+const options = {
+  onOpen: nav => {
 
-        let height = 0;
+    const children = nav.querySelectorAll('.site-nav__content');
 
-        forEach(children, elem => {
-          const h = elem.clientHeight;
-          if (h > height) {
-            height = h;
-          }
-        });
+    let height = 0;
 
-        if (height > window.innerHeight) {
-          headerNav.style.minHeight = height + 'px';
-        }
-        else {
-          headerNav.style.minHeight = '100vh';
-        }
+    forEach(children, elem => {
+      const h = elem.clientHeight;
+      if (h > height) {
+        height = h;
       }
-    })
-);
+    });
 
-module.exports = Navigation;
+    if (height > window.innerHeight) {
+      headerNav.style.minHeight = height + 'px';
+    }
+    else {
+      headerNav.style.minHeight = '100vh';
+    }
+  }
+};
+
+forEach(navs, elem => {
+  const mobilenav = new MobileNavigation(elem, options);
+  mobilenav.init();
+});
