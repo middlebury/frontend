@@ -17,7 +17,6 @@ class Navigation {
     this.onOpen = onOpen;
     this.onClose = onClose;
 
-    this.navActiveClass = 'is-open';
     this.subnavActiveClass = 'is-active';
 
     this.init();
@@ -36,7 +35,6 @@ class Navigation {
 
   open(subnav) {
     this.isOpen = true;
-    this.elem.classList.add(this.navActiveClass);
 
     subnav.classList.add(this.subnavActiveClass);
 
@@ -44,7 +42,6 @@ class Navigation {
   }
 
   close() {
-    this.elem.classList.remove(this.navActiveClass);
     this.elem.classList.remove(this.subnavActiveClass);
     this.isOpen = false;
 
