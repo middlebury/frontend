@@ -26,7 +26,7 @@ class Navigation {
   }
 
   addListeners() {
-    this.items.forEach(item =>
+    forEach(this.items, item =>
       item.addEventListener('click', this.handleItemClick)
     );
     this.backButton.addEventListener('click', this.handleBackClick);
