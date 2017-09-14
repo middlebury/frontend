@@ -1,13 +1,15 @@
 {% extends "layout.twig" %}
 
-{% set page_header = {
-  title: 'Faculty in the Field',
-  breadcrumb: [
-    { text: 'Leadership and Impact', url: '' }
-  ]
-} %}
-
 {% block page %}
+
+<section class="page">
+
+  {% include 'partials/page-header.twig' with {
+    title: 'Faculty in the Field',
+    breadcrumb: [
+      { text: 'Leadership and Impact', url: '' }
+    ]
+  } %}
 
   {% embed 'partials/page-hero.twig' %}
     {% block content %}
@@ -92,5 +94,7 @@
   } %}
 
   {% include 'partials/profile-explorer.twig' %}
+
+</section>
 
 {% endblock %}

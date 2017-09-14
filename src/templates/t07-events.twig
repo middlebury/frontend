@@ -1,11 +1,5 @@
 {% extends "layout.twig" %}
 
-{% block controls %}
-  <a href="#midd-filters-drawer" data-toggle-target=".js-filters-drawer" data-toggle-linked="filters-drawer" aria-label="Toggle filters">
-    <span aria-hidden="true">{{icons.search_lg}}</span>
-  </a>
-{% endblock %}
-
 {% block page %}
 
 <section class="page">
@@ -14,8 +8,12 @@
     title: 'Events',
     callout_link_text: 'Sign up for events email',
     callout_link_url: '#',
-    show_controls: true
   } %}
+    {% block controls %}
+      <a href="#midd-filters-drawer" data-toggle-target=".js-filters-drawer" data-toggle-linked="filters-drawer" aria-label="Toggle filters">
+        <span aria-hidden="true">{{icons.search_lg}}</span>
+      </a>
+    {% endblock %}
   {% endembed %}
 
   <div class="container">
@@ -63,7 +61,7 @@
                 time: '6:00 PM',
                 date: 'Mon Jul 25, 2016',
                 local: 'McCone Irvine Auditorium',
-                blurb: 'Four guest speakers will bring to light realities of the true costs of war experienced by today\'s veteran and military community.',
+                blurb: '<p>Four guest speakers will bring to light realities of the true costs of war experienced by today\'s veteran and military community.</p>',
                 metalist: [
                   { text: 'Closed to the Public' },
                   { text: 'Lorem ipsum dolor set' },

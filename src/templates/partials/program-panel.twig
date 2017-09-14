@@ -1,4 +1,4 @@
-<div class="program-panel">
+<figure class="program-panel">
   <div class="program-panel__media">
 
     <picture>
@@ -13,14 +13,15 @@
   {#should this be the figcaption?#}
   <div class="program-panel__content">
 
-    <div class="program-panel__item program-panel__item--primary">
-      {% include 'partials/quote.twig' with {
-        light: true,
-        is_quote: true,
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolorem architecto asperiores excepturi blanditiis ducimus, unde maiores animi dolor expedita. Atque soluta ipsam consequatur unde, ex saepe tempore nulla aspernatur.',
-        cite: '<strong>James Peter</strong><br>Alumnus'
-      } %}
-    </div>
+    <figcaption class="program-panel__item program-panel__item--primary">
+      <blockquote>
+        <p>&ldquo;I liked the Institute’s focused approach — there was nothing unnecessary or outdated in the curriculum. And we were all empowered to help influence and evolve the curriculum ourselves. My degree was a great combination of working and studying.&rdquo;</p>
+        <footer>
+          <p><strong>James Peter</strong><br>
+          Alumnus</p>
+        </footer>
+      </blockquote>
+    </figcaption>
     <div class="program-panel__item program-panel__item--secondary">
 
       <h3 class="program-panel__stats-title">Class of 2016</h3>
@@ -42,4 +43,4 @@
 
     </div>
   </div>
-</div>
+</figure>

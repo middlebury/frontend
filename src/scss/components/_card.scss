@@ -15,10 +15,6 @@
 .card__title {
   font-size: 22px;
   margin-bottom: 20px;
-
-  @include media(md) {
-    font-size: 28px;
-  }
 }
 
 .card__title--lg {
