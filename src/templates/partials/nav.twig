@@ -1,8 +1,24 @@
 {% macro list(menu, modifier) %}
-  <ul class="site-nav__list" data-nav-list>
+  <ul class="site-nav__list{% if modifier %} site-nav__list--{{modifier}}{% endif %}" data-nav-list>
     {% for item in menu.items %}
-      <li class="site-nav__item">
-        <a href="{{item.href}}" class="site-nav__link{% if modifier == 'top' and loop.index >= 6 %} site-nav__link--accent{% endif %}" data-nav-link>{{item.text}}</a>
+
+      {% set has_sub_nav = false %}
+      {% if item.items %}
+        {% set has_sub_nav = true %}
+      {% endif %}
+
+      <li class="site-nav__item" data-nav-item>
+        <a href="{{item.url}}" class="site-nav__link" data-nav-link>
+          {{item.text}}
+
+          {% if has_sub_nav %}
+          <span class="site-nav__icon">
+            <svg class="icon">
+              <use xlink:href="#icon-arrow-right" />
+            </svg>
+          </span>
+          {% endif %}
+        </a>
         {% if item.items or item.menus %}
           {{ _self.nav(item, 'sub') }}
         {% endif %}
@@ -15,7 +31,15 @@
   <div class="site-nav{% if modifier %} site-nav--{{modifier}}{% endif %}" data-nav>
     <div class="site-nav__content">
       {% if menu.text %}
-        <a href="#" class="site-nav__link site-nav__link--back" data-nav-back>{{menu.text}}</a>
+        <a href="#" class="site-nav__link site-nav__link--back" data-nav-back>
+          <span class="site-nav__icon">
+            <svg class="icon">
+              <use xlink:href="#icon-arrow-left" />
+            </svg>
+          </span>
+          <span class="site-nav__text">Back</span>
+        </a>
+        <a href="{{menu.url}}" class="site-nav__link site-nav__link--top-page">{{menu.text}}</a>
       {% endif %}
       {{ _self.list(menu, modifier) }}
     </div>

@@ -1,7 +1,8 @@
 import forEach from './utils/forEach';
+import isMedia from './utils/isMedia';
 
 class Navigation {
-  constructor(elem) {
+  constructor(elem, {onOpen = f => f, onClose = f => f}) {
     this.elem = elem;
     this.backButton = this.elem.querySelector('[data-nav-back]');
     // TODO: need to only get first level of items for this list and not any sub navs
@@ -14,10 +15,11 @@ class Navigation {
 
     this.isOpen = false;
 
-    this.navActiveClass = 'is-open';
+    this.onOpen = onOpen;
+    this.onClose = onClose;
+
     this.subnavActiveClass = 'is-active';
 
-    this.init();
   }
 
   init() {
@@ -25,7 +27,7 @@ class Navigation {
   }
 
   addListeners() {
-    this.items.forEach(item =>
+    forEach(this.items, item =>
       item.addEventListener('click', this.handleItemClick)
     );
     this.backButton.addEventListener('click', this.handleBackClick);
@@ -33,15 +35,17 @@ class Navigation {
 
   open(subnav) {
     this.isOpen = true;
-    this.elem.classList.add(this.navActiveClass);
 
     subnav.classList.add(this.subnavActiveClass);
+
+    this.onOpen(this.elem);
   }
 
   close() {
-    this.elem.classList.remove(this.navActiveClass);
     this.elem.classList.remove(this.subnavActiveClass);
     this.isOpen = false;
+
+    this.onClose(this.elem);
   }
 
   handleBackClick(e) {
@@ -59,8 +63,34 @@ class Navigation {
   }
 }
 
-const navs = document.querySelectorAll('[data-nav]');
+if (!isMedia('md')) {
+  const navs = document.querySelectorAll('[data-nav]');
+  const headerNav = document.querySelector('.site-header__nav');
 
-forEach(navs, elem => new Navigation(elem));
+  const options = {
+    onOpen: nav => {
+      const children = nav.querySelectorAll('.site-nav__content');
 
-module.exports = Navigation;
+      let height = 0;
+
+      forEach(children, elem => {
+        const h = elem.clientHeight;
+        if (h > height) {
+          height = h;
+        }
+      });
+
+      if (height > window.innerHeight) {
+        headerNav.style.minHeight = height + 'px';
+      }
+      else {
+        headerNav.style.minHeight = '100vh';
+      }
+    }
+  };
+
+  forEach(navs, elem => {
+    const mobilenav = new Navigation(elem, options);
+    mobilenav.init();
+  });
+}

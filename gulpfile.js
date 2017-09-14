@@ -22,6 +22,9 @@ const del = require('del');
 const babelify = require('babelify');
 const beeper = require('beeper');
 const args = require('yargs').argv;
+const svgSprites = require('gulp-svg-sprites');
+const gulpIf = require('gulp-if');
+const slug = require('slug');
 
 const production = !!args.production;
 
@@ -77,6 +80,17 @@ gulp.task('server', () => {
   });
 });
 
+gulp.task('svg', () => {
+  return gulp
+    .src('./src/images/*.svg')
+    .pipe(
+      svgSprites({
+        mode: 'symbols'
+      })
+    )
+    .pipe(gulp.dest('./dist/svg'));
+});
+
 gulp.task('styles', () => {
   gulp
     .src(paths.styles.src)
@@ -94,7 +108,10 @@ gulp.task('styles', () => {
 });
 
 gulp.task('scripts:lint', () => {
-  return gulp.src(paths.scripts.src).pipe(eslint()).pipe(eslint.format());
+  return gulp
+    .src(paths.scripts.src)
+    .pipe(eslint())
+    .pipe(eslint.format());
 });
 
 gulp.task('scripts', function () {
@@ -114,7 +131,7 @@ gulp.task('scripts', function () {
     .pipe(source('bundle.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(uglify())
+    .pipe(gulpIf(production, uglify()))
     .on('error', gutil.log)
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.scripts.dest))
@@ -137,7 +154,15 @@ gulp.task('html', () => {
     )
     .pipe(
       twig({
-        base: './src/templates'
+        base: './src/templates',
+        filters: [
+          {
+            name: 'slugify',
+            func: function (args) {
+              return slug(args, {lower: true});
+            }
+          }
+        ]
       })
     )
     .pipe(prettify())

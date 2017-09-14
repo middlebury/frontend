@@ -17,12 +17,27 @@
     { text: 'Curriculum', href: '#' },
     {
       text: 'Faculty',
-      active: true,
       href: '#',
       items: [
         { text: 'Faculty sub page 1', href: '#' },
         { text: 'Faculty sub page 2', href: '#' },
-        { text: 'Faculty sub page 3', href: '#' },
+        {
+          text: 'Faculty sub page 3',
+          href: '#',
+          items: [
+            { text: 'Faculty sub page 1', href: '#' },
+            { text: 'Faculty sub page 2', href: '#' },
+            {
+              text: 'Faculty sub page 3',
+              active: true,
+              href: '#',
+              items: [
+                { text: 'Faculty sub page 1', href: '#' },
+                { text: 'Faculty sub page 2', href: '#' },
+              ]
+            }
+          ]
+        },
         { text: 'Faculty sub page 4', href: '#' },
       ]
     },
