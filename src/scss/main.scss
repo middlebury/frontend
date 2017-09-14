@@ -69,7 +69,6 @@
 @import 'components/projects';
 @import 'components/publications';
 @import 'components/pullquote';
-@import 'components/quote';
 @import 'components/search-form';
 @import 'components/search-results-item';
 @import 'components/section';
@@ -100,4 +99,3 @@
 .u-link-border {
   @include link-border();
 }
-
