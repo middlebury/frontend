@@ -87,7 +87,8 @@
   position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
-  @include make-gutters();
+  padding-left: $header-padding;
+  padding-right: $header-padding;
 
   &:hover {
     color: $bright-green;
@@ -95,8 +96,8 @@
   }
 
   @include media(md) {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     font-size: 14px;
   }
 
@@ -108,11 +109,11 @@
     padding-left: 40px;
 
     @include media(sm) {
-      padding-left: 80px;
+      // padding-left: 80px;
     }
 
     @include media(md) {
-      padding-left: 40px;
+      padding-left: $header-padding;
     }
   }
 }

@@ -21,7 +21,8 @@
   align-content: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  @include make-gutters();
+  padding-left: 20px;
+  padding-right: 20px;
 
   @include media(md) {
     display: block;
@@ -113,7 +114,8 @@
 .site-header__search {
   padding-top: 30px;
   padding-bottom: 30px;
-  @include make-gutters();
+  padding-left: $header-padding;
+  padding-right: $header-padding;
 
   @include media(md) {
     order: 2;
