@@ -6,6 +6,7 @@
 
 .site-nav--sub {
   display: none;
+  transition: 0.2s 0.5s;
   position: absolute;
   top: 0;
   left: 0;
@@ -14,10 +15,19 @@
   height: 100%;
 
   @include media(md) {
+    display: block;
+    visibility: hidden;
     padding-bottom: 90px;
     left: 100%;
-    width: calc((100vw - #{$header-width}) * 0.33);
-    max-width: calc((#{$grid-container-width} - #{$header-width}) * 0.33);
+    width: calc((100vw - #{$header-width}) * 0.4);
+    max-width: calc((#{$grid-container-width} - #{$header-width}) * 0.4);
+    padding-top: 190px; // TODO: find a solution w/o a magic number
+
+    .site-nav__item:hover > & {
+      visibility: visible;
+      transition-delay: 0.5s;
+      z-index: 5;
+    }
   }
 
   &.is-active {
@@ -26,16 +36,11 @@
     z-index: 5;
   }
 
-  @include media(md) {
-    padding-top: 190px; // TODO: find a solution w/o a magic number
-  }
-
   // third tier
   & & {
     @include media(md) {
-      // padding-top: 70px;
-      width: calc((100vw - #{$header-width}) * 0.67);
-      max-width: calc((#{$grid-container-width} - #{$header-width}) * 0.67);
+      width: calc((100vw - #{$header-width}) * 0.6);
+      max-width: calc((#{$grid-container-width} - #{$header-width}) * 0.6);
     }
   }
 }
@@ -69,14 +74,6 @@
 
   @include media(md) {
     border-bottom: 0;
-  }
-
-  &:hover {
-    @include media(md) {
-      & > .site-nav {
-        display: block;
-      }
-    }
   }
 }
 
