@@ -1,4 +1,5 @@
 import forEach from './utils/forEach';
+import isMedia from './utils/isMedia';
 
 class Navigation {
   constructor(elem, {onOpen = f => f, onClose = f => f}) {
@@ -62,34 +63,34 @@ class Navigation {
   }
 }
 
-const navs = document.querySelectorAll('[data-nav]');
+if (!isMedia('md')) {
+  const navs = document.querySelectorAll('[data-nav]');
+  const headerNav = document.querySelector('.site-header__nav');
 
-const headerNav = document.querySelector('.site-header__nav');
+  const options = {
+    onOpen: nav => {
+      const children = nav.querySelectorAll('.site-nav__content');
 
-const options = {
-  onOpen: nav => {
+      let height = 0;
 
-    const children = nav.querySelectorAll('.site-nav__content');
+      forEach(children, elem => {
+        const h = elem.clientHeight;
+        if (h > height) {
+          height = h;
+        }
+      });
 
-    let height = 0;
-
-    forEach(children, elem => {
-      const h = elem.clientHeight;
-      if (h > height) {
-        height = h;
+      if (height > window.innerHeight) {
+        headerNav.style.minHeight = height + 'px';
       }
-    });
-
-    if (height > window.innerHeight) {
-      headerNav.style.minHeight = height + 'px';
+      else {
+        headerNav.style.minHeight = '100vh';
+      }
     }
-    else {
-      headerNav.style.minHeight = '100vh';
-    }
-  }
-};
+  };
 
-forEach(navs, elem => {
-  const mobilenav = new MobileNavigation(elem, options);
-  mobilenav.init();
-});
+  forEach(navs, elem => {
+    const mobilenav = new Navigation(elem, options);
+    mobilenav.init();
+  });
+}
