@@ -73,13 +73,13 @@
   flex: 0 1 auto;
   align-self: center;
   text-align: center;
-  min-height: 60px;
 
   .site-header.is-toggled & {
     text-align: left;
   }
 
   @include media(md) {
+    min-height: 70px;
     // text-align: center;
     // position: absolute;
     // left: 50%;
