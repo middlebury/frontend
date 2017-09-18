@@ -69,6 +69,15 @@
   order: 1;
 }
 
+// TODO: this is a very specific util for pulling the content out of a .col-md-11.col-md-push-1.
+// Need to come up with a flexible way of achieving this and/or a more meaningful class name.
+.grid-expand {
+  @include media(md) {
+    margin-left: -20%;
+    margin-right: -60%;
+  }
+}
+
 @mixin order($size) {
   .flex-#{$size}-first {
     order: -1;
