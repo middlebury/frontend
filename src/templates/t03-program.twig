@@ -1,109 +1,102 @@
-{% extends "layout.twig" %}
+{% extends "layout-sidebar.twig" %}
 
-{% block page %}
+{% set page_header = {
+  title: 'Masters in Public Administration',
+  breadcrumb: [
+    {
+      text: 'Academics',
+      href: '#',
+    },
+    {
+      text: 'Degree Programs',
+      href: '#',
+    }
+  ],
+  callout_title: 'Application for Spring 2017 Now Open',
+  callout_link_url: '#',
+  callout_link_text: 'Apply Now'
+} %}
 
-<article class="page">
+{# For some reason the sidebar is not showing up. Due to conflicts with blocks? #}
 
-  {% embed 'partials/page-header.twig' with {
-    title: 'Masters in Public Administration',
-    breadcrumb: [
-      {
-        text: 'Academics',
-        href: '#',
-      },
-      {
-        text: 'Degree Programs',
-        href: '#',
-      }
+{% block sidebar %}
+
+  {% include 'partials/page-nav.twig' with {
+    items: [
+      { text: 'Curriculum', href: '#' },
+      { text: 'Faculty', href: '#' },
+      { text: 'Financing Your Education', href: '#' },
     ],
-    callout_title: 'Application for Spring 2017 Now Open',
-    callout_link_url: '#',
-    callout_link_text: 'Apply Now'
+    callouts: [
+      { text: 'Request Information', href: '#' },
+      { text: 'Apply by July 10 for Fall 2017', href: '#' },
+    ]
   } %}
-    {% block controls %}
-      {% include 'partials/page-nav-button.twig' %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="typography">
+    <p class="intro">The Middlebury Institute Master of Public Administration (MPA) is designed for those who want to make a difference in confronting critical social problems, including hunger, poverty, disease, joblessness, and powerlessness.</p>
+    <p>Through hands-on experience, applied learning, practical tools, and community support, this program prepares graduates to be effective leaders and managers in international development for social change organizations, NGOs, nonprofits and government agencies around the world. The four-semester 60-credit program includes core coursework and optional areas of concentration, as well as courses taught in a student’s chosen language of study and a professional practicum.</p>
+  </div>
+
+  {% include 'paragraphs/video.twig' %}
+
+  {% embed 'partials/section.twig' with {
+    title: 'Basic content title',
+    moreLinkHref: '#',
+    moreLinkText: 'Call to action'
+  } %}
+    {% block content %}
+      <nav class="grid-nav">
+        <ul class="grid-nav__list">
+          {% for i in 0..4 %}
+            <li class="grid-nav__item">
+              <figure class="grid-nav__image">
+                <a href="">
+                  <picture>
+                    <source srcset="//placehold.it/320x180" media="(min-width: 960px)" />
+                    <source srcset="//placehold.it/160x90" media="(min-width: 580px)" />
+                    <source srcset="//placehold.it/80x45" />
+                    <img src="//placehold.it/256x144" alt="" />
+                  </picture>
+                </a>
+              </figure>
+              <div class="grid-nav__body">
+                <a href="#" class="grid-nav__title">Human Rights and Social Change</a>
+                <p class="grid-nav__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos debitis nisi aperiam quaerat aut voluptates quibusdam eaque iusto dolorum impedit totam ullam reiciendis.</p>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
     {% endblock %}
   {% endembed %}
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-push-1 col-md-3 flex-md-last">
-        {% include 'partials/page-nav.twig' with {
-          items: [
-            { text: 'Curriculum', href: '#' },
-            { text: 'Faculty', href: '#' },
-            { text: 'Financing Your Education', href: '#' },
-          ],
-          callouts: [
-            { text: 'Request Information', href: '#' },
-            { text: 'Apply by July 10 for Fall 2017', href: '#' },
-          ]
-        } %}
-      </div>
-      <div class="col-md-push-1 col-md-7 flex-md-first">
+  {% embed 'partials/section.twig' with {
+    title: 'Our faculty are professionals, on campus and in the field',
+    moreLinkHref: '#',
+    moreLinkText: 'Call to action'
+  } %}
+    {% block content %}
+      <ol class="list list--lg">
+        {% for i in 0..2 %}
+          <li class="list__item">
+            {% include 'partials/story-teaser.twig' %}
+          </li>
+        {% endfor %}
+      </ol>
+    {% endblock %}
+  {% endembed %}
 
-        <section class="section">
-          <p class="intro">The Middlebury Institute Master of Public Administration (MPA) is designed for those who want to make a difference in confronting critical social problems, including hunger, poverty, disease, joblessness, and powerlessness.</p>
-          <p>Through hands-on experience, applied learning, practical tools, and community support, this program prepares graduates to be effective leaders and managers in international development for social change organizations, NGOs, nonprofits and government agencies around the world. The four-semester 60-credit program includes core coursework and optional areas of concentration, as well as courses taught in a student’s chosen language of study and a professional practicum.</p>
-
-          <figure>
-            <figcaption>
-              <video src=""></video>
-              <h3>Practical Skills for Positive Change</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi commodi, soluta quia aliquam sunt maxime beatae quisquam ex laboriosam, perspiciatis, voluptatem atque ut earum! Non modi, unde amet eaque.</p>
-            </figcaption>
-          </figure>
-        </section>
-
-      </div>
-    </div>
+  <div class="grid-expand">
+    {% include 'partials/program-panel.twig' %}
   </div>
 
+{% endblock %}
 
-  <section class="section">
-    <div class="container">
-      <div class="row row--dividers">
-        <div class="col-md-3">
-          <header>
-            <h1 class="h3">Our students are meeting global challenges</h1>
-            <a href="#" class="button button--primary">Learn more</a>
-          </header>
-        </div>
-        <div class="col-md-9">
-          <div class="row row--dividers">
-            {% for item in six_articles %}
-              <div class="col-md-4">
-                {% include 'partials/card.twig' with item %}
-              </div>
-            {% endfor %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="row row--dividers">
-        <div class="col-md-3">
-          <header>
-            <h1 class="h3">Our faculty are professionals, on campus and in the fields</h1>
-            <a href="#" class="button button--primary">Meet Community Leaders</a>
-          </header>
-        </div>
-        <div class="col-md-8">
-          {% for item in three_articles %}
-            {% include 'partials/card.twig' with item %}
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </section>
-
-  {% include 'partials/program-panel.twig' %}
-
+{% block page_footer %}
   {% include 'partials/callout-group.twig' %}
-
-</article>
-
 {% endblock %}
