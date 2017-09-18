@@ -34,6 +34,7 @@
   @include media(md) {
     flex: 1;
     align-self: flex-end;
+    text-align: right;
   }
 }
 
