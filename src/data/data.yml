@@ -170,38 +170,78 @@ footer_nav:
   - title: Information for
     items:
       - text: Students
+        url: /institute/students
       - text: Alumni
+        url: /institute/alumni
       - text: Faculty and Staff
+        url: /institute/faculty-staff
       - text: Employers
+        url: /institute/employers
       - text: Media
-      - text: Corporate Partners Donors
+        url: /institute/media
+      - text: Partners
+        url: /institute/partners
+      - text: Donors
+        url: /institute/donors
+      - text: Visitors
+        url: /institute/visitors     
   - title: Quick links
     items:
       - text: Emergency
-      - text: About
-      - text: Academic Calendar
+        url: /institute/student-services/health-wellness/emergency
+      - text: BannerWeb
+        url: https://ssb-prod.ec.middlebury.edu/PNTR/twbkwbis.P_WWWLogin?
+      - text: Campus Map
+        url: http://www.myatlascms.com/map/index.php?id=972
       - text: Contact Us
-      - text: Faculty and Staff directory Careers
-      - text: Privacy and Disclosures
+        url: /institute/contact
+      - text: Directory
+        url: https://directory.miis.edu
+      - text: Employment
+        url: https://middlebury.peopleadmin.com
+      - text: Offices and Services
+        url: /institute/a-z
+      - text: WebMail
+        url: https://mail.middlebury.edu
   - title: Resources
     items:
-      - text: Course Directory
+      - text: Course Catalog
+        url: /institute/academics/courses
+      - text: Digital Learning Commons
+        url: /institute/academics/academic-resources/dlc
+      - text: EthicsPoint
+        url: https://secure.ethicspoint.com/domain/media/en/gui/28296/index.html
+      - text: Globe Language Services
+        url: /institute/academics/academic-resources/globe-language-services
       - text: Library
-      - text: BannerWeb
-      - text: Ethical Conduct WebMail
+        url: /institute/academics/library
       - text: META Lab
-      - text: DLC
+        url: /institute/academics/academic-resources/meta-lab
+      - text: Writing Center
+        url: /institute/academics/academic-resources/writing-center
   - title: Site at a glance
     items:
-      - text: Learning Approach
+      - text: Institute Experience
+        url: /institute/institute-experience
       - text: Leadership and Impact
+        url: /institute/leadership-impact
       - text: Areas of Focus
+        url: /institute
       - text: Advancing Your Career
-      - text: The Institute Experience Programs
+        url: /institute/student-services/advising-career-services
+      - text: Academics
+        url: /institute/academics
       - text: Admissions
-      - text: Research Centers
-      - text: News and Events
+        url: /institute/admissions
+      - text: News
+        url: /institute/news
+      - text: Events
+        url: /institute/events
+      - text: Student Services
+        url: /institute/student-services
       - text: Support the Institute
+        url: /institute/support
+
 
 secondary_footer_nav:
   - text: Lorem ipsum
