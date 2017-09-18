@@ -5,11 +5,12 @@
   <div class="row">
     <div class="col-md-11 col-md-push-1">
 
-      <div class="page__row">
-        <div class="page__nav">
-          {% include 'partials/page-nav.twig' with page_nav %}
+      <div class="row">
+        <div class="col-md-4 flex-md-last">
+          {% block sidebar %}
+          {% endblock %}
         </div>
-        <div class="page__content">
+        <div class="col-md-8">
           {% block content %}
           {% endblock %}
         </div>
@@ -19,3 +20,4 @@
   </div>
 </div>
 {% endblock %}
+

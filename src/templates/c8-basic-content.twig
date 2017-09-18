@@ -1,4 +1,4 @@
-{% extends "layout-c8.twig" %}
+{% extends "layout-sidebar.twig" %}
 
 {% set page_header = {
   title: 'Basic content page',
@@ -8,46 +8,50 @@
     { text: 'Academics' },
     { text: 'Degree Programs' },
     { text: 'Masters of Public Administration' },
-  ],
-  show_controls: true
-} %}
-
-{% set page_nav = {
-  items: [
-    { text: 'Curriculum', href: '#' },
-    {
-      text: 'Faculty',
-      href: '#',
-      items: [
-        { text: 'Faculty sub page 1', href: '#' },
-        { text: 'Faculty sub page 2', href: '#' },
-        {
-          text: 'Faculty sub page 3',
-          href: '#',
-          items: [
-            { text: 'Faculty sub page 1', href: '#' },
-            { text: 'Faculty sub page 2', href: '#' },
-            {
-              text: 'Faculty sub page 3',
-              active: true,
-              href: '#',
-              items: [
-                { text: 'Faculty sub page 1', href: '#' },
-                { text: 'Faculty sub page 2', href: '#' },
-              ]
-            }
-          ]
-        },
-        { text: 'Faculty sub page 4', href: '#' },
-      ]
-    },
-    { text: 'Financing Your Education', href: '#' },
-  ],
-  callouts: [
-    { text: 'Request Information', href: '#' },
-    { text: 'Apply by July 10 for Fall 2017', href: '#' },
   ]
 } %}
+
+
+{% block sidebar %}
+
+  {% include 'partials/page-nav.twig' with {
+    items: [
+      { text: 'Curriculum', href: '#' },
+      {
+        text: 'Faculty',
+        href: '#',
+        items: [
+          { text: 'Faculty sub page 1', href: '#' },
+          { text: 'Faculty sub page 2', href: '#' },
+          {
+            text: 'Faculty sub page 3',
+            href: '#',
+            items: [
+              { text: 'Faculty sub page 1', href: '#' },
+              { text: 'Faculty sub page 2', href: '#' },
+              {
+                text: 'Faculty sub page 3',
+                active: true,
+                href: '#',
+                items: [
+                  { text: 'Faculty sub page 1', href: '#' },
+                  { text: 'Faculty sub page 2', href: '#' },
+                ]
+              }
+            ]
+          },
+          { text: 'Faculty sub page 4', href: '#' },
+        ]
+      },
+      { text: 'Financing Your Education', href: '#' },
+    ],
+    callouts: [
+      { text: 'Request Information', href: '#' },
+      { text: 'Apply by July 10 for Fall 2017', href: '#' },
+    ]
+  } %}
+
+{% endblock %}
 
 {% block content %}
 
