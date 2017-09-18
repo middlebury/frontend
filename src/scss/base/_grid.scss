@@ -17,22 +17,21 @@
   margin-left: 0;
   margin-right: 0;
 
-  > [class^="col"] {
+  > [class^='col'] {
     padding-right: 0;
     padding-left: 0;
   }
 }
 
 .row--dividers {
-
-  > [class^="col"]:not(:last-of-type) {
+  > [class^='col']:not(:last-of-type) {
     border-bottom: 1px solid $line-gray;
     padding-bottom: 50px;
     margin-bottom: 50px;
   }
 
   @include media(md) {
-    > [class^="col"]:not(:last-of-type) {
+    > [class^='col']:not(:last-of-type) {
       border-bottom: 0;
       border-right: 1px solid $line-gray;
       padding-bottom: 0;
@@ -42,18 +41,18 @@
 }
 
 .row--dividers-reverse {
-  > [class^="col"]:not(:last-of-type) {
+  > [class^='col']:not(:last-of-type) {
     border-left: 1px solid $line-gray;
   }
 }
 
 .row--dividers-light {
-  > [class^="col"]:not(:last-of-type) {
+  > [class^='col']:not(:last-of-type) {
     border-color: $brand-secondary-dark;
   }
 }
 
-[class^="col"] {
+[class^='col'] {
   @include make-col-ready();
 }
 
