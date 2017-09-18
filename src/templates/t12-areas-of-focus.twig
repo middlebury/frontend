@@ -29,8 +29,20 @@
           <ul class="grid-nav__list">
             {% for i in 0..4 %}
               <li class="grid-nav__item">
-                <a href="#" class="grid-nav__title">Human Rights and Social Change</a>
-                <p class="grid-nav__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos debitis nisi aperiam quaerat aut voluptates quibusdam eaque iusto dolorum impedit totam ullam reiciendis, veritatis, necessitatibus laudantium, neque pariatur accusamus harum.</p>
+                <figure class="grid-nav__image">
+                  <a href="">
+                    <picture>
+                      <source srcset="//placehold.it/320x180" media="(min-width: 960px)" />
+                      <source srcset="//placehold.it/160x90" media="(min-width: 580px)" />
+                      <source srcset="//placehold.it/80x45" />
+                      <img src="//placehold.it/256x144" alt="" />
+                    </picture>
+                  </a>
+                </figure>
+                <div class="grid-nav__body">
+                  <a href="#" class="grid-nav__title">Human Rights and Social Change</a>
+                  <p class="grid-nav__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos debitis nisi aperiam quaerat aut voluptates quibusdam eaque iusto dolorum impedit totam ullam reiciendis.</p>
+                </div>
               </li>
             {% endfor %}
           </ul>
