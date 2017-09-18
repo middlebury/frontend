@@ -11,6 +11,8 @@
 .grid-nav__item {
   margin-bottom: 30px;
   padding-bottom: 30px;
+  display: flex;
+  flex-direction: row-reverse;
 
   &:not(:last-of-type) {
     border-bottom: 1px solid $line-gray;
@@ -19,6 +21,7 @@
   @include media(md) {
     @include make-col-ready();
     @include make-col(6);
+    display: block;
     margin-bottom: 0;
     padding-bottom: 70px;
 
@@ -42,6 +45,22 @@
   }
 }
 
+.grid-nav__image {
+  margin-bottom: 5px;
+  margin-left: 10px;
+
+  @include media(sm) {
+    margin-left: 50px;
+  }
+
+  @include media(md) {
+    margin-left: 0;
+  }
+}
+
+.grid-nav__body {
+  flex: 1;
+}
 
 .grid-nav__title {
   display: inline-block;
@@ -55,5 +74,4 @@
 }
 
 .grid-nav__text {
-
 }
