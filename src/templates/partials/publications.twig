@@ -22,10 +22,18 @@
 
           <button
             class="publications__button publications__button--prev js-publications-prev-button"
-            aria-label="Previous publication">{{icons.chevron_left}}</button>
+            aria-label="Previous publication">
+              <svg class="icon">
+                <use xlink:href="#icon-arrow-left" />
+              </svg>
+            </button>
           <button
             class="publications__button publications__button--next js-publications-next-button"
-            aria-label="Next publication">{{icons.chevron_right}}</button>
+            aria-label="Next publication">
+              <svg class="icon">
+                <use xlink:href="#icon-arrow-right" />
+              </svg>
+            </button>
         </div>
       {% endblock %}
     {% endembed %}

@@ -3,7 +3,11 @@
 
   <a href="#{{id}}" class="filter__button u-clearfix" data-toggle-target="#{{id}}" data-toggle-group="filters">
     {{label}}
-    <span class="filter__button-icon u-float-right">{{icons.chevron_down}}</span>
+    <span class="filter__button-icon u-float-right">
+      <svg class="icon">
+        <use xlink:href="#icon-arrow-left" />
+      </svg>
+    </span>
   </a>
 
   <div class="filter__content" id="{{id}}">

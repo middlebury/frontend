@@ -19,7 +19,9 @@
                 {% for item in social_links %}
                   <li class="social-links__item">
                     <a href="{{item.href}}" class="social-links__link">
-                      {{icons[item.slug]}}
+                      <svg class="icon">
+                        <use xlink:href="#icon-{{item.slug}}" />
+                      </svg>
                     </a>
                   </li>
                 {% endfor %}
@@ -68,7 +70,9 @@
 
     <div class="secondary-footer__button">
       <a href="#midd-pagetop" class="button button--primary" aria-label="Back to top">
-        {{icons.chevron_up}}
+        <svg class="icon">
+          <use xlink:href="#icon-arrow-up" />
+        </svg>
       </a>
     </div>
   </div>
