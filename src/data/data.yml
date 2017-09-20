@@ -10,9 +10,9 @@ site_nav:
         - text: Learning in Language
           url: /institute/institute-experience/learning-language
         - text: Immersive Experience
-          url: /institute-experience/immersive-experience
+          url: /institute/institute-experience/immersive-experience
         - text: About the Institute
-          url: /institute-experience/about
+          url: /institute/institute-experience/about
     - text: Leadership and Impact
       url: /institute/leadership-impact
       items:
@@ -184,7 +184,7 @@ footer_nav:
       - text: Donors
         url: /institute/donors
       - text: Visitors
-        url: /institute/visitors     
+        url: /institute/visitors
   - title: Quick links
     items:
       - text: Emergency
