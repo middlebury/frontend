@@ -12,6 +12,11 @@
   height: 11px;
 }
 
+.icon--sm {
+  width: 8px;
+  height: 8px;
+}
+
 .icon--search {
   width: 16px;
   height: 16px;
@@ -43,7 +48,7 @@
 
 $hamburger-bar-height: 2px;
 $hamburger-spacing: 4px;
-$hamburger-bar-offset:  $hamburger-bar-height + $hamburger-spacing;
+$hamburger-bar-offset: $hamburger-bar-height + $hamburger-spacing;
 
 .icon--hamburger {
   top: -4px;
@@ -55,7 +60,7 @@ $hamburger-bar-offset:  $hamburger-bar-height + $hamburger-spacing;
     background-color: $white;
     width: 20px;
     height: $hamburger-bar-height;
-    transition: transform .2s;
+    transition: transform 0.2s;
   }
 
   &:before,

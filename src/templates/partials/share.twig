@@ -3,17 +3,23 @@
   <ul class="share__list">
     <li class="share__item">
       <a href="https://www.facebook.com/sharer.php?u={{pageUrl}}" target="_blank" title="Share on Facebook" class="share__link">
-        <span aria-hidden="true">{{icons.facebook}}</span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-facebook" />
+        </svg>
       </a>
     </li>
     <li class="share__item">
       <a href="http://twitter.com/share?text={{title}}&url={{pageUrl}}" target="_blank" title="Share on Twitter" class="share__link">
-        <span aria-hidden="true">{{icons.twitter}}</span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-twitter" />
+        </svg>
       </a>
     </li>
     <li class="share__item">
       <a href="mailto:?subject={{title}}&body={{pageUrl}}" title="Share via email" class="share__link">
-        <span aria-hidden="true">{{icons.email}}</span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-email" />
+        </svg>
       </a>
     </li>
   </ul>

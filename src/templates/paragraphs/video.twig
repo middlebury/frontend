@@ -7,7 +7,14 @@
         <source srcset="//placehold.it/640x360 1x, //placehold.it/1280x720 2x" />
         <img src="//placehold.it/1280x720" srcset="//placehold.it/1280x720 1x, //placehold.it/1280x720 2x" alt="">
       </picture>
-      <span class="button button--primary video__button">Play <span class="button__icon">{{icons.play}}</span></span>
+      <span class="button button--primary video__button">
+        Play
+        <span class="button__icon">
+          <svg class="icon icon--sm">
+            <use xlink:href="#icon-play" />
+          </svg>
+        </span>
+      </span>
     </a>
   </div>
   <figcaption class="video__caption">
