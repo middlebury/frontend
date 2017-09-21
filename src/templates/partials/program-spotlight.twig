@@ -3,24 +3,16 @@
     <div class="col-sm-4 col-lg-3">
 
       <div class="program-spotlight__header">
-        {% embed 'partials/callout.twig' with {
-          light: true,
-          title: 'Program Spotlight',
-        } %}
-          {% block body %}
-            <a href="" class="button button--secondary">Explore our Programs</a>
-          {% endblock %}
-          {% block footer %}
-            <div class="program-spotlight__controls" aria-label="carousel controls" role="navigation">
-              <button class="button button--secondary button--circle js-program-spotlight-prev-button" aria-label="Previous">
-                <span aria-hidden="true">&lsaquo;</span>
-              </button>
-              <button class="button button--secondary button--circle js-program-spotlight-next-button" aria-label="Next">
-                <span aria-hidden="true">&rsaquo;</span>
-              </button>
-            </div>
-          {% endblock %}
-        {% endembed %}
+        <h2 class="program-spotlight__title">Program Spotlight</h2>
+        <a href="#" class="button button--secondary">Explore our Programs</a>
+        <div class="program-spotlight__controls" aria-label="carousel controls" role="navigation">
+          <button class="button button--secondary button--circle js-program-spotlight-prev-button" aria-label="Previous">
+            <span aria-hidden="true">&lsaquo;</span>
+          </button>
+          <button class="button button--secondary button--circle js-program-spotlight-next-button" aria-label="Next">
+            <span aria-hidden="true">&rsaquo;</span>
+          </button>
+        </div>
       </div>
 
     </div>
