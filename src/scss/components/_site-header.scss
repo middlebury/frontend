@@ -5,7 +5,7 @@
   align-items: space-between;
 
   @include media(md) {
-    height: 675px;
+    height: $header-height;
     position: absolute;
     z-index: 3;
 
