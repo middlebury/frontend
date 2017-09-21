@@ -1,6 +1,6 @@
 $spotlight-item-breakpoint: 'sm';
 
-.spotlight-item {
+.program-spotlight-item {
   position: relative;
 
   @include media(sm) {
@@ -9,7 +9,7 @@ $spotlight-item-breakpoint: 'sm';
   }
 }
 
-.spotlight-item__close-button {
+.program-spotlight-item__close-button {
   display: none;
 
   @include media($spotlight-item-breakpoint) {
@@ -18,13 +18,13 @@ $spotlight-item-breakpoint: 'sm';
     right: 5px;
     z-index: 5;
 
-    .spotlight-item.is-toggled & {
+    .program-spotlight-item.is-toggled & {
       display: block;
     }
   }
 }
 
-.spotlight-item__image {
+.program-spotlight-item__image {
   @include media($spotlight-item-breakpoint) {
     position: absolute;
     top: 0;
@@ -35,7 +35,7 @@ $spotlight-item-breakpoint: 'sm';
   }
 }
 
-.spotlight-item__content {
+.program-spotlight-item__content {
   padding: 20px;
 
   @include media($spotlight-item-breakpoint) {
@@ -53,7 +53,7 @@ $spotlight-item-breakpoint: 'sm';
   }
 }
 
-.spotlight-item__side {
+.program-spotlight-item__side {
   @include media($spotlight-item-breakpoint) {
     height: 100%;
     display: flex;
@@ -61,29 +61,29 @@ $spotlight-item-breakpoint: 'sm';
   }
 }
 
-.spotlight-item__side--front {
-  .spotlight-item.has-toggler.is-toggled & {
+.program-spotlight-item__side--front {
+  .program-spotlight-item.has-toggler.is-toggled & {
     display: none;
   }
 }
 
-.spotlight-item__side--back {
-  .spotlight-item.has-toggler & {
+.program-spotlight-item__side--back {
+  .program-spotlight-item.has-toggler & {
     display: none;
   }
 
-  .spotlight-item.is-toggled & {
+  .program-spotlight-item.is-toggled & {
     display: flex;
   }
 }
 
-.spotlight-item__body {
+.program-spotlight-item__body {
   @include media($spotlight-item-breakpoint) {
     flex: 1;
   }
 }
 
-.spotlight-item__footer {
+.program-spotlight-item__footer {
   display: none;
 
   @include media($spotlight-item-breakpoint) {
@@ -92,7 +92,7 @@ $spotlight-item-breakpoint: 'sm';
   }
 }
 
-.spotlight-item__title {
+.program-spotlight-item__title {
   font-size: 20px;
   font-family: $font-family-serif;
   margin-bottom: 10px;
@@ -102,19 +102,18 @@ $spotlight-item-breakpoint: 'sm';
   }
 }
 
-.spotlight-item__link {
-
-  .spotlight-item--light & {
+.program-spotlight-item__link {
+  .program-spotlight-item--light & {
     @include media($spotlight-item-breakpoint) {
       color: $white;
     }
   }
 }
 
-.spotlight-item__blurb {
+.program-spotlight-item__blurb {
   // color: $gray;
 
-  .spotlight-item--light & {
+  .program-spotlight-item--light & {
     @include media($spotlight-item-breakpoint) {
       color: $white;
     }
