@@ -3,7 +3,8 @@ import Modal from './modal';
 function createButton(select) {
   const button = document.createElement('button');
 
-  button.classList = select.classList;
+  const selectClassName = select.getAttribute('class');
+  button.setAttribute('class', selectClassName);
 
   const options = select.querySelectorAll('option');
 
