@@ -15,26 +15,6 @@
   }
 }
 
-.section--projects {
-  background-image: url('/images/projects-bg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  color: $white;
-  text-align: center;
-  padding-bottom: 65px;
-
-  .section__header {
-    padding-top: 60px;
-    display: block;
-    text-align: center;
-  }
-
-  .section__title {
-    // display: inline-block;
-  }
-}
-
 .section__header {
   display: flex;
   margin-bottom: 50px;

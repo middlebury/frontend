@@ -138,23 +138,7 @@
       {% endblock %}
     {% endembed %}
 
-    <section class="section section--projects">
-      <header class="section__header">
-        <h2 class="section__title">Global Projects and Partnerships</h2>
-      </header>
-      <div class="projects">
-        {% for item in global_projects %}
-          <article class="projects__item">
-            <h3 class="projects__title">
-              <a href="#" class="projects__link">{{item.title}}</a>
-            </h3>
-            <p class="projects__blurb">{{item.blurb}}</p>
-          </article>
-        {% endfor %}
-      </div>
-      <a href="#" class="button button--secondary">Explore Opportunities with our International Partners</a>
-    </section>
-
+    {% include 'partials/projects.twig' %}
 
   </div>
 
