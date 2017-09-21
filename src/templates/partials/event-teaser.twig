@@ -1,13 +1,15 @@
 <article class="event-teaser" aria-labelledby="midd-event-label-{{i}}">
-  <figure class="event-teaser__media">
+  <div class="event-teaser__media">
     <a href="{{url}}">
-      <picture>
-        <source srcset="http://placehold.it/160x120" media="(min-width: 580px)">
-        <source srcset="http://placehold.it/100x75">
-        <img src="http://placehold.it/160x120" srcset="" alt="">
-      </picture>
+      <figure class="media media-image view-mode-teaser">
+        <picture>
+          <source srcset="http://placehold.it/160x120" media="(min-width: 580px)">
+          <source srcset="http://placehold.it/100x75">
+          <img src="http://placehold.it/160x120" srcset="" alt="">
+        </picture>
+      </figure>
     </a>
-  </figure>
+  </div>
   <div class="event-teaser__body">
     <p class="event-teaser__datetime"><strong><time datetime="">September 25, 2016</time></strong> &middot; <strong><time datetime="">5:00 PM</time></strong></p>
     <p class="event-teaser__local"><span>{{local}}</span></p>
