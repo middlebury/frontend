@@ -109,7 +109,7 @@ $spotlight-item-breakpoint: 'sm';
   }
 }
 
-.program-spotlight-item__blurb {
+.program-spotlight-item__text {
   @include media($spotlight-item-breakpoint) {
     color: $white;
   }
