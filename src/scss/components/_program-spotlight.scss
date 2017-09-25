@@ -60,7 +60,7 @@
 .program-spotlight__item {
   // only shows the first 3 items on mobile
   &:nth-of-type(n + 4) {
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(xs) {
       display: none;
     }
   }
