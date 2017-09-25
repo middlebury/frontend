@@ -10,12 +10,14 @@
   background-color: $brand-primary;
   display: flex;
   flex-direction: column;
+  text-align: center;
 
   @include media(sm) {
     padding-top: 100px;
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 50px;
+    text-align: left;
   }
 
   @include media(md) {
