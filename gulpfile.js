@@ -16,6 +16,7 @@ const notify = require('gulp-notify');
 const eslint = require('gulp-eslint');
 const prettify = require('gulp-prettify');
 const imagemin = require('gulp-imagemin');
+const cssnano = require('gulp-cssnano');
 const replace = require('gulp-replace');
 const yaml = require('js-yaml');
 const del = require('del');
@@ -102,6 +103,7 @@ gulp.task('styles', () => {
     )
     .on('error', sass.logError)
     .pipe(autoprefixer(['> 2%', 'last 2 versions']))
+    .pipe(gulpIf(production, cssnano()))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(browserSync.stream());
