@@ -42,34 +42,37 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="row row--dividers">
-        <div class="col-md-6">
-          {% embed 'partials/section.twig' with {
-            title: 'Latest News',
-            class: 'u-mb-0',
-            moreLinkHref: '#',
-            moreLinkText: 'More News'
-          } %}
-            {% block content %}
-              <ol class="list list--lg">
-                {% for item in homepage.latest_news %}
-                  <li class="list__item">
-                    {% include 'partials/story-teaser-lite.twig' with {
-                      title: item.title,
-                      link: '#',
-                      blurb: item.summary
-                    } %}
-                  </li>
-                {% endfor %}
-              </ol>
-            {% endblock %}
-          {% endembed %}
+    <div class="section">
+      <div class="row">
+        <div class="col-md-6 border-md-r">
+          <div class="mb-6 mb-md-0 pb-6 pb-md-0 border-b border-md-b-0">
+
+            {% embed 'partials/section.twig' with {
+              title: 'Latest News',
+              class: 'mb-0',
+              moreLinkHref: '#',
+              moreLinkText: 'More News'
+            } %}
+              {% block content %}
+                <ol class="list list--lg">
+                  {% for item in homepage.latest_news %}
+                    <li class="list__item">
+                      {% include 'partials/story-teaser-lite.twig' with {
+                        title: item.title,
+                        link: '#',
+                        text: item.text
+                      } %}
+                    </li>
+                  {% endfor %}
+                </ol>
+              {% endblock %}
+            {% endembed %}
+          </div>
         </div>
         <div class="col-md-6">
           {% embed 'partials/section.twig' with {
             title: 'Upcoming Events',
-            class: 'u-mb-0',
+            class: 'mb-0',
             moreLinkHref: '#',
             moreLinkText: 'More Events'
           } %}
@@ -90,7 +93,7 @@
           {% endembed %}
         </div>
       </div>
-    </section>
+    </div>
 
   </div>
 
