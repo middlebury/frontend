@@ -107,15 +107,7 @@
     } %}
       {% block content %}
 
-        <div class="row row--dividers">
-          {% for project in homepage.projects %}
-            <div class="{% if project.featured %}col-md-6{% else %}col-md-3{% endif %}">
-              <img src="{{project.image}}" alt="{{project.image_alt}}">
-              <h3><a href="{{project.link}}">{{project.title}}</a></h3>
-              <p>{{project.blurb}}</p>
-            </div>
-          {% endfor %}
-        </div>
+        {% include 'partials/grid-nav.twig' %}
 
       {% endblock %}
     {% endembed %}
@@ -125,15 +117,7 @@
     } %}
       {% block content %}
 
-        <div class="row row--dividers">
-          {% for item in homepage.leaders_in_the_field %}
-            <div class="{% if item.featured %}col-md-6{% else %}col-md-3{% endif %}">
-              <img src="{{item.image}}" alt="{{item.image_alt}}">
-              <h3><a href="{{item.link}}">{{item.title}}</a></h3>
-              <p>{{item.blurb}}</p>
-            </div>
-          {% endfor %}
-        </div>
+        {% include 'partials/grid-nav.twig' %}
 
       {% endblock %}
     {% endembed %}
