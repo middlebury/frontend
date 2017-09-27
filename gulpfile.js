@@ -102,7 +102,7 @@ gulp.task('styles', () => {
       })
     )
     .on('error', sass.logError)
-    .pipe(autoprefixer(['> 2%', 'last 2 versions']))
+    .pipe(autoprefixer())
     .pipe(gulpIf(production, cssnano()))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.styles.dest))
