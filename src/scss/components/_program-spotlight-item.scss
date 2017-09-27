@@ -9,19 +9,9 @@ $spotlight-item-breakpoint: 'sm';
   }
 }
 
-.program-spotlight-item__close-button {
-  display: none;
-
-  @include media($spotlight-item-breakpoint) {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    z-index: 5;
-
-    .program-spotlight-item.is-toggled & {
-      display: block;
-    }
-  }
+.program-spotlight-item__controls {
+  text-align: right;
+  margin-bottom: 5px;
 }
 
 .program-spotlight-item__image {
@@ -32,6 +22,16 @@ $spotlight-item-breakpoint: 'sm';
     height: 100%;
     width: 100%;
     z-index: 2;
+
+    figure {
+      height: 100%;
+    }
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 
