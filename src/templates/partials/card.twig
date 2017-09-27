@@ -1,6 +1,6 @@
 <article class="card">
   {% if image %}
-    <div class="card__media">
+    <figure class="card__media">
       <a href={{href}}>
         <picture>
           <source srcset="{{image_lg}} 1x" media="(min-width: 960px)">
@@ -9,7 +9,7 @@
           <img src="{{image_lg}}" alt="">
         </picture>
       </a>
-    </div>
+    </figure>
   {% endif %}
   <header class="card__header">
     {% if tag %}<p class="card__tag">{{tag}}</p>{% endif %}
