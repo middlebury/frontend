@@ -16,6 +16,7 @@ const notify = require('gulp-notify');
 const eslint = require('gulp-eslint');
 const prettify = require('gulp-prettify');
 const imagemin = require('gulp-imagemin');
+const cssnano = require('gulp-cssnano');
 const replace = require('gulp-replace');
 const yaml = require('js-yaml');
 const del = require('del');
@@ -25,6 +26,8 @@ const args = require('yargs').argv;
 const svgSprites = require('gulp-svg-sprites');
 const gulpIf = require('gulp-if');
 const slug = require('slug');
+const cmq = require('gulp-combine-mq');
+const size = require('gulp-size');
 
 const production = !!args.production;
 
@@ -92,17 +95,20 @@ gulp.task('svg', () => {
 });
 
 gulp.task('styles', () => {
-  gulp
+  return gulp
     .src(paths.styles.src)
-    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(gulpIf(!production, sourcemaps.init({loadMaps: true})))
     .pipe(
       sass({
         onError: browserSync.notify
       })
     )
     .on('error', sass.logError)
-    .pipe(autoprefixer(['> 2%', 'last 2 versions']))
-    .pipe(sourcemaps.write('./'))
+    .pipe(autoprefixer())
+    .pipe(gulpIf(production, cmq()))
+    .pipe(gulpIf(production, cssnano()))
+    .pipe(gulpIf(!production, sourcemaps.write('./')))
+    .pipe(size({showFiles: true}))
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(browserSync.stream());
 });
@@ -130,10 +136,11 @@ gulp.task('scripts', function () {
     })
     .pipe(source('bundle.js'))
     .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(gulpIf(!production, sourcemaps.init({loadMaps: true})))
     .pipe(gulpIf(production, uglify()))
     .on('error', gutil.log)
-    .pipe(sourcemaps.write('./'))
+    .pipe(gulpIf(!production, sourcemaps.write('./')))
+    .pipe(size({showFiles: true}))
     .pipe(gulp.dest(paths.scripts.dest))
     .pipe(browserSync.stream());
 });

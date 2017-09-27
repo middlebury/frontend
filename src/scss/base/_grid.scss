@@ -1,16 +1,9 @@
 .container {
   @include make-container();
-
-  @include media(lg) {
-    // padding-left: 60px;
-    // padding-right: 60px;
-  }
 }
 
 .row {
   @include make-row();
-  // TODO: need a util for where this is needed? mostly around callouts
-  // height: 100%;
 }
 
 .row--no-gutters {

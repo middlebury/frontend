@@ -1,19 +1,19 @@
 <article class="card">
-  {% if image %}
-    <div class="card__media">
+  {% if image_lg %}
+    <figure class="card__media">
       <a href={{href}}>
         <picture>
-          <source srcset="{{image_lg}} 1x" media="(min-width: 960px)">
-          <source srcset="{{image_md}} 1x" media="(min-width: 580px)">
-          <source srcset="{{image_xs}} 1x">
+          <source srcset="{{image_lg}}" media="(min-width: 960px)">
+          <source srcset="{{image_md}}" media="(min-width: 580px)">
+          <source srcset="{{image_xs}}">
           <img src="{{image_lg}}" alt="">
         </picture>
       </a>
-    </div>
+    </figure>
   {% endif %}
   <header class="card__header">
     {% if tag %}<p class="card__tag">{{tag}}</p>{% endif %}
     <h3 class="card__title {% if lg %}card__title--lg{% endif %}"><a href="{{href}}" class="card__link">{{title}}</a></h3>
   </header>
-  <p class="card__blurb">{{blurb}}</p>
+  <p class="card__text">{{text}}</p>
 </article>

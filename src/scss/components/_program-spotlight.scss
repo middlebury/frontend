@@ -8,20 +8,16 @@
   height: 100%;
   padding: 50px;
   background-color: $brand-primary;
-
-  .callout__title {
-    font-size: 30px;
-
-    @include media(md) {
-      font-size: 40px;
-    }
-  }
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 
   @include media(sm) {
     padding-top: 100px;
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 50px;
+    text-align: left;
   }
 
   @include media(md) {
@@ -30,16 +26,26 @@
   }
 }
 
+.program-spotlight__title {
+  color: $white;
+  font-size: 30px;
+  margin-bottom: 10px;
+
+  @include media(md) {
+    font-size: 40px;
+  }
+}
+
 .program-spotlight__controls {
   display: none;
 
   @include media(sm) {
     display: block;
+    margin-top: auto;
   }
 }
 
 .program-spotlight__container {
-
 }
 
 .program-spotlight__content {
@@ -55,8 +61,8 @@
 
 .program-spotlight__item {
   // only shows the first 3 items on mobile
-  &:nth-of-type(n+4) {
-    @include media-breakpoint-down(sm) {
+  &:nth-of-type(n + 4) {
+    @include media-breakpoint-down(xs) {
       display: none;
     }
   }

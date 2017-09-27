@@ -1,12 +1,35 @@
 .projects {
-  padding-left: 15px;
-  padding-right: 15px;
+  background-image: url('/images/projects-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-bottom: 60px;
+  padding-top: 60px;
+  margin-bottom: 60px;
+
+  @include make-gutters();
+}
+
+.projects__section-title {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: $font-weight-semibold;
+  font-family: $font-family-sans-serif-condensed;
+  font-size: 16px;
+  margin-bottom: 60px;
+  color: $white;
+}
+
+.projects__content {
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .projects__item {
   position: relative;
   margin-bottom: 80px;
-  text-align: center;
 
   &:not(:last-of-type) {
     &:after {
@@ -37,13 +60,6 @@
   color: $white;
 }
 
-.projects__blurb {
-  color: $line-gray;
-  max-width: 550px;
-  display: inline-block;
-  margin-bottom: 0;
-}
-
-.projects__footer {
-  text-align: center;
+.projects__text {
+  color: $white;
 }

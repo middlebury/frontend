@@ -65,6 +65,7 @@
 @import 'components/profile-spotlight-item';
 @import 'components/profile';
 @import 'components/program-panel';
+@import 'components/program-spotlight-item';
 @import 'components/program-spotlight';
 @import 'components/projects';
 @import 'components/publications';
@@ -82,7 +83,6 @@
 @import 'components/slideshow';
 @import 'components/social-links';
 @import 'components/speaker';
-@import 'components/spotlight-item';
 @import 'components/story-detail';
 @import 'components/story-teaser-lite';
 @import 'components/story-teaser';
@@ -94,6 +94,7 @@
 @import 'utils/float';
 @import 'utils/text';
 @import 'utils/spacing';
+@import 'utils/borders';
 @import 'utils/toggler';
 
 .u-link-border {
