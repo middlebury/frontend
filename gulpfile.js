@@ -26,6 +26,7 @@ const args = require('yargs').argv;
 const svgSprites = require('gulp-svg-sprites');
 const gulpIf = require('gulp-if');
 const slug = require('slug');
+const cmq = require('gulp-combine-mq');
 
 const production = !!args.production;
 
@@ -103,6 +104,7 @@ gulp.task('styles', () => {
     )
     .on('error', sass.logError)
     .pipe(autoprefixer())
+    .pipe(gulpIf(production, cmq()))
     .pipe(gulpIf(production, cssnano()))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.styles.dest))
