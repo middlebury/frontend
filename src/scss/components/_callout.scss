@@ -1,6 +1,4 @@
 .callout {
-  margin-bottom: 20px;
-
   @include media(md) {
     flex-direction: column;
     display: flex;
