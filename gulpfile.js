@@ -97,7 +97,7 @@ gulp.task('svg', () => {
 gulp.task('styles', () => {
   return gulp
     .src(paths.styles.src)
-    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(gulpIf(!production, sourcemaps.init({loadMaps: true})))
     .pipe(
       sass({
         onError: browserSync.notify
@@ -107,7 +107,7 @@ gulp.task('styles', () => {
     .pipe(autoprefixer())
     .pipe(gulpIf(production, cmq()))
     .pipe(gulpIf(production, cssnano()))
-    .pipe(sourcemaps.write('./'))
+    .pipe(gulpIf(!production, sourcemaps.write('./')))
     .pipe(size({showFiles: true}))
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(browserSync.stream());
