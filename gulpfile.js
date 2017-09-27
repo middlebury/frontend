@@ -27,6 +27,7 @@ const svgSprites = require('gulp-svg-sprites');
 const gulpIf = require('gulp-if');
 const slug = require('slug');
 const cmq = require('gulp-combine-mq');
+const size = require('gulp-size');
 
 const production = !!args.production;
 
@@ -94,7 +95,7 @@ gulp.task('svg', () => {
 });
 
 gulp.task('styles', () => {
-  gulp
+  return gulp
     .src(paths.styles.src)
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(
@@ -107,6 +108,7 @@ gulp.task('styles', () => {
     .pipe(gulpIf(production, cmq()))
     .pipe(gulpIf(production, cssnano()))
     .pipe(sourcemaps.write('./'))
+    .pipe(size({showFiles: true}))
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(browserSync.stream());
 });
