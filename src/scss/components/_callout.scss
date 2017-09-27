@@ -1,12 +1,10 @@
 .callout {
-  text-align: center;
   margin-bottom: 20px;
 
   @include media(md) {
     flex-direction: column;
     display: flex;
     height: 100%;
-    text-align: left;
   }
 
   @include media(lg) {
