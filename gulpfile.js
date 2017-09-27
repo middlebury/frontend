@@ -136,10 +136,10 @@ gulp.task('scripts', function () {
     })
     .pipe(source('bundle.js'))
     .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(gulpIf(!production, sourcemaps.init({loadMaps: true})))
     .pipe(gulpIf(production, uglify()))
     .on('error', gutil.log)
-    .pipe(sourcemaps.write('./'))
+    .pipe(gulpIf(!production, sourcemaps.write('./')))
     .pipe(gulp.dest(paths.scripts.dest))
     .pipe(browserSync.stream());
 });
