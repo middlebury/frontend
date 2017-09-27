@@ -30,6 +30,16 @@ $container-max-widths: (
   sm: 1440px
 );
 
+// prettier-ignore
+$spacers: (
+  0: 0,
+  // 1: 1em,
+  // 2: 2em,
+  // 3: 3em,
+  4: 40px,
+  6: 60px
+);
+
 // custom configs
 
 $header-width: 400px;
