@@ -323,11 +323,11 @@ programs:
 homepage:
   latest_news:
     - title: Undergraduate Interns Tackle Nonproliferation Issues
-      summary: <p>The program aims to combat the spread of weapons of mass destruction</p>
+      text: The program aims to combat the spread of weapons of mass destruction
     - title: Undergraduate Interns Tackle Nonproliferation Issues
-      summary: <p>The program aims to combat the spread of weapons of mass destruction</p>
+      text: The program aims to combat the spread of weapons of mass destruction
     - title: Alumni Play Important Role in Inauguration of First Female President of Taiwan
-      summary: <p>“I can't express how proud I am to see our students perform so well and play a part in shaping this historic event in Taiwan.”</p>
+      text: “I can't express how proud I am to see our students perform so well and play a part in shaping this historic event in Taiwan.”
   upcoming_events:
     - date: Jul 12, 2016
       time: 1:00 PM
