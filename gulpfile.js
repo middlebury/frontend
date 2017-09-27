@@ -140,6 +140,7 @@ gulp.task('scripts', function () {
     .pipe(gulpIf(production, uglify()))
     .on('error', gutil.log)
     .pipe(gulpIf(!production, sourcemaps.write('./')))
+    .pipe(size({showFiles: true}))
     .pipe(gulp.dest(paths.scripts.dest))
     .pipe(browserSync.stream());
 });
