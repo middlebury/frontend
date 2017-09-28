@@ -12,7 +12,7 @@
 } %}
 
 
-{% block sidebar %}
+{% block layout_sidebar %}
 
   {% include 'partials/page-nav.twig' with {
     items: [
@@ -53,7 +53,7 @@
 
 {% endblock %}
 
-{% block content %}
+{% block layout_content %}
 
   {# G1 text paragraph #}
   <div class="typography">
