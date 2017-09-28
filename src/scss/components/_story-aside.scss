@@ -1,0 +1,27 @@
+.story-aside {
+}
+
+.story-aside__title {
+  font-weight: $font-weight-semibold;
+  font-family: $font-family-sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.story-aside__link {
+  color: $black;
+}
+
+.story-aside__author {
+  font-size: 14px;
+  font-family: $font-family-sans-serif;
+  margin-bottom: 20px;
+  color: $black;
+}
+
+.story-aside__author-link {
+  @include link-border();
+}
+
+.story-aside__text {
+}
