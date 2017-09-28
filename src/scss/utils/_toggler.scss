@@ -1,4 +1,4 @@
-.u-is-toggled-show {
+.is-toggled-show {
   display: none;
 
   .is-toggled > & {
@@ -6,7 +6,7 @@
   }
 }
 
-.u-is-toggled-hide {
+.is-toggled-hide {
   .is-toggled > & {
     display: none;
   }
