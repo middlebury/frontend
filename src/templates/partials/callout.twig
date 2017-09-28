@@ -1,20 +1,30 @@
-<div class="callout{% if className %} {{className}}{% endif %}{% if light %} callout--light{% endif %}">
+<div class="callout{% if className %} {{className}}{% endif %}{% if light %} callout--light{% endif %}{% if theme %} callout--{{theme}}{% endif %}">
   <div class="callout__header">
     {% if preheader %}
       <em class="callout__preheader">{{preheader}}</em>
     {% endif %}
-  <h3 class="callout__title">{{title}}</h3>
+    <h3 class="callout__title">{{title}}</h3>
   </div>
-  <div class="callout__body">
-    {% if subtext %}
-      <p class="callout__subtext">{{subtext}}</p>
-    {% endif %}
-    {% block body %}{% endblock %}
-  </div>
-  <div class="callout__footer">
-    {% if buttonHref and buttonText %}
-      <a href="{{buttonHref}}" class="button button--{{buttonModifier | default('primary')}} callout__button">{{buttonText}}</a>
-    {% endif %}
-    {% block footer %}{% endblock %}
-  </div>
+
+  {% set body_block = block('body') %}
+
+  {% if body_block is not empty or subtext %}
+    <div class="callout__body">
+      {% if subtext %}
+        <p class="callout__subtext">{{subtext}}</p>
+      {% endif %}
+      {{ body_block|raw }}
+    </div>
+  {% endif %}
+
+  {% set footer_block = block('footer') %}
+
+  {% if footer_block is not empty or buttonHref or buttonText %}
+    <div class="callout__footer">
+      {% if buttonHref and buttonText %}
+        <a href="{{buttonHref}}" class="button button--{{buttonModifier | default('primary')}} callout__button">{{buttonText}}</a>
+      {% endif %}
+      {% block footer %}{% endblock %}
+    </div>
+  {% endif %}
 </div>

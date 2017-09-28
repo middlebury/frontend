@@ -83,6 +83,7 @@
 @import 'components/slideshow';
 @import 'components/social-links';
 @import 'components/speaker';
+@import 'components/story-aside';
 @import 'components/story-detail';
 @import 'components/story-teaser-lite';
 @import 'components/story-teaser';
@@ -90,11 +91,12 @@
 @import 'components/video';
 
 // utils
-@import 'utils/clearfix';
-@import 'utils/float';
-@import 'utils/text';
-@import 'utils/spacing';
 @import 'utils/borders';
+@import 'utils/clearfix';
+@import 'utils/display';
+@import 'utils/float';
+@import 'utils/spacing';
+@import 'utils/text';
 @import 'utils/toggler';
 
 .u-link-border {
