@@ -3,7 +3,7 @@
   overflow: hidden;
 
   @include media(md) {
-    padding-top: aspect-ratio(12, 5);
+    padding-top: percentage(5 / 12);
     background-color: #000;
   }
 }
@@ -30,7 +30,7 @@
   @include media(md) {
     @include absolute();
     z-index: 1;
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
@@ -67,7 +67,7 @@
   color: $white;
   text-transform: uppercase;
   font-size: 12px;
-  letter-spacing: .04em;
+  letter-spacing: 0.04em;
   font-family: $font-family-sans-serif;
   line-height: 1;
   font-weight: $font-weight-book;
@@ -122,15 +122,15 @@
   margin-bottom: 30px;
 
   &:not(:last-of-type) {
-    border-bottom: 1px solid rgba(white, .3);
+    border-bottom: 1px solid rgba(white, 0.3);
   }
 }
 
 .panel__list-link {
   color: $white;
   font-family: $font-family-serif;
-  opacity: .5;
-  transition: opacity .2s;
+  opacity: 0.5;
+  transition: opacity 0.2s;
 
   &:hover {
     opacity: 1;
