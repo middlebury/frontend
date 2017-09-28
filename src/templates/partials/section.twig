@@ -1,4 +1,4 @@
-<section class="section{% if class %} {{class}}{% endif %}"{% if labelledby %} aria-labelledby="{{labelledby}}"{% endif %}>
+<section class="section{% if class %} {{class}}{% endif %}{% if aside %} section--aside{% endif %}"{% if labelledby %} aria-labelledby="{{labelledby}}"{% endif %}>
   <header class="section__header">
     <h2 class="section__title"{% if labelledby %} id="{{labelledby}}"{% endif %}>{{title}}</h2>
     {% if moreLinkHref and moreLinkText %}
