@@ -16,23 +16,6 @@
   }
 }
 
-.row--dividers {
-  > [class^='col']:not(:last-of-type) {
-    border-bottom: 1px solid $line-gray;
-    padding-bottom: 50px;
-    margin-bottom: 50px;
-  }
-
-  @include media(md) {
-    > [class^='col']:not(:last-of-type) {
-      border-bottom: 0;
-      border-right: 1px solid $line-gray;
-      padding-bottom: 0;
-      margin-bottom: 0;
-    }
-  }
-}
-
 [class^='col'] {
   @include make-col-ready();
 }
