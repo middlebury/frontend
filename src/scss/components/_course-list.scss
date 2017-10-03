@@ -1,0 +1,57 @@
+.course-list {
+}
+
+.course-list__icon {
+  color: $brand-primary;
+}
+
+.course-list__title {
+  margin-bottom: 1rem;
+}
+
+.course-list__meta {
+  margin-bottom: 2rem;
+  font-family: $font-family-sans-serif;
+  // font-size: 14px;
+}
+
+.course-list__list {
+}
+
+// course-item
+
+.course-item {
+  &:not(:last-of-type) {
+    border-bottom: 1px solid $line-gray;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.course-item__title {
+  // margin-bottom: 1rem;
+}
+
+.course-item__content {
+  margin-top: 1rem;
+  padding-left: 2rem;
+
+  .course-item.has-toggler & {
+    display: none;
+  }
+  .course-item.is-toggled & {
+    display: block;
+  }
+}
+
+.course-item__text {
+  margin-bottom: 1rem;
+}
+
+.course-item__text {
+  margin-bottom: 1rem;
+}
+
+.course-item__terms {
+  margin-bottom: 1rem;
+}
