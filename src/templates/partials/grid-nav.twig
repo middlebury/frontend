@@ -1,6 +1,9 @@
 <nav class="grid-nav">
   <ul class="grid-nav__list">
-    {% for i in 0..4 %}
+    {% if count is not defined %}
+      {% set count = 5 %}
+    {% endif %}
+    {% for i in 1..count %}
       <li class="grid-nav__item">
         <figure class="grid-nav__image">
           <a href="">
