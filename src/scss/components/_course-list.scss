@@ -23,8 +23,8 @@
 .course-item {
   &:not(:last-of-type) {
     border-bottom: 1px solid $line-gray;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
+    // margin-bottom: 1rem;
+    // padding-bottom: 1rem;
   }
 }
 
@@ -32,9 +32,71 @@
   // margin-bottom: 1rem;
 }
 
+.course-item__link {
+  display: block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  @include clearfix();
+  // transition: background-color 0.2s;
+
+  // &.is-toggled,
+  &:hover {
+    // background-color: $line-gray;
+    text-decoration: none;
+
+    .course-item__label {
+      text-decoration: underline;
+    }
+  }
+}
+
+.course-item__label {
+  // flex: 1 0 auto;
+  // max-width: 100%;
+  // float: left;
+  // display: block;
+
+  .icon {
+    float: left;
+  }
+}
+
+.course-item__icon {
+  // flex: 0 0 auto;
+  // margin-left: auto;
+  // display: block;
+  // float: right;
+  // margin-right: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.5rem;
+
+  svg {
+    fill: $gray;
+  }
+}
+
+.course-item__icon--open {
+  .course-item.is-toggled & {
+    display: none;
+  }
+}
+
+.course-item__icon--close {
+  display: none;
+
+  .course-item.is-toggled & {
+    display: inline-block;
+  }
+}
+
+.course-item__markers {
+  // margin-left: 0.5rem;
+}
+
 .course-item__content {
-  margin-top: 1rem;
-  padding-left: 2rem;
+  // margin-top: 1rem;
+  padding-left: 1rem;
 
   .course-item.has-toggler & {
     display: none;
@@ -48,10 +110,14 @@
   margin-bottom: 1rem;
 }
 
-.course-item__text {
+.course-item__requirements {
   margin-bottom: 1rem;
 }
 
 .course-item__terms {
   margin-bottom: 1rem;
+}
+
+.course-item__action {
+  margin-bottom: 2rem;
 }

@@ -22,23 +22,47 @@
         <h4 class="course-item__title" id="course-label-{{id}}">
           <a
             href="#course-{{id}}"
+            class="course-item__link"
             data-toggle-target=".js-course-{{id}}"
             data-toggle-group="courselist"
             aria-expanded="false"
             aria-controls="course-{{id}}">
+
+
+            <span class="course-item__label">
+            {% if loop.first %}
+            TRLM 8535 - Really long title lorem ipsum dolor sit amet consectetur adipisicing elit
+            {% else %}
             TRLM 8535 - Website Localization
+            {% endif %}
+            </span>
+
+            {# "randomly" render some example combinations of icons #}
+            <span class="course-item__markers">
+              {% if loop.first %}
+                {{current_icon}}
+              {% endif %}
+              {% if loop.index == 3 %}
+                {{current_icon}}
+                {{upcoming_icon}}
+              {% endif %}
+              {% if loop.index == 2 %}
+                {{upcoming_icon}}
+              {% endif %}
+            </span>
+
+            <span class="course-item__icon">
+            </span>
+
+
+            <svg class="course-item__icon course-item__icon--open">
+              <use xlink:href="#icon-arrow-right" />
+            </svg>
+
+            <svg class="course-item__icon course-item__icon--close">
+              <use xlink:href="#icon-arrow-down" />
+            </svg>
           </a>
-          {# "randomly" render some example combinations of icons #}
-          {% if loop.first %}
-            {{current_icon}}
-          {% endif %}
-          {% if loop.index == 3 %}
-            {{current_icon}}
-            {{upcoming_icon}}
-          {% endif %}
-          {% if loop.index == 2 %}
-            {{upcoming_icon}}
-          {% endif %}
         </h4>
         <div class="course-item__content" id="course-{{id}}" aria-labelledby="#course-label-{{id}}">
           <p class="course-item__text">
@@ -52,7 +76,9 @@
           </p>
           <div class="course-item__requirements"></div>
           <div class="course-item__terms">Fall 2017 - MIIS</div>
-          <a href="http://catalog.middlebury.edu/courses/view/catalog/catalog%2FMIIS/course/course%2FTRLM8535" class="course-item__link link-border">View in Course Catalog</a>
+          <div class="course-item__action">
+            <a href="http://catalog.middlebury.edu/courses/view/catalog/catalog%2FMIIS/course/course%2FTRLM8535" class="link-border">View in Course Catalog</a>
+          </div>
         </div>
       </div>
     {% endfor %}
