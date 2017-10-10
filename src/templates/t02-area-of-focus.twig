@@ -1,47 +1,47 @@
 {% extends "layout.twig" %}
 
+{% set page_header = {
+  title: 'Sustainable Development',
+  breadcrumb: [
+    { text: 'Areas of Focus' },
+  ]
+} %}
+
 {% block page %}
 
-  {% include 'partials/page-header.twig' with {
-    title: 'Sustainable Development',
-    breadcrumb: [
-      { text: 'Areas of Focus' },
-    ]
-  } %}
+  <div class="container">
 
-  <section class="section">
-    {% embed 'partials/page-hero.twig' %}
-      {% block content %}
+    <div class="text-right mb-6">
+      <figure class="media media--image">
+        <picture>
+          {# <source srcset="http://placehold.it/1440x1080" media="(min-width: 580px)">
+          <source srcset="http://placehold.it/720x540">
+          <img src="http://placehold.it/1440x1080" alt=""> #}
+          <source srcset="http://placehold.it/1440x810" media="(min-width: 580px)">
+          <source srcset="http://placehold.it/720x405">
+          <img src="http://placehold.it/1440x810" alt="">
+        </picture>
+        <figcaption class="media__caption">Some caption for the image here.</figcaption>
+      </figure>
+    </div>
+
+  </div>
+
+  {# {% embed 'partials/page-hero.twig' %}
+    {% block content %}
+      <div class="typography">
         <h3>We reach across boundaries and marry principles with real-world engagement</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit facilis adipisci quod neque ab, dicta laudantium, repudiandae optio dignissimos necessitatibus dolorem possimus, tenetur consequuntur deleniti eligendi omnis, porro eveniet nemo.</p>
         <p>Accusamus doloribus beatae tenetur, consectetur hic laboriosam, voluptates, nesciunt officiis minima obcaecati id. Amet quidem doloremque odit delectus illum illo, ea expedita aut eius natus, impedit sed iste maxime libero.</p>
-      {% endblock %}
-    {% endembed %}
-  </section>
+      </div>
+    {% endblock %}
+  {% endembed %} #}
 
   <div class="container">
-    {% embed 'partials/section.twig' with {
-      title: 'Latest Thinking',
-      moreLinkText: 'View all',
-      moreLinkHref: '#'
-    } %}
-      {% block content %}
-          <div class="row row--dividers">
-            {% for i in 0..3 %}
-              <div class="col-md-3">
-                {% include 'partials/card.twig' with {
-                  tag: 'Sustainable Agriculture',
-                  title: 'Sustainable Agriculture in the Sacred Valley',
-                  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam asperiores consectetur, voluptate, officiis nisi magni quasi reprehenderit.'
-                } %}
-              </div>
-            {% endfor %}
-          </div>
-      {% endblock %}
-    {% endembed %}
+    {% include 'paragraphs/related-stories.twig' %}
   </div>
 
-  <section class="section">
+  <div class="mb-6">
     {% include 'partials/panel.twig' with {
       label: 'Program Spotlight',
       title: 'International Environmental Policy',
@@ -58,14 +58,58 @@
       list_more_link_text: 'View all Sustainable Development Programs',
       list_more_link_url: '#'
     } %}
-  </section>
+  </div>
+
+  <div class="container">
+    {% include 'paragraphs/related-basic-content.twig' with {
+      count: 3,
+      is_last_lg: true
+    } %}
+  </div>
+
+  <div class="mb-6">
+    {% include 'partials/panel.twig' with {
+      label: 'Campus Spotlight',
+      title: 'The Sustainability Council',
+      link_text: 'Learn more',
+      link_url: '#',
+      modifier: 'secondary',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quia a amet maiores modi illum nisi quidem fugit quo totam. Minus odio harum maxime, sapiente aspernatur eligendi, quidem eaque tenetur.',
+    } %}
+  </div>
 
   <div class="container">
     {% embed 'partials/section.twig' with {
-      title: 'International Environmental Policy'
+      title: 'Related Events',
+      moreLinkText: 'View all',
+      moreLinkHref: '#'
     } %}
       {% block content %}
-        test
+          <div class="row">
+            {% for i in 0..3 %}
+
+              {# twig js has to be `divisibleby` instead of `divisible by` #}
+              <div class="col-md-6 col-lg-3{% if not loop.last %}{% if loop.index is divisibleby(2) %} border-lg-r{% else %} border-md-r{% endif %} mb-4 mb-lg-0{% endif %}">
+
+                {% if not loop.last %}
+                  <div class="border-b border-md-b-0 pb-4 pb-md-0">
+                {% endif %}
+
+                  {% include 'partials/card.twig' with {
+                    image: true,
+                    title: 'Middlebury Institute’s TESOL/TFL Program: Innovations in Language Learning',
+                    date: 'September 24, 2017',
+                    time: '4:15 PM',
+                    local: 'McCone Irvine Auditorium'
+                  } %}
+
+                {% if not loop.last %}
+                  </div>
+                {% endif %}
+
+              </div>
+            {% endfor %}
+          </div>
       {% endblock %}
     {% endembed %}
   </div>

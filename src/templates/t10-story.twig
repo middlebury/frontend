@@ -79,22 +79,7 @@
     <div class="row">
       <div class="col-md-push-1 col-md-9">
 
-        {% embed 'partials/section.twig' with {
-          title: 'Further Reading'
-        } %}
-          {% block content %}
-            <div class="row row--dividers">
-              {% for i in 0..2 %}
-                <div class="col-md-4">
-                  <article class="card">
-                    <h3 class="card__title"><a href="#">Lorem ipsum</a></h3>
-                    <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, nam? Repellat consequatur expedita dolorum soluta, ipsam illum magni dicta, corrupti beatae ratione est quaerat a tenetur, quo impedit quod, perferendis.</p>
-                  </article>
-                </div>
-              {% endfor %}
-            </div>
-          {% endblock %}
-        {% endembed %}
+        {% include 'paragraphs/related-stories.twig' %}
 
       </div>
     </div>

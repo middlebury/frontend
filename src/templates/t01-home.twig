@@ -117,27 +117,14 @@
 
   <div class="container">
 
-    {% embed 'partials/section.twig' with {
-      title: 'Projects around the world',
-      moreLinkHref: '#',
-      moreLinkText: 'All Projects'
+    {% include 'paragraphs/related-basic-content.twig' with {
+      count: 3
     } %}
-      {% block content %}
 
-        {% include 'partials/grid-nav.twig' %}
-
-      {% endblock %}
-    {% endembed %}
-
-    {% embed 'partials/section.twig' with {
-      title: 'Leaders in the Field'
+    {% include 'paragraphs/related-basic-content.twig' with {
+      count: 3,
+      is_last_lg: true
     } %}
-      {% block content %}
-
-        {% include 'partials/grid-nav.twig' %}
-
-      {% endblock %}
-    {% endembed %}
 
     {% include 'partials/projects.twig' %}
 

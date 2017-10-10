@@ -44,15 +44,7 @@
 
   {% include 'paragraphs/video.twig' %}
 
-  {% embed 'partials/section.twig' with {
-    title: 'Basic content title',
-    moreLinkHref: '#',
-    moreLinkText: 'Call to action'
-  } %}
-    {% block content %}
-      {% include 'partials/grid-nav.twig' %}
-    {% endblock %}
-  {% endembed %}
+  {% include 'paragraphs/related-basic-content.twig' %}
 
   {% embed 'partials/section.twig' with {
     title: 'Our faculty are professionals, on campus and in the field',
