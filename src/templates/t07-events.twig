@@ -14,7 +14,12 @@
     labelledby: 'midd-featured-event'
   } %}
     {% block content %}
-      {% include 'partials/event-card.twig' %}
+      {% include 'partials/card.twig' with {
+        title: 'Middlebury Institute’s TESOL/TFL Program: Innovations in Language Learning',
+        date: 'September 24, 2017',
+        time: '4:15 PM',
+        local: 'McCone Irvine Auditorium'
+      } %}
     {% endblock %}
   {% endembed %}
 
