@@ -1,34 +1,34 @@
 {#TODO: change panel to use grid for panel__body and panel__footer#}
-<section class="panel{% if modifier %} panel--{{modifier}}{% endif %}">
+<section class="panel{% if modifier %} panel--{{modifier}}{% endif %}" aria-labelledby="midd-program-panel-label-{{label|slugify}}">
   <div class="panel__media">
     <picture>
-      <source srcset="http://unsplash.it/1440/600?random 1x, http://unsplash.it/2880/1200 2x" media="(min-width: 960px)">
-      {#TODO: need to load this on IE somehow without forcing an image on mobile#}
-      <img src="" alt="">
+      <source srcset="http://unsplash.it/1440/810?random" media="(min-width: 960px)">
+      <source srcset="http://unsplash.it/960/540?random" media="(min-width: 580px)">
+      <img src="http://unsplash.it/640/360?random" alt="">
     </picture>
   </div>
   <div class="panel__content">
-    <div class="panel__body">
-      <h1 class="panel__label">{{label}}</h1>
-      <h2 class="panel__title">
-        <a href="{{link_url}}" class="panel__link">{{title}} &rsaquo;</a>
-      </h2>
-      <div class="panel__blurb">
-        {{blurb}}
+    <div class="panel__row">
+      <div class="panel__primary">
+        <h1 class="panel__label" id="midd-program-panel-label-{{label|slugify}}">{{label}}</h1>
+        <h2 class="panel__title">
+          <a href="{{link_url}}" class="panel__link">{{title}} &rsaquo;</a>
+        </h2>
+        <p class="panel__text">{{text}}</p>
+        <a href="{{link_url}}" class="panel__button button button--secondary">{{link_text}}</a>
       </div>
-      <a href="{{link_url}}" class="panel__button button button--secondary">{{link_text}}</a>
+      {% if list %}
+        <div class="panel__secondary">
+          <ul class="panel__list">
+            {% for item in list %}
+              <li class="panel__list-item">
+                <a href="{{item.url}}" class="panel__list-link">{{item.text}}</a>
+              </li>
+            {% endfor %}
+          </ul>
+          <a href="{{list_more_link_url}}" class="panel__more-link">{{list_more_link_text}}</a>
+        </div>
+      {% endif %}
     </div>
-    {% if list %}
-      <div class="panel__footer">
-        <ul class="panel__list">
-          {% for item in list %}
-            <li class="panel__list-item">
-              <a href="{{item.url}}" class="panel__list-link">{{item.text}}</a>
-            </li>
-          {% endfor %}
-        </ul>
-        <a href="{{list_more_link_url}}" class="panel__more-link">{{list_more_link_text}}</a>
-      </div>
-    {% endif %}
   </div>
 </section>

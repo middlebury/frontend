@@ -1,0 +1,74 @@
+{% extends "layout-sidebar.twig" %}
+
+{% set page_header = {
+  title: 'Newsroom'
+} %}
+
+{% block layout_sidebar %}
+  {% include 'partials/page-nav.twig' with {
+    items: [
+      { text: 'Category', href: '#' },
+      { text: 'Category', href: '#' },
+      { text: 'Category', href: '#' },
+      { text: 'Category', href: '#' },
+      { text: 'Category', href: '#' },
+      { text: 'Category', href: '#' },
+    ],
+    callouts: [
+      { text: 'Subscribe' },
+      { text: 'Media Inquiries' },
+      { text: 'Submit a Story' },
+    ]
+  } %}
+
+  <div class="d-none d-md-block">
+
+    {% embed 'partials/section.twig' with {
+      title: 'Featured Stories',
+      aside: true
+    } %}
+      {% block content %}
+        <ol class="list list--lg mb-6">
+          {% for i in 0..1 %}
+            <li class="list__item">
+              {% include 'partials/story-aside.twig' %}
+            </li>
+          {% endfor %}
+        </ol>
+      {% endblock %} #}
+    {% endembed %}
+
+    {% embed 'partials/callout.twig' with {
+      theme: 'gray',
+      preheader: 'Application for',
+      title: 'Spring 2017 Now Open',
+    } %}
+      {% block body %}
+        <a href="#" class="button button--secondary">Apply now</a>
+      {% endblock %}
+    {% endembed %}
+
+  </div>
+
+{% endblock %}
+
+{% block layout_content %}
+
+  <ol class="list list--dividers list--lg mb-6">
+    {% for i in 0..5 %}
+      <li class="list__item">
+      {% if loop.first %}
+        {% include 'partials/story-teaser.twig' with {
+          featured: true
+        } %}
+      {% else %}
+        {% include 'partials/story-teaser.twig' %}
+      {% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+
+  {% include 'partials/pagination.twig' %}
+
+{% endblock %}
+

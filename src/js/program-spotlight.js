@@ -10,6 +10,7 @@ let swiperInstance;
 const swiperConfig = {
   buttonDisabledClass: 'button--disabled',
   slidesPerView: 3,
+  grabCursor: true,
   nextButton: '.js-program-spotlight-next-button',
   prevButton: '.js-program-spotlight-prev-button',
   breakpoints: {

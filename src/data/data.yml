@@ -68,7 +68,7 @@ site_nav:
             - text: Joint MPA/MA in International Education Management
               url: /institute/academics/degree-programs/joint-mpa-iem-overview
             - text: Joint BA/MA Degrees
-              url: /institute/academics/degree-programs/joint-ba-ma
+              url: /institute/academics/degree-programs/joint-bama
         - text: Additional Programs
           url: /institute/academics/additional-programs
         - text: Study Abroad
@@ -83,7 +83,7 @@ site_nav:
             - text: Center for Conflict Studies
               url: /institute/academics/centers-initiatives/conflict-studies
             - text: Graduate Initiative in Russian Studies
-              url: /institute/centers-initiatives/russian-studies
+              url: /institute/academics/centers-initiatives/graduate-initiative-russian-studies
             - text: James Martin Center for Nonproliferation Studies
               url: /institute/academics/centers-initiatives/nonproliferation-studies
         - text: Academic Resources
@@ -323,11 +323,11 @@ programs:
 homepage:
   latest_news:
     - title: Undergraduate Interns Tackle Nonproliferation Issues
-      summary: <p>The program aims to combat the spread of weapons of mass destruction</p>
+      text: The program aims to combat the spread of weapons of mass destruction
     - title: Undergraduate Interns Tackle Nonproliferation Issues
-      summary: <p>The program aims to combat the spread of weapons of mass destruction</p>
+      text: The program aims to combat the spread of weapons of mass destruction
     - title: Alumni Play Important Role in Inauguration of First Female President of Taiwan
-      summary: <p>“I can't express how proud I am to see our students perform so well and play a part in shaping this historic event in Taiwan.”</p>
+      text: “I can't express how proud I am to see our students perform so well and play a part in shaping this historic event in Taiwan.”
   upcoming_events:
     - date: Jul 12, 2016
       time: 1:00 PM

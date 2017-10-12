@@ -3,22 +3,19 @@
   padding-top: 50px;
 }
 
+// use existing utils instead?
 .site-footer__content {
-  border-bottom: 1px solid $brand-primary-dark;
-  height: 100%;
+  border-bottom: 1px solid $brand-secondary-dark;
+  padding-bottom: 60px;
   text-align: center;
-
-  .callout {
-    // text-align: center; // TODO: Change me to a text align util class e.g. text-xs-center, text-lg-left
-
-    @include media(lg) {
-      // text-align: left;
-    }
-  }
+  margin-bottom: 60px;
 
   @include media(lg) {
     text-align: left;
     border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    height: 100%;
   }
 }
 
@@ -54,6 +51,7 @@
 .secondary-footer__item {
   &:not(:last-of-type) {
     margin-bottom: 20px;
+
     @include media(lg) {
       margin-bottom: 0;
     }

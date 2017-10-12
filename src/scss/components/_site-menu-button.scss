@@ -19,37 +19,50 @@
 
 .site-menu-button__text {
   display: none;
-  margin-right: 20px;
+}
 
+.site-menu-button__text--open {
   @include media(sm) {
     display: inline-block;
   }
 
   @include media(md) {
     display: block;
-    margin-right: 0;
-    margin-bottom: 10px;
   }
-}
 
-.site-menu-button__text--open {
   .site-menu-button.is-toggled & {
     display: none;
+
+    @include media(md) {
+      display: none;
+    }
   }
 }
 
 .site-menu-button__text--close {
   display: none;
+
   .site-menu-button.is-toggled & {
     @include media(sm) {
       display: inline-block;
+    }
+
+    @include media(md) {
+      display: block;
     }
   }
 }
 
 .site-menu-button__icon {
+  margin-left: 20px;
+
+  @include media(md) {
+    margin-left: 0;
+    margin-top: 20px;
+  }
   // TODO: need to toggle icon--close class on the icon with js instead.
   // These styles should be in _icon.scss
+  // possibly use an api like data-toggle-target=".something, .anotherthing"
   .site-menu-button.is-toggled & {
     background-color: transparent;
 

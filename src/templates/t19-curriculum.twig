@@ -8,33 +8,36 @@
     { text: 'Academics' },
     { text: 'Degree Programs' },
     { text: 'Masters of Public Administration' },
-  ],
-  show_controls: true
-} %}
-
-{% set page_nav = {
-  items: [
-    { text: 'Curriculum', href: '#' },
-    {
-      text: 'Faculty',
-      active: true,
-      href: '#',
-      items: [
-        { text: 'Faculty sub page 1', href: '#' },
-        { text: 'Faculty sub page 2', href: '#' },
-        { text: 'Faculty sub page 3', href: '#' },
-        { text: 'Faculty sub page 4', href: '#' },
-      ]
-    },
-    { text: 'Financing Your Education', href: '#' },
-  ],
-  callouts: [
-    { text: 'Request Information', href: '#' },
-    { text: 'Apply by July 10 for Fall 2017', href: '#' },
   ]
 } %}
 
-{% block content %}
+{% block layout_sidebar %}
+
+  {% include 'partials/page-nav.twig' with {
+    items: [
+      { text: 'Curriculum', href: '#' },
+      {
+        text: 'Faculty',
+        active: true,
+        href: '#',
+        items: [
+          { text: 'Faculty sub page 1', href: '#' },
+          { text: 'Faculty sub page 2', href: '#' },
+          { text: 'Faculty sub page 3', href: '#' },
+          { text: 'Faculty sub page 4', href: '#' },
+        ]
+      },
+      { text: 'Financing Your Education', href: '#' },
+    ],
+    callouts: [
+      { text: 'Request Information', href: '#' },
+      { text: 'Apply by July 10 for Fall 2017', href: '#' },
+    ]
+  } %}
+
+{% endblock %}
+
+{% block layout_content %}
 
   <div class="typography">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut veritatis sit cumque minus ratione, velit doloremque. Ad dolorem asperiores dolor odio ratione veniam, vel possimus praesentium quas molestiae non cum!</p>
@@ -79,7 +82,7 @@
             </ul>
           </td>
           <td>
-            <strong class="u-sans-serif">Jeff Dayton-Johnson</strong>
+            <strong class="sans-serif">Jeff Dayton-Johnson</strong>
           </td>
         </tr>
         {% endfor %}

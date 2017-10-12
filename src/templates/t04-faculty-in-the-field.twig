@@ -27,14 +27,14 @@
           {% for i in 0..3 %}
             <div class="col-md-3">
 
-              {% set blurb = '<p>lorem ipsum</p>' %}
+              {% set text = 'lorem ipsum' %}
 
               {% if loop.last %}
-                {% set blurb = '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>' %}
+                {% set text = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.' %}
               {% endif %}
 
               {% include 'partials/profile-spotlight-item.twig' with {
-                blurb: blurb
+                text: text
               } %}
             </div>
           {% endfor %}

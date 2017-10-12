@@ -1,0 +1,16 @@
+<section class="projects" aria-labelledby="#midd-projects-label">
+  <div class="projects__content">
+    <h2 class="projects__section-title" id="midd-projects-label">Global Projects and Partnerships</h2>
+    <ul class="projects__list">
+      {% for item in global_projects %}
+        <li class="projects__item">
+          <h3 class="projects__title">
+            <a href="#" class="projects__link">{{item.title}}</a>
+          </h3>
+          <p class="projects__text">{{item.blurb}}</p>
+        </li>
+      {% endfor %}
+    </ul>
+    <a href="#" class="button button--secondary">Explore Opportunities with our International Partners</a>
+  </div>
+</section>

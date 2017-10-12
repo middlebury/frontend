@@ -15,26 +15,6 @@
   }
 }
 
-.section--projects {
-  background-image: url('/images/projects-bg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  color: $white;
-  text-align: center;
-  padding-bottom: 65px;
-
-  .section__header {
-    padding-top: 60px;
-    display: block;
-    text-align: center;
-  }
-
-  .section__title {
-    // display: inline-block;
-  }
-}
-
 .section__header {
   display: flex;
   margin-bottom: 50px;
@@ -44,7 +24,7 @@
 .section__title {
   // TODO: need to use a heading element or class e.g. .h3
   text-transform: uppercase;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   font-weight: $font-weight-semibold;
   font-family: $font-family-sans-serif-condensed;
   font-size: 16px;

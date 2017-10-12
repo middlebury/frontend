@@ -1,84 +1,67 @@
-{% extends "layout.twig" %}
+{% extends "layout-sidebar.twig" %}
 
-{% block page %}
+{% set page_header = {
+  title: 'Events',
+  callout_link_text: 'Sign up for events email',
+  callout_link_url: '#',
+} %}
 
-<section class="page">
+{% block layout_sidebar %}
 
-  {% embed 'partials/page-header.twig' with {
-    title: 'Events',
-    callout_link_text: 'Sign up for events email',
-    callout_link_url: '#',
+  {% embed 'partials/section.twig' with {
+    title: 'Featured Event',
+    class: 'section--aside',
+    labelledby: 'midd-featured-event'
   } %}
-    {% block controls %}
-      <a href="#midd-filters-drawer" data-toggle-target=".js-filters-drawer" data-toggle-linked="filters-drawer" aria-label="Toggle filters">
-        <svg class="icon icon--lg" aria-hidden="true">
-          <use xlink:href="#icon-search" />
-        </svg>
-      </a>
+    {% block content %}
+      {% include 'partials/card.twig' with {
+        title: 'Middlebury Institute’s TESOL/TFL Program: Innovations in Language Learning',
+        date: 'September 24, 2017',
+        time: '4:15 PM',
+        local: 'McCone Irvine Auditorium'
+      } %}
     {% endblock %}
   {% endembed %}
 
-  <div class="container">
-    {#TODO: needs dividers#}
-    <div class="row row--dividers-reverse">
-      <div class="col-md-push-1 col-md-3 col--collapse flex-md-last">
+  {% embed 'partials/drawer.twig' with {
+    id: 'midd-filters-drawer',
+    class: 'js-filters-drawer',
+    toggle_linked: 'filters-drawer',
+    toggle_target: '.js-filters-drawer'
+  } %}
+    {% block content %}
+        {% include 'partials/filters.twig' %}
 
-        <div class="col">
-          {% embed 'partials/section.twig' with {
-            title: 'Featured Event',
-            class: 'section--aside',
-            labelledby: 'midd-featured-event'
-          } %}
-            {% block content %}
-              {% include 'partials/event-card.twig' %}
-            {% endblock %}
-          {% endembed %}
-        </div>
+        {% include 'partials/sidebar-search.twig' %}
 
-        {% embed 'partials/drawer.twig' with {
-          id: 'midd-filters-drawer',
-          class: 'js-filters-drawer',
-          toggle_linked: 'filters-drawer',
-          toggle_target: '.js-filters-drawer'
+        <a href="#" class="button button--tertiary button--xl button--block text-left clearfix">View Academic Calendar <span class="float-right" aria-hidden="true">&rsaquo;</span></a>
+    {% endblock %}
+  {% endembed %}
+
+{% endblock %}
+
+{% block layout_content %}
+
+  <ol class="list list--dividers list--md mb-6">
+    {% for i in 0..7 %}
+      <li class="list__item">
+        {% include 'partials/event-teaser.twig' with {
+          id: i,
+          title: 'Building a Sustainable Career in Social Impact – Breaking into the Field',
+          link: '#',
+          time: '6:00 PM',
+          date: 'Mon Jul 25, 2016',
+          local: 'McCone Irvine Auditorium',
+          blurb: 'Four guest speakers will bring to light realities of the true costs of war experienced by today\'s veteran and military community.',
+          metalist: [
+            { text: 'Closed to the Public' },
+            { text: 'Lorem ipsum dolor set' },
+          ]
         } %}
-          {% block content %}
-              {% include 'partials/filters.twig' %}
+      </li>
+    {% endfor %}
+  </ol>
 
-              {% include 'partials/sidebar-search.twig' %}
-
-              <a href="#" class="button button--tertiary button--xl button--block u-text-left u-clearfix">View Academic Calendar <span class="u-float-right" aria-hidden="true">&rsaquo;</span></a>
-          {% endblock %}
-        {% endembed %}
-
-      </div>
-      <div class="col-md-push-1 col-md-8 flex-md-first">
-
-        <ol class="list list--dividers list--md u-mb-6">
-          {% for i in 0..7 %}
-            <li class="list__item">
-              {% include 'partials/event-teaser.twig' with {
-                id: i,
-                title: 'Building a Sustainable Career in Social Impact – Breaking into the Field',
-                link: '#',
-                time: '6:00 PM',
-                date: 'Mon Jul 25, 2016',
-                local: 'McCone Irvine Auditorium',
-                blurb: 'Four guest speakers will bring to light realities of the true costs of war experienced by today\'s veteran and military community.',
-                metalist: [
-                  { text: 'Closed to the Public' },
-                  { text: 'Lorem ipsum dolor set' },
-                ]
-              } %}
-            </li>
-          {% endfor %}
-        </ol>
-
-        {% include 'partials/pagination.twig' %}
-
-      </div>
-    </div>
-  </div>
-
-</section>
+  {% include 'partials/pagination.twig' %}
 
 {% endblock %}

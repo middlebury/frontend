@@ -13,16 +13,25 @@
   <div class="container">
 
     <section class="section">
-      <div class="row row--dividers">
-        <div class="col-md-6 col-lg-3">
-          <h3><a href="#">Practical Innovation</a></h3>
-          <p>The world needs people who can understand our greatest challenges, from poverty to climate change, and the connections between them.</p>
+      <div class="row text-center text-md-left">
+        <div class="col-md-6 col-lg-3 border-md-r mb-4 mb-lg-0">
+          <div class="border-b border-md-b-0 pb-4 pb-md-0">
+            {% include 'partials/card.twig' with {
+              title: 'Practical Innovation',
+              text: 'The world needs people who can understand our greatest challenges, from poverty to climate change, and the connections between them.'
+            } %}
+          </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-          <h3><a href="">Cultural Fluency</a></h3>
-          <p>Learning in language and intercultural studies are integral to an Institute education. These skills are central to achieving effective change around the world.</p>
+        <div class="col-md-6 col-lg-3 border-lg-r mb-4 mb-lg-0">
+          <div class="border-b border-md-b-0 pb-4 pb-md-0">
+          {% include 'partials/card.twig' with {
+            title: 'Cultural Fluency',
+            text: 'Learning in language and intercultural studies are integral to an Institute education. These skills are central to achieving effective change around the world.'
+          } %}
+          </div>
         </div>
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-3 border-md-r">
+          <div class="border-b border-md-b-0 pb-4 pb-md-0 mb-4 mb-md-0">
           {% include 'partials/callout.twig' with {
             preheader: 'Register for',
             title: 'Monterey Forum',
@@ -30,6 +39,7 @@
             buttonText: 'Register',
             buttonHref: '#',
           } %}
+          </div>
         </div>
         <div class="col-md-6 col-lg-3">
           {% include 'partials/callout.twig' with {
@@ -42,34 +52,41 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="row row--dividers">
-        <div class="col-md-6">
-          {% embed 'partials/section.twig' with {
-            title: 'Latest News',
-            class: 'u-mb-0',
-            moreLinkHref: '#',
-            moreLinkText: 'More News'
-          } %}
-            {% block content %}
-              <ol class="list list--lg">
-                {% for item in homepage.latest_news %}
-                  <li class="list__item">
-                    {% include 'partials/story-teaser-lite.twig' with {
-                      title: item.title,
-                      link: '#',
-                      blurb: item.summary
-                    } %}
-                  </li>
-                {% endfor %}
-              </ol>
-            {% endblock %}
-          {% endembed %}
+  </div>
+
+  <div class="container">
+
+    <div class="section">
+      <div class="row">
+        <div class="col-md-6 border-md-r">
+          <div class="mb-6 mb-md-0 pb-6 pb-md-0 border-b border-md-b-0">
+
+            {% embed 'partials/section.twig' with {
+              title: 'Latest News',
+              class: 'mb-0',
+              moreLinkHref: '#',
+              moreLinkText: 'More News'
+            } %}
+              {% block content %}
+                <ol class="list list--lg">
+                  {% for item in homepage.latest_news %}
+                    <li class="list__item">
+                      {% include 'partials/story-teaser-lite.twig' with {
+                        title: item.title,
+                        link: '#',
+                        text: item.text
+                      } %}
+                    </li>
+                  {% endfor %}
+                </ol>
+              {% endblock %}
+            {% endembed %}
+          </div>
         </div>
         <div class="col-md-6">
           {% embed 'partials/section.twig' with {
             title: 'Upcoming Events',
-            class: 'u-mb-0',
+            class: 'mb-0',
             moreLinkHref: '#',
             moreLinkText: 'More Events'
           } %}
@@ -90,71 +107,26 @@
           {% endembed %}
         </div>
       </div>
-    </section>
+    </div>
 
   </div>
 
-  <section class="section">
+  <section class="section" aria-labelledby="midd-program-spotlight-label">
     {% include 'partials/program-spotlight.twig' %}
   </section>
 
   <div class="container">
 
-    {% embed 'partials/section.twig' with {
-      title: 'Projects around the world',
-      moreLinkHref: '#',
-      moreLinkText: 'All Projects'
+    {% include 'paragraphs/related-basic-content.twig' with {
+      count: 3
     } %}
-      {% block content %}
 
-        <div class="row row--dividers">
-          {% for project in homepage.projects %}
-            <div class="{% if project.featured %}col-md-6{% else %}col-md-3{% endif %}">
-              <img src="{{project.image}}" alt="{{project.image_alt}}">
-              <h3><a href="{{project.link}}">{{project.title}}</a></h3>
-              <p>{{project.blurb}}</p>
-            </div>
-          {% endfor %}
-        </div>
-
-      {% endblock %}
-    {% endembed %}
-
-    {% embed 'partials/section.twig' with {
-      title: 'Leaders in the Field'
+    {% include 'paragraphs/related-basic-content.twig' with {
+      count: 3,
+      is_last_lg: true
     } %}
-      {% block content %}
 
-        <div class="row row--dividers">
-          {% for item in homepage.leaders_in_the_field %}
-            <div class="{% if item.featured %}col-md-6{% else %}col-md-3{% endif %}">
-              <img src="{{item.image}}" alt="{{item.image_alt}}">
-              <h3><a href="{{item.link}}">{{item.title}}</a></h3>
-              <p>{{item.blurb}}</p>
-            </div>
-          {% endfor %}
-        </div>
-
-      {% endblock %}
-    {% endembed %}
-
-    <section class="section section--projects">
-      <header class="section__header">
-        <h2 class="section__title">Global Projects and Partnerships</h2>
-      </header>
-      <div class="projects">
-        {% for item in global_projects %}
-          <article class="projects__item">
-            <h3 class="projects__title">
-              <a href="#" class="projects__link">{{item.title}}</a>
-            </h3>
-            <p class="projects__blurb">{{item.blurb}}</p>
-          </article>
-        {% endfor %}
-      </div>
-      <a href="#" class="button button--secondary">Explore Opportunities with our International Partners</a>
-    </section>
-
+    {% include 'partials/projects.twig' %}
 
   </div>
 

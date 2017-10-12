@@ -2,20 +2,26 @@
   <div class="story-teaser__media">
     <a href="{{url}}">
       <figure class="media media-image view-mode-teaser">
-        <picture>
-          <source srcset="http://placehold.it/160x120" media="(min-width: 580px)">
-          <source srcset="http://placehold.it/100x75">
-          <img src="http://placehold.it/160x120" srcset="" alt="">
-        </picture>
+        {% if featured %}
+          <picture>
+            <source srcset="http://placehold.it/768x432" media="(min-width: 580px)">
+            <source srcset="http://placehold.it/640x360">
+            <img src="http://placehold.it/768x432" srcset="" alt="">
+          </picture>
+        {% else %}
+          <picture>
+            <source srcset="http://placehold.it/160x120" media="(min-width: 580px)">
+            <source srcset="http://placehold.it/100x75">
+            <img src="http://placehold.it/160x120" srcset="" alt="">
+          </picture>
+        {% endif %}
       </figure>
     </a>
   </div>
   <div class="story-teaser__body">
     <time datetime="" class="story-teaser__pubdate">Jun 8, 2017</time>
     <h3 class="story-teaser__title"><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing</a></h3>
-    <p class="story-teaser__byline">by <a href="#">Author Name</a></p>
-    <div class="story-teaser__blurb">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sequi sunt distinctio nostrum voluptate eveniet, repellat commodi ex suscipit rem iste provident, autem fugit doloremque delectus sed, repellendus consequatur recusandae.</p>
-    </div>
+    <p class="story-teaser__author">by <a href="#">Author Name</a></p>
+    <p class="story-teaser__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sequi sunt distinctio nostrum voluptate eveniet, repellat commodi ex suscipit rem iste provident, autem fugit doloremque delectus sed, repellendus consequatur recusandae.</p>
   </div>
 </article>

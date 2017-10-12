@@ -1,11 +1,25 @@
-.u-text-left {
+.text-left {
   text-align: left;
 }
 
-.u-serif {
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-md-left {
+  @include media(md) {
+    text-align: left;
+  }
+}
+
+.serif {
   font-family: $font-family-serif;
 }
 
-.u-sans-serif {
+.sans-serif {
   font-family: $font-family-sans-serif;
 }

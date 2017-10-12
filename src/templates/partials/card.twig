@@ -1,19 +1,32 @@
-<article class="card">
+<article class="card{% if image %} card--has-image{% endif %}">
   {% if image %}
     <div class="card__media">
       <a href={{href}}>
         <picture>
-          <source srcset="{{image_lg}} 1x" media="(min-width: 960px)">
-          <source srcset="{{image_md}} 1x" media="(min-width: 580px)">
-          <source srcset="{{image_xs}} 1x">
-          <img src="{{image_lg}}" alt="">
+          <source srcset="//placehold.it/640x360" media="(min-width: 960px)">
+          <source srcset="//placehold.it/320x180" media="(min-width: 580px)">
+          {# <source srcset="//placehold.it/320x180"> #}
+          <source srcset="//placehold.it/160x90">
+          <img src="//placehold.it/640x360" alt="">
         </picture>
       </a>
     </div>
+  <div class="card__body">
   {% endif %}
-  <header class="card__header">
-    {% if tag %}<p class="card__tag">{{tag}}</p>{% endif %}
-    <h3 class="card__title {% if lg %}card__title--lg{% endif %}"><a href="{{href}}" class="card__link">{{title}}</a></h3>
-  </header>
-  <p class="card__blurb">{{blurb}}</p>
+    <h3 class="card__title"><a href="{{href}}" class="card__link">{{title}}</a></h3>
+    {% if author %}
+      <p class="card__author">by <a href="#" class="link-border">{{author}}</a></p>
+    {% endif %}
+    {% if text %}
+      <p class="card__text">{{text}}</p>
+    {% endif %}
+    {% if date and time %}
+      <p class="card__meta">{{date}} &middot; {{time}}</p>
+    {% endif %}
+    {% if local %}
+      <p class="card__meta">{{local}}</p>
+    {% endif %}
+  {% if image %}
+    </div>
+  {% endif %}
 </article>

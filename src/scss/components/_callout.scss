@@ -1,12 +1,8 @@
 .callout {
-  text-align: center;
-  margin-bottom: 20px;
-
   @include media(md) {
     flex-direction: column;
     display: flex;
     height: 100%;
-    text-align: left;
   }
 
   @include media(lg) {
@@ -14,7 +10,13 @@
   }
 }
 
-.callout--light {}
+.callout--gray {
+  padding: 40px 20px;
+  background-color: $warm-gray;
+}
+
+.callout--light {
+}
 
 .callout__header {
   flex: 0 1 auto;
@@ -61,4 +63,5 @@
   margin-bottom: 0;
 }
 
-.callout__button {}
+.callout__button {
+}

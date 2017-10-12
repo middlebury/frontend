@@ -1,7 +1,7 @@
 <footer class="site-footer">
   <div class="container">
-    <div class="row row--dividers row--dividers-light">
-      <div class="col-lg-3">
+    <div class="row">
+      <div class="col-lg-3 border-lg-r border-secondary-dark">
 
         <div class="site-footer__content">
           {% embed 'partials/callout.twig' with {
@@ -34,7 +34,7 @@
       <div class="col-lg-9">
         <div class="row">
           {% for menu in footer_nav %}
-            <div class="col-sm-3">
+            <div class="col-sm-6 col-md-3">
               {% include 'partials/footer-menu.twig' with menu %}
             </div>
           {% endfor %}

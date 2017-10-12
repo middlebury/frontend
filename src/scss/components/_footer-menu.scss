@@ -1,10 +1,8 @@
 .footer-menu {
   margin-bottom: 40px;
-  margin-top: 40px;
 
   @include media(lg) {
     margin-bottom: 0;
-    margin-top: 0;
   }
 }
 
@@ -18,11 +16,9 @@
 }
 
 .footer-menu__nav {
-
 }
 
 .footer-menu__list {
-
 }
 
 .footer-menu__item {
