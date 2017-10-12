@@ -79,39 +79,7 @@
   </div>
 
   <div class="container">
-    {% embed 'partials/section.twig' with {
-      title: 'Related Events',
-      moreLinkText: 'View all',
-      moreLinkHref: '#'
-    } %}
-      {% block content %}
-          <div class="row">
-            {% for i in 0..3 %}
-
-              {# twig js has to be `divisibleby` instead of `divisible by` #}
-              <div class="col-md-6 col-lg-3{% if not loop.last %}{% if loop.index is divisibleby(2) %} border-lg-r{% else %} border-md-r{% endif %} mb-4 mb-lg-0{% endif %}">
-
-                {% if not loop.last %}
-                  <div class="border-b border-md-b-0 pb-4 pb-md-0">
-                {% endif %}
-
-                  {% include 'partials/card.twig' with {
-                    image: true,
-                    title: 'Middlebury Institute’s TESOL/TFL Program: Innovations in Language Learning',
-                    date: 'September 24, 2017',
-                    time: '4:15 PM',
-                    local: 'McCone Irvine Auditorium'
-                  } %}
-
-                {% if not loop.last %}
-                  </div>
-                {% endif %}
-
-              </div>
-            {% endfor %}
-          </div>
-      {% endblock %}
-    {% endembed %}
+    {% include 'paragraphs/related-events.twig' %}
   </div>
 
   {% include 'partials/panel.twig' with {
