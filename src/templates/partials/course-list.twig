@@ -10,7 +10,7 @@
     {{upcoming_icon}} <em>indicates offered in the upcoming term(s)</em>
   </p>
 
-  <div class="course-list__items">
+  <div class="course-list__items" role="tablist">
 
     {% for i in 0..5 %}
 
@@ -18,8 +18,8 @@
 
       {# data-toggle-group should be a unique value if there are multiple on the page #}
       {# js-course-<ID> can be the course/id value #}
-      <div class="course-item js-course-{{id}}">
-        <h4 class="course-item__title" id="course-label-{{id}}">
+      <div class="course-item">
+        <h4 class="course-item__title" id="course-label-{{id}}" role="tab">
           <a
             href="#course-{{id}}"
             class="course-item__link"
@@ -28,43 +28,39 @@
             aria-expanded="false"
             aria-controls="course-{{id}}">
 
-
             <span class="course-item__label">
-            {% if loop.first %}
-            TRLM 8535 - Really long title lorem ipsum dolor sit amet consectetur adipisicing elit
-            {% else %}
-            TRLM 8535 - Website Localization
-            {% endif %}
-            </span>
-
-            {# "randomly" render some example combinations of icons #}
-            <span class="course-item__markers">
               {% if loop.first %}
-                {{current_icon}}
+              TRLM 8535 - Really long title lorem ipsum dolor sit amet consectetur adipisicing elit
+              {% else %}
+              TRLM 8535 - Website Localization
               {% endif %}
-              {% if loop.index == 3 %}
-                {{current_icon}}
-                {{upcoming_icon}}
-              {% endif %}
-              {% if loop.index == 2 %}
-                {{upcoming_icon}}
-              {% endif %}
-            </span>
 
-            <span class="course-item__icon">
+              {# "randomly" render some example combinations of icons #}
+              <span class="course-item__markers">
+                {% if loop.first %}
+                  {{current_icon}}
+                {% endif %}
+                {% if loop.index == 3 %}
+                  {{current_icon}}
+                  {{upcoming_icon}}
+                {% endif %}
+                {% if loop.index == 2 %}
+                  {{upcoming_icon}}
+                {% endif %}
+              </span>
             </span>
-
 
             <svg class="course-item__icon course-item__icon--open">
-              <use xlink:href="#icon-arrow-right" />
+              <use xlink:href="#icon-arrow-down" />
             </svg>
 
             <svg class="course-item__icon course-item__icon--close">
-              <use xlink:href="#icon-arrow-down" />
+              <use xlink:href="#icon-arrow-up" />
             </svg>
           </a>
+
         </h4>
-        <div class="course-item__content" id="course-{{id}}" aria-labelledby="#course-label-{{id}}">
+        <div class="course-item__content js-course-{{id}}" id="course-{{id}}" role="tabpanel" aria-labelledby="#course-label-{{id}}">
           <p class="course-item__text">
             The purpose of this course is to familiarize students with web technologies, development and localization. We will look at
             this topic from the point of view of the project manager, the localization engineer, and even the translator. The
