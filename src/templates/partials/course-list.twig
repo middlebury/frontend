@@ -36,18 +36,16 @@
               {% endif %}
 
               {# "randomly" render some example combinations of icons #}
-              <span class="course-item__markers">
-                {% if loop.first %}
-                  {{current_icon}}
-                {% endif %}
-                {% if loop.index == 3 %}
-                  {{current_icon}}
-                  {{upcoming_icon}}
-                {% endif %}
-                {% if loop.index == 2 %}
-                  {{upcoming_icon}}
-                {% endif %}
-              </span>
+              {% if loop.first %}
+                {{current_icon}}
+              {% endif %}
+              {% if loop.index == 3 %}
+                {{current_icon}}
+                {{upcoming_icon}}
+              {% endif %}
+              {% if loop.index == 2 %}
+                {{upcoming_icon}}
+              {% endif %}
             </span>
 
             <svg class="course-item__icon course-item__icon--open">
