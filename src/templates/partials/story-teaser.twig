@@ -1,21 +1,23 @@
-<article class="story-teaser{% if featured %} story-teaser--featured{% endif %}">
-  <figure class="story-teaser__media">
+<article class="story-teaser">
+  <div class="story-teaser__media">
     <a href="{{url}}">
-    {% if featured %}
-      <picture>
-        <source srcset="http://placehold.it/768x432" media="(min-width: 580px)">
-        <source srcset="http://placehold.it/640x360">
-        <img src="http://placehold.it/768x432" srcset="" alt="">
-      </picture>
-    {% else %}
-      <picture>
-        <source srcset="http://placehold.it/160x120" media="(min-width: 580px)">
-        <source srcset="http://placehold.it/100x75">
-        <img src="http://placehold.it/160x120" srcset="" alt="">
-      </picture>
-    {% endif %}
+      <figure class="media media-image view-mode-teaser">
+        {% if featured %}
+          <picture>
+            <source srcset="http://placehold.it/768x432" media="(min-width: 580px)">
+            <source srcset="http://placehold.it/640x360">
+            <img src="http://placehold.it/768x432" srcset="" alt="">
+          </picture>
+        {% else %}
+          <picture>
+            <source srcset="http://placehold.it/160x120" media="(min-width: 580px)">
+            <source srcset="http://placehold.it/100x75">
+            <img src="http://placehold.it/160x120" srcset="" alt="">
+          </picture>
+        {% endif %}
+      </figure>
     </a>
-  </figure>
+  </div>
   <div class="story-teaser__body">
     <time datetime="" class="story-teaser__pubdate">Jun 8, 2017</time>
     <h3 class="story-teaser__title"><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing</a></h3>
