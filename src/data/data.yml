@@ -494,3 +494,17 @@ quicklinks:
     - text: Find Internships
     - text: Search for Jobs
     - text: Zócalo
+
+faculty_spotlight:
+  - name: Kathleen M. Bailey
+    title: Professor, Teaching English to Speakers of Other Languages and Teaching Foreign Language
+    text: Bailey is pleased and honored to be a catalyst for her students’ greatest achievements.
+  - name: Anna Vassilieva
+    title: Professor, Russian Studies
+    text: As a young but demanding teacher in a village school near Leningrad, Vassilieva saw something remarkable in her students.
+  - name: Jeff Langholz
+    title: Professor, International Environmental Policy
+    text: As a young Peace Corps volunteer, Langholz learned a lifelong lesson about sustainable practices.
+  - name: Philipp C. Bleek
+    title: Professor, Nonproliferation and Terrorism Studies
+    text: As a young Peace Corps volunteer, Langholz learned a lifelong lesson about sustainable practices.
