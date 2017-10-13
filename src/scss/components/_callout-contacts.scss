@@ -1,4 +1,6 @@
 .callout-contacts {
+  margin-bottom: 100px;
+
   @include media(md) {
     display: flex;
   }
@@ -9,6 +11,7 @@
   font-family: $font-family-sans-serif;
   font-weight: $font-weight-semibold;
   font-size: 18px;
+  margin-bottom: 20px;
 
   @include media(md) {
     flex: 1;

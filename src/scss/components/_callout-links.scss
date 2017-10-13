@@ -1,20 +1,28 @@
 .callout-links {
-  &:not(:last-of-type) {
-    border-bottom: 5px solid $line-gray;
-    margin-bottom: 30px;
- }
+  border-bottom: 5px solid $line-gray;
+  margin-bottom: 30px;
+
+  @include media(md) {
+    margin-bottom: 50px;
+  }
 }
 
 .callout-links__title {
   font-size: 18px;
-  font-weight: normal;
-  margin-bottom: 30px;
+  font-weight: $font-weight-medium;
+  font-family: $font-family-sans-serif;
+  margin-bottom: 20px;
 }
 
 .callout-links__list {
+  margin-bottom: 30px;
 
   @include media(sm) {
     @include make-row();
+  }
+
+  @include media(md) {
+    margin-bottom: 50px;
   }
 }
 
@@ -28,14 +36,8 @@
 
   @include media(md) {
     @include make-col(3);
-    margin-bottom: 30px;
   }
 }
 
 .callout-links__link {
-  font-weight: $font-weight-semibold;
-
-  @include media(md) {
-    font-size: 20px;
-  }
 }
