@@ -9,23 +9,25 @@
 .profile__media {
   flex: 0 0 auto;
   margin-right: 10px;
-
   @include media(sm) {
     margin-right: 40px;
   }
 }
 
-.profile__content {
-
-}
+.profile__content {}
 
 .profile__name {
   font-size: 24px;
   margin-bottom: 5px;
 }
 
-.profile__meta {
-  @include media(md) {
-    margin-bottom: 30px;
-  }
+.profile__title {
+  margin-bottom: 10px;
+}
+
+.profile__info {
+  font-size: 14px;
+  font-family: $font-family-sans-serif;
+  margin-bottom: 1rem;
+  color: $black;
 }
