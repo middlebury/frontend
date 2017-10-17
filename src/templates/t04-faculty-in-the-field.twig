@@ -1,100 +1,43 @@
 {% extends "layout.twig" %}
 
+{% set page_header = {
+  title: 'Faculty in the Field',
+  breadcrumb: [
+    { text: 'Leadership and Impact', url: '' }
+  ]
+} %}
+
 {% block page %}
 
-<section class="page">
-
-  {% include 'partials/page-header.twig' with {
-    title: 'Faculty in the Field',
-    breadcrumb: [
-      { text: 'Leadership and Impact', url: '' }
-    ]
-  } %}
-
-  {% embed 'partials/page-hero.twig' %}
-    {% block content %}
-    <h3>lorem ipsum</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo earum doloremque perferendis nam pariatur nulla neque consectetur inventore quis similique temporibus, dolores excepturi expedita veniam odio quos nesciunt possimus. Enim!</p>
-    {% endblock %}
-  {% endembed %}
+  <div class="container">
+    {% embed 'partials/page-hero.twig' %}
+      {% block content %}
+        <h3>lorem ipsum</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo earum doloremque perferendis nam pariatur nulla neque consectetur inventore quis similique temporibus, dolores excepturi expedita veniam odio quos nesciunt possimus. Enim!</p>
+      {% endblock %}
+    {% endembed %}
+  </div>
 
   <div class="container">
-    {% embed 'partials/section.twig' with {
-      title: 'Faculty Spotlight'
+    {% include 'paragraphs/faculty-spotlight.twig' with {
+      faculty_spotlight: faculty_spotlight
     } %}
-      {% block content %}
-        <div class="row row--dividers">
-          {% for i in 0..3 %}
-            <div class="col-md-3">
-
-              {% set text = 'lorem ipsum' %}
-
-              {% if loop.last %}
-                {% set text = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.' %}
-              {% endif %}
-
-              {% include 'partials/profile-spotlight-item.twig' with {
-                text: text
-              } %}
-            </div>
-          {% endfor %}
-        </div>
-      {% endblock %}
-    {% endembed %}
-
-
-    {% embed 'partials/section.twig' with {
-      title: 'From the Newsroom'
-    } %}
-      {% block content %}
-
-        <div class="row row--dividers">
-          {% for i in 0..2 %}
-            <div class="{% if loop.last %}col-md-6{% else %}col-md-3{% endif %}">
-              <article>
-                <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus omnis tempore temporibus fugit, provident soluta ullam eum quibusdam praesentium ipsam quidem adipisci. Voluptates, eveniet maxime, animi est culpa quaerat quae!</p>
-              </article>
-            </div>
-          {% endfor %}
-        </div>
-
-      {% endblock %}
-    {% endembed %}
-
-    {% embed 'partials/section.twig' with {
-      title: 'Featured Projects'
-    } %}
-      {% block content %}
-
-        <div class="row row--dividers">
-          {% for i in 0..2 %}
-            <div class="{% if loop.first %}col-md-6{% else %}col-md-3{% endif %}">
-              <article>
-                <figure>
-                  <a href="#">
-                    <img src="//placehold.it/500x500" alt="">
-                  </a>
-                </figure>
-                <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus omnis tempore temporibus fugit, provident soluta ullam eum quibusdam praesentium ipsam quidem adipisci. Voluptates, eveniet maxime, animi est culpa quaerat quae!</p>
-              </article>
-            </div>
-          {% endfor %}
-        </div>
-
-      {% endblock %}
-    {% endembed %}
-
   </div>
-  <!-- /container -->
+
+  <div class="container">
+    {% include 'paragraphs/related-stories.twig' %}
+  </div>
+
+  <div class="container">
+    {% include 'paragraphs/related-basic-content.twig' with {
+      count: 3
+    } %}
+  </div>
 
   {% include 'partials/publications.twig' with {
     icons: icons
   } %}
 
   {% include 'partials/profile-explorer.twig' %}
-
-</section>
 
 {% endblock %}
