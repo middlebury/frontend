@@ -1,16 +1,18 @@
-<div class="profile-spotlight-item">
+<article class="profile-spotlight-item">
+  <figure class="profile-spotlight-item__media">
+    <a href="#">
+      <picture>
+        <source srcset="//placehold.it/280x360" media="(min-width: 1200px)">
+        <source srcset="//placehold.it/220x300" media="(min-width: 960px)">
+        <source srcset="//placehold.it/160x220" media="(min-width: 580px)">
+        <source srcset="//placehold.it/86x119">
+        <img src="//placehold.it/280x360" alt="">
+      </picture>
+    </a>
+  </figure>
   <div class="profile-spotlight-item__content">
-    <h3 class="profile-spotlight-item__name"><a href="#">Kathleen M. Bailey</a></h3>
-    <p class="profile-spotlight-item__title"><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit</em></p>
-    <p class="profile-spotlight-item__text">{{text|default('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea pariatur quae ad repudiandae unde illo dolores assumenda itaque blanditiis explicabo. Debitis, distinctio maxime. Nulla sint illum sed eos, cumque architecto.')}}</p>
+    <h3 class="profile-spotlight-item__name"><a href="#">{{name}}</a></h3>
+    <p class="profile-spotlight-item__title">{{title}}</p>
+    <p class="profile-spotlight-item__text">{{text}}</p>
   </div>
-  <div class="profile-spotlight-item__media">
-    <picture>
-      <source srcset="//placehold.it/279x359" media="(min-width: 1200px)">
-      <source srcset="//placehold.it/215x295" media="(min-width: 960px)">
-      <source srcset="//placehold.it/155x215" media="(min-width: 580px)">
-      <source srcset="//placehold.it/86x119">
-      <img src="//placehold.it/" alt="">
-    </picture>
-  </div>
-</div>
+</article>
