@@ -15,15 +15,11 @@
 }
 
 .tags__item {
-  flex: 1 0 auto;
-
-  &:not(:last-of-type) {
-    margin-right: 5px;
-
-    &:after {
-      content: ',';
-      margin-left: -4px;
-    }
+  &:not(:last-child):after {
+    content: ',';
+    display: inline-block;
+    padding-right: 4px;
+    margin-left: -4px;
   }
 }
 
