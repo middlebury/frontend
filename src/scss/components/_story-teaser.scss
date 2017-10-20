@@ -7,6 +7,9 @@
 
   &.story-teaser--featured {
     display: block;
+    margin-bottom: 60px;
+    border-bottom: 1px solid $line-gray;
+    padding-bottom: 60px; // must be list--lg list__item padding
   }
 }
 
