@@ -105,6 +105,8 @@ site_nav:
           url: /institute/admissions/meet-students
         - text: Events
           url: /institute/admissions/events
+        - text: Veterans
+          url: /institute/admissions/veterans
         - text: Application Instructions
           url: /institute/admissions/application-instructions
         - text: Apply
