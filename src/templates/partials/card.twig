@@ -18,16 +18,6 @@
       <a href="{{href}}" class="card__link">{{title}}</a>
     </h3>
 
-    {% if tags %}
-      <ul class="tags__list mb-1">
-        {% for i in 0..3 %}
-          <li class="tags__item">
-            <a href="#" class="tags__link">Lorem Ipsum</a>
-          </li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-
     {% if author and not tags %}
       <p class="card__author">by <a href="#" class="link-border">{{author}}</a></p>
     {% endif %}
@@ -42,6 +32,16 @@
 
     {% if local %}
       <p class="card__meta">{{local}}</p>
+    {% endif %}
+
+    {% if tags %}
+      <ul class="tags mt-1">
+        {% for i in 0..2 %}
+          <li class="tags__item">
+            <a href="#" class="tags__link">Lorem Ipsum</a>
+          </li>
+        {% endfor %}
+      </ul>
     {% endif %}
 
   {% if image %}

@@ -1,16 +1,5 @@
 .tags {
   display: flex;
-  align-items: center;
-}
-
-.tags__label {
-  font-size: 14px;
-  color: $text-gray;
-  margin-right: 5px;
-}
-
-.tags__list {
-  display: flex;
   flex-wrap: wrap;
 }
 
