@@ -6,11 +6,16 @@
     <div class="col-md-11 col-md-push-1">
 
       <div class="row">
-        <div class="col-md-4 flex-md-last">
-          <a href="#midd-content" class="sr-only sr-only-focusable">Skip sidebar</a>
-          {% block layout_sidebar %}
-          {% endblock %}
-        </div>
+
+        {% set _sidebar = block('layout_sidebar') %}
+
+        {% if _sidebar is not empty %}
+          <div class="col-md-4 flex-md-last">
+            <a href="#midd-content" class="sr-only sr-only-focusable">Skip sidebar</a>
+            {{ _sidebar|raw }}
+          </div>
+        {% endif %}
+
         <div class="col-md-8" id="midd-content">
           {% block layout_content %}
           {% endblock %}
