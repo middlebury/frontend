@@ -1,0 +1,47 @@
+{% extends "layout-sidebar.twig" %}
+
+{% set page_header = {
+  title: 'Profile Listing'
+} %}
+
+{% block layout_sidebar %}
+
+  {% include 'partials/page-nav.twig' with {
+    items: [
+      { text: 'Curriculum', href: '#' },
+      {
+        text: 'Faculty',
+        active: true,
+        href: '#',
+        items: [
+          { text: 'Faculty sub page 1', href: '#' },
+          { text: 'Faculty sub page 2', href: '#' },
+          { text: 'Faculty sub page 3', href: '#' },
+          { text: 'Faculty sub page 4', href: '#' },
+        ]
+      },
+      { text: 'Financing Your Education', href: '#' },
+    ],
+    callouts: [
+      { text: 'Request Information', href: '#' },
+      { text: 'Apply by July 10 for Fall 2017', href: '#' },
+    ]
+  } %}
+
+{% endblock %}
+
+{% block layout_content %}
+
+  <div class="typography">
+    <p>Currently we have 160 full-time, adjunct, part-time, and visiting faculty members. They are a diverse group. Many of our faculty are from countries outside the United States and all have lived abroad. They bring interdisciplinary focus and international business experience as well as research interests. They also bring a genuine, demonstrable commitment to the success of our students. Dedicated to working with and guiding students, they become mentors, advisors, and friends.</p>
+  </div>
+
+  <ol class="list list--lg mb-6">
+    {% for i in 0..3 %}
+      <li class="list__item">
+        {% include 'partials/profile.twig' %}
+      </li>
+    {% endfor %}
+  </ol>
+
+{% endblock %}
