@@ -1,0 +1,35 @@
+.teaser {
+  @include clearfix;
+
+  @include media(md) {
+    display: flex;
+  }
+}
+
+.teaser__media {
+  float: right;
+  padding-left: 10px;
+  padding-bottom: 10px;
+
+  @include media(md) {
+    flex: 0 0 auto;
+    float: none;
+    padding-left: 20px;
+    padding-bottom: 0;
+  }
+}
+
+.teaser__body {
+  @include media(md) {
+    flex: 1;
+    order: -1;
+  }
+}
+
+.teaser__title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.teaser__text {
+}

@@ -1,0 +1,48 @@
+{% extends "layout-sidebar.twig" %}
+
+{% set page_header = {
+  title: 'Taxonomy Term'
+} %}
+
+{% block layout_content %}
+
+  <p class="mb-6">36 Items</p>
+
+  <ol class="list list--dividers list--lg mb-6">
+    {% for i in 0..1 %}
+      <li class="list__item">
+        {% include 'partials/profile-teaser.twig' %}
+      </li>
+    {% endfor %}
+    {% for i in 0..1 %}
+      <li class="list__item">
+        {% include 'partials/event-teaser.twig' with {
+          id: i,
+          title: 'Building a Sustainable Career in Social Impact – Breaking into the Field',
+          link: '#',
+          time: '6:00 PM',
+          date: 'Mon Jul 25, 2016',
+          local: 'McCone Irvine Auditorium',
+          blurb: 'Four guest speakers will bring to light realities of the true costs of war experienced by today\'s veteran and military community.',
+          metalist: [
+            { text: 'Closed to the Public' },
+            { text: 'Lorem ipsum dolor set' },
+          ]
+        } %}
+      </li>
+    {% endfor %}
+    {% for i in 0..1 %}
+      <li class="list__item">
+        {% include 'partials/story-teaser.twig' %}
+      </li>
+    {% endfor %}
+    {% for i in 0..1 %}
+      <li class="list__item">
+        {% include 'partials/teaser.twig' %}
+      </li>
+    {% endfor %}
+  </ol>
+
+  {% include 'partials/pagination.twig' %}
+
+{% endblock %}
