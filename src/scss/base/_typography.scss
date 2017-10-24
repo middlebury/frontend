@@ -1,3 +1,15 @@
+.lead {
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 2rem;
+  color: $black;
+
+  @include media(md) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+
 .typography {
   :first-child {
     margin-top: 0;

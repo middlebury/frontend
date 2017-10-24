@@ -72,16 +72,6 @@ address {
   font-style: normal;
 }
 
-p.intro {
-  font-size: 20px;
-  line-height: 28px;
-
-  @include media(md) {
-    font-size: 22px;
-    line-height: 32px;
-  }
-}
-
 img {
   max-width: 100%;
   height: auto;
