@@ -1,44 +1,23 @@
-{% extends "layout.twig" %}
+{% extends "layout-sidebar.twig" %}
 
-{% block page %}
+{% set page_header = {
+  title: 'Search'
+} %}
 
-  <section class="page">
+{% block layout_content %}
 
-    {% include 'partials/page-header.twig' with {
-      title: 'Search Results'
-    } %}
+  <script>
+    (function() {
+      var cx = '011117385296349163972:7vbkxf0mkri';
+      var gcse = document.createElement('script');
+      gcse.type = 'text/javascript';
+      gcse.async = true;
+      gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gcse, s);
+    })();
+  </script>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-push-1 col-md-7">
-
-          <div class="mb-6">
-            {% include 'partials/search-form.twig' %}
-          </div>
-
-          <h2 class="mb-6 sans-serif">183 results for “water scarcity”</h2>
-
-          {% for i in 0..7 %}
-
-            <article class="search-results-item">
-              <figure class="search-results-item__media">
-                <a href="#">
-                  <img src="//placehold.it/148x148" alt="">
-                </a>
-              </figure>
-              <div class="search-results-item__content">
-                <h3><a href="#">Lorem ipsum dolor set</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, saepe, excepturi! Maxime esse ipsum, reiciendis, hic natus neque. Animi ipsa quisquam amet praesentium commodi doloribus, accusamus dolores iste provident est.</p>
-              </div>
-            </article>
-
-          {% endfor %}
-
-          {% include 'partials/pagination.twig' %}
-
-        </div>
-      </div>
-    </div>
-  </section>
+  <gcse:search></gcse:search>
 
 {% endblock %}
