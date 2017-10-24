@@ -1,0 +1,134 @@
+// container
+.gsc-control-cse {
+  padding: 0 !important;
+  margin-bottom: 3rem;
+}
+
+// search
+.gsc-search-box {
+  padding: 0 !important;
+}
+
+td.gsc-input {
+  padding-right: 0.5rem !important;
+}
+
+input.gsc-input {
+  padding: 0.5rem !important;
+  font-family: $font-family-sans-serif !important;
+  background-position: 0.5rem !important;
+  width: 100% !important;
+}
+
+input.gsc-search-button {
+  font-family: $font-family-sans-serif !important;
+  font-size: 16px !important;
+  font-weight: normal !important;
+  background-color: $brand-primary !important;
+  padding: 0.5rem 1rem !important;
+  height: auto !important;
+  cursor: pointer;
+}
+
+// filter tabs
+.gsc-tabsArea {
+  // border-bottom: 0 !important;
+
+  .gsc-tabHeader {
+    font-size: 14px;
+    padding: 0.25rem 0.5rem;
+    font-weight: normal;
+    text-transform: none;
+    margin-right: 0.5rem;
+    margin-top: 0;
+
+    &:not(.gsc-tabhActive):hover {
+      background-color: $line-gray !important;
+    }
+  }
+
+  .gsc-tabHeader.gsc-tabhInactive {
+    background: none;
+    color: $brand-primary;
+    border: 0;
+  }
+
+  .gsc-tabhActive {
+    background-color: $brand-primary !important;
+  }
+}
+
+// results container
+.gsc-result {
+  border: 0 !important;
+  margin-bottom: 3rem !important;
+}
+
+// results items
+.gsc-table-cell-snippet-close {
+  padding: 0;
+}
+
+.gsc-table-cell-thumbnail {
+  padding: 0 1rem 0 0 !important;
+}
+
+.gs-title {
+  font-size: 18px !important;
+  margin-bottom: 8px;
+  color: $brand-primary !important;
+  font-family: $font-family-serif;
+
+  b {
+    text-decoration: none !important;
+    font-weight: normal;
+  }
+
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+.gs-fileFormat {
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-family: $font-family-sans-serif;
+}
+
+.gs-snippet {
+  font-family: $font-family-sans-serif;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.gs-visibleUrl-long {
+  font-family: $font-family-sans-serif;
+  font-family: 14px;
+  margin-bottom: 8px;
+}
+
+.gs-per-result-labels {
+  font-family: $font-family-sans-serif;
+}
+
+// pagination
+
+.gsc-cursor-box {
+  border-top: 0 !important;
+}
+
+.gsc-cursor-page {
+  font-weight: $font-weight-semibold;
+  font-size: 14px;
+  padding: 8px !important;
+
+  &:hover {
+    text-decoration: none !important;
+    background-color: $line-gray !important;
+  }
+}
+
+.gsc-cursor-current-page {
+  background-color: $middlebury-blue !important;
+  color: $white !important;
+}
