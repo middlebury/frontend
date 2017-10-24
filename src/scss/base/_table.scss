@@ -3,8 +3,8 @@
 // .table,
 .typography table {
   width: 100%;
-  // margin-bottom: 50px;
   border-top: 5px solid $line-gray;
+  margin-bottom: 1rem;
 
   @include media(md) {
     border-top: 0;
