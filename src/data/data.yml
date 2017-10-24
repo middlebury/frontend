@@ -25,7 +25,7 @@ site_nav:
         - text: Sustainable Campus
           url: /institute/leadership-impact/sustainable-campus
     - text: Areas of Focus
-      url: /institute
+      url: /institute/areas-of-focus
       items:
         - text: Human Rights and Social Change
           url: /institute/areas-of-focus/human-rights-social-change
