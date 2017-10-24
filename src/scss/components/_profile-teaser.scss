@@ -1,8 +1,8 @@
-.profile {
+.profile-teaser {
   display: flex;
 }
 
-.profile__media {
+.profile-teaser__media {
   flex: 0 0 auto;
   margin-right: 10px;
   @include media(sm) {
@@ -10,18 +10,19 @@
   }
 }
 
-.profile__content {}
+.profile-teaser__content {
+}
 
-.profile__name {
+.profile-teaser__name {
   font-size: 24px;
   margin-bottom: 5px;
 }
 
-.profile__title {
+.profile-teaser__title {
   margin-bottom: 10px;
 }
 
-.profile__info {
+.profile-teaser__info {
   font-size: 14px;
   font-family: $font-family-sans-serif;
   margin-bottom: 1rem;
