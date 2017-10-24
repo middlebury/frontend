@@ -1,79 +1,80 @@
-table {
+// Only style tables within basic content otherwise these styles override google custom search markup.
+
+// .table,
+.typography table {
   width: 100%;
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
   border-top: 5px solid $line-gray;
 
   @include media(md) {
     border-top: 0;
     border-collapse: collapse;
   }
-}
 
-thead {}
-
-th {
-  display: none;
-  border-bottom: 5px solid $line-gray;
-  font-size: 14px;
-  font-weight: $font-weight-semibold;
-  text-align: left;
-  padding-top: 16px;
-  padding-bottom: 16px;
-
-  @include media(md) {
-    display: table-cell;
-    white-space: nowrap;
-
-    &:not(:last-of-type) {
-      padding-right: 20px;
-    }
+  thead {
   }
-}
 
-tr {
-  &:not(:last-of-type) {
-
-    td {
-
-      &:last-of-type {
-        border-bottom: 1px solid $line-gray;
-      }
-
-      @include media(md) {
-        border-bottom: 1px solid $line-gray;
-      }
-    }
-
-  }
-}
-
-td {
-  display: block;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-family: $font-family-serif;
-  color: $text-gray;
-
-  &:before {
-    content: attr(data-th);
+  th {
+    display: none;
+    border-bottom: 5px solid $line-gray;
     font-size: 14px;
     font-weight: $font-weight-semibold;
-    font-family: $font-family-sans-serif;
-    color: $black;
-    display: block;
-    margin-bottom: 5px;
+    text-align: left;
+    padding-top: 16px;
+    padding-bottom: 16px;
 
     @include media(md) {
-      display: none;
+      display: table-cell;
+      white-space: nowrap;
+
+      &:not(:last-of-type) {
+        padding-right: 20px;
+      }
     }
   }
 
-  @include media(md) {
-    vertical-align: top;
-    display: table-cell;
-
+  tr {
     &:not(:last-of-type) {
-      padding-right: 20px;
+      td {
+        &:last-of-type {
+          border-bottom: 1px solid $line-gray;
+        }
+
+        @include media(md) {
+          border-bottom: 1px solid $line-gray;
+        }
+      }
+    }
+  }
+
+  td {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: $font-family-serif;
+    color: $text-gray;
+
+    &:before {
+      content: attr(data-th);
+      font-size: 14px;
+      font-weight: $font-weight-semibold;
+      font-family: $font-family-sans-serif;
+      color: $black;
+      display: block;
+      margin-bottom: 5px;
+
+      @include media(md) {
+        display: none;
+      }
+    }
+
+    @include media(md) {
+      vertical-align: top;
+      display: table-cell;
+
+      &:not(:last-of-type) {
+        padding-right: 20px;
+      }
     }
   }
 }
