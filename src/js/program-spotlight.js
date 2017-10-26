@@ -14,10 +14,10 @@ const swiperConfig = {
   nextButton: '.js-program-spotlight-next-button',
   prevButton: '.js-program-spotlight-prev-button',
   breakpoints: {
-    [config.breakpoints.sm]: {
+    [config.breakpoints.md]: {
       slidesPerView: 1
     },
-    [config.breakpoints.md]: {
+    [config.breakpoints.lg]: {
       slidesPerView: 2
     }
   }
