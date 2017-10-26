@@ -6,30 +6,21 @@
 
 .program-spotlight__header {
   height: 100%;
-  padding: 50px;
+  padding: 3rem;
   background-color: $brand-primary;
   display: flex;
   flex-direction: column;
   text-align: center;
 
   @include media(sm) {
-    padding-top: 100px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 50px;
     text-align: left;
-  }
-
-  @include media(md) {
-    padding-left: 60px;
-    padding-right: 60px;
   }
 }
 
 .program-spotlight__title {
   color: $white;
   font-size: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 
   @include media(md) {
     font-size: 40px;

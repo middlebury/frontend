@@ -2,8 +2,10 @@ $spotlight-item-breakpoint: 'sm';
 
 .program-spotlight-item {
   position: relative;
+  margin-bottom: 1rem;
 
   @include media(sm) {
+    margin-bottom: 0;
     height: 100%;
     overflow: hidden;
   }
@@ -27,8 +29,6 @@ $spotlight-item-breakpoint: 'sm';
 }
 
 .program-spotlight-item__content {
-  padding: 20px;
-
   @include media($spotlight-item-breakpoint) {
     position: absolute;
     top: 0;
@@ -36,11 +36,6 @@ $spotlight-item-breakpoint: 'sm';
     height: 100%;
     width: 100%;
     z-index: 3;
-    padding: 30px;
-  }
-
-  @include media(md) {
-    padding: 50px;
   }
 }
 
@@ -59,6 +54,8 @@ $spotlight-item-breakpoint: 'sm';
 }
 
 .program-spotlight-item__side--back {
+  background-color: $lighter-blue;
+
   .program-spotlight-item.has-toggler & {
     display: none;
   }
@@ -69,8 +66,15 @@ $spotlight-item-breakpoint: 'sm';
 }
 
 .program-spotlight-item__body {
+  padding: 1rem;
+
   @include media($spotlight-item-breakpoint) {
     flex: 1;
+    padding: 3rem;
+
+    .program-spotlight-item__side--back & {
+      padding-top: 0;
+    }
   }
 }
 
@@ -80,6 +84,8 @@ $spotlight-item-breakpoint: 'sm';
   @include media($spotlight-item-breakpoint) {
     display: block;
     flex: 0 1 auto;
+    padding: 3rem;
+    padding-top: 0;
   }
 }
 
