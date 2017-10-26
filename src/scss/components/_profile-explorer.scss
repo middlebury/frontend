@@ -17,10 +17,10 @@
 
 .profile-explorer__label {
   text-transform: uppercase;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   font-weight: $font-weight-semibold;
-  font-family: $font-family-sans-serif-condensed;
-  font-size: 16px;
+  font-family: $font-family-sans-serif;
+  font-size: 14px;
 
   @include media(md) {
     flex: 0 0 auto;
@@ -30,5 +30,4 @@
 }
 
 .profile-explorer__control {
-
 }
