@@ -2,16 +2,18 @@
   display: inline-block;
   font-family: $font-family-sans-serif;
   text-align: center;
-  // white-space: nowrap; // removed for program spotlight button
-  padding: 10px 20px;
-  // height: 50px;
-  font-size: 16px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
   border-radius: 0;
   border: 0;
   cursor: pointer;
   background: none;
   transition: 0.2s;
   line-height: 1.5;
+
+  @include media(md) {
+    white-space: nowrap;
+  }
 
   &:hover,
   &:focus {
@@ -29,20 +31,26 @@
   }
 }
 
+// Modifiers
+
 .button--block {
   display: block;
   width: 100%;
 }
 
 .button--circle {
-  border-radius: 100%;
-  height: 50px;
-  width: 50px;
+  border-radius: 10rem;
+  padding: 1rem;
+  width: 3rem;
+  height: 3rem;
+  line-height: 1;
 }
 
 .button--pill {
-  border-radius: 9999px;
+  border-radius: 10rem;
 }
+
+// Sizes
 
 .button--sm {
   font-size: 14px;
@@ -51,6 +59,8 @@
 .button--xl {
   padding: 40px 30px; // matches .filter__button sizes
 }
+
+// Themes
 
 .button--primary {
   background-color: $brand-tertiary;
@@ -73,7 +83,7 @@
 
   &:hover,
   &:focus {
-    background-color: #022543; // TODO: move me to variable
+    background-color: $brand-primary-dark;
     color: $white;
 
     svg {
@@ -87,6 +97,9 @@
   color: $white;
 }
 
+// Elements
+
+// TODO: use ml-2 or 1
 .button__icon {
   margin-left: 10px;
 }

@@ -7,10 +7,6 @@
   margin-bottom: 20px;
   position: relative;
 
-  img {
-    display: block;
-  }
-
   .video.has-video & {
     padding-top: percentage(9 / 16);
     overflow: hidden;

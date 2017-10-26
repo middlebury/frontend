@@ -45,6 +45,8 @@ $spacers: (
 $header-width: 400px;
 $header-height: 675px;
 
+// TODO: all these variables need better names
+
 // TODO: rename and use color names e.g. brand-green, brand-blue?
 $brand-primary: #0d395f;
 $brand-primary-dark: #022543;
@@ -55,6 +57,7 @@ $brand-tertiary: #0ac3a6;
 // from styleguide
 $middlebury-blue: #0d395f;
 $light-blue: #97bbd5;
+$lighter-blue: #e5f1fa;
 $bright-green: #0ac3a6;
 $dark-green: #058371;
 $teal: #017c9f;
@@ -68,7 +71,6 @@ $gray-light: #dedede;
 
 // prettier-ignore
 $font-family-sans-serif: 'whitney ssm a', 'whitney ssm b', Tahoma, Geneva, sans-serif;
-$font-family-sans-serif-condensed: 'whitney condensed', $font-family-sans-serif;
 $font-family-serif: 'sentinel ssm a', 'sentinel ssm b', georgia, serif;
 
 $font-weight-light: 300;

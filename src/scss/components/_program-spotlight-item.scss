@@ -2,16 +2,13 @@ $spotlight-item-breakpoint: 'sm';
 
 .program-spotlight-item {
   position: relative;
+  margin-bottom: 1rem;
 
   @include media(sm) {
+    margin-bottom: 0;
     height: 100%;
     overflow: hidden;
   }
-}
-
-.program-spotlight-item__controls {
-  text-align: right;
-  margin-bottom: 5px;
 }
 
 .program-spotlight-item__image {
@@ -23,10 +20,6 @@ $spotlight-item-breakpoint: 'sm';
     width: 100%;
     z-index: 2;
 
-    figure {
-      height: 100%;
-    }
-
     img {
       object-fit: cover;
       height: 100%;
@@ -36,8 +29,6 @@ $spotlight-item-breakpoint: 'sm';
 }
 
 .program-spotlight-item__content {
-  padding: 20px;
-
   @include media($spotlight-item-breakpoint) {
     position: absolute;
     top: 0;
@@ -45,15 +36,23 @@ $spotlight-item-breakpoint: 'sm';
     height: 100%;
     width: 100%;
     z-index: 3;
-    padding: 30px;
   }
+}
 
-  @include media(md) {
-    padding: 50px;
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 .program-spotlight-item__side {
+  animation: fade-in 1s;
+
   @include media($spotlight-item-breakpoint) {
     height: 100%;
     display: flex;
@@ -68,6 +67,8 @@ $spotlight-item-breakpoint: 'sm';
 }
 
 .program-spotlight-item__side--back {
+  background-color: $lighter-blue;
+
   .program-spotlight-item.has-toggler & {
     display: none;
   }
@@ -78,8 +79,15 @@ $spotlight-item-breakpoint: 'sm';
 }
 
 .program-spotlight-item__body {
+  padding: 1rem;
+
   @include media($spotlight-item-breakpoint) {
     flex: 1;
+    padding: 3rem;
+
+    .program-spotlight-item__side--back & {
+      padding-top: 0;
+    }
   }
 }
 
@@ -89,28 +97,24 @@ $spotlight-item-breakpoint: 'sm';
   @include media($spotlight-item-breakpoint) {
     display: block;
     flex: 0 1 auto;
+    padding: 3rem;
+    padding-top: 0;
   }
 }
 
 .program-spotlight-item__title {
-  color: $white;
   font-size: 20px;
   font-family: $font-family-serif;
   margin-bottom: 10px;
 
-  @include media(md) {
+  @include media($spotlight-item-breakpoint) {
     font-size: 22px;
   }
 }
 
 .program-spotlight-item__link {
-  @include media($spotlight-item-breakpoint) {
-    color: $white;
-  }
 }
 
 .program-spotlight-item__text {
-  @include media($spotlight-item-breakpoint) {
-    color: $white;
-  }
+  color: $black;
 }

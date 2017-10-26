@@ -27,10 +27,6 @@
 }
 
 .panel__media {
-  img {
-    display: block;
-  }
-
   @include media(md) {
     @include absolute();
     z-index: 1;

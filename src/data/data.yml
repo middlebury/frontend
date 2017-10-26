@@ -284,43 +284,48 @@ missions:
 
 programs:
   - title: International Environmental Policy
-    image_xs: http://placehold.it/580x435
-    image_xs_2x: http://placehold.it/1160x870
-    image_md: http://placehold.it/360x720
-    image_md_2x: http://placehold.it/720x1440
-    blurb: Develop the critical knowledge and skills to tackle complex environmental challenges, especially those posed by climate change.
+    image: maiep
+    text: Develop the critical knowledge and skills to tackle complex environmental challenges, especially those posed by climate change.
     card:
-      body: lorem ipsum dolor set
+      title: Lorem ipsum dolor sit amet
+      text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum explicabo sequi quia laboriosam corrupti molestias est officiis delectus, deleniti dignissimos quos sunt totam, fugit consequuntur asperiores inventore omnis laborum rerum?
       link_text: Learn more
       link_href: '#'
   - title: Nonproliferation and Terrorism Studies
-    light: true
-    image_xs: http://placehold.it/580x435/000
-    image_xs_2x: http://placehold.it/1158x869/000
-    image_md: http://placehold.it/360x720/000
-    image_md_2x: http://placehold.it/720x1440/000
-    blurb: Develop the knowledge and skills to address the spread of weapons of mass destruction (WMD) and respond effectively to terrorism.
+    image: manpts
+    text: Develop the knowledge and skills to address the spread of weapons of mass destruction (WMD) and respond effectively to terrorism.
+    card:
+      title: Lorem ipsum dolor sit amet
+      text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum explicabo sequi quia laboriosam corrupti molestias est officiis delectus, deleniti dignissimos quos sunt totam, fugit consequuntur asperiores inventore omnis laborum rerum?
+      link_text: Learn more
+      link_href: '#'
   - title: Translation & Localization Management
-    light: true
-    image_xs: http://placehold.it/580x435/222
-    image_xs_2x: http://placehold.it/1158x869/222
-    image_md: http://placehold.it/360x720/222
-    image_md_2x: http://placehold.it/720x1440/222
-    blurb: Learn translation, consecutive and simultaneous interpretation to enhance cross-cultural understanding and communication.
-  - title: Translation & Localization Management
-    light: true
-    image_xs: http://placehold.it/580x435/222
-    image_xs_2x: http://placehold.it/1158x869/222
-    image_md: http://placehold.it/360x720/222
-    image_md_2x: http://placehold.it/720x1440/222
-    blurb: Learn translation, consecutive and simultaneous interpretation to enhance cross-cultural understanding and communication.
-  - title: Translation & Localization Management
-    light: true
-    image_xs: http://placehold.it/580x435/222
-    image_xs_2x: http://placehold.it/1158x869/222
-    image_md: http://placehold.it/360x720/222
-    image_md_2x: http://placehold.it/720x1440/222
-    blurb: Learn translation, consecutive and simultaneous interpretation to enhance cross-cultural understanding and communication.
+    image: matlm
+    text: Learn translation, consecutive and simultaneous interpretation to enhance cross-cultural understanding and communication.
+    card:
+      title: Lorem ipsum dolor sit amet
+      text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum explicabo sequi quia laboriosam corrupti molestias est officiis delectus, deleniti dignissimos quos sunt totam, fugit consequuntur asperiores inventore omnis laborum rerum?
+      link_text: Learn more
+      link_href: '#'
+  - title: International Education Management
+    image: maiem
+    text: Learn translation, consecutive and simultaneous interpretation to enhance cross-cultural understanding and communication.
+  - title: International Policy and Development
+    image: maipd
+    text: Learn translation, consecutive and simultaneous interpretation to enhance cross-cultural understanding and communication.
+  - title: International Trade and Economic Diplomacy
+    image: maited
+    text: Learn translation, consecutive and simultaneous interpretation to enhance cross-cultural understanding and communication.
+  - title: Language Education
+    image: matfl-tesol
+    text: Learn translation, consecutive and simultaneous interpretation to enhance cross-cultural understanding and communication.
+  - title: Translation; Translation and Interpretation; Conference Interpretation
+    image: mati-maci
+    text: Learn translation, consecutive and simultaneous interpretation to enhance cross-cultural understanding and communication.
+  - title: Master of Public Administration
+    image: map
+    text: Learn translation, consecutive and simultaneous interpretation to enhance cross-cultural understanding and communication.
+
 
 homepage:
   latest_news:

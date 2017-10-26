@@ -10,6 +10,7 @@ body {
   font-size: $base-font-size;
   color: $black;
   background-color: $warm-gray;
+  -webkit-font-smoothing: antialiased;
 }
 
 textarea {
@@ -75,6 +76,7 @@ address {
 img {
   max-width: 100%;
   height: auto;
+  vertical-align: middle;
 }
 
 ol,
@@ -95,4 +97,8 @@ h6 {
   font-weight: normal;
   line-height: 1.4;
   margin: 0;
+}
+
+svg {
+  fill: currentColor;
 }
