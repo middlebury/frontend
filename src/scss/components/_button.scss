@@ -2,7 +2,6 @@
   display: inline-block;
   font-family: $font-family-sans-serif;
   text-align: center;
-  white-space: nowrap;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   border-radius: 0;
@@ -11,6 +10,10 @@
   background: none;
   transition: 0.2s;
   line-height: 1.5;
+
+  @include media(md) {
+    white-space: nowrap;
+  }
 
   &:hover,
   &:focus {
