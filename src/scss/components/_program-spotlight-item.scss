@@ -9,11 +9,6 @@ $spotlight-item-breakpoint: 'sm';
   }
 }
 
-.program-spotlight-item__controls {
-  text-align: right;
-  margin-bottom: 5px;
-}
-
 .program-spotlight-item__image {
   @include media($spotlight-item-breakpoint) {
     position: absolute;
