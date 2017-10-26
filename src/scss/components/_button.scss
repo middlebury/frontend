@@ -36,9 +36,11 @@
 }
 
 .button--circle {
-  border-radius: 100%;
-  height: 50px;
-  width: 50px;
+  border-radius: 10rem;
+  padding: 1rem;
+  width: 3rem;
+  height: 3rem;
+  line-height: 1;
 }
 
 .button--pill {
