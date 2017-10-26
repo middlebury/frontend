@@ -93,7 +93,6 @@ $spotlight-item-breakpoint: 'sm';
 }
 
 .program-spotlight-item__title {
-  color: $white;
   font-size: 20px;
   font-family: $font-family-serif;
   margin-bottom: 10px;
@@ -104,13 +103,8 @@ $spotlight-item-breakpoint: 'sm';
 }
 
 .program-spotlight-item__link {
-  @include media($spotlight-item-breakpoint) {
-    color: $white;
-  }
 }
 
 .program-spotlight-item__text {
-  @include media($spotlight-item-breakpoint) {
-    color: $white;
-  }
+  color: $black;
 }
