@@ -25,7 +25,9 @@
           data-toggle-target=".js-spotlight-item-{{id}}"
           data-toggle-linked="spotlight-item-{{id}}"
           data-toggle-group="spotlight-items">
-          &plus;
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-plus" />
+          </svg>
         </a>
       </div>
 
@@ -39,10 +41,9 @@
           aria-label="Close"
           data-toggle-target=".js-spotlight-item-{{id}}"
           data-toggle-linked="spotlight-item-{{id}}">
-          &times;
-          {# <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-x-circle" />
-          </svg> #}
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-x" />
+          </svg>
         </button>
       </div>
 
