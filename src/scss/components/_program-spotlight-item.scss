@@ -15,10 +15,6 @@ $spotlight-item-breakpoint: 'sm';
 }
 
 .program-spotlight-item__image {
-  img {
-    display: block;
-  }
-
   @include media($spotlight-item-breakpoint) {
     position: absolute;
     top: 0;
