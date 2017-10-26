@@ -1,14 +1,8 @@
 <article class="program-spotlight-item js-spotlight-item-{{id}}">
 
-  <div class="program-spotlight-item__image">
-    <figure>
-      <picture>
-        <source srcset="{{program.image_md}} 1x, {{program.image_md_2x}} 2x" media="(min-width: 580px)">
-        <source srcset="{{program.image_xs}} 1x, {{program.image_xs_2x}} 2x">
-        <img src="{{program.image_md}}" alt="{{program.image_alt}}">
-      </picture>
-    </figure>
-  </div>
+  <figure class="program-spotlight-item__image">
+    <img src="/images/degrees-{{program.image}}.jpg" alt="{{program.image_alt}}">
+  </figure>
 
   <div class="program-spotlight-item__content">
     <div class="program-spotlight-item__side program-spotlight-item__side--front">
