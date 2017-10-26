@@ -94,7 +94,7 @@ $spotlight-item-breakpoint: 'sm';
   font-family: $font-family-serif;
   margin-bottom: 10px;
 
-  @include media(md) {
+  @include media($spotlight-item-breakpoint) {
     font-size: 22px;
   }
 }
