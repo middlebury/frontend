@@ -38,7 +38,9 @@
   {% endembed %} #}
 
   <div class="container">
-    {% include 'paragraphs/related-stories.twig' %}
+    {% include 'paragraphs/related-stories.twig' with {
+      tags: true
+    } %}
   </div>
 
   <div class="mb-6">
