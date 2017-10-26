@@ -28,6 +28,8 @@
   }
 }
 
+// Modifiers
+
 .button--block {
   display: block;
   width: 100%;
@@ -43,6 +45,8 @@
   border-radius: 9999px;
 }
 
+// Sizes
+
 .button--sm {
   font-size: 14px;
 }
@@ -50,6 +54,8 @@
 .button--xl {
   padding: 40px 30px; // matches .filter__button sizes
 }
+
+// Themes
 
 .button--primary {
   background-color: $brand-tertiary;
@@ -86,6 +92,7 @@
   color: $white;
 }
 
+// Elements
 .button__icon {
   margin-left: 10px;
 }
