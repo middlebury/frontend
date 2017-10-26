@@ -66,4 +66,10 @@
       display: none;
     }
   }
+
+  @include media(sm) {
+    &:not(:last-child) {
+      border-right: 1px solid $white;
+    }
+  }
 }
