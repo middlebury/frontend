@@ -9,33 +9,12 @@
 
 {% block page %}
 
-  <div class="container">
-
-    <div class="text-right mb-6">
-      <figure class="media media--image">
-        <picture>
-          {# <source srcset="http://placehold.it/1440x1080" media="(min-width: 580px)">
-          <source srcset="http://placehold.it/720x540">
-          <img src="http://placehold.it/1440x1080" alt=""> #}
-          <source srcset="http://placehold.it/1440x810" media="(min-width: 580px)">
-          <source srcset="http://placehold.it/720x405">
-          <img src="http://placehold.it/1440x810" alt="">
-        </picture>
-        <figcaption class="media__caption">Some caption for the image here.</figcaption>
-      </figure>
-    </div>
-
-  </div>
-
-  {# {% embed 'partials/page-hero.twig' %}
+  {% embed 'partials/page-hero.twig' %}
     {% block content %}
-      <div class="typography">
-        <h3>We reach across boundaries and marry principles with real-world engagement</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit facilis adipisci quod neque ab, dicta laudantium, repudiandae optio dignissimos necessitatibus dolorem possimus, tenetur consequuntur deleniti eligendi omnis, porro eveniet nemo.</p>
-        <p>Accusamus doloribus beatae tenetur, consectetur hic laboriosam, voluptates, nesciunt officiis minima obcaecati id. Amet quidem doloremque odit delectus illum illo, ea expedita aut eius natus, impedit sed iste maxime libero.</p>
-      </div>
+    <h3>Some headline</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit facilis adipisci quod neque ab, dicta laudantium, repudiandae optio dignissimos necessitatibus dolorem possimus, tenetur consequuntur deleniti eligendi omnis, porro eveniet nemo.</p>
     {% endblock %}
-  {% endembed %} #}
+  {% endembed %}
 
   <div class="container">
     {% include 'paragraphs/related-stories.twig' with {
