@@ -9,14 +9,12 @@
 
 {% block page %}
 
-  <div class="container">
-    {% embed 'partials/page-hero.twig' %}
-      {% block content %}
-        <h3>lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo earum doloremque perferendis nam pariatur nulla neque consectetur inventore quis similique temporibus, dolores excepturi expedita veniam odio quos nesciunt possimus. Enim!</p>
-      {% endblock %}
-    {% endembed %}
-  </div>
+  {% embed 'partials/page-hero.twig' %}
+    {% block content %}
+      <h3>lorem ipsum</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo earum doloremque perferendis nam pariatur nulla neque consectetur inventore quis similique temporibus, dolores excepturi expedita veniam odio quos nesciunt possimus. Enim!</p>
+    {% endblock %}
+  {% endembed %}
 
   <div class="container">
     {% include 'paragraphs/faculty-spotlight.twig' with {
