@@ -15,7 +15,7 @@
   <div class="site-container">
     {% include 'partials/header.twig' %}
     <main class="main" id="midd-main">
-      <section class="page">
+      <section class="page" aria-labelledby="midd-page-header-label" role="main">
         {% if page_header %}
           {% include 'partials/page-header.twig' with page_header %}
         {% endif %}
