@@ -1,13 +1,7 @@
 <figure class="program-panel">
   <div class="program-panel__media">
 
-    <picture>
-      <source srcset="/images/program-panel-xl.jpg" media="(min-width: 960px)">
-      <source srcset="/images/program-panel-lg.jpg" media="(min-width: 580px)">
-      <source srcset="/images/program-panel-md.jpg" media="(min-width: 320px)">
-      <source srcset="/images/program-panel-xs.jpg">
-      <img src="/images/program-panel-xl.jpg" alt="">
-    </picture>
+    {% include 'partials/picture.twig' with { name: 'panel' } %}
 
   </div>
   <figcaption class="program-panel__content">

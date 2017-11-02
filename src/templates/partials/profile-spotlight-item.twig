@@ -1,13 +1,9 @@
 <article class="profile-spotlight-item">
   <figure class="profile-spotlight-item__media">
     <a href="#">
-      <picture>
-        <source srcset="//placehold.it/280x360" media="(min-width: 1200px)">
-        <source srcset="//placehold.it/220x300" media="(min-width: 960px)">
-        <source srcset="//placehold.it/160x220" media="(min-width: 580px)">
-        <source srcset="//placehold.it/86x119">
-        <img src="//placehold.it/280x360" alt="">
-      </picture>
+      {% include 'partials/picture.twig' with {
+        name: 'profile_spotlight_item'
+      } %}
     </a>
   </figure>
   <div class="profile-spotlight-item__content">

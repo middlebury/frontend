@@ -8,11 +8,7 @@
 
   <div class="mb-6 text-right">
     <figure>
-      <picture>
-        <source srcset="//placehold.it/1440x570 1x, //placehold.it/2880x1140 2x" media="(min-width: 580px)">
-        <source srcset="//placehold.it/720x285 1x, //placehold.it/2880x1140 2x">
-        <img src="//placehold.it/2880x1140" alt="">
-      </picture>
+      {% include 'partials/picture.twig' with { name: 'top_level' } %}
       <figcaption class="media__caption">some caption for the image</figcaption>
     </figure>
   </div>

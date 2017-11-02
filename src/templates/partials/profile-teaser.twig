@@ -1,11 +1,9 @@
 <div class="profile-teaser">
   <div class="profile-teaser__media">
     <a href="#">
-      <picture>
-        <source srcset="//placehold.it/148x206" media="(min-width: 580px)">
-        <source srcset="//placehold.it/86x120">
-        <img src="//placehold.it/148x206" alt="">
-      </picture>
+      {% include 'partials/picture.twig' with {
+        name: 'profile_teaser'
+      } %}
     </a>
   </div>
   <div class="profile-teaser__content">

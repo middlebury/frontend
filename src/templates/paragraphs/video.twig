@@ -2,11 +2,7 @@
 <figure class="video js-video" data-video='<iframe src="https://player.vimeo.com/video/221201240" width="400" height="225" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'>
   <div class="video__content js-video-content">
     <a href="https://player.vimeo.com/video/221201240" class="video__link js-video-link">
-      <picture>
-        <source srcset="//placehold.it/1280x720 1x, //placehold.it/2560x1440 2x" media="(min-width: 1024px)" />
-        <source srcset="//placehold.it/640x360 1x, //placehold.it/1280x720 2x" />
-        <img src="//placehold.it/1280x720" srcset="//placehold.it/1280x720 1x, //placehold.it/1280x720 2x" alt="">
-      </picture>
+      {% include 'partials/picture.twig' with { name: 'video' } %}
       <span class="button button--primary video__button">
         Play
         <span class="button__icon">

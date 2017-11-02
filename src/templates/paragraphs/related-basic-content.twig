@@ -40,6 +40,8 @@ should display first as large and 2 small if 3 #}
 
           {% include 'partials/card.twig' with {
             image: true,
+            image_sizes: image_sizes,
+            breakpoints: breakpoints,
             title: 'some page title',
             text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et temporibus deleniti vitae sint quod? Dolorum tenetur suscipit temporibus excepturi doloribus inventore eos optio, placeat aliquid, repellat iusto repellendus illo a.'
           } %}

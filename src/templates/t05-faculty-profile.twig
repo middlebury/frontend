@@ -25,7 +25,9 @@
               <div class="row">
 
                 <div class="profile-detail__photo">
-                  <img src="//placehold.it/306x426" srcset="//placehold.it/306x426 1x, //placehold.it/612x852 2x" alt="">
+                  {% include 'partials/picture.twig' with {
+                    name: 'profile_detail'
+                  } %}
                 </div>
 
                 <div class="profile-detail__info">

@@ -515,3 +515,100 @@ faculty_spotlight:
   - name: Philipp C. Bleek
     title: Professor, Nonproliferation and Terrorism Studies
     text: As a young Peace Corps volunteer, Langholz learned a lifelong lesson about sustainable practices.
+
+
+breakpoints:
+  xs: 0
+  sm: 580
+  md: 960
+  lg: 1200
+  xl: 1440
+
+image_sizes:
+  homepage_hero:
+    xs: 1040x780
+    md: 1160x870
+  # homepage program spotlight
+  program_spotlight:
+    xs: 400x225
+    sm: 640x360
+    md: 1120x630
+  # related basic content/events/stories
+  card:
+    xs: 160x90
+    sm: 320x180
+    md: 640x360
+  # list of event/story
+  teaser:
+    xs: 128x72
+    sm: 160x90
+    md: 240x135
+  teaser_featured:
+    xs: 400x225
+    sm: 640x360
+    md: 768x432
+  # aof, audience, faculty in the field top
+  page_hero:
+    xs: 640x360
+    sm: 960x540
+  # page image
+  page_image:
+    xs: 400x225
+    sm: 640x360
+    md: 960x540
+    lg: 1440x810
+  panel:
+    xs: 400x225
+    sm: 640x360
+    md: 960x540
+    lg: 1440x810
+  # program_panel:
+  #   xs: 640x360
+  #   sm: 960x540
+  #   md: 1280x720
+  #   lg: 1440x810
+  # video paragraph
+  video:
+    xs: 400x225
+    sm: 640x360
+    md: 1280x720
+  #  image paragraph
+  image:
+    xs: 400x225
+    sm: 640x360
+    md: 1280x720
+  # publication: this is skipped for now
+  profile_spotlight_item: # 4:3
+    xs: 90x120
+    sm: 144x192
+    md: 288x384
+  profile_teaser: # 4:3
+    xs: 90x120
+    sm: 144x192
+  profile_detail:
+    xs: 300x400
+    sm: 432x576
+  speaker: # 4:3
+    xs: 144x192
+  event_teaser:
+    xs: 128x72
+    sm: 160x90
+    md: 240x135
+  event_detail:
+    xs: 640x360
+    sm: 768x432
+  story_detail:
+    xs: 400x225
+    sm: 640x360
+    md: 1280x720
+  top_level:
+    xs: 640x360
+    sm: 1280x720
+    md: 1440x810
+  grid_nav:
+    xs: 128x72
+    sm: 160x90
+    md: 400x225
+    lg: 320x180
+  # TODO: slidershow with lazy <picture>?
+
