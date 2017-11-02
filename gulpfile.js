@@ -28,6 +28,7 @@ const gulpIf = require('gulp-if');
 const slug = require('slug');
 const cmq = require('gulp-combine-mq');
 const size = require('gulp-size');
+const sortby = require('lodash.sortby');
 
 const production = !!args.production;
 
@@ -167,6 +168,12 @@ gulp.task('html', () => {
             name: 'slugify',
             func: function (args) {
               return slug(args, {lower: true});
+            }
+          },
+          {
+            name: 'sortby',
+            func: function (args, field) {
+              return sortby(args, field);
             }
           }
         ]
