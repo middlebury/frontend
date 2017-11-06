@@ -9,14 +9,12 @@
 
 {% block page %}
 
-  <div class="container">
-    {% embed 'partials/page-hero.twig' %}
-      {% block content %}
-        <h3>Course Selection required by September 13, 2017</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ratione exercitationem reiciendis sit quo recusandae, eos minus repellendus quisquam aut, ab expedita, ut possimus eius accusantium natus illum veniam.</p>
-      {% endblock %}
-    {% endembed %}
-  </div>
+  {% embed 'partials/page-hero.twig' %}
+    {% block content %}
+      <h3>Course Selection required by September 13, 2017</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ratione exercitationem reiciendis sit quo recusandae, eos minus repellendus quisquam aut, ab expedita, ut possimus eius accusantium natus illum veniam.</p>
+    {% endblock %}
+  {% endembed %}
 
   <div class="container">
     {% include 'partials/callout-contacts.twig' %}

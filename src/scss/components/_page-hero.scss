@@ -1,35 +1,36 @@
 .page-hero {
-  margin-bottom: 60px;
-
-  @include media(md) {
-    position: relative;
-    padding-top: percentage(9 / 16);
-    overflow: hidden;
-  }
+  margin-bottom: 4rem;
 }
 
 .page-hero__media {
-  position: relative;
-  margin-left: -#{map-get($grid-gutter-widths, xs) / 2};
-  margin-right: -#{map-get($grid-gutter-widths, xs) / 2};
-  z-index: 1;
+  margin-bottom: 1.5rem;
+  @include make-col-ready();
+
+  @include media-breakpoint-down(md) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   @include media(md) {
-    @include absolute();
+    @include make-col(9);
+    padding-left: 0;
+    margin-bottom: 0;
   }
 }
 
 .page-hero__content {
-  position: relative;
-  z-index: 2;
-  background-color: $white;
-  margin-top: -130px;
-  padding: 20px;
+  @include make-col-ready();
+
+  p {
+    color: $black;
+  }
 
   @include media(md) {
-    padding: 50px;
-    max-width: 500px;
-    margin-top: 0;
-    @include absolute(30px, 30px, auto, auto);
+    @include make-col(3);
+    min-height: 600px;
+    order: -1;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: $lighter-blue;
   }
 }
