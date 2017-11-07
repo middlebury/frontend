@@ -70,10 +70,6 @@
   &:focus {
     background-color: $brand-primary;
     color: $white;
-
-    svg {
-      fill: $white;
-    }
   }
 }
 
@@ -85,10 +81,6 @@
   &:focus {
     background-color: $brand-primary-dark;
     color: $white;
-
-    svg {
-      fill: $white;
-    }
   }
 }
 

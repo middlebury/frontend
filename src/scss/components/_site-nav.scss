@@ -128,10 +128,6 @@
 
   .site-nav__icon {
     float: none;
-
-    svg {
-      fill: $bright-green;
-    }
   }
 
   @include media(md) {
@@ -154,7 +150,6 @@
   float: right;
 
   .icon {
-    fill: #fff;
     width: 8px;
     height: 8px;
   }

@@ -13,10 +13,6 @@
   text-align: left;
   color: $brand-primary;
 
-  .icon {
-    fill: $brand-primary;
-  }
-
   @include media(md) {
     display: none;
   }
