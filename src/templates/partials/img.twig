@@ -1,0 +1,27 @@
+{% block responsive_img %}
+  {% set image = image_sizes[name] %}
+  {% set placehold = 'http://placehold.it/' %}
+
+  {% set src = '' %}
+  {% set srcset = [] %}
+  {% set sizes = [] %}
+
+  {% for size in image.srcset %}
+
+    {% set dimensions = size|split('x') %}
+    {% set width = dimensions[0] %}
+
+    {% set src = placehold ~ size %}
+
+    {% set srcset = [placehold ~ size ~ ' ' ~ width ~ 'w']|merge(srcset) %}
+
+  {% endfor %}
+
+  <img
+    src="{{image.src|default(src)}}"
+    srcset="{{srcset|reverse|join(',')}}"
+    sizes="{{image.sizes|default('100vw')}}"
+    alt=""
+  />
+
+{% endblock %}
