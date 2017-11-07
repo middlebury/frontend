@@ -1,0 +1,24 @@
+{% set sizes = image_sizes[name] %}
+{% set placehold = 'http://placehold.it/' %}
+
+{% set picture_sources = [] %}
+
+{% set srcset = "" %}
+{% set sizes = "" %}
+
+{% for name, size in sizes %}
+  {% set bp = breakpoints[name] %}
+  {% set picture_sources = [{size: size, bp: bp}]|merge(picture_sources) %}
+{% endfor %}
+
+{% set sources = picture_sources|sortby('bp')|reverse %}
+
+<img src="{{placehold}}{{picture_sources[0].size}}" alt="" />
+
+  {# <img
+    sizes="(min-width: 960px) 640px, (min-width: 580px) 320px, 160px"
+    srcset="http://placehold.it/160x90 160w,
+            http://placehold.it/320x180 320w,
+            http://placehold.it/640x360 640w"
+    src="http://placehold.it/640x360"
+  /> #}
