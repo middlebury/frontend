@@ -574,11 +574,6 @@ image_sizes:
     - 640x360
     - 960x540
     - 1440x810
-  # program_panel:
-  #   xs: 640x360
-  #   sm: 960x540
-  #   md: 1280x720
-  #   lg: 1440x810
   # video paragraph
   video:
     srcset:
@@ -610,11 +605,6 @@ image_sizes:
     sizes: '(max-width: 580px) 300px, 432px'
   speaker: # 3:4
     src: 144x192
-  event_teaser:
-    srcset:
-    - 128x72
-    - 160x90
-    - 240x135
   event_detail:
     srcset:
     - 640x360
