@@ -557,7 +557,8 @@ image_sizes:
     srcset:
     - 400x225
     - 640x360
-    - 768x432
+    - 800x450
+    - 960x540
     sizes: '(max-width: 960px) 100vw, 800px'
   # aof, audience, faculty in the field top
   page_hero:
@@ -622,15 +623,17 @@ image_sizes:
     sizes: '(max-width: 960px) 100vw, 800px'
   event_detail:
     srcset:
+    - 400x225
     - 640x360
-    - 768x432
+    - 800x450
+    - 960x540
     sizes: '(max-width: 960px) 100vw, 800px'
   story_detail:
     srcset:
     - 400x225
     - 640x360
     - 960x540
-    - 1280x720
+    - 1040x585
     sizes: '(max-width: 1040px) 100vw, 1040px'
   top_level:
     srcset:
