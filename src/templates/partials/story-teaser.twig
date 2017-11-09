@@ -3,9 +3,9 @@
     <a href="{{url}}">
       <figure class="media media-image view-mode-teaser">
         {% if featured %}
-          {% include 'partials/picture.twig' with { name: 'teaser_featured' } %}
+          {% include 'partials/img.twig' with { name: 'teaser_featured' } %}
         {% else %}
-          {% include 'partials/picture.twig' with { name: 'teaser' } %}
+          {% include 'partials/img.twig' with { name: 'teaser' } %}
         {% endif %}
       </figure>
     </a>

@@ -1,24 +1,27 @@
-{% set sizes = image_sizes[name] %}
-{% set placehold = 'http://placehold.it/' %}
+{% block responsive_img %}
+  {% set image = image_sizes[name] %}
+  {% set placehold = 'http://placehold.it/' %}
 
-{% set picture_sources = [] %}
+  {% set src = '' %}
+  {% set srcset = [] %}
+  {% set sizes = [] %}
 
-{% set srcset = "" %}
-{% set sizes = "" %}
+  {% for size in image.srcset %}
 
-{% for name, size in sizes %}
-  {% set bp = breakpoints[name] %}
-  {% set picture_sources = [{size: size, bp: bp}]|merge(picture_sources) %}
-{% endfor %}
+    {% set dimensions = size|split('x') %}
+    {% set width = dimensions[0] %}
 
-{% set sources = picture_sources|sortby('bp')|reverse %}
+    {% set src = placehold ~ size %}
 
-<img src="{{placehold}}{{picture_sources[0].size}}" alt="" />
+    {% set srcset = [placehold ~ size ~ ' ' ~ width ~ 'w']|merge(srcset) %}
 
-  {# <img
-    sizes="(min-width: 960px) 640px, (min-width: 580px) 320px, 160px"
-    srcset="http://placehold.it/160x90 160w,
-            http://placehold.it/320x180 320w,
-            http://placehold.it/640x360 640w"
-    src="http://placehold.it/640x360"
-  /> #}
+  {% endfor %}
+
+  <img
+    src="{{image.src|default(src)}}"
+    srcset="{{srcset|reverse|join(',')}}"
+    sizes="{{image.sizes|default('100vw')}}"
+    alt=""
+  />
+
+{% endblock %}
