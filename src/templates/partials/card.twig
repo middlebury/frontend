@@ -2,13 +2,7 @@
   {% if image %}
     <div class="card__media">
       <a href={{href}}>
-        <picture>
-          <source srcset="//placehold.it/640x360" media="(min-width: 960px)">
-          <source srcset="//placehold.it/320x180" media="(min-width: 580px)">
-          {# <source srcset="//placehold.it/320x180"> #}
-          <source srcset="//placehold.it/160x90">
-          <img src="//placehold.it/640x360" alt="">
-        </picture>
+        {% include 'partials/img.twig' with { name: 'card' } %}
       </a>
     </div>
   <div class="card__body">

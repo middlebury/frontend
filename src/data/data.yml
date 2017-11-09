@@ -515,3 +515,135 @@ faculty_spotlight:
   - name: Philipp C. Bleek
     title: Professor, Nonproliferation and Terrorism Studies
     text: As a young Peace Corps volunteer, Langholz learned a lifelong lesson about sustainable practices.
+
+
+breakpoints:
+  xs: 0
+  sm: 580
+  md: 960
+  lg: 1200
+  xl: 1440
+
+image_sizes:
+  homepage_hero:
+    srcset:
+    - 800x450
+    - 1040x780
+    - 1160x870
+  # homepage program spotlight
+  program_spotlight:
+    srcset:
+    - 400x225
+    - 640x360
+    - 1120x630
+  # related basic content/events/stories
+  card:
+    srcset:
+    - 160x90
+    - 320x180
+    - 640x360
+    sizes: '(max-width: 580px) 160px, (max-width: 960px) 320px, 640px'
+  # list of event/story
+  teaser:
+    srcset:
+    - 128x72
+    - 160x90
+    - 240x135
+    sizes: '(max-width: 580px) 128px, (max-width: 960px) 160px, 240px'
+  teaser_featured:
+    srcset:
+    - 400x225
+    - 640x360
+    - 768x432
+  # aof, audience, faculty in the field top
+  page_hero:
+    srcset:
+    - 360x180
+    - 640x360
+    - 960x540
+  # page image
+  page_image:
+    srcset:
+    - 400x225
+    - 640x360
+    - 960x540
+    - 1440x810
+  panel:
+    srcset:
+    - 400x225
+    - 640x360
+    - 960x540
+    - 1440x810
+  notfound:
+    srcset:
+    - 400x225
+    - 640x360
+    - 960x540
+    - 1440x810
+  # program_panel:
+  #   xs: 640x360
+  #   sm: 960x540
+  #   md: 1280x720
+  #   lg: 1440x810
+  # video paragraph
+  video:
+    srcset:
+    - 400x225
+    - 640x360
+    - 1280x720
+  #  image paragraph
+  image:
+    srcset:
+    - 400x225
+    - 640x360
+    - 1280x720
+  # publication: this is skipped for now
+  profile_spotlight_item: # 4:3
+    srcset:
+    - 90x120
+    - 144x192
+    - 288x384
+    sizes: '(max-width: 580px) 90px, (max-width: 960px) 144px, 288px'
+  profile_teaser: # 4:3
+    srcset:
+    - 90x120
+    - 144x192
+    sizes: '(max-width: 580px) 90px, 144px'
+  profile_detail:
+    srcset:
+    - 300x400
+    - 432x576
+    sizes: '(max-width: 580px) 300px, 432px'
+  speaker: # 4:3
+    src: 144x192
+  event_teaser:
+    srcset:
+    - 128x72
+    - 160x90
+    - 240x135
+  event_detail:
+    srcset:
+    - 640x360
+    - 768x432
+  story_detail:
+    srcset:
+    - 400x225
+    - 640x360
+    - 960x540
+    - 1280x720
+  top_level:
+    srcset:
+    - 400x225
+    - 640x360
+    - 960x540
+    - 1280x720
+    - 1440x810
+  grid_nav:
+    srcset:
+    - 128x72
+    - 160x90
+    - 400x225
+    - 320x180
+    sizes: '(max-width: 580px) 128px, (max-width: 960px) 160px, (max-width: 1200px) 400px, 320px'
+  # TODO: slidershow with lazy <picture>?
+

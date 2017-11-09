@@ -6,7 +6,7 @@
   margin-bottom: 1.5rem;
   @include make-col-ready();
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     padding-left: 0;
     padding-right: 0;
   }

@@ -1,10 +1,6 @@
 <article class="homepage-hero">
   <figure class="homepage-hero__media">
-    <picture>
-      <source srcset="http://lorempixel.com/1040/780/city/" media="(min-width: 580px)">
-      <source srcset="http://lorempixel.com/1160/870/city/">
-      <img src="http://lorempixel.com/1160/870/city/" alt="">
-    </picture>
+    {% include 'partials/img.twig' with { name: 'homepage_hero' } %}
   </figure>
   <section class="homepage-hero__content">
     <div class="homepage-hero__body">

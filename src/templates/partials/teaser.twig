@@ -1,11 +1,7 @@
 <article class="teaser">
   <figure class="teaser__media">
     <a href="#">
-      <picture>
-        <source srcset="http://placehold.it/160x120" media="(min-width: 580px)">
-        <source srcset="http://placehold.it/100x75">
-        <img src="http://placehold.it/160x120" alt="">
-      </picture>
+      {% include 'partials/img.twig' with { name: 'teaser' } %}
     </a>
   </figure>
   <div class="teaser__body">

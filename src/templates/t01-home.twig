@@ -118,11 +118,13 @@
   <div class="container">
 
     {% include 'paragraphs/related-basic-content.twig' with {
-      count: 3
+      count: 3,
+      image_sizes: image_sizes,
     } %}
 
     {% include 'paragraphs/related-basic-content.twig' with {
       count: 3,
+      image_sizes: image_sizes,
       is_last_lg: true
     } %}
 
