@@ -1,14 +1,7 @@
 {#TODO: change panel to use grid for panel__body and panel__footer#}
 <section class="panel{% if modifier %} panel--{{modifier}}{% endif %}" aria-labelledby="midd-program-panel-label-{{label|slugify}}">
   <div class="panel__media">
-    {# {% include 'partials/img.twig' with { name: 'panel' } %} #}
-    <img
-      srcset="http://placehold.it/400x225 400w,
-              http://placehold.it/640x360 640w,
-              http://placehold.it/960x540 960w,
-              http://placehold.it/1440x810 1440w"
-      sizes="100vw"
-    />
+    {% include 'partials/img.twig' with { name: 'panel' } %}
   </div>
   <div class="panel__content">
     <div class="panel__row">
