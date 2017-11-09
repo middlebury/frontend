@@ -524,6 +524,7 @@ breakpoints:
   lg: 1200
   xl: 1440
 
+# if sizes is not preset, default is 100vw
 image_sizes:
   homepage_hero:
     srcset:
