@@ -538,6 +538,7 @@ image_sizes:
     - 400x225
     - 640x360
     - 1120x630
+    sizes: '(max-width: 1120px) 100vw, 1120px'
   # related basic content/events/stories
   card:
     srcset:
@@ -557,36 +558,42 @@ image_sizes:
     - 400x225
     - 640x360
     - 768x432
+    sizes: '(max-width: 960px) 100vw, 800px'
   # aof, audience, faculty in the field top
   page_hero:
     srcset:
     - 360x180
     - 640x360
     - 960x540
+    sizes: '(max-width: 960px) 100vw, 960px'
   panel:
     srcset:
     - 400x225
     - 640x360
     - 960x540
     - 1440x810
+    sizes: '(max-width: 1440px) 100vw, 1440px'
   notfound:
     srcset:
     - 400x225
     - 640x360
     - 960x540
     - 1440x810
+    sizes: '(max-width: 1440px) 100vw, 1440px'
   # video paragraph
   video:
     srcset:
     - 400x225
     - 640x360
     - 1280x720
+    sizes: '(max-width: 1280px) 100vw, 1280px'
   #  image paragraph
   image:
     srcset:
     - 400x225
     - 640x360
     - 1280x720
+    sizes: '(max-width: 1280px) 100vw, 1280px'
   # publication: this is skipped for now
   profile_spotlight_item: # 4:3
     srcset:
@@ -617,12 +624,14 @@ image_sizes:
     srcset:
     - 640x360
     - 768x432
+    sizes: '(max-width: 960px) 100vw, 800px'
   story_detail:
     srcset:
     - 400x225
     - 640x360
     - 960x540
     - 1280x720
+    sizes: '(max-width: 1040px) 100vw, 1040px'
   top_level:
     srcset:
     - 400x225
@@ -630,6 +639,7 @@ image_sizes:
     - 960x540
     - 1280x720
     - 1440x810
+    sizes: '(max-width: 1440px) 100vw, 1440px'
   grid_nav:
     srcset:
     - 128x72
