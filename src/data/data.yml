@@ -561,13 +561,6 @@ image_sizes:
     - 360x180
     - 640x360
     - 960x540
-  # page image
-  page_image:
-    srcset:
-    - 400x225
-    - 640x360
-    - 960x540
-    - 1440x810
   panel:
     srcset:
     - 400x225
