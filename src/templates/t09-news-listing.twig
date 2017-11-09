@@ -9,16 +9,14 @@
 
 {% block layout_content %}
 
+  {% include 'partials/story-teaser.twig' with {
+    featured: true
+  } %}
+
   <ol class="list list--dividers list--lg mb-6">
     {% for i in 0..5 %}
       <li class="list__item">
-      {% if loop.first %}
-        {% include 'partials/story-teaser.twig' with {
-          featured: true
-        } %}
-      {% else %}
         {% include 'partials/story-teaser.twig' %}
-      {% endif %}
       </li>
     {% endfor %}
   </ol>
