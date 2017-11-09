@@ -604,7 +604,7 @@ image_sizes:
     - 144x192
     - 288x384
     sizes: '(max-width: 580px) 90px, (max-width: 960px) 144px, 288px'
-  profile_teaser: # 4:3
+  profile_teaser: # 3:4
     srcset:
     - 90x120
     - 144x192
@@ -614,7 +614,7 @@ image_sizes:
     - 300x400
     - 432x576
     sizes: '(max-width: 580px) 300px, 432px'
-  speaker: # 4:3
+  speaker: # 3:4
     src: 144x192
   event_teaser:
     srcset:
