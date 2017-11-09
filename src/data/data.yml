@@ -598,7 +598,7 @@ image_sizes:
     - 90x120
     - 144x192
     sizes: '(max-width: 580px) 90px, 144px'
-  profile_detail:
+  profile_detail: # 3:4
     srcset:
     - 300x400
     - 432x576
