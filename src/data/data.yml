@@ -606,6 +606,13 @@ image_sizes:
     sizes: '(max-width: 580px) 300px, 432px'
   speaker: # 3:4
     src: 144x192
+  basic_content_detail:
+    srcset:
+    - 400x225
+    - 640x360
+    - 800x450
+    - 960x540
+    sizes: '(max-width: 960px) 100vw, 800px'
   event_detail:
     srcset:
     - 640x360
