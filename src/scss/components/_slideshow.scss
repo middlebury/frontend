@@ -43,12 +43,8 @@
   padding: 10px;
   cursor: pointer;
 
-  svg {
-    fill: $white;
-  }
-
   &.is-disabled {
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 

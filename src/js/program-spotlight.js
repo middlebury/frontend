@@ -24,6 +24,12 @@ const swiperConfig = {
 };
 
 function match() {
+  const swiperWrapper = document.querySelector('.swiper-wrapper');
+
+  for (let i = swiperWrapper.children.length; i >= 0; i--) {
+    swiperWrapper.appendChild(swiperWrapper.children[(Math.random() * i) | 0]);
+  }
+
   const programSwiperElem = document.querySelector('.js-program-spotlight');
   swiperInstance = new Swiper(programSwiperElem, swiperConfig);
 }
