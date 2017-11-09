@@ -1,10 +1,6 @@
 <div class="hero-form">
   <div class="hero-form__media">
-    <picture>
-      <source srcset="http://placehold.it/1440x570" media="(min-width: 580px)">
-      <source srcset="http://placehold.it/580x230">
-      <img src="http://placehold.it/1440x570" alt="" aria-hidden="true" role="presentation">
-    </picture>
+    {% include 'partials/img.twig' with { name: 'notfound' } %}
   </div>
   <div class="hero-form__content">
     <div class="container">
