@@ -625,8 +625,8 @@ image_sizes:
     srcset:
     - 128x72
     - 160x90
-    - 400x225
     - 320x180
+    - 400x225
     sizes: '(max-width: 580px) 128px, (max-width: 960px) 160px, (max-width: 1200px) 400px, 320px'
   # TODO: slidershow with lazy <picture>?
 
