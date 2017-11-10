@@ -4,8 +4,9 @@
 
   {% set src = '' %}
   {% set srcset = [] %}
-  {% set sizes = [] %}
+  {% set width = '' %}
 
+  {# dependant on the sizes always starting small and ending in large #}
   {% for size in image.srcset %}
 
     {% set dimensions = size|split('x') %}
@@ -20,7 +21,11 @@
   <img
     src="{{image.src|default(src)}}"
     srcset="{{srcset|reverse|join(',')}}"
-    sizes="{{image.sizes|default('100vw')}}"
+    {% if image.sizes %}
+      sizes="{{image.sizes}}"
+    {% else %}
+      sizes="(max-width: {{width}}px) 100vw, {{width}}px"
+    {% endif %}
     alt=""
   />
 
