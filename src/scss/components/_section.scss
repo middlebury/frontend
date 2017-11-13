@@ -16,9 +16,12 @@
 }
 
 .section__header {
-  display: flex;
   margin-bottom: 50px;
-  align-items: center;
+  @include media(md) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .section__title {
@@ -30,19 +33,13 @@
   font-size: 14px;
 }
 
-.section__nav {
-  justify-content: flex-end;
-  text-align: right;
-  flex: 1;
-}
-
-.section__nav-link {
+.section__link {
+  margin-top: 10px;
+  display: inline-block;
   font-weight: $font-weight-medium;
-  border-bottom: 1px solid $middlebury-blue;
+  @include link-border();
 
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    border: 0;
+  @include media(md) {
+    margin-top: 0;
   }
 }
