@@ -12,11 +12,15 @@
   border-right: 1px solid #0bab92;
   align-items: center;
   display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
   @include make-gutters();
 
   @include media(md) {
     border-right: 0;
     padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
