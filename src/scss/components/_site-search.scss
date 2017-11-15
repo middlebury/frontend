@@ -8,7 +8,6 @@
 .site-search__control {
   border: 1px solid transparent;
   color: $white;
-  padding: 10px;
   background-color: $brand-primary-dark;
 
   &:focus {
@@ -17,38 +16,18 @@
     outline: 0;
   }
 
-  @include media(md) {
-    // font-size: 14px;
-    // background-color: transparent;
-
-    &:focus {
-      // padding: 5px;
-      // background-color: $white;
-      // color: $black;
-    }
-  }
-
   &::placeholder {
     color: $white;
-
-    @include media(md) {
-      // color: $light-blue;
-    }
   }
 }
 
 .site-search__button {
   border: 1px solid transparent;
   color: $white;
-  height: 100%;
   background-color: $brand-primary-dark;
 
   &:focus {
     border-color: $white;
     outline: 0;
-  }
-
-  @include media(md) {
-    // padding: 0;
   }
 }

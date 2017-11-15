@@ -44,10 +44,9 @@
 }
 
 .hero-form__control {
-  padding: 20px;
   font-size: 20px;
   font-family: $font-family-serif;
-  border: 0;
+  border-color: transparent;
 
   &:focus {
     background-color: $warm-gray;
@@ -72,11 +71,9 @@
 }
 
 .hero-form__label {
-
 }
 
 .hero-form__button {
-  padding: 20px;
   font-size: 20px;
   background-color: $warm-gray;
 
