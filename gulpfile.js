@@ -28,6 +28,7 @@ const gulpIf = require('gulp-if');
 const slug = require('slug');
 const cmq = require('gulp-combine-mq');
 const size = require('gulp-size');
+const rename = require('gulp-rename');
 
 const production = !!args.production;
 
@@ -92,6 +93,13 @@ gulp.task('svg', () => {
       })
     )
     .pipe(gulp.dest('./dist/svg'));
+});
+
+gulp.task('copy:svg', () => {
+  return gulp
+    .src('./dist/svg/svg/symbols.svg')
+    .pipe(rename('icons.twig'))
+    .pipe(gulp.dest('./src/templates/partials'));
 });
 
 gulp.task('styles', () => {
