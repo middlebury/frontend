@@ -86,7 +86,8 @@ gulp.task('server', () => {
 
 gulp.task('svg', () => {
   return gulp
-    .src('./src/images/*.svg')
+    .src('./src/images/icon-*.svg')
+    .pipe(imagemin())
     .pipe(
       svgSprites({
         mode: 'symbols'
