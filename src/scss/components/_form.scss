@@ -7,12 +7,12 @@
 
 .form__group--has-error {
   .form__control {
-    border-color: #e60000;
+    border-color: $danger;
   }
 }
 
 .form__error-message {
-  color: #e60000;
+  color: $danger;
   font-size: 14px;
 }
 
