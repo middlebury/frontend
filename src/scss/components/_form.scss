@@ -25,25 +25,25 @@
 .form__control {
   display: block;
   appearance: none;
-  border: 1px solid $line-gray;
   width: 100%;
-  font-size: 16px;
-  line-height: 1.5;
-  background-color: $warm-gray;
-  color: $black;
-  padding: 20px;
-  border-radius: 0;
+  border: $input-border-width solid $input-border-color;
   font-family: $font-family-base;
+  font-size: $input-font-size;
+  line-height: $input-line-height;
+  background-color: $input-bg;
+  color: $input-color;
+  padding: $input-padding-y $input-padding-x;
+  border-radius: $input-border-radius;
 
   &:focus {
-    background-color: $white;
+    background-color: $input-focus-bg;
   }
 }
 
 select.form__control {
   background-color: $white;
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAICAYAAAAiJnXPAAAAtElEQVQYlXXOsUpCcRQH4M/LRcMXcAr+W+/gIiRmECERiNBruDf3HioO1RO4uBcUEQ66RYSIhFPQ1HKC66XOcjjn/D44lZRSE0Nc4cv/VccYNzmucYJ79PD9B6jFvYuDDH084hS3qJZAFXcBHjDIsIvFM84xQV4AU5zhKT7aZXHcooNXXGIUYIQLvAT4hEpKqfhKA3Mc4Q2HWKCFzW8os19rtLEKsIx5UwyVEbzjGLPoH+XADz8MIz9yNyrhAAAAAElFTkSuQmCC');
-  background-position: right 30px center;
+  background-position: right $input-padding-x center;
   background-repeat: no-repeat;
 
   &::-ms-expand {

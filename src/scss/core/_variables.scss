@@ -73,7 +73,9 @@ $danger: #e60000;
 $body-bg: $white;
 $body-color: $black;
 
+$border-width: 1px;
 $border-color: $line-gray;
+
 // prettier-ignore
 $font-family-sans-serif: 'whitney ssm a', 'whitney ssm b', Tahoma, Geneva, sans-serif;
 $font-family-serif: 'sentinel ssm a', 'sentinel ssm b', georgia, serif;
@@ -93,3 +95,48 @@ $link-color: $brand-primary;
 $link-decoration: none;
 $link-hover-color: $brand-primary;
 $link-hover-decoration: underline;
+// Shared buttons and forms styles
+$input-btn-padding-y: 0.75rem;
+$input-btn-padding-x: 1.5rem;
+$input-btn-line-height: $line-height-base;
+
+$input-btn-border-width: $border-width;
+$input-btn-border-color: $border-color;
+$input-btn-border-radius: 0;
+
+// Buttons
+
+// button size default
+$btn-padding-y: $input-btn-padding-y;
+$btn-padding-x: $input-btn-padding-x;
+$btn-line-height: $input-btn-line-height;
+$btn-font-size: 1rem;
+
+// button border styles
+$btn-border-width: $input-btn-border-width;
+$btn-border-color: transparent;
+$btn-border-radius: $input-btn-border-radius;
+
+$btn-font-weight: $font-weight-normal;
+$btn-disabled-opacity: 0.5;
+
+$btn-transition: color 0.2s, background-color 0.2s;
+
+// Forms
+
+// input size default
+$input-padding-y: $input-btn-padding-y;
+$input-padding-x: $input-btn-padding-y;
+$input-line-height: $input-btn-line-height;
+$input-font-size: 1rem;
+
+$input-bg: $warm-gray;
+$input-disabled-bg: $warm-gray;
+
+$input-color: $black;
+$input-border-color: $border-color;
+$input-border-width: $input-btn-border-width;
+$input-border-radius: $input-btn-border-radius;
+
+$input-focus-bg: $input-bg;
+$input-focus-border-color: $bright-green;
