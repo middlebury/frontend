@@ -5,11 +5,11 @@
 }
 
 body {
-  color: $black;
-  background-color: $warm-gray;
   font-family: $font-family-base;
   line-height: $line-height-base;
   font-size: $font-size-base;
+  color: $body-color;
+  background-color: $body-bg;
   -webkit-font-smoothing: antialiased;
 }
 
