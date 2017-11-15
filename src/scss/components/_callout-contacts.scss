@@ -15,7 +15,7 @@
 
   @include media(md) {
     flex: 1;
-    border-right: 1px solid $line-gray;
+    border-right: 1px solid $border-color;
     padding-right: 20px;
   }
 }
@@ -34,11 +34,11 @@
   &:not(:last-of-type) {
     margin-bottom: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid $line-gray;
+    border-bottom: 1px solid $border-color;
 
     @include media(md) {
       border-bottom: 0;
-      border-right: 1px solid $line-gray;
+      border-right: 1px solid $border-color;
     }
   }
 }

@@ -4,7 +4,7 @@
 
 .page-nav__toggler {
   padding: 10px;
-  border: 1px solid $line-gray;
+  border: 1px solid $border-color;
   width: 100%;
   background: none;
   font-size: 14px;
@@ -26,7 +26,7 @@
   @include media-breakpoint-down(sm) {
     padding-left: 10px;
     padding-right: 10px;
-    border: 1px solid $line-gray;
+    border: 1px solid $border-color;
     border-top: 0;
     background-color: #f2f2f2;
   }
@@ -48,7 +48,7 @@
   // nested lists
   .page-nav__list {
     margin-left: 30px;
-    border-top: 1px solid $line-gray;
+    border-top: 1px solid $border-color;
   }
 }
 
@@ -60,7 +60,7 @@
 
 .page-nav__item {
   &:not(:last-of-type) {
-    border-bottom: 1px solid $line-gray;
+    border-bottom: 1px solid $border-color;
   }
 
   .page-nav__list--callouts & {

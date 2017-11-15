@@ -1,10 +1,10 @@
 .filter {
   &:not(:last-of-type) {
-    border-bottom: 1px solid $line-gray;
+    border-bottom: 1px solid $border-color;
   }
 
   &:first-of-type {
-    border-top: 1px solid $line-gray;
+    border-top: 1px solid $border-color;
   }
 }
 

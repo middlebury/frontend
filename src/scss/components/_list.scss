@@ -19,7 +19,7 @@
 .list--dividers {
   .list__item {
     &:not(:last-of-type) {
-      border-bottom: 1px solid $line-gray;
+      border-bottom: 1px solid $border-color;
       padding-bottom: 30px;
     }
   }

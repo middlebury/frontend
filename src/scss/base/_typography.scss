@@ -75,7 +75,7 @@
       flex: 0 0 50%;
 
       &:not(:last-of-type) {
-        border-bottom: 1px solid $line-gray;
+        border-bottom: 1px solid $border-color;
       }
     }
   }
@@ -87,7 +87,7 @@
     padding-bottom: 20px;
 
     &:not(:last-of-type) {
-      border-bottom: 1px solid $line-gray;
+      border-bottom: 1px solid $border-color;
     }
 
     @include media(md) {
