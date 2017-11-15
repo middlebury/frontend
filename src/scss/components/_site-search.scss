@@ -1,10 +1,6 @@
 .site-search {
 }
 
-.site-search__label {
-  @include sr-only();
-}
-
 .site-search__control {
   border: 1px solid transparent;
   color: $white;
