@@ -81,10 +81,9 @@ $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
-$base-font-size: 16px;
-$base-text-color: $black;
-$base-line-height: 1.5;
-$base-font-family: $font-family-sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+
 // Links
 $link-color: $brand-primary;
 $link-decoration: none;
