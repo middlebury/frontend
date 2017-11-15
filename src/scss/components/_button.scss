@@ -49,7 +49,11 @@
 // Sizes
 
 .button--sm {
-  font-size: 14px;
+  padding: $btn-padding-y-sm $btn-padding-x-sm;
+}
+
+.button--lg {
+  padding: $btn-padding-y-lg $btn-padding-x-lg;
 }
 
 .button--xl {
