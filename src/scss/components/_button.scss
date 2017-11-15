@@ -56,6 +56,9 @@
   padding: $btn-padding-y-lg $btn-padding-x-lg;
 }
 
+// TODO: use padding utils to override this.
+// A button size increase should also increase font size, which this does not
+// so it shouldn't be a button size modifier.
 .button--xl {
   padding: 40px 30px; // matches .filter__button sizes
 }
@@ -73,6 +76,7 @@
   }
 }
 
+// TODO: change to button--light
 .button--secondary {
   background-color: $white;
   color: $brand-primary;
