@@ -36,11 +36,11 @@ dd {
 }
 
 a {
-  color: $brand-primary;
-  text-decoration: none;
+  color: $link-color;
+  text-decoration: $link-decoration;
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: $link-hover-decoration;
   }
 }
 
