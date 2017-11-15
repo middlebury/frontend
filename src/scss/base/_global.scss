@@ -54,22 +54,14 @@ fieldset {
   border: 0;
 }
 
-%p {
-  color: $text-gray;
-  font-family: $font-family-serif;
-  // font-size: 16px;
-  // line-height: 28px;
-  // font-weight: $font-weight-normal;
-  margin: 0;
-  // margin-bottom: 20px;
-}
-
 p {
-  @extend %p;
+  font-family: $font-family-base;
+  margin-top: 0;
+  margin-bottom: $paragraph-margin-bottom;
 }
 
 address {
-  @extend %p;
+  font-family: $font-family-base;
   font-style: normal;
 }
 
