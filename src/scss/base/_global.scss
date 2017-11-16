@@ -55,7 +55,8 @@ fieldset {
 }
 
 p {
-  font-family: $font-family-base;
+  color: $text-gray;
+  font-family: $font-family-serif;
   margin-top: 0;
   margin-bottom: $paragraph-margin-bottom;
 }
