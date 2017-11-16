@@ -189,7 +189,13 @@ gulp.task('html', () => {
 gulp.task('images', () => {
   return gulp
     .src(paths.images.src)
-    .pipe(imagemin())
+    .pipe(
+      imagemin([
+        imagemin.jpegtran({progressive: true}),
+        imagemin.optipng({optimizationLevel: 5}),
+        imagemin.svgo({plugins: [{removeDimensions: true}]})
+      ])
+    )
     .pipe(gulp.dest(paths.images.dest))
     .pipe(browserSync.stream());
 });
