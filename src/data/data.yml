@@ -570,12 +570,14 @@ image_sizes:
     - 400x225
     - 640x360
     - 960x540
+    - 1280x720
     - 1440x810
   notfound:
     srcset:
     - 400x225
     - 640x360
     - 960x540
+    - 1280x720
     - 1440x810
   # video paragraph
   video:
