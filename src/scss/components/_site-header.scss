@@ -38,7 +38,6 @@
 }
 
 .site-header__title {
-  text-indent: -9999px;
   margin: 0;
 }
 
@@ -52,6 +51,7 @@
   background-repeat: no-repeat;
   width: 213px;
   height: 40px;
+  text-indent: -9999px;
 
   @include media(md) {
     background-image: url('/images/miis-shield.svg');
