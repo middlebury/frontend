@@ -16,7 +16,7 @@
   }
 }
 
-[class^='col'] {
+[class^='col-'] {
   @include make-col-ready();
 }
 
