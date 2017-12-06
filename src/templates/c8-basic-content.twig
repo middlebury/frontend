@@ -55,6 +55,11 @@
 
 {% block layout_content %}
 
+  {% include 'paragraphs/schedule.twig' %}
+  <figure class="mb-4">
+    {% include 'partials/img.twig' with { name: 'featured' } %}
+  </figure>
+
   <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur commodi, excepturi necessitatibus, quibusdam beatae libero est modi aliquam aspernatur provident quod voluptate dolor non hic, eveniet dolorem assumenda tenetur error.</p>
 
   {# G1 text paragraph #}
@@ -124,13 +129,12 @@
 
   </div>
 
+
+  {% include 'paragraphs/faq.twig' %}
+
   {# G3 image paragraph #}
-  <figure class="media media--image">
-    <picture>
-      <img src="//placehold.it/1280x720" alt="">
-    </picture>
-    <figcaption class="media__caption">Caption text here</figcaption>
-  </figure>
+
+  {% include 'paragraphs/image.twig' %}
 
   {#G2 two column text. May change later to a component name like two-col-text #}
   <div class="row row--dividers mb-6">

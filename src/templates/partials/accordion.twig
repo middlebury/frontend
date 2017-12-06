@@ -1,0 +1,38 @@
+<div class="accordion{% if modifier %} accordion--{{modifier}}{% endif %}">
+
+  {% for item in items %}
+
+    {# ID must be unique on the page #}
+    {% set id = loop.index %}
+
+    <div class="accordion-item">
+      <h4 class="accordion-item__title" id="accordion-item-label-{{id}}" role="tab">
+        <a
+          href="#accordion-content-{{id}}"
+          class="accordion-item__link"
+          data-toggle-target=".js-accordion-item-{{id}}"
+          aria-expanded="false"
+          aria-controls="accordion-content-{{id}}">
+
+          <span class="accordion-item__label">{{item.title}}</span>
+
+          <svg class="accordion-item__icon accordion-item__icon--open">
+            <use xlink:href="#icon-arrow-down" />
+          </svg>
+
+          <svg class="accordion-item__icon accordion-item__icon--close">
+            <use xlink:href="#icon-arrow-up" />
+          </svg>
+        </a>
+
+      </h4>
+      <div class="accordion-item__content js-accordion-item-{{id}}" id="accordion-content-{{id}}" role="tabpanel" aria-labelledby="#accordion-item-label-{{id}}">
+        <div class="typography">
+          {{item.content}}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+
+</div>
+

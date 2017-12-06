@@ -1,15 +1,15 @@
 .button {
   display: inline-block;
-  font-family: $font-family-sans-serif;
+  font-family: $font-family-base;
   text-align: center;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 0;
-  border: 0;
+  border: $btn-border-width solid $btn-border-color;
   cursor: pointer;
   background: none;
-  transition: 0.2s;
-  line-height: 1.5;
+  transition: $btn-transition;
+  padding: $btn-padding-y $btn-padding-x;
+  font-size: $btn-font-size;
+  line-height: $btn-line-height;
+  border-radius: $btn-border-radius;
 
   @include media(md) {
     white-space: nowrap;
@@ -22,16 +22,12 @@
 
   &--disabled,
   &[disabled] {
-    opacity: 0.5;
+    opacity: $btn-disabled-opacity;
     pointer-events: none;
-  }
-
-  svg {
-    transition: 0.2s;
   }
 }
 
-// Modifiers
+// Shapes
 
 .button--block {
   display: block;
@@ -53,9 +49,16 @@
 // Sizes
 
 .button--sm {
-  font-size: 14px;
+  padding: $btn-padding-y-sm $btn-padding-x-sm;
 }
 
+.button--lg {
+  padding: $btn-padding-y-lg $btn-padding-x-lg;
+}
+
+// TODO: use padding utils to override this.
+// A button size increase should also increase font size, which this does not
+// so it shouldn't be a button size modifier.
 .button--xl {
   padding: 40px 30px; // matches .filter__button sizes
 }
@@ -70,13 +73,10 @@
   &:focus {
     background-color: $brand-primary;
     color: $white;
-
-    svg {
-      fill: $white;
-    }
   }
 }
 
+// TODO: change to button--light
 .button--secondary {
   background-color: $white;
   color: $brand-primary;
@@ -85,10 +85,6 @@
   &:focus {
     background-color: $brand-primary-dark;
     color: $white;
-
-    svg {
-      fill: $white;
-    }
   }
 }
 

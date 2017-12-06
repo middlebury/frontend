@@ -28,6 +28,7 @@ const gulpIf = require('gulp-if');
 const slug = require('slug');
 const cmq = require('gulp-combine-mq');
 const size = require('gulp-size');
+const rename = require('gulp-rename');
 
 const production = !!args.production;
 
@@ -85,13 +86,21 @@ gulp.task('server', () => {
 
 gulp.task('svg', () => {
   return gulp
-    .src('./src/images/*.svg')
+    .src('./src/images/icon-*.svg')
+    .pipe(imagemin())
     .pipe(
       svgSprites({
         mode: 'symbols'
       })
     )
     .pipe(gulp.dest('./dist/svg'));
+});
+
+gulp.task('copy:svg', () => {
+  return gulp
+    .src('./dist/svg/svg/symbols.svg')
+    .pipe(rename('icons.twig'))
+    .pipe(gulp.dest('./src/templates/partials'));
 });
 
 gulp.task('styles', () => {
@@ -180,7 +189,13 @@ gulp.task('html', () => {
 gulp.task('images', () => {
   return gulp
     .src(paths.images.src)
-    .pipe(imagemin())
+    .pipe(
+      imagemin([
+        imagemin.jpegtran({progressive: true}),
+        imagemin.optipng({optimizationLevel: 5}),
+        imagemin.svgo({plugins: [{removeDimensions: true}]})
+      ])
+    )
     .pipe(gulp.dest(paths.images.dest))
     .pipe(browserSync.stream());
 });

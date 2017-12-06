@@ -21,6 +21,7 @@
 @import 'base/grid';
 
 // components
+@import 'components/accordion';
 @import 'components/breadcrumb';
 @import 'components/button';
 @import 'components/callout-contacts';
@@ -71,6 +72,7 @@
 @import 'components/projects';
 @import 'components/publications';
 @import 'components/pullquote';
+@import 'components/schedule';
 @import 'components/search-form';
 @import 'components/search-results-item';
 @import 'components/section';
@@ -106,4 +108,9 @@
 
 .h-100 {
   height: 100%;
+}
+
+// TODO: need to change frontend to use this class or figure out admin panel only styles
+.visually-hidden {
+  @include sr-only;
 }

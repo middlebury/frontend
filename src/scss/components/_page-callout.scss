@@ -7,23 +7,29 @@
   }
 }
 
-.page-callout__content {
+.page-callout__text {
   flex: 1;
   border-right: 1px solid #0bab92;
   align-items: center;
   display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
   @include make-gutters();
 
   @include media(md) {
     border-right: 0;
     padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
-.page-callout__action {
-}
-
 .page-callout__button {
-  // flex: 0 1 auto;
-}
+  flex: 0 1 auto;
+  display: flex;
+  align-items: center;
 
+  @include media(md) {
+    height: 100%;
+  }
+}

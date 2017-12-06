@@ -10,71 +10,27 @@
     {{upcoming_icon}} <em>indicates offered in the upcoming term(s)</em>
   </p>
 
-  <div class="course-list__items" role="tablist">
-
-    {% for i in 0..5 %}
-
-      {% set id = loop.index %}
-
-      {# data-toggle-group should be a unique value if there are multiple on the page #}
-      {# js-course-<ID> can be the course/id value #}
-      <div class="course-item">
-        <h4 class="course-item__title" id="course-label-{{id}}" role="tab">
-          <a
-            href="#course-{{id}}"
-            class="course-item__link"
-            data-toggle-target=".js-course-{{id}}"
-            data-toggle-group="courselist"
-            aria-expanded="false"
-            aria-controls="course-{{id}}">
-
-            <span class="course-item__label">
-              {% if loop.first %}
-              TRLM 8535 - Really long title lorem ipsum dolor sit amet consectetur adipisicing elit
-              {% else %}
-              TRLM 8535 - Website Localization
-              {% endif %}
-
-              {# "randomly" render some example combinations of icons #}
-              {% if loop.first %}
-                {{current_icon}}
-              {% endif %}
-              {% if loop.index == 3 %}
-                {{current_icon}}
-                {{upcoming_icon}}
-              {% endif %}
-              {% if loop.index == 2 %}
-                {{upcoming_icon}}
-              {% endif %}
-            </span>
-
-            <svg class="course-item__icon course-item__icon--open">
-              <use xlink:href="#icon-arrow-down" />
-            </svg>
-
-            <svg class="course-item__icon course-item__icon--close">
-              <use xlink:href="#icon-arrow-up" />
-            </svg>
-          </a>
-
-        </h4>
-        <div class="course-item__content js-course-{{id}}" id="course-{{id}}" role="tabpanel" aria-labelledby="#course-label-{{id}}">
-          <p class="course-item__text">
-            The purpose of this course is to familiarize students with web technologies, development and localization. We will look at
+  {% include 'partials/accordion.twig' with {
+    items: [
+      {
+        title: 'TRLM 8535 - Really long title lorem ipsum dolor sit amet consectetur adipisicing elit' ~ current_icon,
+        content: '<p>The purpose of this course is to familiarize students with web technologies, development and localization. We will look at
             this topic from the point of view of the project manager, the localization engineer, and even the translator. The
             hands-on style of this course will put students in situations that require critical thinking, risk mitigation skills
             and solid knowledge of the web localization industry—all of which will be honed throughout this class. Specifically,
             we will be covering the following topics: creating and localizing websites using opensource frameworks such as WordPress
             and Drupal, web technologies such as HTML, CSS and responsive design and JavaScript, wiki technology such as MediaWiki
-            and Dokuwiki, bug tracking in Jira and The Bug Genie, and proxy localization such as Transifex and Smartling.
-          </p>
-          <div class="course-item__requirements"></div>
-          <div class="course-item__terms">Fall 2017 - MIIS</div>
-          <a href="http://catalog.middlebury.edu/courses/view/catalog/catalog%2FMIIS/course/course%2FTRLM8535" class="link-border">View in Course Catalog</a>
-        </div>
-      </div>
-    {% endfor %}
-
-  </div>
+            and Dokuwiki, bug tracking in Jira and The Bug Genie, and proxy localization such as Transifex and Smartling.</p>
+          <p>Fall 2017 - MIIS</p>
+          <p><a href="http://catalog.middlebury.edu/courses/view/catalog/catalog%2FMIIS/course/course%2FTRLM8535">View in Course Catalog</a></p>'
+      },
+      {
+        title: 'TRLM 8535 - Really long sit amet consectetur adipisicing elit' ~ current_icon ~ upcoming_icon,
+        content: '<p>The purpose of this course is to familiarize students with web technologies, development and localization. We will look at this topic from the point of view of the project manager, the localization engineer, and even the translator. The hands-on style of this course will put students in situations that require critical thinking, risk mitigation skills and solid knowledge of the web localization industry—all of which will be honed throughout this class. Specifically, we will be covering the following topics: creating and localizing websites using opensource frameworks such as WordPress and Drupal, web technologies such as HTML, CSS and responsive design and JavaScript, wiki technology such as MediaWiki and Dokuwiki, bug tracking in Jira and The Bug Genie, and proxy localization such as Transifex and Smartling.</p>
+          <p>Fall 2017 - MIIS</p>
+          <p><a href="http://catalog.middlebury.edu/courses/view/catalog/catalog%2FMIIS/course/course%2FTRLM8535">View in Course Catalog</a></p>'
+      }
+    ]
+  } %}
 
 </div>

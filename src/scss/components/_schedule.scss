@@ -1,0 +1,80 @@
+.schedule {
+}
+
+.schedule__header {
+  background-color: $lighter-blue;
+  padding: 0.5rem;
+
+  @include media(sm) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.schedule__title {
+  font-size: 20px;
+  font-weight: $font-weight-semibold;
+  font-family: $font-family-base;
+
+  @include media(sm) {
+    width: 30%;
+  }
+}
+
+.schedule__description {
+  color: $black;
+}
+
+.schedule__item {
+  padding: 1rem 0.5rem 3rem;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $border-color;
+  }
+
+  @include media(sm) {
+    display: flex;
+  }
+}
+
+.schedule__details {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+
+  @include media(sm) {
+    width: 30%;
+    padding-right: 1rem;
+  }
+}
+
+.schedule__time {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.schedule__local {
+  font-size: 14px;
+}
+
+.schedule__body {
+  @include media(sm) {
+    width: 70%;
+  }
+}
+
+.schedule__subtitle {
+  font-size: 20px;
+  font-weight: $font-weight-semibold;
+  font-family: $font-family-base;
+  margin-bottom: 0.5rem;
+}
+
+.schedule__name {
+  font-size: 18px;
+  font-family: $font-family-serif;
+}
+
+.schedule__job {
+  margin-bottom: 1rem;
+  font-size: 16px;
+}

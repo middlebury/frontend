@@ -1,10 +1,6 @@
 .event-teaser {
   @include clearfix;
 
-  &:not(:last-of-type) {
-    border-bottom: 1px solid $line-gray;
-  }
-
   @include media(md) {
     display: flex;
   }
@@ -73,4 +69,3 @@
     }
   }
 }
-

@@ -19,6 +19,7 @@
 .callout-group-item__header {
   @include media(sm) {
     flex: 1;
+    max-width: 100%;
   }
 }
 
@@ -47,19 +48,20 @@
 .callout-group-item__button {
   @include link-border();
 
+  // Can't use @extend within another mixin so we have to recreate a button
   @include media(lg) {
     border: none;
     background-color: $bright-green;
     display: inline-block;
     font-family: $font-family-sans-serif;
     text-align: center;
-    padding: 13px 20px;
-    font-size: 16px;
-    border-radius: 0;
+    padding: $btn-padding-y $btn-padding-x;
+    font-size: $btn-font-size;
+    border-radius: $btn-border-radius;
     border: 0;
     cursor: pointer;
-    transition: .2s;
-    line-height: inherit;
+    transition: 0.2s;
+    line-height: $btn-line-height;
 
     &:hover,
     &:focus {

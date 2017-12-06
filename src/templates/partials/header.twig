@@ -19,24 +19,7 @@
 
   <div class="site-header__secondary">
     <div class="site-header__search">
-      <div class="site-search">
-        <form>
-          <div class="input-group">
-            <div class="input-group__field">
-              <label for="midd-site-search" class="site-search__label">Search the Institute</label>
-              <input type="search" placeholder="Search the Institute" class="site-search__control form__control" id="midd-site-search" required />
-            </div>
-            <div class="input-group__button">
-              <button type="submit" class="button site-search__button">
-                <span class="sr-only">Search</span>
-                <svg class="icon" aria-hidden="true">
-                  <use xlink:href="#icon-search" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
+      {% include 'partials/site-search.twig' %}
     </div>
 
     <div class="site-header__nav" id="midd-site-nav">

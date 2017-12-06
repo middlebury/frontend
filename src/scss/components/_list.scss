@@ -19,7 +19,7 @@
 .list--dividers {
   .list__item {
     &:not(:last-of-type) {
-      border-bottom: 1px solid $line-gray;
+      border-bottom: 1px solid $border-color;
       padding-bottom: 30px;
     }
   }
@@ -38,10 +38,7 @@
   margin-right: 10px;
   position: relative;
   top: 5px;
-
-  svg {
-    fill: $bright-green;
-  }
+  color: $bright-green;
 }
 
 .list--unordered {

@@ -38,8 +38,6 @@
 }
 
 .site-header__title {
-  text-indent: -9999px;
-  margin: 0;
 }
 
 .site-header__home-link {
@@ -48,11 +46,11 @@
 // TODO: change to svg
 .site-header__logo {
   display: block;
-  background-image: url('/images/miis-logo-left.png');
+  background-image: url('/images/miis-logo.svg');
   background-repeat: no-repeat;
-  background-position: center;
   width: 213px;
   height: 40px;
+  text-indent: -9999px;
 
   @include media(md) {
     background-image: url('/images/miis-shield.svg');

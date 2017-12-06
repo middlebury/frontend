@@ -6,7 +6,7 @@
 
     @each $prop, $abbrev in (bottom: b, right: r, left:l, top:t) {
       .border#{$infix}-#{$abbrev} {
-        border-#{$prop}: 1px solid $line-gray;
+        border-#{$prop}: 1px solid $border-color;
       }
 
       .border#{$infix}-#{$abbrev}-0 {
