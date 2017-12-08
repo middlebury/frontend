@@ -1,0 +1,111 @@
+{% extends "layout-sidebar.twig" %}
+
+{% set page_header = {
+  title: 'Chart components'
+} %}
+
+{% block layout_content %}
+
+  {% include 'partials/chart.twig' with {
+    title: 'Time until employment',
+    id: 'employed',
+    type: 'pie',
+    label: 'Time employed',
+    data: [
+      30.16,
+      6.35,
+      39.68,
+      22.22,
+      1.59,
+    ],
+    labels: [
+      "Employed within 3 months of graduating",
+      "Employed within 6 months of graduating",
+      "Employed at graduation",
+      "Employed within 1 year of graduating",
+      "Employed within 2 or more years after graduating",
+    ]
+  } %}
+
+  {% include 'partials/chart.twig' with {
+    title: 'Salary',
+    id: 'salary',
+    type: 'horizontalBar',
+    data: [
+      18.87,
+      39.62,
+      26.42,
+      9.43,
+      5.66,
+    ],
+    label: 'salary',
+    labels: [
+      "30k or less",
+      "$31k to 50k",
+      "$51k to $70k",
+      "$71k to $90k",
+      "$91k or more",
+    ]
+  } %}
+
+  {% include 'partials/chart.twig' with {
+    title: 'Job Function',
+    id: 'job-function',
+    type: 'pie',
+    data: [
+      2.273,
+      2.273,
+      11.360,
+      6.818,
+      6.818,
+      70.455
+    ],
+    labels: [
+      "Administration",
+      "Management / Strategic Planning",
+      "Operations / Project Management",
+      "Other",
+      "Teaching / Training",
+      "Translation / Interpretation"
+    ]
+  } %}
+
+  {% include 'partials/chart.twig' with {
+    title: 'Job sector',
+    id: 'job-sector',
+    type: 'pie',
+    data: [
+      1.89,
+      3.77,
+      5.66,
+      75.47,
+      13.21
+    ],
+    labels: [
+      "Intergovernmental",
+      "Intergovernmental (i.e., World Bank, UN, etc.)",
+      "Nonprofit/Nongovernmental organization",
+      "Private/Corporate/Business",
+      "Public/Government"
+    ]
+  } %}
+
+  <div class="mb-6">
+    {% include 'partials/world.twig' %}
+
+    <ul>
+      <li>United States</li>
+      <li>Germany</li>
+      <li>China</li>
+    </ul>
+
+    <style>
+      #world #US,
+      #world #DE,
+      #world #CN {
+        fill: #0d395f;
+      }
+    </style>
+  </div>
+
+{% endblock %}

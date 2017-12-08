@@ -1,0 +1,22 @@
+<div class="mb-6">
+  <h1>{{title}}</h1>
+  <canvas id="midd-chart-{{id}}"></canvas>
+</div>
+
+<script>
+  window.addEventListener('load', function() {
+    var elem = document.getElementById('midd-chart-{{id}}');
+    new Chart(elem, {
+      type: '{{type|default('pie')}}',
+      data: {
+        datasets: [
+          {
+            data: [{{data}}],
+            label: '{{label}}'
+          }
+        ],
+        labels: [{% for item in labels %}'{{item}}'{% if not loop.last %},{% endif %}{% endfor %}]
+      }
+    });
+  });
+</script>
