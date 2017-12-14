@@ -123,33 +123,33 @@ site_nav:
       url: /institute/news
     - text: Events
       url: /institute/events
-    - text: Student Services
-      url: /institute/student-services
+    - text: Student Life
+      url: /institute/student-life
       items:
+        - text: Student Life Team
+          url: /institute/student-life/team
         - text: New Students
-          url: /institute/student-services/new-students
+          url: /institute/student-life/new-students
         - text: International Students
-          url: /institute/student-services/international
+          url: /institute/offices-services/international-student-scholar
         - text: Veterans
-          url: /institute/student-services/veterans
-        - text: Center for Advising and Career Services
-          url: /institute/student-services/advising-career-services
+          url: /institute/student-life/veterans
+        - text: Families
+          url: /institute/student-life/families
+        - text: LGBTQ
+          url: /institute/student-life/lgbtq
         - text: Health and Wellness
-          url: /institute/student-services/health-wellness
-        - text: Office of Student Accounts
-          url: /institute/student-services/student-accounts
-        - text: Office of Student Records (Registrar)
-          url: /institute/student-services/student-records
+          url: /institute/student-life/health-wellness
         - text: Life in Monterey
-          url: /institute/student-services/life-in-monterey
-        - text: Student Life
-          url: /institute/student-services/student-life
-        - text: Security
-          url: /institute/student-services/security
-        - text: Technology Support
-          url: /institute/student-services/technology-support
-        - text: Annual Events
-          url: /institute/student-services/annual-events
+          url: /institute/student-life/life-in-monterey
+        - text: Student Council
+          url: /institute/student-life/student-council
+        - text: Student Clubs and Organizations
+          url: /institute/student-life/clubs
+        - text: Community Discounts
+          url: /institute/student-life/community-discounts
+        - text: Student Policies
+          url: /institute/student-life/student-policies
     - text: Support the Institute
       url: /institute/support
       items:

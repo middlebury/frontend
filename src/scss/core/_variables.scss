@@ -54,11 +54,13 @@ $brand-secondary-dark: #174872;
 $brand-tertiary: #0ac3a6;
 
 // from styleguide
-$middlebury-blue: #0d395f;
 $light-blue: #97bbd5;
 $lighter-blue: #e5f1fa;
-$bright-green: #0ac3a6;
-$dark-green: #058371;
+
+$green-dark: #1a8574;
+$green: #1f9f8b;
+$green-light: #23b39c;
+
 $teal: #017c9f;
 $warm-gray: #e5e4e2;
 $line-gray: #dedede;
@@ -165,4 +167,4 @@ $input-border-width: $input-btn-border-width;
 $input-border-radius: $input-btn-border-radius;
 
 $input-focus-bg: $input-bg;
-$input-focus-border-color: $bright-green;
+$input-focus-border-color: $green-light;

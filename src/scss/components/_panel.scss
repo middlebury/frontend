@@ -10,7 +10,7 @@
 
 .panel--primary {
   @include media-breakpoint-down(sm) {
-    background-color: $middlebury-blue;
+    background-color: $brand-primary;
   }
 }
 
@@ -22,7 +22,7 @@
 
 .panel--tertiary {
   @include media-breakpoint-down(sm) {
-    background-color: $dark-green;
+    background-color: $green-dark;
   }
 }
 
