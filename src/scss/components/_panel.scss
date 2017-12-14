@@ -10,7 +10,7 @@
 
 .panel--primary {
   @include media-breakpoint-down(sm) {
-    background-color: $middlebury-blue;
+    background-color: $brand-primary;
   }
 }
 

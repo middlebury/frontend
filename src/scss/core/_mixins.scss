@@ -6,7 +6,7 @@
 }
 
 @mixin link-border() {
-  border-bottom: 1px solid $middlebury-blue;
+  border-bottom: 1px solid $brand-primary;
   text-decoration: none;
 
   &:hover {
