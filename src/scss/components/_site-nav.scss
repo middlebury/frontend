@@ -88,7 +88,7 @@
   @include make-gutters();
 
   &:hover {
-    color: $bright-green;
+    color: $green-light;
     text-decoration: none;
   }
 
@@ -99,7 +99,7 @@
   }
 
   .site-nav__item:hover > & {
-    color: $bright-green;
+    color: $green-light;
   }
 
   .site-nav__list--sub > .site-nav__item > & {
@@ -121,7 +121,7 @@
 }
 
 .site-nav__link--back {
-  color: $bright-green;
+  color: $green-light;
   position: relative;
   border-bottom: 1px solid $brand-secondary-dark;
   border-top: 1px solid $brand-secondary-dark;

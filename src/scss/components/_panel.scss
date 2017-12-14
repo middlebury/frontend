@@ -22,7 +22,7 @@
 
 .panel--tertiary {
   @include media-breakpoint-down(sm) {
-    background-color: $dark-green;
+    background-color: $green-dark;
   }
 }
 
