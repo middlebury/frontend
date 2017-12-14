@@ -202,7 +202,7 @@ footer_nav:
       - text: Employment
         url: https://middlebury.peopleadmin.com
       - text: Offices and Services
-        url: /institute/a-z
+        url: /institute/offices-services
       - text: WebMail
         url: https://mail.middlebury.edu
   - title: Resources
