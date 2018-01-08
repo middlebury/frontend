@@ -2,17 +2,17 @@ site_title: Middlebury Institute of International Studies at Monterey
 
 site_nav:
   items:
-    - text: Institute Experience
-      url: /institute/institute-experience
+    - text: Institute Approach
+      url: /institute/institute-approach
       items:
         - text: Intercultural Competence
-          url: /institute/institute-experience/intercultural-competence
+          url: /institute/institute-approach/intercultural-competence
         - text: Learning in Language
-          url: /institute/institute-experience/learning-language
+          url: /institute/institute-approach/learning-in-language
         - text: Immersive Experience
-          url: /institute/institute-experience/immersive-experience
+          url: /institute/institute-approach/immersive-experience
         - text: About the Institute
-          url: /institute/institute-experience/about
+          url: /institute/institute-approach/about
     - text: Leadership and Impact
       url: /institute/leadership-impact
       items:
@@ -38,7 +38,7 @@ site_nav:
         - text: Global Management
           url: /institute/areas-of-focus/global-policy-management
     - text: Advancing Your Career
-      url: /institute/student-services/advising-career-services
+      url: /institute/advancing-your-career
     - text: Academics
       url: /institute/academics
       items:
@@ -104,8 +104,8 @@ site_nav:
         - text: Meet Our Students
           url: /institute/admissions/meet-students
         - text: Events
-          url: /institute/admissions/events
-        - text: Veterans
+          url: /institute/admissions/events-webinars
+        - text: For Veterans
           url: /institute/admissions/veterans
         - text: Application Instructions
           url: /institute/admissions/application-instructions
@@ -115,7 +115,7 @@ site_nav:
           url: /institute/admissions/tuition-fees
         - text: Scholarships and Fellowships
           url: /institute/admissions/scholarships
-        - text: Financial Aid
+        - text: Student Financial Services
           url: /institute/admissions/financial-aid
         - text: Admissions Team
           url: /institute/admissions/team
@@ -126,8 +126,6 @@ site_nav:
     - text: Student Life
       url: /institute/student-life
       items:
-        - text: Student Life Team
-          url: /institute/student-life/team
         - text: New Students
           url: /institute/student-life/new-students
         - text: International Students
@@ -150,23 +148,21 @@ site_nav:
           url: /institute/student-life/community-discounts
         - text: Student Policies
           url: /institute/student-life/student-policies
-    - text: Support the Institute
-      url: /institute/support
+    - text: Give to the Institute
+      url: /institute/giving
       items:
         - text: Ways to Give
-          url: /institute/support/ways-to-give
+          url: /institute/giving/ways-to-give
         - text: Annual Fund
-          url: /institute/support/annual-fund
-        - text: Volunteer
-          url: /institute/support/annual-fund/volunteer
+          url: /institute/giving/annual-fund
         - text: Donor Recognition
-          url: /institute/support/donor-recognition
+          url: /institute/giving/donor-recognition
         - text: Plan Your Legacy
-          url: /institute/support/plan-your-legacy
-        - text: Ways to Give
-          url: /institute/support/carl-fehlandt-scholarship
+          url: /institute/giving/plan-your-legacy
+        - text: Carl Fehlandt Scholarship
+          url: /institute/giving/carl-fehlandt-scholarship
         - text: Meet the Team
-          url: /institute/support/team
+          url: /institute/giving/team
 
 footer_nav:
   - title: Information for
