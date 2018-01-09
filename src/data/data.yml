@@ -48,48 +48,55 @@ site_nav:
             - text: International Education Management
               url: /institute/academics/degree-programs/international-education-management
             - text: International Environmental Policy
-              url: /institute/academics/degree-programs/international-environmental-policy
+              url: /institute/academics/degree-programs/international-environmental-policy              
             - text: International Policy and Development
-              url: /institute/academics/degree-programs/international-policy-development/
+              url: /institute/academics/degree-programs/international-policy-development        
             - text: International Trade and Economic Diplomacy
               url: /institute/academics/degree-programs/international-trade-economic-diplomacy
             - text: Nonproliferation and Terrorism Studies
-              url: /institute/academics/degree-programs/nonproliferation-terrorism-studies
-            - text: Teaching English to Speakers of Other Languages
-              url: /institute/academics/degree-programs/language-education
-            - text: Teaching Foreign Language
-              url: /institute/academics/degree-programs/language-education
+              url: /institute/academics/degree-programs/nonproliferation-terrorism-studies           
+            - text: Language Education
+              url: /institute/academics/degree-programs/language-education 
             - text: Translation; Translation and Interpretation; Conference Interpretation
               url: /institute/academics/degree-programs/translation-interpretation
             - text: Translation and Localization Management
               url: /institute/academics/degree-programs/translation-localization-management
             - text: Master of Public Administration
-              url: /institute/academics/degree-programs/public-administration
+              url: /institute/academics/degree-programs/public-administration    
             - text: Joint MPA/MA in International Education Management
-              url: /institute/academics/degree-programs/joint-mpa-iem-overview
+              url: /institute/academics/degree-programs/joint-mpa-iem/overview
             - text: Joint BA/MA Degrees
-              url: /institute/academics/degree-programs/joint-bama
+              url: /institute/academics/degree-programs/joint-bama 
         - text: Additional Programs
           url: /institute/academics/additional-programs
+          items:
+            - text: Certificates and Specializations
+              url: /institute/academics/additional-programs/certificates
+            - text: Language Programs
+              url: /institute/academics/additional-programs/language
+            - text: Professional Development
+              url: /institute/academics/additional-programs/professional
         - text: Study Abroad
-          url: /institute/academics/study-abroad
+          url: /institute/academics/immersive-learning-study-abroad/
+        - text: Fellowships
+          url: /institute/academics/fellowships
         - text: University Partnerships
           url: /institute/academics/university-partnerships
         - text: Centers and Initiatives
           url: /institute/academics/centers-initiatives
           items:
             - text: Center for the Blue Economy
-              url: /institute/academics/centers-initiatives/blue-economy
+              url: /institute/academics/centers-initiatives/center-blue-economy
             - text: Center for Conflict Studies
               url: /institute/academics/centers-initiatives/conflict-studies
             - text: Graduate Initiative in Russian Studies
               url: /institute/academics/centers-initiatives/graduate-initiative-russian-studies
             - text: James Martin Center for Nonproliferation Studies
-              url: /institute/academics/centers-initiatives/nonproliferation-studies
+              url: /institute/academics/centers-initiatives/center-nonproliferation-studies
         - text: Academic Resources
           url: /institute/academics/academic-resources
-        - text: Library Resources
-          url: /institute/academics/library-resources
+        - text: Library
+          url: /institute/academics/library
         - text: Course Catalog
           url: /institute/academics/catalog
     - text: Admissions
