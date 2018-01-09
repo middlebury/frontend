@@ -174,71 +174,47 @@ footer_nav:
       - text: Faculty and Staff
         url: /institute/faculty-staff
       - text: Employers
-        url: /institute/employers
+        url: /institute/advancing-your-career/employers
+  - title: 
+    items:
       - text: Media
-        url: /institute/media
+        url: /institute/offices-services/communications
       - text: Partners
-        url: /institute/partners
+        url: /institute/leadership-impact/global-partnerships
       - text: Donors
-        url: /institute/donors
+        url: /institute/giving
       - text: Visitors
-        url: /institute/visitors
-  - title: Quick links
+        url: /institute/admissions/visit
+  - title: Quick Links
     items:
       - text: Emergency
-        url: /institute/student-services/health-wellness/emergency
-      - text: BannerWeb
-        url: https://ssb-prod.ec.middlebury.edu/PNTR/twbkwbis.P_WWWLogin?
+        url: /institute/offices-services/security
+      - text: Academic Resources
+        url: /institute/academics/academic-resources     
       - text: Campus Map
         url: http://www.myatlascms.com/map/index.php?id=972
-      - text: Contact Us
-        url: /institute/contact
       - text: Directory
-        url: https://directory.miis.edu
+        url: https://directory.miis.edu        
+      - text: Events Calendar
+        url: /institute/events
+      - text: Library
+        url: /institute/academics/library         
       - text: Employment
         url: https://middlebury.peopleadmin.com
+  - title:
+    items:            
       - text: Offices and Services
         url: /institute/offices-services
-      - text: WebMail
-        url: https://mail.middlebury.edu
-  - title: Resources
-    items:
-      - text: Course Catalog
-        url: /institute/academics/courses
-      - text: Digital Learning Commons
-        url: /institute/academics/academic-resources/dlc
+      - text: BannerWeb
+        url: https://ssb-prod.ec.middlebury.edu/PNTR/twbkwbis.P_WWWLogin?        
       - text: EthicsPoint
-        url: https://secure.ethicspoint.com/domain/media/en/gui/28296/index.html
-      - text: Globe Language Services
-        url: /institute/academics/academic-resources/globe-language-services
-      - text: Library
-        url: /institute/academics/library
-      - text: META Lab
-        url: /institute/academics/academic-resources/meta-lab
-      - text: Writing Center
-        url: /institute/academics/academic-resources/writing-center
-  - title: Site at a glance
-    items:
-      - text: Institute Experience
-        url: /institute/institute-experience
-      - text: Leadership and Impact
-        url: /institute/leadership-impact
-      - text: Areas of Focus
-        url: /institute/areas-of-focus
-      - text: Advancing Your Career
-        url: /institute/student-services/advising-career-services
-      - text: Academics
-        url: /institute/academics
-      - text: Admissions
-        url: /institute/admissions
-      - text: News
-        url: /institute/news
-      - text: Events
-        url: /institute/events
-      - text: Student Services
-        url: /institute/student-services
-      - text: Support the Institute
-        url: /institute/support
+        url: https://secure.ethicspoint.com/domain/media/en/gui/28296/index.html          
+      - text: WebMail
+        url: https://mail.middlebury.edu/owa/auth/logon.aspx
+      - text: Zoom Web Conferencing
+        url: https://middlebury.zoom.us
+      - text: Site Editor Login
+        url: https://www.middlebury.edu/institute/saml/login?destination=/
 
 
 secondary_footer_nav:
