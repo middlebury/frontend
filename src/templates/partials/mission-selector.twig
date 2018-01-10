@@ -6,7 +6,7 @@
           <label class="mission-selector__label">What&rsquo;s Your Mission?</label>
           <select name="mission" class="mission-selector__select js-mission-selector">
             {% for mission in missions %}
-              <option value="{{mission.text}}">{{mission.text}}</option>
+              <option value="{{mission.text}}">I want to {{mission.text}}</option>
             {% endfor %}
           </select>
         </div>
