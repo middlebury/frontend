@@ -1,26 +1,24 @@
-<section class="schedule">
-  <header class="schedule__header">
+<div class="schedule">
+  <div class="schedule__header">
     <h2 class="schedule__day">Day 1</h2>
     <p class="schedule__description">Arrival Day</p>
-  </header>
-  <ol class="schedule__list">
-    {% for i in 0..3 %}
-      <li class="schedule__item">
-        <div class="schedule__details">
-          <time class="schedule__time">8:00 AM&ndash;5:00 PM</time>
-          <span class="schedule__local">152 College St</span>
+  </div>
+  {% for i in 0..3 %}
+    <div class="schedule__item">
+      <div class="schedule__details">
+        <time class="schedule__time">8:00 AM&ndash;5:00 PM</time>
+        <span class="schedule__local">152 College St</span>
+      </div>
+      <div class="schedule__body">
+        {% if loop.last %}
+          <p class="schedule__name">Aaron Smith</p>
+          <p class="schedule__job">Director of Digital Services</p>
+        {% endif %}
+        <h3 class="schedule__title">Some event title</h3>
+        <div class="typography">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aspernatur modi reiciendis quos voluptatum obcaecati aperiam! Perferendis consequatur voluptatibus, incidunt aut, officia et autem rem rerum nobis assumenda natus cupiditate.</p>
         </div>
-        <div class="schedule__body">
-          {% if loop.last %}
-            <p class="schedule__name">Aaron Smith</p>
-            <p class="schedule__job">Director of Digital Services</p>
-          {% endif %}
-          <h3 class="schedule__title">Some event title</h3>
-          <div class="typography">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aspernatur modi reiciendis quos voluptatum obcaecati aperiam! Perferendis consequatur voluptatibus, incidunt aut, officia et autem rem rerum nobis assumenda natus cupiditate.</p>
-          </div>
-        </div>
-      </li>
-    {% endfor %}
-  </ol>
-</section>
+      </div>
+    </div>
+  {% endfor %}
+</div>
