@@ -55,25 +55,28 @@
 
 {% block layout_content %}
 
-  <p class="lead">Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing</a> elit. Pariatur commodi, excepturi necessitatibus, quibusdam beatae libero est modi aliquam aspernatur provident quod voluptate dolor non hic, eveniet dolorem assumenda tenetur error.</p>
-
-  {% include 'paragraphs/schedule.twig' %}
-
   <figure class="mb-4">
     {% include 'partials/img.twig' with { name: 'featured' } %}
   </figure>
+
+  <p class="lead">Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing</a> elit. Pariatur commodi, excepturi necessitatibus, quibusdam beatae libero est modi aliquam aspernatur provident quod voluptate dolor non hic, eveniet dolorem assumenda tenetur error.</p>
 
   {# G1 text paragraph #}
   <div class="typography">
     <h2>Some headline here</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
     <h3>Some headline here</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
     <h4>Some headline here</h4>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
     <h5>Some headline here</h4>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
     <h6>Some headline here</h6>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
 
     <h3>short list</h3>
@@ -84,17 +87,33 @@
       <li>some more long ish text</li>
     </ul>
 
-    <h4>Unordered list</h4>
+    <h3>Unordered list</h3>
     <ul>
       <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quas voluptatibus minima facere nesciunt odio, fugiat distinctio minus consequatur quo placeat neque expedita laudantium incidunt blanditiis laborum nam similique illum.</li>
-      <li>Excepturi, minima provident. Reiciendis illo assumenda eveniet vero, velit nihil id, animi in nesciunt voluptatum, beatae officia! Nostrum consequuntur commodi nisi velit voluptatum tempore quisquam illo dolore, fugiat vitae distinctio.</li>
-      <li>Quae corrupti officia debitis suscipit, quis consequuntur consequatur perspiciatis eveniet odio non! Recusandae, assumenda vero reprehenderit est voluptate qui natus, itaque sapiente officia ex voluptatibus tempora facere error enim repudiandae!</li>
+      <li>
+      Excepturi, minima provident. Reiciendis illo assumenda eveniet vero, velit nihil id, animi in nesciunt voluptatum, beatae officia! Nostrum consequuntur commodi nisi velit voluptatum tempore quisquam illo dolore, fugiat vitae distinctio.
+        <ul>
+          <li>Excepturi, minima provident. Reiciendis illo assumenda eveniet vero</li>
+        </ul>
+      </li>
+      <li>
+        Quae corrupti officia debitis suscipit, quis consequuntur consequatur perspiciatis eveniet odio non! Recusandae, assumenda vero reprehenderit est voluptate qui natus, itaque sapiente officia ex voluptatibus tempora facere error enim repudiandae!
+      </li>
     </ul>
 
-    <h4>Ordered list</h4>
+    <h3>Ordered list</h3>
     <ol>
       <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem asperiores ut, aliquid eveniet deleniti impedit mollitia earum, explicabo quaerat, voluptate, dignissimos omnis sed aliquam. Hic possimus eum veritatis corporis labore.</li>
-      <li>Esse numquam nulla at ipsam, consequatur dolore! Officiis enim architecto, sed delectus exercitationem veritatis, voluptatum beatae excepturi sapiente quas veniam hic cum vero itaque, possimus, fuga? Magnam, consequatur reiciendis velit.</li>
+      <li>Esse numquam nulla at ipsam, consequatur dolore! Officiis enim architecto, sed delectus exercitationem veritatis, voluptatum beatae excepturi sapiente quas veniam hic cum vero itaque, possimus, fuga? Magnam, consequatur reiciendis velit.
+        <ul>
+          <li>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus vero consectetur ea dolor aperiam nostrum rerum totam cumque qui laborum culpa dignissimos impedit, aut, soluta magni nam hic molestiae rem?</p>
+          </li>
+          <li>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus vero consectetur ea dolor aperiam nostrum rerum totam cumque qui laborum culpa dignissimos impedit, aut, soluta magni nam hic molestiae rem?</p>
+          </li>
+        </ul>
+      </li>
       <li>Dignissimos autem sit deserunt ratione illum reiciendis, atque, facere repellat quaerat excepturi tempore neque cupiditate. Ut unde autem dolores, accusamus, magnam pariatur, facere corrupti doloribus obcaecati fugiat earum quis nisi.</li>
       <li>Officiis inventore, repellendus ullam laudantium amet aperiam porro illum est, tempora temporibus ut. Placeat quisquam reprehenderit architecto repudiandae fuga id nisi, modi eum, libero mollitia quis rerum molestiae sunt itaque?</li>
     </ol>
@@ -130,6 +149,8 @@
 
   </div>
 
+  {% include 'paragraphs/schedule.twig' %}
+
   {% include 'paragraphs/media-object.twig' %}
 
   {% include 'paragraphs/media-object.twig' with { right: true } %}
@@ -138,7 +159,9 @@
 
   {# G3 image paragraph #}
 
-  {% include 'paragraphs/image.twig' %}
+  {% include 'paragraphs/image.twig' with {
+    caption: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+  } %}
 
   {#G2 two column text. May change later to a component name like two-col-text #}
   <div class="row row--dividers mb-6">
@@ -152,7 +175,7 @@
     </div>
   </div>
 
-  {% include 'paragraphs/video.twig' %}
+  {% include 'paragraphs/video.twig' with { transcript: true } %}
 
   {% include 'paragraphs/slideshow.twig' %}
 
