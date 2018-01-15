@@ -28,8 +28,8 @@
 .schedule__item {
   padding: 1rem 0.5rem 3rem;
 
-  &:not(:last-child) {
-    border-bottom: 1px solid $border-color;
+  & + & {
+    border-top: 1px solid $border-color;
   }
 
   @include media(sm) {
