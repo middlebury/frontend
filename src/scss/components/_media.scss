@@ -9,9 +9,7 @@
 }
 
 .media__caption {
-  font-family: $font-family-sans-serif;
-  font-size: 14px;
-  color: $text-gray;
+  font-size: $caption-font-size;
   padding-top: 0.5rem;
   padding-right: 1rem;
   padding-left: 1rem;
