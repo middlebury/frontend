@@ -48,25 +48,25 @@ site_nav:
             - text: International Education Management
               url: /institute/academics/degree-programs/international-education-management
             - text: International Environmental Policy
-              url: /institute/academics/degree-programs/international-environmental-policy              
+              url: /institute/academics/degree-programs/international-environmental-policy
             - text: International Policy and Development
-              url: /institute/academics/degree-programs/international-policy-development        
+              url: /institute/academics/degree-programs/international-policy-development
             - text: International Trade and Economic Diplomacy
               url: /institute/academics/degree-programs/international-trade-economic-diplomacy
             - text: Nonproliferation and Terrorism Studies
-              url: /institute/academics/degree-programs/nonproliferation-terrorism-studies           
+              url: /institute/academics/degree-programs/nonproliferation-terrorism-studies
             - text: Language Education
-              url: /institute/academics/degree-programs/language-education 
+              url: /institute/academics/degree-programs/language-education
             - text: Translation; Translation and Interpretation; Conference Interpretation
               url: /institute/academics/degree-programs/translation-interpretation
             - text: Translation and Localization Management
               url: /institute/academics/degree-programs/translation-localization-management
             - text: Master of Public Administration
-              url: /institute/academics/degree-programs/public-administration    
+              url: /institute/academics/degree-programs/public-administration
             - text: Joint MPA/MA in International Education Management
               url: /institute/academics/degree-programs/joint-mpa-iem/overview
             - text: Joint BA/MA Degrees
-              url: /institute/academics/degree-programs/joint-bama 
+              url: /institute/academics/degree-programs/joint-bama
         - text: Additional Programs
           url: /institute/academics/additional-programs
           items:
@@ -182,8 +182,6 @@ footer_nav:
         url: /institute/faculty-staff
       - text: Employers
         url: /institute/advancing-your-career/employers
-  - title: 
-    items:
       - text: Media
         url: /institute/offices-services/communications
       - text: Partners
@@ -197,25 +195,23 @@ footer_nav:
       - text: Emergency
         url: /institute/offices-services/security
       - text: Academic Resources
-        url: /institute/academics/academic-resources   
+        url: /institute/academics/academic-resources
       - text: Campus Map
         url: http://www.myatlascms.com/map/index.php?id=972
       - text: Directory
-        url: https://directory.miis.edu       
+        url: https://directory.miis.edu
       - text: Events Calendar
         url: /institute/events
       - text: Library
-        url: /institute/academics/library       
+        url: /institute/academics/library
       - text: Employment
         url: https://middlebury.peopleadmin.com
-  - title:
-    items:            
       - text: Offices and Services
         url: /institute/offices-services
       - text: BannerWeb
-        url: https://ssb-prod.ec.middlebury.edu/PNTR/twbkwbis.P_WWWLogin?        
+        url: https://ssb-prod.ec.middlebury.edu/PNTR/twbkwbis.P_WWWLogin?
       - text: EthicsPoint
-        url: https://secure.ethicspoint.com/domain/media/en/gui/28296/index.html      
+        url: https://secure.ethicspoint.com/domain/media/en/gui/28296/index.html
       - text: WebMail
         url: https://mail.middlebury.edu/owa/auth/logon.aspx
       - text: Zoom Web Conferencing

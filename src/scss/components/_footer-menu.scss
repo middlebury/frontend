@@ -15,10 +15,10 @@
   margin-bottom: 20px;
 }
 
-.footer-menu__nav {
-}
-
 .footer-menu__list {
+  @include media(md) {
+    columns: 2;
+  }
 }
 
 .footer-menu__item {
