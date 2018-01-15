@@ -1,13 +1,7 @@
 .lead {
-  font-size: 20px;
-  line-height: 28px;
-  margin-bottom: 2rem;
-  color: $black;
-
-  @include media(md) {
-    font-size: 22px;
-    line-height: 32px;
-  }
+  font-size: $lead-font-size;
+  line-height: $lead-line-height;
+  margin-bottom: $lead-margin-bottom;
 
   a {
     text-decoration: underline;
