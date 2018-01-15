@@ -1,10 +1,9 @@
 .video {
-  margin-bottom: 60px;
   position: relative;
+  margin-bottom: 2.5rem;
 }
 
 .video__content {
-  margin-bottom: 20px;
   position: relative;
 
   .video.has-video & {
@@ -30,11 +29,32 @@
   left: 0;
 }
 
-.video__title {
-  font-size: 28px;
-  margin-bottom: 20px;
-  font-weight: $font-weight-medium;
+.video__body {
+  padding: 1rem;
+  border: $border-width solid $border-color;
 }
 
-.video__blurb {
+.video__title {
+  font-size: $h3-font-size;
+  margin-bottom: 0.5rem;
+}
+
+.video__text {
+}
+
+.video__transcript-button {
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.video__transcript {
+  margin-top: 1rem;
+
+  &.has-toggler {
+    display: none;
+  }
+
+  &.is-toggled {
+    display: block;
+  }
 }
