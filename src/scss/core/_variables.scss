@@ -104,8 +104,11 @@ $link-decoration: none;
 $link-hover-color: $brand-primary;
 $link-hover-decoration: underline;
 
-// Paragraphs
-$paragraph-margin-bottom: 0;
+
+// Paragraphs (in typography)
+$paragraph-font-size: 18px;
+$paragraph-line-height: 30px;
+$paragraph-margin-bottom: 1.5rem;
 
 // Shared buttons and forms styles
 $input-btn-padding-y: 0.75rem;
