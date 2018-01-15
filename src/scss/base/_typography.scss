@@ -99,74 +99,44 @@
     }
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: $font-family-sans-serif;
-    font-weight: $font-weight-semibold;
-  }
-
   h1 {
-    font-size: 20px;
-    line-height: 24px;
-    margin-top: 50px;
-    margin-bottom: 20px;
-
-    @include media(md) {
-      font-size: 30px;
-      line-height: 38px;
-    }
+    font-size: $h1-font-size;
+    margin-top: 4.5rem;
+    margin-bottom: 2.5rem;
   }
 
   h2 {
-    font-size: 22px;
-    line-height: 26px;
-    margin-top: 50px;
-    margin-bottom: 20px;
-
-    @include media(md) {
-      font-size: 26px;
-      line-height: 30px;
-    }
+    font-size: $h2-font-size;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
   }
 
   h3 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-
-    @include media(md) {
-      font-size: 20px;
-      line-height: 28px;
-    }
+    font-size: $h3-font-size;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
   }
 
   h4 {
-    font-size: 16px;
-    font-weight: $font-weight-medium;
-    line-height: 22px;
-    margin-top: 34px;
-    margin-bottom: 24px;
-
-    @include media(md) {
-      font-size: 18px;
-      line-height: 22px;
-    }
+    font-size: $h4-font-size;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
   }
 
   h5 {
-    font-size: 14px;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    font-size: $h5-font-size;
+    font-family: $font-family-sans-serif;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
   }
 
   h6 {
-    font-size: 12px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    font-size: $h6-font-size;
+    font-family: $font-family-sans-serif;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: $font-weight-light;
   }
 }
