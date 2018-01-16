@@ -4,14 +4,14 @@
 
 .list__item {
   &:not(:last-of-type) {
-    margin-bottom: 10px;
+    margin-bottom: $list-item-margin-bottom;
 
     .list--md & {
-      margin-bottom: 30px;
+      margin-bottom: $list-item-margin-bottom-md;
     }
 
     .list--lg & {
-      margin-bottom: 60px;
+      margin-bottom: $list-item-margin-bottom-lg;
     }
   }
 }
@@ -20,14 +20,14 @@
   .list__item {
     &:not(:last-of-type) {
       border-bottom: 1px solid $border-color;
-      padding-bottom: 30px;
+      padding-bottom: $list-item-margin-bottom-md;
     }
   }
 
   &.list--lg {
     .list__item {
       &:not(:last-of-type) {
-        padding-bottom: 60px;
+        padding-bottom: $list-item-margin-bottom-lg;
       }
     }
   }

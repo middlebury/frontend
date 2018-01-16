@@ -32,16 +32,16 @@
 
 {% block layout_content %}
 
-  <div class="typography">
-    <p>Currently we have 160 full-time, adjunct, part-time, and visiting faculty members. They are a diverse group. Many of our faculty are from countries outside the United States and all have lived abroad. They bring interdisciplinary focus and international business experience as well as research interests. They also bring a genuine, demonstrable commitment to the success of our students. Dedicated to working with and guiding students, they become mentors, advisors, and friends.</p>
-  </div>
+  <article class="profile-listing">
 
-  <ol class="list list--lg mb-6">
+    <div class="typography">
+      <p>Currently we have 160 full-time, adjunct, part-time, and visiting faculty members. They are a diverse group. Many of our faculty are from countries outside the United States and all have lived abroad. They bring interdisciplinary focus and international business experience as well as research interests. They also bring a genuine, demonstrable commitment to the success of our students. Dedicated to working with and guiding students, they become mentors, advisors, and friends.</p>
+    </div>
+
     {% for i in 0..3 %}
-      <li class="list__item">
-        {% include 'partials/profile-teaser.twig' %}
-      </li>
+      {% include 'partials/profile-teaser.twig' %}
     {% endfor %}
-  </ol>
+
+  </article>
 
 {% endblock %}
