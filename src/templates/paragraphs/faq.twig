@@ -38,11 +38,10 @@
   ]
 %}
 
-{% embed 'partials/section.twig' with { title: 'Frequently Asked Questions' } %}
-  {% block content %}
-    {% include 'partials/accordion.twig' with {
-      items: faq_items,
-      modifier: 'faq'
-    } %}
-  {% endblock %}
-{% endembed %}
+<div class="faq">
+  <h3 class="faq__title">Frequently Asked Questions</h3>
+  {% include 'partials/accordion.twig' with {
+    items: faq_items,
+    modifier: 'faq'
+  } %}
+</div>
