@@ -18,6 +18,10 @@
     margin-top: 0;
   }
 
+  // TODO: need to apply bottom margin to .typography if its in list of components or wrap it with a "text" component
+  > :last-child {
+    margin-bottom: 0;
+  }
 
   p {
     font-size: $paragraph-font-size;
