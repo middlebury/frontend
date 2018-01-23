@@ -2,7 +2,12 @@
   margin-bottom: $component-margin-bottom;
 }
 
-.schedule__header {
+.schedule__title {
+  @include section-title();
+}
+
+// schedule-header
+.schedule-header {
   background-color: $lighter-blue;
   padding: 0.5rem;
 
@@ -12,22 +17,23 @@
   }
 }
 
-.schedule__day {
-  font-size: 20px;
-  font-weight: $font-weight-semibold;
-  font-family: $font-family-base;
+.schedule-header__title {
+  font-size: $h3-font-size;
 
   @include media(sm) {
     width: 30%;
   }
 }
 
-.schedule__description {
-  color: $black;
+.schedule-header__text {
 }
 
-.schedule__item {
-  padding: 1rem 0.5rem 3rem;
+// schedule-item
+.schedule-item {
+  padding-top: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 1.5rem;
 
   & + & {
     border-top: 1px solid $border-color;
@@ -38,7 +44,7 @@
   }
 }
 
-.schedule__details {
+.schedule-item__details {
   display: inline-block;
   margin-bottom: 0.5rem;
 
@@ -48,36 +54,32 @@
   }
 }
 
-.schedule__time {
+.schedule-item__time {
   display: block;
   margin-bottom: 0.5rem;
+  font-size: $paragraph-font-size;
 }
 
-.schedule__local {
-  font-size: 14px;
+.schedule-item__local {
+  font-size: $paragraph-font-size;
 }
 
-.schedule__body {
+.schedule-item__body {
   @include media(sm) {
     width: 70%;
   }
 }
 
-.schedule__title {
+.schedule-item__title {
   font-size: 20px;
-  font-weight: $font-weight-semibold;
-  font-family: $font-family-base;
   margin-bottom: 0.5rem;
 }
 
-.schedule__name {
+.schedule-item__name {
   font-size: 18px;
-  font-family: $font-family-serif;
-  font-weight: $font-weight-normal;
-  color: $black;
 }
 
-.schedule__job {
-  margin-bottom: 1rem;
-  font-size: 16px;
+.schedule-item__job {
+  font-size: 18px;
+  margin-bottom: 1.5rem;
 }
