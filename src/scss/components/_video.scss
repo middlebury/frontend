@@ -47,6 +47,23 @@
   display: inline-block;
 }
 
+.video__transcript-icon {
+  // display: none;
+}
+
+.video__transcript-icon--close {
+  display: none;
+  .video__transcript-button.is-toggled & {
+    display: inline-block;
+  }
+}
+
+.video__transcript-icon--open {
+  .video__transcript-button.is-toggled & {
+    display: none;
+  }
+}
+
 .video__transcript {
   margin-top: 1rem;
 
