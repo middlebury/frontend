@@ -163,17 +163,7 @@
     caption: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
   } %}
 
-  {#G2 two column text. May change later to a component name like two-col-text #}
-  <div class="row row--dividers mb-6">
-    <div class="col-md-6 typography">
-      <h2>Some headline</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe facilis cum doloribus similique dolores doloremque voluptate hic iste quisquam necessitatibus iure quos illo porro voluptates distinctio, obcaecati rem, sapiente labore.</p>
-    </div>
-    <div class="col-md-6 typography">
-      <h2>Some headline</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe facilis cum doloribus similique dolores doloremque voluptate hic iste quisquam necessitatibus iure quos illo porro voluptates distinctio, obcaecati rem, sapiente labore.</p>
-    </div>
-  </div>
+  {% include 'paragraphs/two-col-text.twig' %}
 
   {% include 'paragraphs/video.twig' with { transcript: true } %}
 
