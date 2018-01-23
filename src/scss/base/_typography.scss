@@ -80,7 +80,7 @@
   }
 
   dl {
-    margin-bottom: 50px;
+    margin-bottom: 1.5rem;
 
     @include media(md) {
       display: flex;
@@ -90,11 +90,15 @@
 
   dt {
     font-weight: $font-weight-semibold;
-    padding-top: 20px;
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     @include media(md) {
-      padding-bottom: 20px;
       flex: 0 0 50%;
+      padding-bottom: 1rem;
 
       &:not(:last-of-type) {
         border-bottom: 1px solid $border-color;
@@ -103,10 +107,13 @@
   }
 
   dd {
-    color: $gray;
-    font-family: $font-family-serif;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
 
     &:not(:last-of-type) {
       border-bottom: 1px solid $border-color;
@@ -114,7 +121,6 @@
 
     @include media(md) {
       flex: 0 0 50%;
-      padding-top: 20px;
     }
   }
 
