@@ -22,3 +22,12 @@
   bottom: $bottom;
   left: $left;
 }
+
+@mixin section-title() {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: $font-weight-semibold;
+  font-family: $font-family-sans-serif;
+  font-size: 14px;
+  margin-bottom: $section-title-margin-bottom;
+}
