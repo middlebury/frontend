@@ -607,11 +607,15 @@ image_sizes:
     - 1040x585
   top_level:
     srcset:
-    - 400x225
-    - 640x360
-    - 960x540
-    - 1280x720
-    - 1440x810
+    - 400x160
+    - 640x256
+    - 960x384
+    - 1280x512
+    - 1440x576
+  top_level_teaser:
+    srcset:
+    - 160x64
+    - 240x96
   grid_nav:
     srcset:
     - 128x72
