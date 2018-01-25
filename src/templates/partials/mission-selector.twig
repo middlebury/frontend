@@ -1,19 +1,13 @@
 <div class="section">
   <div class="container">
     <div class="mission-selector{% if overlap %} mission-selector--overlap{% endif %}">
-      <form action="" class="mission-selector__form">
-        <div class="mission-selector__form-group">
-          <label class="mission-selector__label" for="midd-mission-selector">What&rsquo;s Your Mission?</label>
-          <select name="mission" class="mission-selector__select js-mission-selector" id="midd-mission-selector">
-            {% for mission in missions %}
-              <option value="{{mission.text}}">I want to {{mission.text}}</option>
-            {% endfor %}
-          </select>
-        </div>
-        <div class="mission-selector__actions">
-          <input type="submit" class="mission-selector__button button button--secondary" value="Show Me How">
-        </div>
-      </form>
+      <div class="mission-selector__content">
+        <h3 class="mission-selector__title">What&rsquo;s Your Mission?</h3>
+        <a href="#mission-modal" data-toggle-modal="#mission-modal" class="mission-selector__select">I want to {{missions[0].text}}</a>
+      </div>
+      <div class="mission-selector__actions">
+        <a href="{{missions[0].url}}" class="mission-selector__button button button--secondary">Show Me How</a>
+      </div>
     </div>
   </div>
 </div>

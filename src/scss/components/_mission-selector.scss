@@ -1,9 +1,10 @@
 .mission-selector {
   background-color: $brand-secondary;
-  padding: 50px 30px;
+  padding: 2rem;
 
   @include media(md) {
-    padding: 50px;
+    padding: 2.5rem 3.5rem;
+    display: flex;
   }
 }
 
@@ -17,13 +18,7 @@
   }
 }
 
-.mission-selector__form {
-  @include media(md) {
-    display: flex;
-  }
-}
-
-.mission-selector__form-group {
+.mission-selector__content {
   @include media(md) {
     flex: 0 1 auto;
     padding-right: 50px;
@@ -38,35 +33,29 @@
   }
 }
 
-.mission-selector__label {
+.mission-selector__title {
   font-family: $font-family-serif;
-  font-size: 14px;
+  font-size: 18px;
   font-style: italic;
-  display: block;
-  // margin-bottom: 20px;
-
-  @include media(md) {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
 }
 
 .mission-selector__select {
-  text-align: left;
+  display: inline-block;
   color: $brand-primary;
   font-family: $font-family-serif;
-  font-size: 22px;
-  background-color: transparent;
-  white-space: normal;
-  width: 100%;
-  height: auto;
-  border: 0;
-  appearance: none;
+  font-size: 26px;
+  line-height: 32px;
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAYCAYAAADKx8xXAAABeUlEQVQ4je3UMWtTURQA4C+vU7o0P+ENXRwEUZQIBVOw5YJ1ky4iBOpidb/Nli19m1PdhW5Zii2EtlA6ZOvm4JLh/YR0Ee3k0BtMw0vjD/DAhcs557tc3j28WrfbVRXFoNyHGPK9qnp2D4qIkwMWwmJQ7iX0La2YcvNhaujhBG/SOkFvFmdT6ENCF9iOIb+JIb/Bdsr1Us9fmBIHuMRWDPnPSUPab6XawQTX6s32W3zFFTZjyK+rPkYxKFdwiqd4V6s327/wHS/noRl8jocZ1rGxCKVrX2MD67V5A7AoKgfgP7yNWr3Zfo4fMeTjfwHFoGzgQeZ2Ds/S4y5CKzjDRYYdPMHpfXhq5B5jJ4shP8RHPMNRMSiXK9AyjlLPpxjywwxiyL9gFy9wPI3T/jjVdlOvpVarBdZWG1fD0fg33uPRcDTuD0fjJfSxiU4M+efJgXeeI4Z8Hx28SqCf9p1UUwmncIHXaRWz6M5Vp2NttXE+HI3rGM77Pf4BdkyRRKtw6yYAAAAASUVORK5CYII=');
   background-repeat: no-repeat;
-  background-position: 100% 50%;
-  margin-bottom: 20px;
-  padding: 15px 40px 15px 0;
+  background-position: right center;
+  margin-bottom: 1rem;
+  padding-right: 2rem;
+  padding-top: $btn-padding-y;
+  padding-bottom: $btn-padding-y;
+
+  &:hover {
+    text-decoration: none;
+  }
 
   @include media(md) {
     font-size: 26px;
@@ -75,5 +64,4 @@
 }
 
 .mission-selector__button {
-
 }

@@ -1,3 +1,5 @@
+import forEach from './utils/forEach';
+
 const ESC_KEY = 27;
 
 class Modal {
@@ -65,6 +67,21 @@ class Modal {
     document.body.classList.remove(this.activeBodyClass);
     this.modal.classList.remove(this.activeModalClass);
   }
+}
+
+const modalButtons = document.querySelectorAll('[data-toggle-modal]');
+
+if (modalButtons) {
+  forEach(modalButtons, elem => {
+    const modalTarget = elem.getAttribute('data-toggle-modal');
+
+    const modal = new Modal(modalTarget);
+
+    elem.addEventListener('click', event => {
+      event.preventDefault();
+      modal.open();
+    });
+  });
 }
 
 export default Modal;
