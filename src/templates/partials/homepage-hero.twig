@@ -1,19 +1,15 @@
 <article class="homepage-hero">
   <figure class="homepage-hero__media">
-    <picture>
-      <source srcset="http://lorempixel.com/1040/780/city/" media="(min-width: 580px)">
-      <source srcset="http://lorempixel.com/1160/870/city/">
-      <img src="http://lorempixel.com/1160/870/city/" alt="">
-    </picture>
+    {% include 'partials/img.twig' with { name: 'homepage_hero' } %}
   </figure>
-  <section class="homepage-hero__content">
+  <section class="homepage-hero__content" aria-labelledby="midd-homepage-hero-title">
     <div class="homepage-hero__body">
-      <h1 class="homepage-hero__title">
+      <h1 class="homepage-hero__title" id="midd-homepage-hero-title">
         <a href="#" class="homepage-hero__link">Water Sanitation Research and Development, India</a>
       </h1>
       <p class="homepage-hero__text">Access to safe water and adequate sanitation services has proven to be one of the most efficient ways of improving human health.</p>
       <div class="homepage-hero__more-link">
-        <a href="#" class="button button--secondary">Read More</a>
+        <a href="#" class="button button--secondary">Read More<span class="sr-only"> of "Water Sanitation Research and Development, India"</span></a>
       </div>
     </div>
   </section>

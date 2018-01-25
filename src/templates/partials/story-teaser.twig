@@ -3,17 +3,9 @@
     <a href="{{url}}">
       <figure class="media media-image view-mode-teaser">
         {% if featured %}
-          <picture>
-            <source srcset="http://placehold.it/768x432" media="(min-width: 580px)">
-            <source srcset="http://placehold.it/640x360">
-            <img src="http://placehold.it/768x432" srcset="" alt="">
-          </picture>
+          {% include 'partials/img.twig' with { name: 'featured' } %}
         {% else %}
-          <picture>
-            <source srcset="http://placehold.it/160x120" media="(min-width: 580px)">
-            <source srcset="http://placehold.it/100x75">
-            <img src="http://placehold.it/160x120" srcset="" alt="">
-          </picture>
+          {% include 'partials/img.twig' with { name: 'teaser' } %}
         {% endif %}
       </figure>
     </a>

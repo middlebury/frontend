@@ -2983,7 +2983,7 @@ gulp-prettify@^0.5.0:
     js-beautify "^1.6.3"
     through2 "^2.0.1"
 
-gulp-rename@^1.2.0:
+gulp-rename@^1.2.0, gulp-rename@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/gulp-rename/-/gulp-rename-1.2.2.tgz#3ad4428763f05e2764dec1c67d868db275687817"
 

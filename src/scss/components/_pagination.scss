@@ -14,9 +14,7 @@
   // display: none;
 
   &:first-of-type,
-  &:last-of-type,
-  // &:nth-of-type(n+3)
-  {
+  &:last-of-type {
     // display: block;
   }
 }
@@ -41,7 +39,7 @@
   }
 
   &.pagination__link--active {
-    background-color: $middlebury-blue;
+    background-color: $brand-primary;
     color: $white;
   }
 }

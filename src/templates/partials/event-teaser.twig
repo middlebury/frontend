@@ -2,11 +2,7 @@
   <div class="event-teaser__media">
     <a href="{{url}}">
       <figure class="media media-image view-mode-teaser">
-        <picture>
-          <source srcset="http://placehold.it/160x120" media="(min-width: 580px)">
-          <source srcset="http://placehold.it/100x75">
-          <img src="http://placehold.it/160x120" srcset="" alt="">
-        </picture>
+        {% include 'partials/img.twig' with { name: 'teaser' } %}
       </figure>
     </a>
   </div>

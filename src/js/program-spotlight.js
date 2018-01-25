@@ -7,6 +7,8 @@ const mq = `screen and (min-width: ${config.breakpoints.sm}px)`;
 
 let swiperInstance;
 
+const swiperWrapper = document.querySelector('.swiper-wrapper');
+
 const swiperConfig = {
   buttonDisabledClass: 'button--disabled',
   slidesPerView: 3,
@@ -24,6 +26,10 @@ const swiperConfig = {
 };
 
 function match() {
+  for (let i = swiperWrapper.children.length; i >= 0; i--) {
+    swiperWrapper.appendChild(swiperWrapper.children[(Math.random() * i) | 0]);
+  }
+
   const programSwiperElem = document.querySelector('.js-program-spotlight');
   swiperInstance = new Swiper(programSwiperElem, swiperConfig);
 }
@@ -37,7 +43,9 @@ function unmatch() {
   }
 }
 
-enquire.register(mq, {
-  match,
-  unmatch
-});
+if (swiperWrapper) {
+  enquire.register(mq, {
+    match,
+    unmatch
+  });
+}

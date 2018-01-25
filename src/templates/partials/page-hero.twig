@@ -7,12 +7,7 @@
         <div class="row">
           <div class="page-hero__media">
             <figure>
-              <picture>
-                <source srcset="http://placehold.it/960x540" media="(min-width: 641px)">
-                <source srcset="http://placehold.it/640x360" media="(min-width: 401px)">
-                <source srcset="http://placehold.it/400x225">
-                <img src="http://placehold.it/960x540" alt="">
-              </picture>
+              {% include 'partials/img.twig' with { name: 'page_hero' } %}
               <figcaption class="media__caption">Some caption for the page hero image</figcaption>
             </figure>
           </div>

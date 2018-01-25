@@ -3,10 +3,10 @@
     <div class="mission-selector{% if overlap %} mission-selector--overlap{% endif %}">
       <form action="" class="mission-selector__form">
         <div class="mission-selector__form-group">
-          <label class="mission-selector__label">What&rsquo;s Your Mission?</label>
-          <select name="mission" class="mission-selector__select js-mission-selector">
+          <label class="mission-selector__label" for="midd-mission-selector">What&rsquo;s Your Mission?</label>
+          <select name="mission" class="mission-selector__select js-mission-selector" id="midd-mission-selector">
             {% for mission in missions %}
-              <option value="{{mission.text}}">{{mission.text}}</option>
+              <option value="{{mission.text}}">I want to {{mission.text}}</option>
             {% endfor %}
           </select>
         </div>

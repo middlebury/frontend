@@ -11,8 +11,8 @@
 
 .social-links__link {
   display: inline-block;
-  color: $white;
-  transition: .2s;
+  color: $green-light;
+  transition: 0.2s;
 
   &:hover,
   &:focus {
@@ -20,17 +20,10 @@
       opacity: 0.5;
     }
 
-    svg {
-      fill: $middlebury-blue;
-    }
+    color: $brand-primary;
   }
 
-  svg {
-    fill: $bright-green;
-    transition: .2s;
-
-    .social-links--light & {
-      fill: $white;
-    }
+  .social-links--light & {
+    color: $white;
   }
 }

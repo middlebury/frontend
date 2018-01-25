@@ -16,15 +16,11 @@
 }
 
 .share__link {
-  svg {
-    fill: $bright-green;
-    transition: .2s;
-  }
+  color: $green-light;
+  transition: 0.2s;
 
   &:hover,
   &:focus {
-    svg {
-      fill: $middlebury-blue;
-    }
+    color: $brand-primary;
   }
 }

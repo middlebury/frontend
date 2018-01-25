@@ -31,10 +31,8 @@
 
             <div class="event-detail__media">
               <figure>
-                <picture>
-                  <img src="//placehold.it/800x500" alt="">
-                </picture>
-                <figcaption>
+                {% include 'partials/img.twig' with { name: 'featured' } %}
+                <figcaption class="media__caption">
                   This is a caption for this image.
                   <span class="media__credit">Credit</span>
                 </figcaption>

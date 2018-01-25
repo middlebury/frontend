@@ -10,7 +10,7 @@
 
 .panel--primary {
   @include media-breakpoint-down(sm) {
-    background-color: $middlebury-blue;
+    background-color: $brand-primary;
   }
 }
 
@@ -22,7 +22,7 @@
 
 .panel--tertiary {
   @include media-breakpoint-down(sm) {
-    background-color: $dark-green;
+    background-color: $green-dark;
   }
 }
 
@@ -70,7 +70,7 @@
   letter-spacing: 0.04em;
   font-family: $font-family-sans-serif;
   line-height: 1;
-  font-weight: $font-weight-book;
+  font-weight: $font-weight-normal;
   margin-bottom: 10px;
 
   @include media(sm) {

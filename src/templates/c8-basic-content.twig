@@ -55,7 +55,13 @@
 
 {% block layout_content %}
 
-  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur commodi, excepturi necessitatibus, quibusdam beatae libero est modi aliquam aspernatur provident quod voluptate dolor non hic, eveniet dolorem assumenda tenetur error.</p>
+  <p class="lead">Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing</a> elit. Pariatur commodi, excepturi necessitatibus, quibusdam beatae libero est modi aliquam aspernatur provident quod voluptate dolor non hic, eveniet dolorem assumenda tenetur error.</p>
+
+  {% include 'paragraphs/schedule.twig' %}
+
+  <figure class="mb-4">
+    {% include 'partials/img.twig' with { name: 'featured' } %}
+  </figure>
 
   {# G1 text paragraph #}
   <div class="typography">
@@ -124,13 +130,15 @@
 
   </div>
 
+  {% include 'paragraphs/media-object.twig' %}
+
+  {% include 'paragraphs/media-object.twig' with { right: true } %}
+
+  {% include 'paragraphs/faq.twig' %}
+
   {# G3 image paragraph #}
-  <figure class="media media--image">
-    <picture>
-      <img src="//placehold.it/1280x720" alt="">
-    </picture>
-    <figcaption class="media__caption">Caption text here</figcaption>
-  </figure>
+
+  {% include 'paragraphs/image.twig' %}
 
   {#G2 two column text. May change later to a component name like two-col-text #}
   <div class="row row--dividers mb-6">

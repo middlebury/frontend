@@ -1,10 +1,6 @@
 <aside class="page-callout">
   {% if title %}
-  <div class="page-callout__content">
-    <span class="page-callout__title">{{title}}</span>
-  </div>
+    <span class="page-callout__text">{{title}}</span>
   {% endif %}
-  <div class="page-callout__action">
-    <a href="{{link_url}}" class="page-callout__button button button--primary button--block">{{link_text}}</a>
-  </div>
+  <a href="{{link_url}}" class="page-callout__button button button--primary">{{link_text}}</a>
 </aside>

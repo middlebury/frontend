@@ -6,20 +6,22 @@
 
 {% block page %}
 
-  <figure class="page-top">
-    <picture>
-      <source srcset="//placehold.it/1440x570 1x, //placehold.it/2880x1140 2x" media="(min-width: 580px)">
-      <source srcset="//placehold.it/720x285 1x, //placehold.it/2880x1140 2x">
-      <img src="//placehold.it/2880x1140" alt="">
-    </picture>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-push-1 col-md-7">
-          <figcaption class="page-top__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum a nulla magni molestias? Natus itaque adipisci molestiae mollitia voluptatum fugit illum hic reiciendis, omnis fugiat sapiente vitae, quia nobis eaque!</figcaption>
-        </div>
+  <div class="mb-6 text-right">
+    <figure>
+      {% include 'partials/img.twig' with { name: 'top_level' } %}
+      <figcaption class="media__caption">some caption for the image</figcaption>
+    </figure>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-push-1 col-md-9">
+        <p class="lead mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum a nulla magni molestias? Natus itaque adipisci molestiae mollitia voluptatum fugit illum hic reiciendis, omnis fugiat sapiente vitae, quia nobis eaque!</p>
       </div>
     </div>
-  </figure>
+  </div>
+
+  {% include 'partials/mission-selector.twig' %}
 
   <div class="container">
     <div class="row">
@@ -28,8 +30,6 @@
       </div>
     </div>
   </div>
-
-  {% include 'partials/mission-selector.twig' %}
 
   {% include 'partials/callout-group.twig' %}
 

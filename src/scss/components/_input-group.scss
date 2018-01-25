@@ -1,12 +1,16 @@
 .input-group {
   display: flex;
   width: 100%;
+}
 
-  &__field {
-    flex: 1;
-  }
+.input-group__field {
+  flex: 1;
 
-  &__button {
-    flex: 0 1 auto;
+  .form__control {
+    height: 100%;
   }
+}
+
+.input-group__button {
+  flex: 0 1 auto;
 }

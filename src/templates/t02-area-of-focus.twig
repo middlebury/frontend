@@ -44,7 +44,8 @@
   <div class="container">
     {% include 'paragraphs/related-basic-content.twig' with {
       count: 3,
-      is_last_lg: true
+      is_last_lg: true,
+      image_sizes: image_sizes
     } %}
   </div>
 
@@ -60,7 +61,9 @@
   </div>
 
   <div class="container">
-    {% include 'paragraphs/related-events.twig' %}
+    {% include 'paragraphs/related-events.twig' with {
+      image_sizes: image_sizes
+    } %}
   </div>
 
   {% include 'partials/panel.twig' with {

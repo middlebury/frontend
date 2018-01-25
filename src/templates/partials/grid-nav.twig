@@ -8,12 +8,7 @@
         <div class="grid-nav__image">
           <figure>
             <a href="">
-              <picture>
-                <source srcset="//placehold.it/320x180" media="(min-width: 960px)" />
-                <source srcset="//placehold.it/160x90" media="(min-width: 580px)" />
-                <source srcset="//placehold.it/80x45" />
-                <img src="//placehold.it/256x144" alt="" />
-              </picture>
+              {% include 'partials/img.twig' with { name: 'grid_nav' } %}
             </a>
           </figure>
         </div>

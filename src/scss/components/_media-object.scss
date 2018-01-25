@@ -1,11 +1,22 @@
 .media-object {
-
+  display: flex;
+  margin-bottom: 2rem;
 }
 
-.media-object__media {
-
+.media-object__image {
+  width: 25%;
+  padding-right: 1rem;
+  min-width: 100px;
 }
 
-.media-object__content {
+.media-object__body {
+  width: 75%;
+}
 
+.media-object--right {
+  .media-object__image {
+    order: 2;
+    padding-right: 0;
+    padding-left: 1rem;
+  }
 }

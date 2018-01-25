@@ -12,11 +12,11 @@
   @include make-col-ready();
 
   &:not(:last-of-type) {
-    border-bottom: 1px solid $line-gray;
+    border-bottom: 1px solid $border-color;
 
     @include media(lg) {
       border-bottom: 0;
-      border-right: 1px solid $line-gray;
+      border-right: 1px solid $border-color;
     }
   }
 

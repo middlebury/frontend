@@ -3,7 +3,7 @@
   margin-bottom: 60px;
 
   &:not(:last-of-type) {
-    border-bottom: 1px solid $line-gray;
+    border-bottom: 1px solid $border-color;
     padding-bottom: 60px;
   }
 }

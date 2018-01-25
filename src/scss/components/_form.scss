@@ -7,12 +7,12 @@
 
 .form__group--has-error {
   .form__control {
-    border-color: #e60000;
+    border-color: $danger;
   }
 }
 
 .form__error-message {
-  color: #e60000;
+  color: $danger;
   font-size: 14px;
 }
 
@@ -25,25 +25,35 @@
 .form__control {
   display: block;
   appearance: none;
-  border: 1px solid $line-gray;
   width: 100%;
-  font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  background-color: $warm-gray;
-  color: $black;
-  padding: 20px;
-  border-radius: 0;
+  border: $input-border-width solid $input-border-color;
+  font-family: $font-family-base;
+  font-size: $input-font-size;
+  line-height: $input-line-height;
+  background-color: $input-bg;
+  color: $input-color;
+  padding: $input-padding-y $input-padding-x;
+  border-radius: $input-border-radius;
 
   &:focus {
-    background-color: $white;
+    background-color: $input-focus-bg;
   }
 }
 
+// sizes
+.form__control--sm {
+  padding: $input-padding-y-sm $input-padding-x-sm;
+}
+
+.form__control--lg {
+  padding: $input-padding-y-lg $input-padding-x-lg;
+}
+
+// custom elements
 select.form__control {
   background-color: $white;
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAICAYAAAAiJnXPAAAAtElEQVQYlXXOsUpCcRQH4M/LRcMXcAr+W+/gIiRmECERiNBruDf3HioO1RO4uBcUEQ66RYSIhFPQ1HKC66XOcjjn/D44lZRSE0Nc4cv/VccYNzmucYJ79PD9B6jFvYuDDH084hS3qJZAFXcBHjDIsIvFM84xQV4AU5zhKT7aZXHcooNXXGIUYIQLvAT4hEpKqfhKA3Mc4Q2HWKCFzW8os19rtLEKsIx5UwyVEbzjGLPoH+XADz8MIz9yNyrhAAAAAElFTkSuQmCC');
-  background-position: right 30px center;
+  background-position: right $input-padding-x center;
   background-repeat: no-repeat;
 
   &::-ms-expand {

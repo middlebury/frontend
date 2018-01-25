@@ -3,8 +3,8 @@
 // .table,
 .typography table {
   width: 100%;
-  border-top: 5px solid $line-gray;
-  margin-bottom: 1rem;
+  border-top: 5px solid $border-color;
+  margin-bottom: 2rem;
 
   @include media(md) {
     border-top: 0;
@@ -16,7 +16,7 @@
 
   th {
     display: none;
-    border-bottom: 5px solid $line-gray;
+    border-bottom: 5px solid $border-color;
     font-size: 14px;
     font-weight: $font-weight-semibold;
     text-align: left;
@@ -37,11 +37,11 @@
     &:not(:last-of-type) {
       td {
         &:last-of-type {
-          border-bottom: 1px solid $line-gray;
+          border-bottom: 1px solid $border-color;
         }
 
         @include media(md) {
-          border-bottom: 1px solid $line-gray;
+          border-bottom: 1px solid $border-color;
         }
       }
     }
