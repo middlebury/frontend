@@ -1,6 +1,6 @@
 <div class="chart">
   <h3 class="chart__title">Map example</h3>
-  {% include 'partials/world.twig' %}
+  {% include 'partials/world.twig' with { id: id } %}
 
   <p>
     {% for item in items %}
@@ -10,7 +10,7 @@
 
   <style>
     {% for item in items %}
-      #world #{{item.abbr|upper}}{% if not loop.last %},{% endif %}
+      #midd-world-{{id}} #{{item.abbr|upper}}{% if not loop.last %},{% endif %}
     {% endfor %}
       {
         fill: #0d395f;
