@@ -25,15 +25,9 @@
   </div>
 
   <div class="container">
-    {% embed 'partials/section.twig' with {
-      title: 'Quick Links and Resources'
-    } %}
-      {% block content %}
-        {% for section in quicklinks %}
-          {% include 'partials/callout-links.twig' with section %}
-        {% endfor %}
-      {% endblock %}
-    {% endembed %}
+    {% for section in quicklinks %}
+      {% include 'partials/callout-links.twig' with section %}
+    {% endfor %}
   </div>
 
   <div class="container">
