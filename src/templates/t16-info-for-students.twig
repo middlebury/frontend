@@ -9,33 +9,31 @@
 
 {% block page %}
 
-  {% embed 'partials/page-hero.twig' %}
-    {% block content %}
-      <h3>Course Selection required by September 13, 2017</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ratione exercitationem reiciendis sit quo recusandae, eos minus repellendus quisquam aut, ab expedita, ut possimus eius accusantium natus illum veniam.</p>
-    {% endblock %}
-  {% endembed %}
-
-  <div class="container">
-    {% include 'partials/callout-contacts.twig' %}
+  <div class="mb-6 text-right">
+    <figure>
+      {% include 'partials/img.twig' with { name: 'top_level' } %}
+      <figcaption class="media__caption">some caption for the image</figcaption>
+    </figure>
   </div>
 
   <div class="container">
-    {% include 'paragraphs/related-stories.twig' %}
-  </div>
+    <div class="row">
+      <div class="col-md-push-1 col-md-9">
 
-  <div class="container">
-    {% for section in quicklinks %}
-      {% include 'partials/callout-links.twig' with section %}
-    {% endfor %}
-  </div>
+        {% include 'partials/callout-contacts.twig' %}
 
-  <div class="container">
-    {% include 'paragraphs/related-events.twig' %}
-  </div>
+        {% include 'paragraphs/related-stories.twig' %}
 
-  <div class="container">
-    {% include 'paragraphs/related-basic-content.twig' %}
+        {% for section in quicklinks %}
+          {% include 'partials/callout-links.twig' with section %}
+        {% endfor %}
+
+        {% include 'paragraphs/related-events.twig' %}
+
+        {% include 'paragraphs/related-basic-content.twig' %}
+
+      </div>
+    </div>
   </div>
 
   {#TODO: PSD has pagination/load more button but do we want that?#}
