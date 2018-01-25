@@ -55,6 +55,7 @@
   },
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6",
+    "chart.js": "^2.7.1",
     "enquire.js": "^2.1.6",
     "intersection-observer": "^0.5.0",
     "normalize.css": "^5.0.0",
