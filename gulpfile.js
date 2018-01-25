@@ -216,6 +216,14 @@ gulp.task('replace:imageurls', () => {
     .pipe(gulp.dest('./dist/css'));
 });
 
+gulp.task('copy:deps', function () {
+  // NOTE: Chart.bundle.min.js includes Momentjs but so far we are not using time axis
+  // http://www.chartjs.org/docs/latest/getting-started/installation.html#bundled-build
+  gulp
+    .src(['./node_modules/chart.js/dist/Chart.min.js'])
+    .pipe(gulp.dest('./dist/js'));
+});
+
 gulp.task('deploy', ['replace:imageurls'], () => {
   const dest = args.themeDir || '';
   if (!args.themeDir) {
@@ -234,7 +242,8 @@ gulp.task('build', [
   'images',
   'styles',
   'scripts:lint',
-  'scripts'
+  'scripts',
+  'copy:deps'
 ]);
 
 gulp.task('default', ['build', 'watch', 'server']);
