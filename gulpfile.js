@@ -193,7 +193,9 @@ gulp.task('images', () => {
       imagemin([
         imagemin.jpegtran({progressive: true}),
         imagemin.optipng({optimizationLevel: 5}),
-        imagemin.svgo({plugins: [{removeDimensions: true}]})
+        imagemin.svgo({
+          plugins: [{removeDimensions: true}, {cleanupIDs: false}]
+        })
       ])
     )
     .pipe(gulp.dest(paths.images.dest))
