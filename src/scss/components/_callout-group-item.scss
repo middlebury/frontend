@@ -51,7 +51,7 @@
   // Can't use @extend within another mixin so we have to recreate a button
   @include media(lg) {
     border: none;
-    background-color: $bright-green;
+    background-color: $green-light;
     display: inline-block;
     font-family: $font-family-sans-serif;
     text-align: center;
@@ -66,7 +66,7 @@
     &:hover,
     &:focus {
       text-decoration: none;
-      background-color: $middlebury-blue;
+      background-color: $brand-primary;
       color: $white;
     }
   }

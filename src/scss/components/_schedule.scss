@@ -11,7 +11,7 @@
   }
 }
 
-.schedule__title {
+.schedule__day {
   font-size: 20px;
   font-weight: $font-weight-semibold;
   font-family: $font-family-base;
@@ -28,8 +28,8 @@
 .schedule__item {
   padding: 1rem 0.5rem 3rem;
 
-  &:not(:last-child) {
-    border-bottom: 1px solid $border-color;
+  & + & {
+    border-top: 1px solid $border-color;
   }
 
   @include media(sm) {
@@ -62,7 +62,7 @@
   }
 }
 
-.schedule__subtitle {
+.schedule__title {
   font-size: 20px;
   font-weight: $font-weight-semibold;
   font-family: $font-family-base;
@@ -72,6 +72,8 @@
 .schedule__name {
   font-size: 18px;
   font-family: $font-family-serif;
+  font-weight: $font-weight-normal;
+  color: $black;
 }
 
 .schedule__job {

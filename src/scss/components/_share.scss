@@ -16,11 +16,11 @@
 }
 
 .share__link {
-  color: $bright-green;
+  color: $green-light;
   transition: 0.2s;
 
   &:hover,
   &:focus {
-    color: $middlebury-blue;
+    color: $brand-primary;
   }
 }

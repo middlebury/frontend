@@ -10,7 +10,7 @@
         <a
           href="#accordion-content-{{id}}"
           class="accordion-item__link"
-          data-toggle-target=".js-accordion-item-{{id}}"
+          data-toggle-target=".js-accordion-content-{{id}}"
           aria-expanded="false"
           aria-controls="accordion-content-{{id}}">
 
@@ -26,7 +26,7 @@
         </a>
 
       </h4>
-      <div class="accordion-item__content js-accordion-item-{{id}}" id="accordion-content-{{id}}" role="tabpanel" aria-labelledby="#accordion-item-label-{{id}}">
+      <div class="accordion-item__content js-accordion-content-{{id}}" id="accordion-content-{{id}}" role="tabpanel" aria-labelledby="#accordion-item-label-{{id}}">
         <div class="typography">
           {{item.content}}
         </div>

@@ -2,17 +2,17 @@ site_title: Middlebury Institute of International Studies at Monterey
 
 site_nav:
   items:
-    - text: Institute Experience
-      url: /institute/institute-experience
+    - text: Institute Approach
+      url: /institute/institute-approach
       items:
         - text: Intercultural Competence
-          url: /institute/institute-experience/intercultural-competence
+          url: /institute/institute-approach/intercultural-competence
         - text: Learning in Language
-          url: /institute/institute-experience/learning-language
+          url: /institute/institute-approach/learning-in-language
         - text: Immersive Experience
-          url: /institute/institute-experience/immersive-experience
+          url: /institute/institute-approach/immersive-experience
         - text: About the Institute
-          url: /institute/institute-experience/about
+          url: /institute/institute-approach/about
     - text: Leadership and Impact
       url: /institute/leadership-impact
       items:
@@ -38,7 +38,7 @@ site_nav:
         - text: Global Management
           url: /institute/areas-of-focus/global-policy-management
     - text: Advancing Your Career
-      url: /institute/student-services/advising-career-services
+      url: /institute/advancing-your-career
     - text: Academics
       url: /institute/academics
       items:
@@ -50,14 +50,12 @@ site_nav:
             - text: International Environmental Policy
               url: /institute/academics/degree-programs/international-environmental-policy
             - text: International Policy and Development
-              url: /institute/academics/degree-programs/international-policy-development/
+              url: /institute/academics/degree-programs/international-policy-development
             - text: International Trade and Economic Diplomacy
               url: /institute/academics/degree-programs/international-trade-economic-diplomacy
             - text: Nonproliferation and Terrorism Studies
               url: /institute/academics/degree-programs/nonproliferation-terrorism-studies
-            - text: Teaching English to Speakers of Other Languages
-              url: /institute/academics/degree-programs/language-education
-            - text: Teaching Foreign Language
+            - text: Language Education
               url: /institute/academics/degree-programs/language-education
             - text: Translation; Translation and Interpretation; Conference Interpretation
               url: /institute/academics/degree-programs/translation-interpretation
@@ -66,20 +64,29 @@ site_nav:
             - text: Master of Public Administration
               url: /institute/academics/degree-programs/public-administration
             - text: Joint MPA/MA in International Education Management
-              url: /institute/academics/degree-programs/joint-mpa-iem-overview
+              url: /institute/academics/degree-programs/joint-mpa-iem/overview
             - text: Joint BA/MA Degrees
               url: /institute/academics/degree-programs/joint-bama
         - text: Additional Programs
           url: /institute/academics/additional-programs
+          items:
+            - text: Certificates and Specializations
+              url: /institute/academics/additional-programs/certificates
+            - text: Language Programs
+              url: /institute/academics/additional-programs/language
+            - text: Professional Development
+              url: /institute/academics/additional-programs/professional
         - text: Study Abroad
-          url: /institute/academics/study-abroad
+          url: /institute/academics/immersive-learning-study-abroad/
+        - text: Fellowships
+          url: /institute/academics/fellowships
         - text: University Partnerships
           url: /institute/academics/university-partnerships
         - text: Centers and Initiatives
           url: /institute/academics/centers-initiatives
           items:
             - text: Center for the Blue Economy
-              url: /institute/academics/centers-initiatives/blue-economy
+              url: /institute/academics/centers-initiatives/center-blue-economy
             - text: Center for Conflict Studies
               url: /institute/academics/centers-initiatives/conflict-studies
             - text: Graduate Initiative in Russian Studies
@@ -88,8 +95,8 @@ site_nav:
               url: /institute/academics/centers-initiatives/nonproliferation-studies
         - text: Academic Resources
           url: /institute/academics/academic-resources
-        - text: Library Resources
-          url: /institute/academics/library-resources
+        - text: Library
+          url: /institute/academics/library
         - text: Course Catalog
           url: /institute/academics/catalog
     - text: Admissions
@@ -103,9 +110,9 @@ site_nav:
           url: /institute/admissions/visit
         - text: Meet Our Students
           url: /institute/admissions/meet-students
-        - text: Events
-          url: /institute/admissions/events
-        - text: Veterans
+        - text: Events and Webinars
+          url: /institute/admissions/events-webinars
+        - text: For Veterans
           url: /institute/admissions/veterans
         - text: Application Instructions
           url: /institute/admissions/application-instructions
@@ -115,7 +122,7 @@ site_nav:
           url: /institute/admissions/tuition-fees
         - text: Scholarships and Fellowships
           url: /institute/admissions/scholarships
-        - text: Financial Aid
+        - text: Student Financial Services
           url: /institute/admissions/financial-aid
         - text: Admissions Team
           url: /institute/admissions/team
@@ -123,50 +130,46 @@ site_nav:
       url: /institute/news
     - text: Events
       url: /institute/events
-    - text: Student Services
-      url: /institute/student-services
+    - text: Student Life
+      url: /institute/student-life
       items:
         - text: New Students
-          url: /institute/student-services/new-students
+          url: /institute/student-life/new-students
         - text: International Students
-          url: /institute/student-services/international
+          url: /institute/offices-services/international-student-scholar
         - text: Veterans
-          url: /institute/student-services/veterans
-        - text: Center for Advising and Career Services
-          url: /institute/student-services/advising-career-services
+          url: /institute/student-life/veterans
+        - text: Families
+          url: /institute/student-life/families
+        - text: LGBTQ
+          url: /institute/student-life/lgbtq
         - text: Health and Wellness
-          url: /institute/student-services/health-wellness
-        - text: Office of Student Accounts
-          url: /institute/student-services/student-accounts
-        - text: Office of Student Records (Registrar)
-          url: /institute/student-services/student-records
+          url: /institute/student-life/health-wellness
         - text: Life in Monterey
-          url: /institute/student-services/life-in-monterey
-        - text: Student Life
-          url: /institute/student-services/student-life
-        - text: Security
-          url: /institute/student-services/security
-        - text: Technology Support
-          url: /institute/student-services/technology-support
-        - text: Annual Events
-          url: /institute/student-services/annual-events
-    - text: Support the Institute
-      url: /institute/support
+          url: /institute/student-life/life-in-monterey
+        - text: Student Council
+          url: /institute/student-life/student-council
+        - text: Student Clubs and Organizations
+          url: /institute/student-life/clubs
+        - text: Community Discounts
+          url: /institute/student-life/community-discounts
+        - text: Student Policies
+          url: /institute/student-life/student-policies
+    - text: Give to the Institute
+      url: /institute/giving
       items:
         - text: Ways to Give
-          url: /institute/support/ways-to-give
+          url: /institute/giving/ways-to-give
         - text: Annual Fund
-          url: /institute/support/annual-fund
-        - text: Volunteer
-          url: /institute/support/annual-fund/volunteer
+          url: /institute/giving/annual-fund
         - text: Donor Recognition
-          url: /institute/support/donor-recognition
+          url: /institute/giving/donor-recognition
         - text: Plan Your Legacy
-          url: /institute/support/plan-your-legacy
-        - text: Ways to Give
-          url: /institute/support/carl-fehlandt-scholarship
+          url: /institute/giving/plan-your-legacy
+        - text: Carl Fehlandt Scholarship
+          url: /institute/giving/carl-fehlandt-scholarship
         - text: Meet the Team
-          url: /institute/support/team
+          url: /institute/giving/team
 
 footer_nav:
   - title: Information for
@@ -178,71 +181,43 @@ footer_nav:
       - text: Faculty and Staff
         url: /institute/faculty-staff
       - text: Employers
-        url: /institute/employers
+        url: /institute/advancing-your-career/employers
       - text: Media
-        url: /institute/media
+        url: /institute/offices-services/communications
       - text: Partners
-        url: /institute/partners
+        url: /institute/leadership-impact/global-partnerships
       - text: Donors
-        url: /institute/donors
+        url: /institute/giving
       - text: Visitors
-        url: /institute/visitors
-  - title: Quick links
+        url: /institute/admissions/visit
+  - title: Quick Links
     items:
       - text: Emergency
-        url: /institute/student-services/health-wellness/emergency
-      - text: BannerWeb
-        url: https://ssb-prod.ec.middlebury.edu/PNTR/twbkwbis.P_WWWLogin?
+        url: /institute/offices-services/security
+      - text: Academic Resources
+        url: /institute/academics/academic-resources
       - text: Campus Map
         url: http://www.myatlascms.com/map/index.php?id=972
-      - text: Contact Us
-        url: /institute/contact
       - text: Directory
         url: https://directory.miis.edu
+      - text: Events Calendar
+        url: /institute/events
+      - text: Library
+        url: /institute/academics/library
       - text: Employment
         url: https://middlebury.peopleadmin.com
       - text: Offices and Services
-        url: /institute/a-z
-      - text: WebMail
-        url: https://mail.middlebury.edu
-  - title: Resources
-    items:
-      - text: Course Catalog
-        url: /institute/academics/courses
-      - text: Digital Learning Commons
-        url: /institute/academics/academic-resources/dlc
+        url: /institute/offices-services
+      - text: BannerWeb
+        url: https://ssb-prod.ec.middlebury.edu/PNTR/twbkwbis.P_WWWLogin?
       - text: EthicsPoint
         url: https://secure.ethicspoint.com/domain/media/en/gui/28296/index.html
-      - text: Globe Language Services
-        url: /institute/academics/academic-resources/globe-language-services
-      - text: Library
-        url: /institute/academics/library
-      - text: META Lab
-        url: /institute/academics/academic-resources/meta-lab
-      - text: Writing Center
-        url: /institute/academics/academic-resources/writing-center
-  - title: Site at a glance
-    items:
-      - text: Institute Experience
-        url: /institute/institute-experience
-      - text: Leadership and Impact
-        url: /institute/leadership-impact
-      - text: Areas of Focus
-        url: /institute/areas-of-focus
-      - text: Advancing Your Career
-        url: /institute/student-services/advising-career-services
-      - text: Academics
-        url: /institute/academics
-      - text: Admissions
-        url: /institute/admissions
-      - text: News
-        url: /institute/news
-      - text: Events
-        url: /institute/events
-      - text: Student Services
-        url: /institute/student-services
-      - text: Support the Institute
-        url: /institute/support
+      - text: WebMail
+        url: https://mail.middlebury.edu/owa/auth/logon.aspx
+      - text: Zoom Web Conferencing
+        url: https://middlebury.zoom.us
+      - text: Site Editor Login
+        url: https://www.middlebury.edu/institute/saml/login?destination=/
 
 
 secondary_footer_nav:
@@ -275,12 +250,26 @@ contact_social_links:
     slug: instagram
 
 missions:
-  - text: I want to take on the world’s most important sustainability challenges.
-  - text: I want to create positive social change in international business
-  - text: I want to teach English to students around the world.
-  - text: I want to help people find hope after loss.
-  - text: I want to cultivate the self-worth of women around the world.
-  - text: I want to create positive social change in international business
+  - text: help build a more just world.
+    url: https://www.middlebury.edu/institute/academics/degree-programs/international-policy-development
+  - text: be a catalyst for social change.
+    url: https://www.middlebury.edu/institute/academics/degree-programs/public-administration
+  - text: take on the world’s most important sustainability challenges.
+    url: https://www.middlebury.edu/institute/academics/degree-programs/international-environmental-policy
+  - text: bridge cultures through international education.
+    url: https://www.middlebury.edu/institute/academics/degree-programs/international-education-management
+  - text: promote global prosperity.
+    url: https://www.middlebury.edu/institute/academics/degree-programs/international-trade-economic-diplomacy
+  - text: make the world safe from violent extremism and weapons of mass destruction.
+    url: https://www.middlebury.edu/institute/academics/degree-programs/nonproliferation-terrorism-studies
+  - text: build understanding through language.
+    url: https://www.middlebury.edu/institute/academics/degree-programs/language-education
+  - text: facilitate communication worldwide
+    url: https://www.middlebury.edu/institute/academics/degree-programs/translation-interpretation
+  - text: open global markets through technology
+    url: https://www.middlebury.edu/institute/academics/degree-programs/translation-localization-management
+  - text: teach English to students around the world.
+    url: https://www.middlebury.edu/institute/academics/degree-programs/language-education
 
 programs:
   - title: International Environmental Policy
@@ -631,4 +620,3 @@ image_sizes:
     - 400x225
     sizes: '(max-width: 580px) 128px, (max-width: 960px) 160px, (max-width: 1200px) 400px, 320px'
   # TODO: slidershow with lazy <picture>?
-

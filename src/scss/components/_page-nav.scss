@@ -76,7 +76,7 @@
   padding-bottom: 10px;
 
   .page-nav__list--callouts & {
-    color: $middlebury-blue;
+    color: $brand-primary;
     font-weight: $font-weight-semibold;
     padding: 0;
     display: inline;
@@ -90,6 +90,6 @@
 }
 
 .page-nav__link--active {
-  color: $bright-green !important; // TODO: don't use !important
+  color: $green-dark !important; // TODO: somehow remove need for important
   font-weight: $font-weight-semibold;
 }
