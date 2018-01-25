@@ -1,3 +1,6 @@
+// polyfills
+import 'intersection-observer';
+
 import './toggler';
 import './video';
 import './nav';
