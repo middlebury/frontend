@@ -51,7 +51,7 @@
   {% include 'partials/chart.twig' with {
     title: 'Job Function',
     id: 'job-function',
-    type: 'pie',
+    type: 'doughnut',
     data: [
       2.273,
       2.273,
@@ -73,7 +73,7 @@
   {% include 'partials/chart.twig' with {
     title: 'Job sector',
     id: 'job-sector',
-    type: 'pie',
+    type: 'doughnut',
     data: [
       1.89,
       3.77,
@@ -90,22 +90,18 @@
     ]
   } %}
 
-  <div class="mb-6">
-    {% include 'partials/world.twig' %}
 
-    <ul>
-      <li>United States</li>
-      <li>Germany</li>
-      <li>China</li>
-    </ul>
+  {% include 'paragraphs/map-chart.twig' with {
+    items: [
+      {name: 'Germany', abbr: 'de'},
+      {name: 'United States', abbr: 'us'},
+      {name: 'China', abbr: 'cn'}
+    ]
+  } %}
 
-    <style>
-      #world #US,
-      #world #DE,
-      #world #CN {
-        fill: #0d395f;
-      }
-    </style>
-  </div>
 
+{% endblock %}
+
+{% block scripts %}
+<script src="js/Chart.min.js" async></script>
 {% endblock %}
