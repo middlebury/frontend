@@ -1,5 +1,10 @@
 .profile-teaser {
   display: flex;
+
+  // HACK: we should wrap the teasers in a list or use a modifier class
+  .profile-listing & {
+    margin-bottom: $list-item-margin-bottom-lg;
+  }
 }
 
 .profile-teaser__media {

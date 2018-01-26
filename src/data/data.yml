@@ -92,7 +92,7 @@ site_nav:
             - text: Graduate Initiative in Russian Studies
               url: /institute/academics/centers-initiatives/graduate-initiative-russian-studies
             - text: James Martin Center for Nonproliferation Studies
-              url: /institute/academics/centers-initiatives/center-nonproliferation-studies
+              url: /institute/academics/centers-initiatives/nonproliferation-studies
         - text: Academic Resources
           url: /institute/academics/academic-resources
         - text: Library
@@ -607,11 +607,15 @@ image_sizes:
     - 1040x585
   top_level:
     srcset:
-    - 400x225
-    - 640x360
-    - 960x540
-    - 1280x720
-    - 1440x810
+    - 400x160
+    - 640x256
+    - 960x384
+    - 1280x512
+    - 1440x576
+  top_level_teaser:
+    srcset:
+    - 160x64
+    - 240x96
   grid_nav:
     srcset:
     - 128x72
@@ -620,4 +624,3 @@ image_sizes:
     - 400x225
     sizes: '(max-width: 580px) 128px, (max-width: 960px) 160px, (max-width: 1200px) 400px, 320px'
   # TODO: slidershow with lazy <picture>?
-
