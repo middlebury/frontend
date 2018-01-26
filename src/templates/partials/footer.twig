@@ -4,30 +4,26 @@
       <div class="col-lg-3 border-lg-r border-secondary-dark">
 
         <div class="site-footer__content">
-          {% embed 'partials/callout.twig' with {
-            light: true,
-            preheader: 'Help us help the world',
-            title: 'Support the Institute',
-            social_links: social_links,
-            icons: icons
-          } %}
-            {% block body %}
-              <a href="" class="button button--secondary">Make a Gift</a>
-            {% endblock %}
-            {% block footer %}
-              <ul class="social-links social-links--light">
-                {% for item in social_links %}
-                  <li class="social-links__item">
-                    <a href="{{item.href}}" class="social-links__link">
-                      <svg class="icon">
-                        <use xlink:href="#icon-{{item.slug}}" />
-                      </svg>
-                    </a>
-                  </li>
-                {% endfor %}
-              </ul>
-            {% endblock %}
-          {% endembed %}
+
+          <div class="footer-callout">
+            <h3 class="footer-callout__title">Support the Institute</h3>
+            <p class="footer-callout__text">Help us help the world</p>
+            <div class="footer-callout__footer">
+              <a href="#" class="button button--secondary">Make a Gift</a>
+            </div>
+          </div>
+
+          <ul class="social-links social-links--light site-footer__social">
+            {% for item in social_links %}
+              <li class="social-links__item">
+                <a href="{{item.href}}" class="social-links__link">
+                  <svg class="icon">
+                    <use xlink:href="#icon-{{item.slug}}" />
+                  </svg>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
         </div>
 
       </div>
