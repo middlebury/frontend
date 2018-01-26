@@ -1,7 +1,7 @@
 .mission-selector {
   background-color: $brand-secondary;
   padding: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: $component-margin-bottom;
 
   @include media(md) {
     padding: 2.5rem 3.5rem;
