@@ -232,7 +232,7 @@ gulp.task('deploy', ['replace:imageurls'], () => {
     return console.error('No `--themeDir` argument passed');
   }
   return gulp
-    .src(['./dist/css/main.css', './dist/js/bundle.js', './dist/images/*'], {
+    .src(['./dist/css/main.css', './dist/js/bundle.js', './dist/js/Chart.min.js', './dist/images/*'], {
       base: './dist'
     })
     .pipe(gulp.dest(dest));
