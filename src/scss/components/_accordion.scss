@@ -40,6 +40,8 @@
 }
 
 .accordion-item__title {
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
 }
 
 .accordion-item__link {
@@ -82,7 +84,7 @@
 }
 
 .accordion-item__content {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 
   &.has-toggler {
     display: none;
