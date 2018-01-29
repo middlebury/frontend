@@ -6,7 +6,7 @@
 
 {% block layout_content %}
 
-  {% include 'partials/chart.twig' with {
+  {% include 'paragraphs/chart.twig' with {
     title: 'Time until employment',
     id: 'employed',
     type: 'pie',
@@ -27,7 +27,7 @@
     ]
   } %}
 
-  {% include 'partials/chart.twig' with {
+  {% include 'paragraphs/chart.twig' with {
     title: 'Salary',
     id: 'salary',
     type: 'horizontalBar',
@@ -48,7 +48,7 @@
     ]
   } %}
 
-  {% include 'partials/chart.twig' with {
+  {% include 'paragraphs/chart.twig' with {
     title: 'Job Function',
     id: 'job-function',
     type: 'doughnut',
@@ -70,7 +70,7 @@
     ]
   } %}
 
-  {% include 'partials/chart.twig' with {
+  {% include 'paragraphs/chart.twig' with {
     title: 'Job sector',
     id: 'job-sector',
     type: 'doughnut',
