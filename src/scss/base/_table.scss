@@ -4,7 +4,8 @@
 .typography table {
   width: 100%;
   border-top: 5px solid $border-color;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
 
   @include media(md) {
     border-top: 0;
