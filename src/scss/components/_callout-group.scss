@@ -1,4 +1,6 @@
 .callout-group {
+  margin-bottom: $component-margin-bottom;
+
   @include media(md) {
     display: flex;
   }
