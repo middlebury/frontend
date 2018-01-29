@@ -30,7 +30,7 @@
 
 // schedule-item
 .schedule-item {
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-bottom: 1.5rem;
@@ -57,11 +57,13 @@
 .schedule-item__time {
   display: block;
   margin-bottom: 0.5rem;
-  font-size: $paragraph-font-size;
+  font-size: 16px;
+  line-height: 28px;
 }
 
 .schedule-item__local {
-  font-size: $paragraph-font-size;
+  font-size: 16px;
+  line-height: 28px;
 }
 
 .schedule-item__body {
@@ -71,7 +73,8 @@
 }
 
 .schedule-item__title {
-  font-size: 20px;
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
   margin-bottom: 0.5rem;
 }
 
@@ -80,6 +83,6 @@
 }
 
 .schedule-item__job {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 1.5rem;
 }
