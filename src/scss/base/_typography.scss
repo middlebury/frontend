@@ -90,7 +90,10 @@
   }
 
   dl {
-    margin-bottom: 1.5rem;
+    font-size: $paragraph-font-size;
+    line-height: $paragraph-line-height;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
 
     @include media(md) {
       display: flex;
