@@ -1,0 +1,15 @@
+.chart {
+  margin-bottom: 3rem;
+}
+
+.chart__title {
+  @extend .section__title;
+  margin-bottom: 2rem;
+}
+
+.chart__container {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  margin: auto;
+}

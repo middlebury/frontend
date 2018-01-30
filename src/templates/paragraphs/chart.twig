@@ -1,0 +1,23 @@
+<div class="chart">
+  <h3 class="chart__title">{{title}}</h3>
+  <div class="chart__container">
+    <canvas id="midd-chart-{{id}}"></canvas>
+  </div>
+</div>
+
+<script>
+  window.addEventListener('load', function() {
+
+    var selector = '#midd-chart-{{id}}';
+
+    var options = {
+      type: '{{type}}',
+      data: [{{data}}],
+      label: '{{label}}',
+      labels: [{% for item in labels %}'{{item}}'{% if not loop.last %},{% endif %}{% endfor %}],
+    };
+
+    window.loadChart(selector, options);
+
+  });
+</script>

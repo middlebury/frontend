@@ -193,7 +193,9 @@ gulp.task('images', () => {
       imagemin([
         imagemin.jpegtran({progressive: true}),
         imagemin.optipng({optimizationLevel: 5}),
-        imagemin.svgo({plugins: [{removeDimensions: true}]})
+        imagemin.svgo({
+          plugins: [{removeDimensions: true}, {cleanupIDs: false}]
+        })
       ])
     )
     .pipe(gulp.dest(paths.images.dest))
@@ -216,13 +218,21 @@ gulp.task('replace:imageurls', () => {
     .pipe(gulp.dest('./dist/css'));
 });
 
+gulp.task('copy:deps', function () {
+  // NOTE: Chart.bundle.min.js includes Momentjs but so far we are not using time axis
+  // http://www.chartjs.org/docs/latest/getting-started/installation.html#bundled-build
+  gulp
+    .src(['./node_modules/chart.js/dist/Chart.min.js'])
+    .pipe(gulp.dest('./dist/js'));
+});
+
 gulp.task('deploy', ['replace:imageurls'], () => {
   const dest = args.themeDir || '';
   if (!args.themeDir) {
     return console.error('No `--themeDir` argument passed');
   }
   return gulp
-    .src(['./dist/css/main.css', './dist/js/bundle.js', './dist/images/*'], {
+    .src(['./dist/css/main.css', './dist/js/bundle.js', './dist/js/Chart.min.js', './dist/images/*'], {
       base: './dist'
     })
     .pipe(gulp.dest(dest));
@@ -234,7 +244,8 @@ gulp.task('build', [
   'images',
   'styles',
   'scripts:lint',
-  'scripts'
+  'scripts',
+  'copy:deps'
 ]);
 
 gulp.task('default', ['build', 'watch', 'server']);
