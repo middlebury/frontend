@@ -10,10 +10,7 @@
   font-size: $btn-font-size;
   line-height: $btn-line-height;
   border-radius: $btn-border-radius;
-
-  @include media(md) {
-    white-space: nowrap;
-  }
+  white-space: nowrap;
 
   &:hover,
   &:focus {
