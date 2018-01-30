@@ -12,14 +12,35 @@ const chartColors = [
 ];
 
 function makeChart(elem, {type = 'pie', data, label, labels}) {
+  const defaultOptions = {
+    maintainAspectRatio: false,
+    legend: {
+      position: 'bottom'
+    }
+  };
+
+  if (type === 'bar' || type === 'horizontalBar') {
+    defaultOptions.scales = {
+      xAxes: [
+        {
+          ticks: {
+            beginAtZero: true
+          }
+        }
+      ],
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: true
+          }
+        }
+      ]
+    };
+  }
+
   new window.Chart(elem, {
     type,
-    options: {
-      maintainAspectRatio: false,
-      legend: {
-        position: 'bottom'
-      }
-    },
+    options: defaultOptions,
     data: {
       datasets: [
         {
