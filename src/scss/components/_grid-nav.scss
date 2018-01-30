@@ -1,5 +1,5 @@
 .grid-nav {
-  margin-bottom: 100px;
+  margin-bottom: $component-margin-bottom;
 }
 
 .grid-nav__list {
@@ -9,10 +9,9 @@
 }
 
 .grid-nav__item {
-  margin-bottom: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 2.5rem;
+  margin-bottom: 3rem;
   display: flex;
-  flex-direction: row-reverse;
 
   &:not(:last-of-type) {
     border-bottom: 1px solid $border-color;
@@ -22,8 +21,7 @@
     @include make-col-ready();
     @include make-col(6);
     display: block;
-    margin-bottom: 0;
-    padding-bottom: 70px;
+    margin-bottom: $component-margin-bottom;
 
     &:not(:last-of-type) {
       border-bottom: 0;
@@ -46,12 +44,9 @@
 }
 
 .grid-nav__image {
-  margin-bottom: 5px;
-  margin-left: 10px;
-
-  @include media(sm) {
-    margin-left: 50px;
-  }
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+  order: 2;
 
   @include media(md) {
     margin-left: 0;
@@ -63,14 +58,11 @@
 }
 
 .grid-nav__title {
-  display: inline-block;
-  font-size: 22px;
-  font-family: $font-family-serif;
-  margin-bottom: 20px;
-
-  @include media(md) {
-    font-size: 28px;
-  }
+  display: block;
+  font-size: $h3-font-size;
+  font-family: $headings-font-family;
+  line-height: $h3-line-height;
+  margin-bottom: 0.5rem;
 }
 
 .grid-nav__text {
