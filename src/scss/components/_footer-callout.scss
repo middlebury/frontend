@@ -1,0 +1,23 @@
+.footer-callout {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-callout__title {
+  order: 2;
+  color: $white;
+  font-size: 40px;
+  margin-bottom: 1rem;
+}
+
+.footer-callout__text {
+  order: 1;
+  color: $white;
+  font-size: 20px;
+  font-family: $font-family-serif;
+  font-style: italic;
+}
+
+.footer-callout__footer {
+  order: 3;
+}

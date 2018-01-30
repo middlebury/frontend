@@ -4,7 +4,8 @@
 .typography table {
   width: 100%;
   border-top: 5px solid $border-color;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
 
   @include media(md) {
     border-top: 0;
@@ -20,15 +21,15 @@
     font-size: 14px;
     font-weight: $font-weight-semibold;
     text-align: left;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 
     @include media(md) {
       display: table-cell;
       white-space: nowrap;
 
       &:not(:last-of-type) {
-        padding-right: 20px;
+        padding-right: 1.5rem;
       }
     }
   }
@@ -49,19 +50,16 @@
 
   td {
     display: block;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-family: $font-family-serif;
-    color: $text-gray;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
     &:before {
       content: attr(data-th);
       font-size: 14px;
       font-weight: $font-weight-semibold;
       font-family: $font-family-sans-serif;
-      color: $black;
       display: block;
-      margin-bottom: 5px;
+      margin-bottom: 0.5rem;
 
       @include media(md) {
         display: none;
@@ -73,7 +71,7 @@
       display: table-cell;
 
       &:not(:last-of-type) {
-        padding-right: 20px;
+        padding-right: 1.5rem;
       }
     }
   }

@@ -27,33 +27,26 @@
 }
 
 .event-teaser__title {
-  font-family: $font-family-serif;
-  font-weight: normal;
-  font-size: 22px;
-  margin-bottom: 10px;
+  font-size: $h3-font-size;
+  margin-bottom: 0.5rem;
 }
 
 .event-teaser__datetime,
 .event-teaser__local {
-  color: $black;
-  font-size: 18px;
-  font-family: $font-family-sans-serif;
-
-  @include media(md) {
-    font-size: 20px;
-  }
+  font-size: 16px;
+  line-height: 28px;
 }
 
 .event-teaser__local {
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
-.event-teaser__blurb {
-  margin-bottom: 20px;
+.event-teaser__text {
 }
 
 .event-teaser__metalist {
   display: flex;
+  margin-top: 1rem;
 }
 
 .event-teaser__metaitem {
@@ -61,8 +54,8 @@
   font-size: 14px;
 
   &:not(:first-of-type) {
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
 
     &:before {
       content: '|';

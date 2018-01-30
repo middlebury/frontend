@@ -1,0 +1,26 @@
+.two-col-text {
+  margin-bottom: $component-margin-bottom;
+  @include media(md) {
+    display: flex;
+  }
+}
+
+.two-col-text__col {
+  &:not(:last-of-type) {
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  @include media(md) {
+    &:not(:last-of-type) {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+
+      border-right: 1px solid $border-color;
+      padding-right: 2rem;
+      margin-right: 2rem;
+    }
+  }
+}

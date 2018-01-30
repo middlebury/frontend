@@ -1,11 +1,11 @@
 .media-object {
   display: flex;
-  margin-bottom: 2rem;
+  margin-bottom: $component-margin-bottom;
 }
 
 .media-object__image {
   width: 25%;
-  padding-right: 1rem;
+  padding-right: 1.5rem;
   min-width: 100px;
 }
 

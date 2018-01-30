@@ -26,14 +26,10 @@
 }
 
 .page-header__title {
-  font-family: $font-family-sans-serif;
-  font-weight: $font-weight-semibold;
-  font-size: 20px;
-  margin-bottom: 40px;
+  font-size: $h1-font-size;
+  margin-bottom: 1.5rem;
 
   @include media(md) {
-    font-size: 30px;
-    margin-top: 40px;
-    margin-bottom: 10px;
+    margin-top: 3rem;
   }
 }

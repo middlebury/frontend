@@ -1,0 +1,7 @@
+.faq {
+  margin-bottom: $component-margin-bottom;
+}
+
+.faq__title {
+  @include section-title();
+}

@@ -1,7 +1,9 @@
 .callout-group {
-}
-.callout-group {
-  @include make-container();
+  margin-bottom: $component-margin-bottom;
+
+  @include media(md) {
+    display: flex;
+  }
 }
 
 .callout-group__row {
@@ -10,6 +12,7 @@
 
 .callout-group__item {
   @include make-col-ready();
+  // margin-bottom: 2rem;
 
   &:not(:last-of-type) {
     border-bottom: 1px solid $border-color;
@@ -22,5 +25,6 @@
 
   @include media(lg) {
     @include make-col(3);
+    margin-bottom: 0;
   }
 }

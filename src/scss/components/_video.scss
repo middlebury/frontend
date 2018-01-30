@@ -1,10 +1,9 @@
 .video {
-  margin-bottom: 60px;
   position: relative;
+  margin-bottom: $component-margin-bottom;
 }
 
 .video__content {
-  margin-bottom: 20px;
   position: relative;
 
   .video.has-video & {
@@ -30,11 +29,51 @@
   left: 0;
 }
 
-.video__title {
-  font-size: 28px;
-  margin-bottom: 20px;
-  font-weight: $font-weight-medium;
+.video__body {
+  padding: 1rem 1.5rem 0.5rem;
+  border: $border-width solid $border-color;
 }
 
-.video__blurb {
+.video__title {
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+  margin-bottom: 0.5rem;
+}
+
+.video__text {
+}
+
+.video__transcript-button {
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.video__transcript-icon {
+  // display: none;
+  margin-left: 0.5rem;
+}
+
+.video__transcript-icon--close {
+  display: none;
+  .video__transcript-button.is-toggled & {
+    display: inline-block;
+  }
+}
+
+.video__transcript-icon--open {
+  .video__transcript-button.is-toggled & {
+    display: none;
+  }
+}
+
+.video__transcript {
+  margin-top: 1rem;
+
+  &.has-toggler {
+    display: none;
+  }
+
+  &.is-toggled {
+    display: block;
+  }
 }

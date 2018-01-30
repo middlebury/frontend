@@ -1,22 +1,22 @@
 .section {
-  margin-bottom: 100px;
+  margin-bottom: $component-margin-bottom;
 }
 
 .section--aside {
-  margin-bottom: 80px;
+  margin-bottom: $component-margin-bottom / 2;
 
   .section__header {
-    margin-bottom: 25px;
+    margin-bottom: $section-title-margin-bottom / 2;
   }
 
   .section__title {
     color: $gray;
-    font-size: 13px;
   }
 }
 
 .section__header {
-  margin-bottom: 50px;
+  margin-bottom: $section-title-margin-bottom;
+
   @include media(md) {
     display: flex;
     align-items: center;
@@ -25,18 +25,14 @@
 }
 
 .section__title {
-  // TODO: need to use a heading element or class e.g. .h3
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: $font-weight-semibold;
-  font-family: $font-family-sans-serif;
-  font-size: 14px;
+  // TODO: need to not apply margin instead of reseting it to 0
+  @include section-title(0);
 }
 
 .section__link {
-  margin-top: 10px;
   display: inline-block;
   font-weight: $font-weight-medium;
+  margin-top: 1rem;
   @include link-border();
 
   @include media(md) {

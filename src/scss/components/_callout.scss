@@ -1,67 +1,51 @@
 .callout {
-  @include media(md) {
-    flex-direction: column;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+
+  @include media(sm) {
     display: flex;
+    align-items: center;
+    text-align: left;
     height: 100%;
   }
 
   @include media(lg) {
-    min-height: 270px;
+    min-height: 300px;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 0;
   }
-}
-
-.callout--gray {
-  padding: 40px 20px;
-  background-color: $warm-gray;
-}
-
-.callout--light {
-}
-
-.callout__header {
-  flex: 0 1 auto;
-  padding-bottom: 20px;
 }
 
 .callout__body {
-  flex: 1;
-}
-
-.callout__footer {
-  flex: 0 1 auto;
-  padding-top: 20px;
+  padding-right: 1rem;
 
   @include media(lg) {
-    padding: 0;
-  }
-}
-
-.callout__preheader {
-  display: block;
-  font-family: $font-family-serif;
-  font-size: 20px;
-  font-weight: 300;
-
-  .callout--light & {
-    color: $white;
+    padding-right: 0;
   }
 }
 
 .callout__title {
-  font-size: 40px;
-  font-weight: $font-weight-normal;
-  font-family: $font-family-serif;
-  line-height: 1.3;
-  margin-bottom: 0;
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
 
-  .callout--light & {
-    color: $white;
+  @include media(lg) {
+    margin-bottom: 0.5rem;
   }
 }
 
-.callout__subtext {
-  margin-bottom: 0;
+.callout__text {
+  margin-bottom: 1rem;
 }
 
-.callout__button {
+.callout__footer {
+  margin-left: auto;
+
+  @include media(lg) {
+    margin-top: auto;
+    margin-left: 0;
+    padding-bottom: 3rem;
+  }
 }
