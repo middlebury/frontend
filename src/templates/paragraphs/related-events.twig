@@ -5,7 +5,7 @@
 } %}
   {% block content %}
     <div class="row">
-      {% for i in 0..3 %}
+      {% for i in 0..2 %}
 
         {# twig js has to be `divisibleby` instead of `divisible by` #}
         <div class="col-md-6 col-lg-3{% if not loop.last %}{% if loop.index is divisibleby(2) %} border-lg-r{% else %} border-md-r{% endif %} mb-4 mb-lg-0{% endif %}">
