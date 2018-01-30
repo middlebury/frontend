@@ -66,21 +66,12 @@
 
   {# G1 text paragraph #}
   <div class="text typography">
-    <h2>Some headline here (h2)</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
-    <h3>Some headline here (h3)</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
-    <h4>Some headline here (h4)</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
-    <h5>Some headline here (h5)</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
-    <h6>Some headline here (h6)</h6>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis odit, adipisci consequatur repellat non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
+
+    {% for i in 2..6 %}
+      <h{{i}}>Some headline here (h{{i}})</h{{i}}>
+      <p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Minus reiciendis odit, adipisci consequatur <em>repellat</em> non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis <sup>odit</sup>, adipisci consequatur repellat non distinctio consequuntur <sub>delectus</sub>, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
+    {% endfor %}
 
     <h3>short list</h3>
 
