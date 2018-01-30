@@ -1,0 +1,16 @@
+{% embed 'partials/section.twig' with {
+  title: 'Related Stories',
+  labelledby: 'midd-related-stories-label',
+  moreLinkText: 'View all',
+  moreLinkHref: '#'
+} %}
+  {% block content %}
+    <ul class="list list--dividers list--md">
+      {% for i in 0..3 %}
+        <li class="list__item">
+          {% include 'partials/story-teaser.twig' %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endblock %}
+{% endembed %}

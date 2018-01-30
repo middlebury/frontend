@@ -1,0 +1,15 @@
+{% embed 'partials/section.twig' with {
+  title: 'Related Events',
+  moreLinkText: 'View all',
+  moreLinkHref: '#'
+} %}
+  {% block content %}
+    <ul class="list list--dividers list--md">
+      {% for i in 0..2 %}
+        <li class="list__item">
+          {% include 'partials/event-teaser.twig' %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endblock %}
+{% endembed %}
