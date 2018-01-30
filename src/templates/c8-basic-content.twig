@@ -55,12 +55,7 @@
 
 {% block layout_content %}
 
-  <div class="page__image">
-    <figure class="media media--image">
-      {% include 'partials/img.twig' with { name: 'featured' } %}
-      <figcaption class="media__caption">basic content image caption</figcaption>
-    </figure>
-  </div>
+  {% include 'partials/page-image.twig' %}
 
   <p class="lead">Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing</a> elit. Pariatur commodi, excepturi necessitatibus, quibusdam beatae libero est modi aliquam aspernatur provident quod voluptate dolor non hic, eveniet dolorem assumenda tenetur error.</p>
 
