@@ -519,7 +519,7 @@ image_sizes:
   homepage_hero:
     srcset:
     - 800x450
-    - 1040x545
+    - 1040x585
     - 1200x675
   # homepage program spotlight
   program_spotlight:
