@@ -1,0 +1,59 @@
+{% extends "layout.twig" %}
+
+{% set page_header = {
+  title: 'Top Level Page',
+  breadcrumb: [
+    { text: 'Areas of Focus' },
+  ]
+} %}
+
+{% block page %}
+
+  <div class="page__image">
+    <figure>
+      {% include 'partials/img.twig' with { name: 'top_level' } %}
+      <div class="container">
+        <div class="row">
+          <div class="col-md-push-1 col-md-9">
+            <figcaption class="media__caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (Photo: John Doe)</figcaption>
+          </div>
+        </div>
+      </div>
+    </figure>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-push-1 col-md-9">
+
+        {% include 'partials/lead.twig' %}
+
+        {% include 'paragraphs/text.twig' %}
+
+        {% include 'paragraphs/image.twig' %}
+
+        {% include 'partials/grid-nav.twig' %}
+
+        {% include 'paragraphs/slideshow.twig' %}
+
+        {% include 'paragraphs/video.twig' %}
+
+        {% include 'paragraphs/related-events-list.twig' %}
+
+        {% include 'paragraphs/related-stories-list.twig' %}
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    {% include 'partials/mission-selector.twig' %}
+  </div>
+
+  <div class="container">
+    {% include 'partials/callout-group.twig' %}
+  </div>
+
+
+{% endblock %}
