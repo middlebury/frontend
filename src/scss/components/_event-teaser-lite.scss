@@ -2,14 +2,18 @@
 }
 
 .event-teaser-lite__datetime {
-  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: $font-weight-semibold;
+  line-height: 22px;
 }
 
 .event-teaser-lite__title {
-  font-size: 22px;
-  margin-bottom: 20px;
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
 }
 
 .event-teaser-lite__local {
-  // margin-bottom: 0;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 1rem;
 }
