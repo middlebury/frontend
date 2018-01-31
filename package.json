@@ -57,6 +57,7 @@
     "bootstrap": "4.0.0-alpha.6",
     "enquire.js": "^2.1.6",
     "normalize.css": "^5.0.0",
+    "object-fit-images": "^3.2.3",
     "swiper": "^4.1.0"
   }
 }
