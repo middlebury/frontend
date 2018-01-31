@@ -39,6 +39,17 @@ site_nav:
           url: /institute/areas-of-focus/global-policy-management
     - text: Advancing Your Career
       url: /institute/advancing-your-career
+      items:
+        - text: Career Management
+          url: /institute/advancing-your-career/management
+        - text: Career Outcomes
+          url: /institute/advancing-your-career/outcomes
+        - text: Events
+          url: /institute/advancing-your-career/events
+        - text: For Employers
+          url: /institute/advancing-your-career/employers
+        - text: Meet the Team
+          url: /institute/advancing-your-career/team
     - text: Academics
       url: /institute/academics
       items:
@@ -63,10 +74,13 @@ site_nav:
               url: /institute/academics/degree-programs/translation-localization-management
             - text: Master of Public Administration
               url: /institute/academics/degree-programs/public-administration
+        - text: Joint Degree Programs
+          url: /institute/academics/joint-degrees
+          items:
             - text: Joint MPA/MA in International Education Management
-              url: /institute/academics/degree-programs/joint-mpa-iem/overview
+              url: /institute/academics/joint-degrees/joint-mpa-iem/overview
             - text: Joint BA/MA Degrees
-              url: /institute/academics/degree-programs/joint-bama
+              url: /institute/academics/joint-degrees/joint-bama
         - text: Additional Programs
           url: /institute/academics/additional-programs
           items:
