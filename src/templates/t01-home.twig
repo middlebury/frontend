@@ -26,7 +26,7 @@
               moreLinkText: 'More News'
             } %}
               {% block content %}
-                <ol class="list list--lg">
+                <ol class="list list--dividers list--md">
                   {% for item in homepage.latest_news %}
                     <li class="list__item">
                       {% include 'partials/story-teaser-lite.twig' with {
@@ -49,7 +49,7 @@
             moreLinkText: 'More Events'
           } %}
             {% block content %}
-              <ol class="list list--lg">
+              <ol class="list list--dividers list--md">
                 {% for item in homepage.upcoming_events %}
                   <li class="list__item">
                     {% include 'partials/event-teaser-lite.twig' with {
