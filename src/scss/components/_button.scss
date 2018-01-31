@@ -83,6 +83,18 @@
     background-color: $brand-primary-dark;
     color: $white;
   }
+
+  &.button--outline {
+    background-color: transparent;
+    color: $white;
+    border-color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: $brand-primary;
+    }
+  }
 }
 
 .button--tertiary {
