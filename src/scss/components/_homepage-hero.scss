@@ -71,7 +71,6 @@
 .homepage-hero__text {
   color: $white;
   display: none;
-  margin-bottom: 2rem;
 
   @include media(sm) {
     display: block;
@@ -79,9 +78,5 @@
 }
 
 .homepage-hero__more-link {
-  display: none;
-
-  @include media(sm) {
-    display: block;
-  }
+  margin-top: 2rem;
 }
