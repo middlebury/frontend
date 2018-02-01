@@ -2,7 +2,7 @@
 }
 
 .profile-detail__header {
-  margin-bottom: 40px;
+  margin-bottom: $lead-margin-bottom;
 }
 
 .profile-detail__body {
@@ -23,12 +23,11 @@
 .profile-detail__photo {
   @include make-col-ready();
   @include make-col(12);
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 
   @include media(sm) {
     order: 2;
     text-align: right;
-    margin-bottom: 40px;
     @include make-col(6);
   }
 
@@ -58,15 +57,6 @@
   font-family: $font-family-sans-serif;
   font-weight: 600;
   margin-bottom: 40px;
-}
-
-.profile-detail__title {
-  font-size: 16px;
-  font-family: $font-family-sans-serif;
-
-  @include media(md) {
-    font-size: 20px;
-  }
 }
 
 .profile-detail__content {
