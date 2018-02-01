@@ -32,6 +32,8 @@ $container-max-widths: (
 
 $spacer: 1rem !default;
 $spacers: () !default;
+
+// prettier-ignore
 $spacers: map-merge(
   (
     0: 0,
