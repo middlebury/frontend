@@ -15,3 +15,9 @@
     text-align: left;
   }
 }
+
+@each $name, $color in $text-colors {
+  .text-#{$name} {
+    color: $color;
+  }
+}

@@ -77,6 +77,12 @@ $gray-light: #dedede;
 
 $danger: #e60000;
 
+$text-colors: (
+  'primary': $brand-primary,
+  'secondary': $brand-secondary,
+  'white': $white
+);
+
 $body-bg: $warm-gray;
 $body-color: $black;
 
