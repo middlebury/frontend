@@ -1,16 +1,13 @@
 .callout-info {
-  background-color: $line-gray;
-  padding: 30px 40px;
+  padding: 1rem 1.5rem;
+  border: 1px solid $border-color;
 }
 
 .callout-info__title {
-  color: $black;
-  font-size: 25px;
-  font-family: $font-family-sans-serif;
-  font-weight: $font-weight-semibold;
-  margin-bottom: 20px;
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+  margin-bottom: 1rem;
 }
 
 .callout-info__text {
-  color: $black;
 }
