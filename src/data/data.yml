@@ -79,6 +79,10 @@ site_nav:
           items:
             - text: Joint MPA/MA in International Education Management
               url: /institute/academics/joint-degrees/joint-mpa-iem/overview
+            - text: Joint MPA/MA in International Trade and Economic Diplomacy
+              url: /institute/academics/joint-degrees/joint-mpa-ited/overview
+            - text: Joint MA in International Policy and Development and International Trade and Economic Diplomacy
+              url: /institute/academics/joint-degrees/joint-ipd-ited/overview
             - text: Joint BA/MA Degrees
               url: /institute/academics/joint-degrees/joint-bama
         - text: Additional Programs
