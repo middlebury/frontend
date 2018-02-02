@@ -14,14 +14,10 @@
     <div class="row">
       <div class="col-md-push-1 col-md-7">
 
-        <header class="story-detail__header">
-          <div class="story-detail__meta">
-            <p class="story-detail__pubdate"><time datetime="2016-08-24T00:00:00-04:00">August 24, 2017</time></p>
-            <p class="story-detail__author">by <a href="#" class="link-border">Michael Green</a></p>
-          </div>
-          <div class="story-detail__share">
-            {% include 'partials/share.twig' %}
-          </div>
+        <header class="mb-4">
+          <p><strong><time datetime="2016-08-24T00:00:00-04:00">August 24, 2017</time></strong></p>
+          <p class="mb-3">by <a href="#" class="link-border">Michael Green</a></p>
+          {% include 'partials/share.twig' %}
         </header>
 
       </div>
@@ -29,25 +25,19 @@
     <div class="row">
       <div class="col-md-push-1 col-md-9">
 
-        <div class="story-detail__image">
-          {% include 'partials/img.twig' with { name: 'story_detail' } %}
-        </div>
+        {% include 'partials/img.twig' with { name: 'story_detail' } %}
 
-        <div class="story-detail__body">
+        {% include 'paragraphs/text.twig' %}
 
-          {% include 'paragraphs/text.twig' %}
+        {% include 'paragraphs/slideshow.twig' %}
 
-          {# {% include 'paragraphs/slideshow.twig' %} #}
+        {% include 'paragraphs/text.twig' %}
 
-          {% include 'paragraphs/text.twig' %}
+        {% include 'paragraphs/quote.twig' %}
 
-          {% include 'paragraphs/quote.twig' %}
+        {% include 'paragraphs/text.twig' %}
 
-          {% include 'paragraphs/text.twig' %}
-
-          {# {% include 'paragraphs/video.twig' %} #}
-
-        </div>
+        {% include 'paragraphs/video.twig' %}
 
       </div>
     </div>
