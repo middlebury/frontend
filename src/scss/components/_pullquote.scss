@@ -1,21 +1,13 @@
 .pullquote {
-  margin-top: 60px;
-  margin-bottom: 60px;
-
-  @include media(md) {
-    float: right;
-    width: 400px;
-    margin-top: 0;
-    padding-left: 40px;
-  }
+  margin-bottom: $component-margin-bottom;
 }
 
 .pullquote__text {
-  color: $black;
-  font-size: 24px;
+  color: $teal;
+  font-size: 26px;
   line-height: 34px;
-  margin-bottom: 24px;
-  quotes: "“" "”";
+  margin-bottom: 1.5rem;
+  quotes: '“' '”';
 
   .pullquote--is-quote & {
     position: relative;
@@ -34,5 +26,6 @@
 }
 
 .pullquote__cite {
-
+  font-size: 14px;
+  line-height: 20px;
 }
