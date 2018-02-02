@@ -1,12 +1,15 @@
+// polyfills
+import 'intersection-observer';
 import objectFitImages from 'object-fit-images';
 
-import './toggler';
-import './video';
-import './nav';
-import './slideshow';
-import './modal';
 // import './publications';
+import './chart-loader';
+import './modal';
+import './nav';
 import './program-spotlight';
 import './responsive-tables';
+import './slideshow';
+import './toggler';
+import './video';
 
 objectFitImages();
