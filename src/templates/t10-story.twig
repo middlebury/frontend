@@ -15,8 +15,8 @@
       <div class="col-md-push-1 col-md-7">
 
         <header class="mb-4">
-          <p><strong><time datetime="2016-08-24T00:00:00-04:00">August 24, 2017</time></strong></p>
-          <p class="mb-3">by <a href="#" class="link-border">Michael Green</a></p>
+          <p>by <a href="#" class="link-border">Michael Green</a></p>
+          <p class="mb-3"><strong><time datetime="2016-08-24T00:00:00-04:00">August 24, 2017</time></strong></p>
           {% include 'partials/share.twig' %}
         </header>
 
@@ -25,15 +25,22 @@
     <div class="row">
       <div class="col-md-push-1 col-md-9">
 
-        {% include 'partials/img.twig' with { name: 'story_detail' } %}
+        <div class="page__image">
+          <figure class="media">
+            {% include 'partials/img.twig' with { name: 'story_detail' } %}
+            <figcaption class="media__caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ab accusantium tenetur quo</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-push-3 col-md-6">
 
         {% include 'paragraphs/text.twig' %}
 
         {% include 'paragraphs/slideshow.twig' %}
 
         {% include 'paragraphs/text.twig' %}
-
-        {% include 'paragraphs/quote.twig' %}
 
         {% include 'paragraphs/text.twig' %}
 
@@ -42,14 +49,17 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-push-1 col-md-7">
-
-        <div class="story-detail__media-contact">
-          <div class="callout-info">
-            <h3 class="callout-info__title">For More Information</h3>
-            <p class="callout-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio. Veritatis, esse. At ad a architecto eum voluptates in inventore placeat culpa nemo! Minus voluptates cupiditate quasi, laudantium in quam?</p>
-          </div>
-        </div>
+      <div class="col-md-push-1 col-md-9">
+        {% include 'paragraphs/quote.twig' %}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-push-3 col-md-6">
+        {% include 'paragraphs/text.twig' %}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-push-3 col-md-6">
 
         <div class="story-detail__tags">
           <div class="d-flex">
@@ -61,6 +71,13 @@
                 </li>
               {% endfor %}
             </ul>
+          </div>
+        </div>
+
+        <div class="story-detail__media-contact">
+          <div class="callout-info">
+            <h3 class="callout-info__title">For More Information</h3>
+            <p class="callout-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio. Veritatis, esse. At ad a architecto eum voluptates in inventore placeat culpa nemo! Minus voluptates cupiditate quasi, laudantium in quam?</p>
           </div>
         </div>
 
