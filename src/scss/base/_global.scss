@@ -66,6 +66,8 @@ p {
 address {
   font-family: $font-family-base;
   font-style: normal;
+  font-size: $paragraph-font-size;
+  line-height: $paragraph-line-height;
 }
 
 img {
