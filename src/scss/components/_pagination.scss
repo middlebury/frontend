@@ -1,5 +1,6 @@
 .pagination {
-  margin-bottom: 30px;
+  margin-bottom: $component-margin-bottom;
+  margin-top: $component-margin-bottom;
 }
 
 .pagination__list {
