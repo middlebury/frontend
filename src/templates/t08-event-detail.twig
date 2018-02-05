@@ -1,61 +1,58 @@
 {% extends "layout.twig" %}
 
 {% block page %}
-  <section class="page" aria-labelledby="midd-page-header-label">
 
-    {% include 'partials/page-header.twig' with {
-      breadcrumb: [
-        { text: 'Events' }
-      ],
-      title: 'Museum of Art Lecture Series'
-    } %}
+  {% include 'partials/page-header.twig' with {
+    breadcrumb: [
+      { text: 'Events' }
+    ],
+    title: 'Museum of Art Lecture Series'
+  } %}
 
-    <article class="event-detail" aria-labelledby="midd-event-label">
-      <div class="container">
-        <div class="row">
+  <article class="event-detail" aria-labelledby="midd-event-label">
+    <div class="container">
+      <div class="row">
 
-          <div class="col-md-push-1 col-md-7">
-            <header class="event-detail__header" aria-labelledby="midd-event-label">
-              <div class="event-detail__meta">
-                <p class="event-detail__datetime">
-                  <time datetime="">August 18, 2017 &middot; 4:00 PM&ndash;<br>August 19, 2017 &middot; 8:00 PM</time>
-                </p>
-                <p class="event-detail__admission">TESOL Members $175; Non-members $225</p>
-                <p class="event-detail__access">Open to the Public</p>
-              </div>
-
-              <div class="event-detail__share">
-                {% include 'partials/share.twig' %}
-              </div>
-            </header>
-
-            <div class="event-detail__media">
-              <figure>
-                {% include 'partials/img.twig' with { name: 'featured' } %}
-                <figcaption class="media__caption">
-                  This is a caption for this image.
-                  <span class="media__credit">Credit</span>
-                </figcaption>
-              </figure>
+        <div class="col-md-push-1 col-md-7">
+          <header class="mb-4" aria-labelledby="midd-event-label">
+            <div class="mb-4">
+              <p>
+                <strong><time datetime="">August 18, 2017 &middot; 4:00 PM&ndash;<br>August 19, 2017 &middot; 8:00 PM</time></strong>
+              </p>
+              <p>TESOL Members $175; Non-members $225</p>
+              <p>Open to the Public</p>
             </div>
 
-            <div class="event-detail__body typography">
-              <p>The Old Monterey Foundation, a California non-profit, public benefit corporation, was formed on February 14, 2011, with the specific mission and purpose of promoting, supporting and enhancing the artistic, cultural and historic environment of historic Downtown Monterey, California.</p>
+            {% include 'partials/share.twig' %}
+          </header>
 
-              <p>Since 2013, Old Monterey Foundation has continued its promotion of local history and art with the 2014 Jules Tavernier Lecture Series and the 2015 Marcia Devoe Lecture Series, and the Art in the Gardens Plein Aire event.</p>
-            </div>
+          <div class="page__image">
+            <figure>
+              {% include 'partials/img.twig' with { name: 'featured' } %}
+              <figcaption class="media__caption">
+                This is a caption for this image.
+                <span class="media__credit">Credit</span>
+              </figcaption>
+            </figure>
+          </div>
 
-            <div class="event-detail__contact">
-              <div class="row">
-                <div class="col-sm-6">
+          <div class="text typography">
+            <p>The Old Monterey Foundation, a California non-profit, public benefit corporation, was formed on February 14, 2011, with the specific mission and purpose of promoting, supporting and enhancing the artistic, cultural and historic environment of historic Downtown Monterey, California.</p>
 
-                <h3 class="event-detail__meta-title">Where</h3>
+            <p>Since 2013, Old Monterey Foundation has continued its promotion of local history and art with the 2014 Jules Tavernier Lecture Series and the 2015 Marcia Devoe Lecture Series, and the Art in the Gardens Plein Aire event.</p>
+          </div>
 
-                <address class="event-detail__text">McCone Irvine Auditorium<br>
+          <div class="row">
+            <div class="col-sm-6">
+
+              <div class="mb-5">
+                <h2 class="mb-4">Where</h2>
+
+                <address class="mb-3">McCone Irvine Auditorium<br>
                 460 Pierce St<br>
                 Monterey, CA 93940</address>
 
-                <ul class="list mb-6">
+                <ul class="list">
                   <li class="list__item">
                     <span class="list__icon">
                       <svg class="icon" aria-hidden="true">
@@ -73,44 +70,47 @@
                     <a href="#" class="link-border">Add to my calendar</a>
                   </li>
                 </ul>
+              </div>
 
-                <h3 class="event-detail__meta-title">Contact Organizer</h3>
+              <div class="mb-5">
+                <h2 class="mb-4">Contact Organizer</h2>
 
-                <p class="event-detail__text">Priscilla Lorenzo<br>
+                <p>Priscilla Lorenzo<br>
                   <a href="#" class="link-border">plorenzo@middlebury.edu</a><br>
                   <a href="tel:" class="link-border">802-555-0000</a>
                 </p>
-
-                </div>
-                <div class="col-sm-6">
-                  <picture>
-                    <img src="http://placehold.it/300x300" srcset="http://placehold.it/300x300 1x, http://placehold.it/600x600 2x" alt="">
-                  </picture>
-                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="mb-4">
+                <picture>
+                  <img src="http://placehold.it/300x300" srcset="http://placehold.it/300x300 1x, http://placehold.it/600x600 2x" alt="">
+                </picture>
               </div>
             </div>
           </div>
-
-          <div class="col-md-push-1 col-md-3">
-            {% embed 'partials/section.twig' with {
-              title: 'Speakers',
-              class: 'section--aside'
-            } %}
-              {% block content %}
-                <div class="row">
-                  <div class="col-sm-6 col-md-12">
-                    {% include 'partials/speaker.twig' %}
-                  </div>
-                  <div class="col-sm-6 col-md-12">
-                    {% include 'partials/speaker.twig' %}
-                  </div>
-                </div>
-              {% endblock %}
-            {% endembed %}
-          </div>
         </div>
-      </div>
-    </article>
 
-  </section>
+        <div class="col-md-push-1 col-md-3">
+          {% embed 'partials/section.twig' with {
+            title: 'Speakers',
+            class: 'section--aside'
+          } %}
+            {% block content %}
+              <div class="row">
+                <div class="col-sm-6 col-md-12">
+                  {% include 'partials/speaker.twig' %}
+                </div>
+                <div class="col-sm-6 col-md-12">
+                  {% include 'partials/speaker.twig' %}
+                </div>
+              </div>
+            {% endblock %}
+          {% endembed %}
+        </div>
+
+      </div>
+    </div>
+  </article>
+
 {% endblock %}
