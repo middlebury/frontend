@@ -6,7 +6,7 @@
 }
 
 @mixin link-border() {
-  border-bottom: 1px solid $brand-primary;
+  border-bottom: 1px solid currentColor;
   text-decoration: none;
 
   &:hover {
