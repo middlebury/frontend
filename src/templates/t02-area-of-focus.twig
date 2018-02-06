@@ -9,61 +9,41 @@
 
 {% block page %}
 
-  {% embed 'partials/page-hero.twig' %}
-    {% block content %}
-    <h3>Some headline</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit facilis adipisci quod neque ab, dicta laudantium, repudiandae optio dignissimos necessitatibus dolorem possimus, tenetur consequuntur deleniti eligendi omnis, porro eveniet nemo.</p>
-    {% endblock %}
-  {% endembed %}
+  {% include 'partials/page-image-full.twig' %}
 
   <div class="container">
-    {% include 'paragraphs/related-stories.twig' with {
-      tags: true
-    } %}
+    <div class="row">
+      <div class="col-md-push-1 col-md-9">
+        {% include 'partials/lead.twig' %}
+
+        {% include 'paragraphs/text.twig' %}
+
+      </div>
+    </div>
   </div>
 
-  <div class="mb-6">
-    {% include 'partials/panel.twig' with {
-      label: 'Program Spotlight',
-      title: 'International Environmental Policy',
-      link_text: 'Explore and Compare Programs',
-      link_url: '#',
-      modifier: 'primary',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quia a amet maiores modi illum nisi quidem fugit quo totam. Minus odio harum maxime, sapiente aspernatur eligendi, quidem eaque tenetur.',
-      list: [
-        { text: 'Master of Public Administration (MPA)', url: '#' },
-        { text: 'Master of Public Administration (MPA)', url: '#' },
-        { text: 'Master of Public Administration (MPA)', url: '#' },
-        { text: 'Master of Public Administration (MPA)', url: '#' },
-      ],
-      list_more_link_text: 'View all Sustainable Development Programs',
-      list_more_link_url: '#'
-    } %}
-  </div>
-
-  <div class="container">
-    {% include 'paragraphs/related-basic-content.twig' with {
-      count: 3,
-      is_last_lg: true,
-      image_sizes: image_sizes
-    } %}
-  </div>
-
-  <div class="mb-6">
-    {% include 'partials/panel.twig' with {
-      label: 'Campus Spotlight',
-      title: 'The Sustainability Council',
-      link_text: 'Learn more',
-      link_url: '#',
-      modifier: 'secondary',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quia a amet maiores modi illum nisi quidem fugit quo totam. Minus odio harum maxime, sapiente aspernatur eligendi, quidem eaque tenetur.',
-    } %}
-  </div>
+  {% include 'partials/panel.twig' with {
+    label: 'Program Spotlight',
+    title: 'International Environmental Policy',
+    link_text: 'Explore and Compare Programs',
+    link_url: '#',
+    modifier: 'primary',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quia a amet maiores modi illum nisi quidem fugit quo totam. Minus odio harum maxime, sapiente aspernatur eligendi, quidem eaque tenetur.',
+    list: [
+      { text: 'Master of Arts in International Environmental Policy', url: '#' },
+      { text: 'Master of Arts in Nonproliferation and Terrorism Studies', url: '#' },
+      { text: 'Master of Public Administration', url: '#' },
+    ],
+    list_more_link_text: 'View all Sustainable Development Programs',
+    list_more_link_url: '#'
+  } %}
 
   <div class="container">
-    {% include 'paragraphs/related-events.twig' with {
-      image_sizes: image_sizes
-    } %}
+    <div class="row">
+      <div class="col-md-push-1 col-md-9">
+        {% include 'paragraphs/related-stories.twig' %}
+      </div>
+    </div>
   </div>
 
   {% include 'partials/panel.twig' with {
@@ -75,6 +55,27 @@
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quia a amet maiores modi illum nisi quidem fugit quo totam. Minus odio harum maxime, sapiente aspernatur eligendi, quidem eaque tenetur.',
   } %}
 
-  {% include 'partials/callout-group.twig' %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-push-1 col-md-9">
+        {% include 'paragraphs/related-events.twig' with {
+          image_sizes: image_sizes
+        } %}
+        </div>
+      </div>
+    </div>
+
+  {% include 'partials/panel.twig' with {
+    label: 'Center Spotlight',
+    title: 'The Sustainability Council',
+    link_text: 'Learn more',
+    link_url: '#',
+    modifier: 'tertiary',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quia a amet maiores modi illum nisi quidem fugit quo totam. Minus odio harum maxime, sapiente aspernatur eligendi, quidem eaque tenetur.',
+  } %}
+
+  <div class="container">
+    {% include 'partials/callout-group.twig' %}
+  </div>
 
 {% endblock %}
