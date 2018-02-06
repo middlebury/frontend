@@ -3,10 +3,6 @@ should have a toggle option to display the 'large' variant on left or right
 should display 2 columns if 2 stories, both large display
 should display first as large and 2 small if 3 #}
 
-{% if is_last_lg is not defined %}
-  {% set is_last_lg = false %}
-{% endif %}
-
 {% if count is not defined %}
   {% set count = 3 %}
 {% endif %}
@@ -21,15 +17,6 @@ should display first as large and 2 small if 3 #}
     <div class="row">
 
       {% for i in 1..count %}
-
-        {% if count == 3 %}
-          {% set col = 3 %}
-          {% if loop.last and is_last_lg or loop.first and not is_last_lg %}
-            {% set col = 6 %}
-          {% endif %}
-        {% elseif count == 2 %}
-          {% set col = 6 %}
-        {% endif %}
 
         {% if loop.last %}
           <div class="col-md-{{col}}">
