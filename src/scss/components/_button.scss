@@ -4,7 +4,7 @@
   text-align: center;
   border: $btn-border-width solid $btn-border-color;
   cursor: pointer;
-  background: none;
+  background: $input-bg;
   transition: $btn-transition;
   padding: $btn-padding-y $btn-padding-x;
   font-size: $btn-font-size;
