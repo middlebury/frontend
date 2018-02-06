@@ -20,6 +20,8 @@ site_nav:
           url: /institute/leadership-impact/faculty-in-field
         - text: Alumni in the Field
           url: /institute/leadership-impact/alumni-in-field
+        - text: Centers and Initiatives
+          url: /institute/academics/centers-initiatives
         - text: Global Partnerships
           url: /institute/leadership-impact/global-partnerships
         - text: Sustainable Campus
@@ -134,8 +136,6 @@ site_nav:
           url: /institute/admissions/veterans
         - text: Application Instructions
           url: /institute/admissions/application-instructions
-        - text: Apply
-          url: https://miis.force.com/application/tx_communitieshome#_ga=2.119341769.1724926458.1504802435-1564157331.1473439940
         - text: Tuition and Fees
           url: /institute/admissions/tuition-fees
         - text: Scholarships and Fellowships
@@ -151,6 +151,8 @@ site_nav:
     - text: Student Life
       url: /institute/student-life
       items:
+        - text: Meet the Team
+          url: /institute/student-life/team
         - text: New Students
           url: /institute/student-life/new-students
         - text: International Students
