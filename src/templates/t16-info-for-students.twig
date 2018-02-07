@@ -9,12 +9,7 @@
 
 {% block page %}
 
-  <div class="mb-6 text-right">
-    <figure>
-      {% include 'partials/img.twig' with { name: 'top_level' } %}
-      <figcaption class="media__caption">some caption for the image</figcaption>
-    </figure>
-  </div>
+  {% include 'partials/page-image-full.twig' %}
 
   <div class="container">
     <div class="row">
