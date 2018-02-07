@@ -23,6 +23,12 @@
           {% include 'partials/callout-links.twig' with section %}
         {% endfor %}
 
+        {% include 'paragraphs/text.twig' %}
+
+        {% for section in quicklinks %}
+          {% include 'partials/callout-links.twig' with section %}
+        {% endfor %}
+
         {% include 'paragraphs/related-events.twig' %}
 
         {% include 'paragraphs/related-basic-content.twig' %}
