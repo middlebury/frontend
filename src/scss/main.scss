@@ -118,3 +118,8 @@
 .visually-hidden {
   @include sr-only;
 }
+
+.profile-listing-title {
+  margin-top: $component-margin-bottom;
+  margin-bottom: 3rem;
+}
