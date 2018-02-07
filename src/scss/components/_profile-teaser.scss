@@ -9,27 +9,23 @@
 
 .profile-teaser__media {
   flex: 0 0 auto;
-  margin-right: 10px;
-  @include media(sm) {
-    margin-right: 40px;
-  }
+  margin-right: 1.5rem;
 }
 
 .profile-teaser__content {
 }
 
 .profile-teaser__name {
-  font-size: 24px;
-  margin-bottom: 5px;
 }
 
 .profile-teaser__title {
-  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 1.5rem;
+  // margin-bottom: 10px;
 }
 
 .profile-teaser__info {
   font-size: 14px;
-  font-family: $font-family-sans-serif;
   margin-bottom: 1rem;
-  color: $black;
 }
