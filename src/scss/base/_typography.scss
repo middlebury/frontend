@@ -37,6 +37,13 @@
     }
   }
 
+  // reset styles for jump links
+  // TODO: we should have a class for these links instead
+  a[id][name] {
+    color: currentColor;
+    text-decoration: none;
+  }
+
   ul,
   ol {
     margin-bottom: $paragraph-margin-bottom;

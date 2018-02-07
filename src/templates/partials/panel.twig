@@ -4,14 +4,14 @@
     {% include 'partials/img.twig' with { name: 'panel' } %}
   </div>
   <div class="panel__content">
+    <h2 class="panel__label" id="midd-program-panel-label-{{label|slugify}}">{{label}}</h2>
     <div class="panel__row">
       <div class="panel__primary">
-        <h1 class="panel__label" id="midd-program-panel-label-{{label|slugify}}">{{label}}</h1>
-        <h2 class="panel__title">
-          <a href="{{link_url}}" class="panel__link">{{title}} &rsaquo;</a>
-        </h2>
+        <h3 class="panel__title">
+          <a href="{{link_url}}" class="panel__link">{{title}}</a>
+        </h3>
         <p class="panel__text">{{text}}</p>
-        <a href="{{link_url}}" class="panel__button button button--secondary">{{link_text}}</a>
+        <a href="{{link_url}}" class="panel__button button button--secondary button--outline">{{link_text}}</a>
       </div>
       {% if list %}
         <div class="panel__secondary">
@@ -22,7 +22,7 @@
               </li>
             {% endfor %}
           </ul>
-          <a href="{{list_more_link_url}}" class="panel__more-link">{{list_more_link_text}}</a>
+          <a href="{{list_more_link_url}}" class="link-border text-white">{{list_more_link_text}}</a>
         </div>
       {% endif %}
     </div>

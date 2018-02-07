@@ -15,33 +15,30 @@
       <div class="row">
         <div class="col-md-push-1 col-md-11">
 
-          <header class="profile-detail__header">
-            {# <h2 class="profile-detail__name">Beryl Levinger</h2> #}
-            <p class="profile-detail__title">Program Chair, Master of Public Administration and International Policy and Development</p>
-          </header>
+          <p class="lead">Program Chair, Master of Public Administration and International Policy and Development</p>
 
-          <div class="profile-detail__body">
-            <div class="profile-detail__card">
+          <div class="row">
+            <div class="col-md-4 flex-md-last">
               <div class="row">
 
-                <div class="profile-detail__photo">
+                <div class="col-sm-6 col-md-12 mb-3">
                   {% include 'partials/img.twig' with {
                     name: 'profile_detail'
                   } %}
                 </div>
 
-                <div class="profile-detail__info">
+                <div class="col-sm-6 col-md-12">
                   <dl class="profile-info">
                     <dt class="profile-info__title">Office</dt>
                     <dd class="profile-info__text">E6-364</dd>
                     <dt class="profile-info__title">Tel</dt>
                     <dd class="profile-info__text"><a href="tel:6173247535">617-324-7535</a></dd>
                     <dt class="profile-info__title">Email</dt>
-                    <dd class="profile-info__text"><a href="mailto:blevinger@middlebury.edu">blevinger@middlebury.edu</a></dd>
+                    <dd class="profile-info__text"><a href="mailto:blevinger@middlebury.edu" class="link-border">blevinger@middlebury.edu</a></dd>
                     <dt class="profile-info__title">Office Hours</dt>
                     <dd class="profile-info__text">Tuesdays 3-4pm<br>Thursdays 11am-12pm</dd>
                     <dt class="profile-info__title sr-only">CV</dt>
-                    <dd class="profile-info__text"><a href="#">Download CV</a></dd>
+                    <dd class="profile-info__text"><a href="#" class="link-border">Download CV</a></dd>
                     <dt class="profile-info__title sr-only">Elsewhere</dt>
                     <dd class="profile-info__text">
                       {% include 'partials/social-links.twig' with {
@@ -53,20 +50,20 @@
 
               </div>
             </div>
-            <div class="profile-detail__content">
+            <div class="col-md-8 flex-md-first">
 
-              <div class="typography">
+              <div class="text typography">
                 <p>Pellentesque nibh felis, eleifend id, commodo in, interdum vitae, leo. Praesent eu elit. Ut eu ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Maecenas elementum augue nec nisl. Proinauctor lorem at nibh. Curabitur nulla purus, feugiat id, elementum in, lobortis quis, pede. Vivamus sodales adipiscing sapien. Vestibulum posuere nulla eget wisi.</p>
                 <p>Integer volutpat ligula eget enim. Suspendisse vitae arcu. Pellentesque nibh felis, eleifend id, commodo in, interdum vitae, leo. Praesent eu elit. Ut eu ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Maecenas elementum augue nec nisl. Proin auctor lorem at nibh. Curabitur nulla purus, feugiat id, elementum in, lobortis quis, pede. Vivamus sodales adipiscing sapien. Vestibulum posuere nulla eget wisi.</p>
               </div>
 
               <section class="profile-section" aria-labelledby="midd-profile-section-courses-label">
-                <h3 class="profile-section__title" id="midd-profile-section-courses-label">Courses Taught</h3>
+                <h2 class="profile-section__title" id="midd-profile-section-courses-label">Courses Taught</h2>
                 {% include 'partials/course-list.twig' %}
               </section>
 
               <section class="profile-section" aria-labelledby="midd-profile-section-interests-label">
-                <h3 class="profile-section__title" id="midd-profile-section-interests-label">Areas of Interest</h3>
+                <h2 class="profile-section__title" id="midd-profile-section-interests-label">Areas of Interest</h2>
                 <div class="typography">
                   <ul>
                     <li>Lorem ipsum dolor sit amet</li>
@@ -76,7 +73,7 @@
               </section>
 
               <section class="profile-section" aria-labelledby="midd-profile-section-centers-label">
-                <h3 class="profile-section__title" id="midd-profile-section-centers-label">Research Centers</h3>
+                <h2 class="profile-section__title" id="midd-profile-section-centers-label">Research Centers</h2>
                 <div class="typography">
                   <ul>
                     <li><a href="#">Lorem ipsum dolor sit amet</a></li>
@@ -86,7 +83,7 @@
               </section>
 
               <section class="profile-section" aria-labelledby="midd-profile-section-degrees-label">
-                <h3 class="profile-section__title" id="midd-profile-section-degrees-label">Academic Degrees</h3>
+                <h2 class="profile-section__title" id="midd-profile-section-degrees-label">Academic Degrees</h2>
                 <div class="typography">
                   <ul>
                     <li>Lorem ipsum dolor sit amet</li>
@@ -96,29 +93,33 @@
               </section>
 
               <section class="profile-section" aria-labelledby="midd-profile-section-pubs-label">
-                <h3 class="profile-section__title" id="midd-profile-section-pubs-label">Latest Publications</h3>
+                <h2 class="profile-section__title" id="midd-profile-section-pubs-label">Latest Publications</h2>
 
                 <div class="typography">
-                  <h4><a href="#">Islam, Islamism, and Politics in Eurasia Report</a></h4>
+                  <h3><a href="#">Islam, Islamism, and Politics in Eurasia Report</a></h3>
                   <p>Pellentesque nibh felis, eleifend id, commodo in, interdum vitae, leo. Praesent eu elit. Ut eu ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.</p>
                 </div>
               </section>
 
               <section class="profile-section" aria-labelledby="midd-profile-section-events-label">
-                <h3 class="profile-section__title" id="midd-profile-section-events-label">Upcoming Event</h3>
+                <h2 class="profile-section__title" id="midd-profile-section-events-label">Upcoming Event</h2>
 
-                {% include 'partials/event-teaser-lite.twig' with {
-                  title: 'Museum of Art Lecture Series',
-                  date: 'Jun 12',
-                  time: '4:00 PM',
-                  location: 'McCone Irvine Auditoriumh'
-                } %}
+                <ol class="list list--dividers list--md">
+                  <li class="list__item">
+                    {% include 'partials/event-teaser-lite.twig' with {
+                      title: 'Museum of Art Lecture Series',
+                      date: 'Jun 12',
+                      time: '4:00 PM',
+                      location: 'McCone Irvine Auditoriumh'
+                    } %}
+                  </li>
+                </ol>
               </section>
 
               <section class="profile-section" aria-labelledby="midd-profile-section-news-label">
-                <h3 class="profile-section__title" id="midd-profile-section-news-label">News Feed</h3>
+                <h2 class="profile-section__title" id="midd-profile-section-news-label">News Feed</h2>
 
-                <ul class="list list--lg">
+                <ul class="list list--dividers list--md">
                   {% for i in 0..1 %}
                     <li class="list__item">
                       {% include 'partials/story-teaser.twig' %}

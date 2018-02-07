@@ -1,17 +1,21 @@
 .profile-section {
-  margin-bottom: 50px;
+  margin-bottom: 3rem;
+
+  & + & {
+    padding-top: 3rem;
+    border-top: 3px solid $border-color;
+  }
 }
 
 .profile-section__title {
-  font-size: 26px;
-  font-family: $font-family-sans-serif;
-  font-weight: $font-weight-semibold;
-  margin-bottom: 20px;
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+  margin-bottom: 1.5rem;
 }
 
 .profile-section__list {
   list-style-type: disc;
-  padding-left: 20px;
+  padding-left: 2rem;
 }
 
 .profile-section__item {

@@ -1,9 +1,9 @@
 .page-nav {
-  margin-bottom: 60px;
+  margin-bottom: 4rem;
 }
 
 .page-nav__toggler {
-  padding: 10px;
+  padding: 1rem;
   border: 1px solid $border-color;
   width: 100%;
   background: none;
@@ -24,8 +24,8 @@
 
 .page-nav__content {
   @include media-breakpoint-down(sm) {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
     border: 1px solid $border-color;
     border-top: 0;
     background-color: #f2f2f2;
@@ -47,15 +47,15 @@
 .page-nav__list {
   // nested lists
   .page-nav__list {
-    margin-left: 30px;
+    margin-left: 2rem;
     border-top: 1px solid $border-color;
   }
 }
 
 .page-nav__list--callouts {
   border-top: 4px solid #cfd5db;
-  margin-top: 20px;
-  padding-top: 20px;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
 }
 
 .page-nav__item {
@@ -64,16 +64,16 @@
   }
 
   .page-nav__list--callouts & {
-    padding-top: 10px;
+    padding-top: 1rem;
     border-bottom: 0;
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
   }
 }
 
 .page-nav__link {
   display: block;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 
   .page-nav__list--callouts & {
     color: $brand-primary;

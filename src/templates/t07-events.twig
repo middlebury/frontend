@@ -14,7 +14,7 @@
     labelledby: 'midd-featured-event'
   } %}
     {% block content %}
-      {% include 'partials/card.twig' with {
+      {% include 'partials/event-card.twig' with {
         title: 'Middlebury Institute’s TESOL/TFL Program: Innovations in Language Learning',
         date: 'September 24, 2017',
         time: '4:15 PM',
@@ -23,26 +23,18 @@
     {% endblock %}
   {% endembed %}
 
-  {% embed 'partials/drawer.twig' with {
-    id: 'midd-filters-drawer',
-    class: 'js-filters-drawer',
-    toggle_linked: 'filters-drawer',
-    toggle_target: '.js-filters-drawer'
-  } %}
-    {% block content %}
-        {% include 'partials/filters.twig' %}
+  <div class="d-none d-md-block">
+    {% include 'partials/sidebar-search.twig' %}
 
-        {% include 'partials/sidebar-search.twig' %}
-
-        <a href="#" class="button button--tertiary button--xl button--block text-left clearfix">View Academic Calendar <span class="float-right" aria-hidden="true">&rsaquo;</span></a>
-    {% endblock %}
-  {% endembed %}
+    <a href="#" class="button button--tertiary button--block text-left clearfix mb-1">View Academic Calendar <span class="float-right" aria-hidden="true">&rsaquo;</span></a>
+    <a href="#" class="button button--tertiary button--block text-left clearfix mb-1">Commencement <span class="float-right" aria-hidden="true">&rsaquo;</span></a>
+  </div>
 
 {% endblock %}
 
 {% block layout_content %}
 
-  <ol class="list list--dividers list--md mb-6">
+  <ol class="list list--dividers list--md">
     {% for i in 0..7 %}
       <li class="list__item">
         {% include 'partials/event-teaser.twig' with {

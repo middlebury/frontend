@@ -35,12 +35,9 @@
 }
 
 .card__title {
-  font-size: 18px;
-  margin-bottom: 10px;
-
-  @include media(md) {
-    font-size: 22px;
-  }
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+  margin-bottom: 0.5rem;
 }
 
 .card__author {
