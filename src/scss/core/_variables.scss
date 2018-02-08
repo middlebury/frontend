@@ -14,8 +14,7 @@ $grid-breakpoints: (
   xs: 0,
   sm: $screen-sm,
   md: $screen-md,
-  lg: $screen-lg,
-  xl: $screen-xl
+  lg: $screen-lg
 );
 
 // prettier-ignore
@@ -29,13 +28,20 @@ $container-max-widths: (
   sm: 1440px
 );
 
+$spacer: 1rem !default;
+$spacers: () !default;
+
 // prettier-ignore
-$spacers: (
-  0: 0,
-  1: .5rem,
-  // 3: 3em,
-  4: 40px,
-  6: 60px
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * 0.25),
+    2: ($spacer * 0.5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3)
+  ),
+  $spacers
 );
 
 // custom configs
@@ -70,6 +76,12 @@ $gray: #767676;
 $gray-light: #dedede;
 
 $danger: #e60000;
+
+$text-colors: (
+  'primary': $brand-primary,
+  'secondary': $brand-secondary,
+  'white': $white
+);
 
 $body-bg: $warm-gray;
 $body-color: $black;
@@ -130,7 +142,7 @@ $h6-margin-bottom: 0;
 
 $lead-font-size: 26px;
 $lead-line-height: 38px;
-$lead-margin-bottom: 3.5rem;
+$lead-margin-bottom: 2rem;
 
 // Links
 $link-color: $brand-primary;

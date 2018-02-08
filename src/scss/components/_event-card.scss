@@ -1,0 +1,21 @@
+.event-card {
+}
+
+.event-card__media {
+  margin-bottom: 0.5rem;
+}
+
+.event-card__title {
+  font-size: $h4-font-size;
+  line-height: $h4-line-height;
+  margin-bottom: 0.5rem;
+}
+
+.event-card__datetime {
+  font-size: 16px;
+  font-weight: $font-weight-medium;
+}
+
+.event-card__local {
+  font-size: 16px;
+}

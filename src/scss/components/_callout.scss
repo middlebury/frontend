@@ -21,6 +21,7 @@
 
 .callout__body {
   padding-right: 1rem;
+  max-width: 100%;
 
   @include media(lg) {
     padding-right: 0;
@@ -42,6 +43,7 @@
 
 .callout__footer {
   margin-left: auto;
+  max-width: 100%;
 
   @include media(lg) {
     margin-top: auto;

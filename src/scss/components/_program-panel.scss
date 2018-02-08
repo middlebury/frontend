@@ -1,26 +1,30 @@
 .program-panel {
   position: relative;
   background-color: $gray;
+  margin-bottom: $component-margin-bottom;
 
   @include media(md) {
-    position: relative;
     overflow: hidden;
-    padding-top: 56.25%;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: $brand-primary;
+      opacity: 0.7;
+      z-index: 1;
+    }
   }
 }
 
 .program-panel__text {
-  font-family: $font-family-sans-serif;
   color: $white;
-  line-height: 1.5;
-
-  @include media(sm) {
-    font-size: 22px;
-  }
-
-  @include media(lg) {
-    font-size: 24px;
-  }
+  font-size: 21px;
+  line-height: 48px;
 }
 
 .program-panel__media {
@@ -31,7 +35,13 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-    opacity: 0.8;
+  }
+
+  img {
+    object-fit: cover;
+    font-family: 'object-fit: cover;'; // for object-fit-images polyfill
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -41,29 +51,25 @@
   }
 
   @include media(md) {
-    position: absolute;
+    position: relative;
     z-index: 2;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    min-height: 700px;
     justify-content: space-between;
     align-items: center;
   }
 }
 
 .program-panel__item {
-  padding: 30px;
-  text-align: center;
+  padding: 2rem;
 
   @include media(sm) {
-    padding: 60px;
     flex: 1;
   }
 
   @include media(md) {
     background-color: transparent !important;
     max-width: 40%;
+    padding: 4rem;
   }
 
   @include media(lg) {
@@ -74,39 +80,45 @@
 // These modifiers have to be before panel item so background color becomes transparent on medium and up
 .program-panel__item--primary {
   background-color: $teal;
-
-  @include media(md) {
-    text-align: left;
-  }
 }
 
 .program-panel__item--secondary {
   background-color: $brand-primary;
+  text-align: center;
+}
+
+.program-panel__stats-list {
+  margin-bottom: 2.5rem;
 }
 
 .program-panel__stats-title {
   color: $white;
-  font-size: 30px;
-  margin-bottom: 40px;
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+  margin-bottom: 2rem;
 }
 
-.program-panel__stat-label {
+.program-panel__stats-label {
   display: block;
-  font-size: 40px;
-  font-style: normal;
-  font-family: $font-family-serif;
-  line-height: 1;
-  margin-bottom: 10px;
   color: $white;
+  font-family: $font-family-serif;
+  font-size: 48px;
+  line-height: 1;
 }
 
-.program-panel__stat-text {
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+.program-panel__stats-text {
   color: $white;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 28px;
 
   &:not(:last-of-type) {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
     border-bottom: 1px solid $white;
+  }
+
+  @include media(md) {
+    font-size: $paragraph-font-size;
+    line-height: $paragraph-line-height;
   }
 }

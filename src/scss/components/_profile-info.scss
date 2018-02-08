@@ -1,13 +1,14 @@
 .profile-info {
-
 }
 
 .profile-info__title {
   font-weight: $font-weight-semibold;
-  margin-bottom: 5px;
+  font-size: $paragraph-font-size;
+  line-height: $paragraph-line-height;
 }
 
 .profile-info__text {
-  margin-bottom: 20px;
-  font-family: $font-family-serif;
+  font-size: $paragraph-font-size;
+  line-height: $paragraph-line-height;
+  margin-bottom: 1rem;
 }

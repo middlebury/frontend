@@ -1,28 +1,26 @@
+// TODO: change panel, homepage hero, and program panel to use
+// same component for background images with text over them
+
 .panel {
-  position: relative;
-  overflow: hidden;
+  margin-bottom: $component-margin-bottom;
 
   @include media(md) {
-    padding-top: percentage(5 / 12);
     background-color: #000;
-  }
-}
+    position: relative;
+    overflow: hidden;
 
-.panel--primary {
-  @include media-breakpoint-down(sm) {
-    background-color: $brand-primary;
-  }
-}
-
-.panel--secondary {
-  @include media-breakpoint-down(sm) {
-    background-color: $teal;
-  }
-}
-
-.panel--tertiary {
-  @include media-breakpoint-down(sm) {
-    background-color: $green-dark;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: $brand-primary;
+      opacity: 0.7;
+      z-index: 1;
+    }
   }
 }
 
@@ -30,59 +28,59 @@
   @include media(md) {
     @include absolute();
     z-index: 1;
-    opacity: 0.5;
+
+    img {
+      object-fit: cover;
+      font-family: 'object-fit: cover;';
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
 .panel__content {
-  padding-top: 45px;
-  padding-bottom: 45px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: $brand-primary;
+
   @include make-container();
 
   @include media(md) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    position: relative;
     z-index: 2;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    background-color: transparent;
   }
 }
 
 .panel__row {
   @include make-row();
-  align-items: center;
-  height: 100%;
+  @include media(md) {
+    min-height: 500px;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .panel__primary {
   @include make-col-ready();
 
   @include media(md) {
-    @include make-col(6);
+    @include make-col(5);
   }
 }
 
 .panel__label {
+  @include section-title();
   color: $white;
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 0.04em;
-  font-family: $font-family-sans-serif;
-  line-height: 1;
-  font-weight: $font-weight-normal;
-  margin-bottom: 10px;
-
-  @include media(sm) {
-    font-size: 14px;
-    margin-bottom: 30px;
-  }
+  font-weight: $font-weight-semibold;
 }
 
 .panel__title {
-  font-weight: normal;
-  font-size: 28px;
-  margin-bottom: 10px;
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+  margin-bottom: 0.5rem;
 }
 
 .panel__link {
@@ -90,13 +88,8 @@
 }
 
 .panel__text {
-  margin-bottom: 40px;
   color: $white;
-  font-family: $font-family-sans-serif;
-
-  @include media(lg) {
-    font-size: 20px;
-  }
+  margin-bottom: 2rem;
 }
 
 .panel__button {
@@ -106,13 +99,12 @@
   @include make-col-ready();
 
   @include media(md) {
-    @include make-col(5);
-    margin-left: auto;
+    @include make-col(4);
   }
 }
 
 .panel__list {
-  margin-top: 60px;
+  margin-top: 4rem;
 
   @include media(md) {
     margin-top: 0;
@@ -120,41 +112,21 @@
 }
 
 .panel__list-item {
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-
-  @include media(sm) {
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-  }
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
 
   &:not(:last-of-type) {
-    border-bottom: 1px solid rgba(white, 0.3);
+    border-bottom: 1px solid rgba($white, 0.5);
   }
 }
 
 .panel__list-link {
   color: $white;
-  font-family: $font-family-serif;
-  opacity: 0.5;
-  transition: opacity 0.2s;
-
-  &:hover {
-    opacity: 1;
-    text-decoration: none;
-  }
-
-  @include media(lg) {
-    font-size: 20px;
-  }
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+  font-family: $headings-font-family;
 }
 
 .panel__more-link {
   color: $white;
-  border-bottom: 1px solid $white;
-
-  &:hover {
-    border-color: transparent;
-    text-decoration: none;
-  }
 }

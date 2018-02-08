@@ -4,7 +4,7 @@
   text-align: center;
   border: $btn-border-width solid $btn-border-color;
   cursor: pointer;
-  background: none;
+  background: $input-bg;
   transition: $btn-transition;
   padding: $btn-padding-y $btn-padding-x;
   font-size: $btn-font-size;
@@ -83,11 +83,29 @@
     background-color: $brand-primary-dark;
     color: $white;
   }
+
+  &.button--outline {
+    background-color: transparent;
+    color: $white;
+    border-color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: $brand-primary;
+    }
+  }
 }
 
 .button--tertiary {
   background-color: $brand-primary;
   color: $white;
+
+  &:hover,
+  &:focus {
+    background-color: $green-light;
+    color: $brand-primary;
+  }
 }
 
 // Elements

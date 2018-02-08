@@ -37,30 +37,15 @@
 
 {% block layout_content %}
 
-  <div class="typography">
-    <p class="lead">The Middlebury Institute Master of Public Administration (MPA) is designed for those who want to make a difference in confronting critical social problems, including hunger, poverty, disease, joblessness, and powerlessness.</p>
-    <p>Through hands-on experience, applied learning, practical tools, and community support, this program prepares graduates to be effective leaders and managers in international development for social change organizations, NGOs, nonprofits and government agencies around the world. The four-semester 60-credit program includes core coursework and optional areas of concentration, as well as courses taught in a student’s chosen language of study and a professional practicum.</p>
-  </div>
+  {% include 'partials/lead.twig' %}
+
+  {% include 'paragraphs/text.twig' %}
 
   {% include 'paragraphs/video.twig' %}
 
   {% include 'paragraphs/related-basic-content.twig' %}
 
-  {% embed 'partials/section.twig' with {
-    title: 'Our faculty are professionals, on campus and in the field',
-    moreLinkHref: '#',
-    moreLinkText: 'Call to action'
-  } %}
-    {% block content %}
-      <ol class="list list--lg">
-        {% for i in 0..2 %}
-          <li class="list__item">
-            {% include 'partials/story-teaser.twig' %}
-          </li>
-        {% endfor %}
-      </ol>
-    {% endblock %}
-  {% endembed %}
+  {% include 'paragraphs/related-stories-list.twig' %}
 
   <div class="grid-expand">
     {% include 'partials/program-panel.twig' %}
@@ -69,5 +54,7 @@
 {% endblock %}
 
 {% block page_footer %}
-  {% include 'partials/callout-group.twig' %}
+  <div class="container">
+    {% include 'partials/callout-group.twig' %}
+  </div>
 {% endblock %}

@@ -8,14 +8,12 @@
 
     <div class="program-panel__item program-panel__item--primary">
       <p class="program-panel__text">
-        &ldquo;I liked the Institute’s focused approach — there was nothing unnecessary or outdated in the curriculum. And we were all empowered to help influence and evolve the curriculum ourselves. My degree was a great combination of working and studying.&rdquo;<br><br>
-        <strong>James Peter</strong><br>
-        Alumnus
+        &ldquo;I liked the Institute’s focused approach — there was nothing unnecessary or outdated in the curriculum. And we were all empowered to help influence and evolve the curriculum ourselves. My degree was a great combination of working and studying.&rdquo;
       </p>
     </div>
     <div class="program-panel__item program-panel__item--secondary">
 
-      <h3 class="program-panel__stats-title">Class of 2016</h3>
+      <h3 class="program-panel__stats-title">Career Outcomes</h3>
 
       {% set stats = [
         { label: '81%', text: 'Using Language &amp; Cultural Skills' },
@@ -23,10 +21,10 @@
         { label: '88%', text: 'Living Aligned with Values' }
       ] %}
 
-      <dl>
+      <dl class="program-panel__stats-list">
         {% for item in stats %}
-          <dt class="program-panel__stat-label">{{item.label}}</dt>
-          <dd class="program-panel__stat-text">{{item.text}}</dd>
+          <dt class="program-panel__stats-label">{{item.label}}</dt>
+          <dd class="program-panel__stats-text">{{item.text}}</dd>
         {% endfor %}
       </dl>
 

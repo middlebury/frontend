@@ -16,10 +16,8 @@
   }
 }
 
-.serif {
-  font-family: $font-family-serif;
-}
-
-.sans-serif {
-  font-family: $font-family-sans-serif;
+@each $name, $color in $text-colors {
+  .text-#{$name} {
+    color: $color;
+  }
 }

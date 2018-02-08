@@ -37,31 +37,31 @@
   right: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom, rgba(black, 0.5), transparent);
+  background-image: linear-gradient(to bottom, rgba(black, 0.8), transparent);
 
   @include media(md) {
     text-align: right;
+    background-image: linear-gradient(
+      to bottom left,
+      rgba(black, 0.8),
+      transparent 75%
+    );
   }
 }
 
 .homepage-hero__body {
-  padding: 30px;
+  padding: 2.5rem;
 
   @include media(md) {
-    max-width: 500px;
+    max-width: 600px;
     display: inline-block;
   }
 }
 
 .homepage-hero__title {
-  font-size: 22px;
-  font-family: $font-family-sans-serif;
-  font-weight: $font-weight-semibold;
-  margin-bottom: 20px;
-
-  @include media(md) {
-    font-size: 30px;
-  }
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+  margin-bottom: 0.5rem;
 }
 
 .homepage-hero__link {
@@ -71,7 +71,6 @@
 .homepage-hero__text {
   color: $white;
   display: none;
-  margin-bottom: 20px;
 
   @include media(sm) {
     display: block;
@@ -79,9 +78,5 @@
 }
 
 .homepage-hero__more-link {
-  display: none;
-
-  @include media(sm) {
-    display: block;
-  }
+  margin-top: 2rem;
 }
