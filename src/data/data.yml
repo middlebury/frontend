@@ -241,11 +241,10 @@ footer_nav:
 
 
 secondary_footer_nav:
-  - text: Lorem ipsum
-  - text: Dolor site amet
-  - text: Adipsing
-  - text: Conssueretal Apidsing
-  - text: Lorem ipsum dolor sit
+  - text: Privacy Policy
+    href: http://www.middlebury.edu/about/privacy
+  - text: Copyright
+    href: http://www.middlebury.edu/about/copyright
 
 social_links:
   - text: LinkedIn
