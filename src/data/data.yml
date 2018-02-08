@@ -247,18 +247,22 @@ secondary_footer_nav:
     href: http://www.middlebury.edu/about/copyright
 
 social_links:
-  - text: LinkedIn
-    href: http://go.miis.edu/linkedin
-    slug: linkedin
+  - text: Instagram
+    href: http://go.miis.edu/instagram
+    slug: instagram
   - text: Facebook
     href: http://go.miis.edu/facebook
     slug: facebook
   - text: twitter
     href: http://go.miis.edu/twitter
     slug: twitter
-  - text: YouTube
-    href: http://go.miis.edu/youtube
-    slug: youtube
+  - text: LinkedIn
+    href: http://go.miis.edu/linkedin
+    slug: linkedin
+  - text: Vimeo
+    href: https://vimeo.com/middleburyinstitute
+    slug: vimeo
+
 
 contact_social_links:
   - text: Google Plus
