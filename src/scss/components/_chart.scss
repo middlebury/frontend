@@ -1,9 +1,9 @@
 .chart {
-  margin-bottom: 3rem;
+  margin-bottom: $component-margin-bottom;
 }
 
 .chart__title {
-  @extend .section__title;
+  @include section-title();
   margin-bottom: 2rem;
 }
 
