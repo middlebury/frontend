@@ -13,6 +13,13 @@
   </nav>
   {% include 'partials/icons.twig' %}
   <div class="site-container">
+    {% if alert %}
+      <div class="alert alert--warning">
+        <div class="container">
+          <strong>Warning:</strong> look out below!
+        </div>
+      </div>
+    {% endif %}
     {% include 'partials/header.twig' %}
     <main class="main" id="midd-main" aria-labelledby="midd-page-header-label">
       <div class="page">
