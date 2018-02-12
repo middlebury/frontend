@@ -47,7 +47,9 @@
 
 .program-panel__content {
   @include media(sm) {
-    display: flex;
+    @include make-row();
+    margin-left: 0;
+    margin-right: 0;
   }
 
   @include media(md) {
@@ -63,17 +65,18 @@
   padding: 2rem;
 
   @include media(sm) {
-    flex: 1;
+    @include make-col-ready();
+    @include make-col(6);
   }
 
   @include media(md) {
     background-color: transparent !important;
-    max-width: 40%;
     padding: 4rem;
+    @include make-col(5);
   }
 
   @include media(lg) {
-    max-width: 33.33%;
+    @include make-col(4);
   }
 }
 
