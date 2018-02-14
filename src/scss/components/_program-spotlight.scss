@@ -4,7 +4,7 @@
 
 .program-spotlight__header {
   height: 100%;
-  padding: 8rem 4rem 3rem;
+  padding: 2rem;
   background-color: $brand-primary;
   display: flex;
   flex-direction: column;
@@ -12,6 +12,7 @@
 
   @include media(sm) {
     text-align: left;
+    padding: 8rem 4rem 3rem;
   }
 }
 
@@ -19,14 +20,18 @@
   color: $white;
   font-size: $h1-font-size;
   line-height: $h1-line-height;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+
+  @include media(sm) {
+    margin-bottom: 3rem;
+  }
 }
 
 .program-spotlight__button {
 }
 
 .program-spotlight__controls {
-  margin-top: 1rem;
+  margin-top: 2rem;
   @include media(sm) {
     margin-top: auto;
   }
