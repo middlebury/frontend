@@ -1,52 +1,64 @@
 <article class="program-spotlight-item js-spotlight-item-{{id}}">
 
   <figure class="program-spotlight-item__image">
-    <img src="/images/degrees-{{program.image}}.jpg" alt="{{program.image_alt}}">
+    <img src="/images/{{image}}" alt="{{title}}">
   </figure>
 
   <div class="program-spotlight-item__content">
     <div class="program-spotlight-item__side program-spotlight-item__side--front">
 
-      <div class="program-spotlight-item__body">
-        <h3 class="program-spotlight-item__title">
-          <a href="{{program.href}}" class="program-spotlight-item__link">{{program.title}}</a>
-        </h3>
-        <p class="program-spotlight-item__text">{{program.text}}</p>
-      </div>
-      <div class="program-spotlight-item__footer">
         <a href="#midd-program-spotlight-item-aside-{{id}}"
-          class="button button--secondary button--circle"
+          class="program-spotlight-item__toggle button button--sm button--tertiary"
+          aria-label="Open Q&A"
           data-toggle-target=".js-spotlight-item-{{id}}"
-          data-toggle-linked="spotlight-item-{{id}}"
-          data-toggle-group="spotlight-items"
-          aria-controls="midd-program-spotlight-item-aside-{{id}}">
+          data-toggle-group="midd-program-spotlight-items"
+          data-toggle-linked="spotlight-item-{{id}}">
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-plus" />
           </svg>
+        </a>
+
+      <div class="program-spotlight-item__header">
+        <h3 class="program-spotlight-item__title">{{title}}</h3>
+        <p class="program-spotlight-item__text">{{type}}</p>
+      </div>
+      <div class="program-spotlight-item__body">
+
+      </div>
+      <div class="program-spotlight-item__footer">
+        <a href="#" class="program-spotlight-item__label button button--secondary">
+          {{program}}
         </a>
       </div>
 
     </div>
     <aside class="program-spotlight-item__side program-spotlight-item__side--back" id="midd-program-spotlight-item-aside-{{id}}">
 
-      <div class="text-right">
-        <button
-          class="button"
-          aria-label="Close"
-          data-toggle-target=".js-spotlight-item-{{id}}"
-          data-toggle-linked="spotlight-item-{{id}}">
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-x" />
-          </svg>
-        </button>
-      </div>
+      <button
+        class="program-spotlight-item__toggle button button--sm button--secondary"
+        aria-label="Close"
+        data-toggle-target=".js-spotlight-item-{{id}}"
+        data-toggle-group="midd-program-spotlight-items"
+        data-toggle-linked="spotlight-item-{{id}}">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-x" />
+        </svg>
+      </button>
 
+      <div class="program-spotlight-item__header">
+        <h3 class="program-spotlight-item__title">{{title}}</h3>
+        <p class="program-spotlight-item__text">{{type}}</p>
+      </div>
       <div class="program-spotlight-item__body">
-        <h4 class="program-spotlight-item__title">{{program.card.title}}</h4>
-        <p class="program-spotlight-item__text">{{program.card.text}}</p>
+        <div class="typography">
+          <h4>Lorem ipsum dolor set?</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <h4>Lorem ipsum dolor set?</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
       </div>
       <div class="program-spotlight-item__footer">
-        <a href="{{program.card.link_href}}" class="button button--secondary button--pill button--block">{{program.card.link_text}}</a>
+        <a href="#" class="link-border">Learn more about {{program}}</a>
       </div>
 
     </aside>

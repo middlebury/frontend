@@ -11,13 +11,13 @@
   margin-bottom: 60px;
   display: flex;
   flex-direction: column;
+  height: 100%;
 
   @include media(lg) {
     text-align: left;
     border-bottom: 0;
     margin-bottom: 0;
     padding-bottom: 0;
-    height: 100%;
   }
 }
 
