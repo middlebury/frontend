@@ -262,14 +262,6 @@ social_links:
     slug: vimeo
 
 
-contact_social_links:
-  - text: Google Plus
-    href: http://go.miis.edu/googleplus
-    slug: googleplus
-  - text: Instagram
-    href: http://go.miis.edu/instagram
-    slug: instagram
-
 missions:
   - text: help build a more just world.
     url: https://www.middlebury.edu/institute/academics/degree-programs/international-policy-development
@@ -291,6 +283,25 @@ missions:
     url: https://www.middlebury.edu/institute/academics/degree-programs/translation-localization-management
   - text: teach English to students around the world.
     url: https://www.middlebury.edu/institute/academics/degree-programs/language-education
+
+students:
+  - title: Anna Galbraith
+    type: Student
+    program: International Environmental Policy
+    image: anna-galbraith-582x786.jpg
+  - title: Jorge Silva
+    type: Student
+    program: Nonproliferation and Terrorism Studies
+    image: jorge-silva-582x786.jpg
+  - title: Justin Arrington
+    type: Student
+    program: International Trade and Economic Diplomacy
+    image: justin-arrington-582x786.jpg
+  - title: Anna Galbraith
+    type: Student
+    program: international environmental policy
+    image: anna-galbraith-582x786.jpg
+
 
 programs:
   - title: International Environmental Policy
@@ -362,95 +373,12 @@ homepage:
       location: McCone Irvine Auditorium
       url: '#'
 
-  projects:
-    - title: Peru Field Work
-      featured: true
-      image: http://placehold.it/500x375
-      image_lg: http://placehold.it/63000x375
-      image_alt: alt text
-      blurb: Students are applying policy-research concepts learned in the Field Methods and Policy and Data Analysis courses to the design of a country-specific, client specified field-research project.
-    - title: Nepal Data Analysis
-      image: http://placehold.it/500x375
-      image_alt: alt text
-      blurb: A team of 15 students are using data- analytical techniques to assess the data they collected from three sites in Nepal.
-    - title: MPA Students Survey Digital Media in Cuba
-      image: http://placehold.it/500x375
-      image_alt: alt text
-      blurb: To support innovative analysis of ICT for development, students conduct 10 days of fieldwork in and around Havana
-
-  leaders_in_the_field:
-    - title: Institute Experts Contribute to Climate
-      image: http://placehold.it/500x500
-      blurb: <p>Students are applying policy-research concepts learned in the Field Methods and Policy and Data Analysis courses to the design of a country-specific, client specified field-research project</p>
-    - title: “Romantic Computing” and the Future of Education
-      image: http://placehold.it/500x500
-      blurb: <p>“Romantic computing” is not about dating sites like Tinder, Professor Gardner Campbell assured a bi- coastal audience at the Middlebury Institute in Monterey and Middlebury</p>
-    - title: Institute Co-Hosts U.S.-China Conference on Arms Control
-      featured: true
-      blurb: <p>Students are applying policy-research concepts learned in the Field Methods and Policy and Data Analysis courses to the design of a country-specific, client specified field-research project</p>
-
 global_projects:
   - title: United Nations
     blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
   - title: Silicon Valley
     blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
   - title: Teach for America
-    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
-
-six_articles:
-  - title: Environmental Sustainability
-    image: http://placehold.it/500x500
-    image_xs: http://placehold.it/85x65
-    image_md: http://placehold.it/155x115
-    image_lg: http://placehold.it/536x402
-    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
-  - title: Environmental Sustainability
-    image: http://placehold.it/500x500
-    image_xs: http://placehold.it/85x65
-    image_md: http://placehold.it/155x115
-    image_lg: http://placehold.it/536x402
-    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
-  - title: Environmental Sustainability
-    image: http://placehold.it/500x500
-    image_xs: http://placehold.it/85x65
-    image_md: http://placehold.it/155x115
-    image_lg: http://placehold.it/536x402
-    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
-  - title: Environmental Sustainability
-    image: http://placehold.it/500x500
-    image_xs: http://placehold.it/85x65
-    image_md: http://placehold.it/155x115
-    image_lg: http://placehold.it/536x402
-    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
-  - title: Environmental Sustainability
-    image: http://placehold.it/500x500
-    image_xs: http://placehold.it/85x65
-    image_md: http://placehold.it/155x115
-    image_lg: http://placehold.it/536x402
-    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
-  - title: Environmental Sustainability
-    image: http://placehold.it/500x500
-    image_xs: http://placehold.it/85x65
-    image_md: http://placehold.it/155x115
-    image_lg: http://placehold.it/536x402
-    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
-
-three_articles:
-  - title: Environmental Sustainability
-    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
-  - title: Environmental Sustainability
-    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
-  - title: Environmental Sustainability
-    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
-
-four_articles:
-  - title: Environmental Sustainability
-    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
-  - title: Environmental Sustainability
-    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
-  - title: Environmental Sustainability
-    blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
-  - title: Environmental Sustainability
     blurb: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
 
 quicklinks:

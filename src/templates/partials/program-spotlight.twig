@@ -1,6 +1,6 @@
-<div class="program-spotlight">
+<section class="program-spotlight" aria-labelledby="midd-program-spotlight-label">
   <div class="row row--no-gutters">
-    <div class="col-sm-6 col-md-5 col-lg-3">
+    <div class="col-sm-6 col-md-4 col-lg-3">
 
       <div class="program-spotlight__header">
         <h2 class="program-spotlight__title" id="midd-program-spotlight-label">Program Spotlight</h2>
@@ -8,23 +8,24 @@
           <a href="#" class="button button--secondary">Explore our Programs</a>
         </div>
         <div class="program-spotlight__controls" aria-label="program spotlight controls" role="navigation">
-          <button class="button button--secondary button--circle js-program-spotlight-prev-button" aria-label="Previous">
+          {# ids for tracking #}
+          <button class="button button--secondary button--circle js-program-spotlight-prev-button" aria-label="Previous" id="midd-program-spotlight-button-prev">
             <span aria-hidden="true">&lsaquo;</span>
           </button>
-          <button class="button button--secondary button--circle js-program-spotlight-next-button" aria-label="Next">
+          <button class="button button--secondary button--circle js-program-spotlight-next-button" aria-label="Next" id="midd-program-spotlight-button-next">
             <span aria-hidden="true">&rsaquo;</span>
           </button>
         </div>
       </div>
 
     </div>
-    <div class="col-sm-6 col-md-7 col-lg-9">
+    <div class="col-sm-6 col-md-8 col-lg-9">
       <div class="program-spotlight__container swiper-container js-program-spotlight">
-        <div class="program-spotlight__content swiper-wrapper">
+        <div class="program-spotlight__content swiper-wrapper js-swiper-wrapper">
 
-          {% for program in programs %}
+          {% for student in students %}
             <div class="program-spotlight__item swiper-slide">
-              {% set item = program|merge({ id: loop.index }) %}
+              {% set item = student|merge({ id: loop.index }) %}
               {% include 'partials/program-spotlight-item.twig' with item %}
             </div>
           {% endfor %}
@@ -34,4 +35,4 @@
 
     </div>
   </div>
-</div>
+</section>

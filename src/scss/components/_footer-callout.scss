@@ -1,10 +1,12 @@
 .footer-callout {
   display: flex;
   flex-direction: column;
+  // height: 100%;
 }
 
 .footer-callout__title {
   order: 2;
+  // flex: 0 0 auto;
   color: $white;
   font-size: 40px;
   line-height: 50px;
@@ -13,6 +15,7 @@
 
 .footer-callout__text {
   order: 1;
+  // flex: 0 0 auto;
   color: $white;
   font-size: 20px;
   font-family: $font-family-serif;
@@ -21,4 +24,5 @@
 
 .footer-callout__footer {
   order: 3;
+  // flex: 0 0 auto;
 }
