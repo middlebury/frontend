@@ -79,6 +79,7 @@ $spotlight-item-breakpoint: 'xs';
 .program-spotlight-item__body {
   padding: 1rem;
   flex: 1;
+  overflow-y: auto;
 
   p {
     font-size: 16px;
