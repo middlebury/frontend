@@ -1,9 +1,9 @@
 <div class="site-search">
-  <form>
+  <form method="GET" action="/institute/search">
     <div class="input-group">
       <div class="input-group__field">
         <label for="midd-site-search" class="sr-only">Search the Institute</label>
-        <input type="search" placeholder="Search the Institute" class="site-search__control form__control form__control--sm" id="midd-site-search" required />
+        <input type="search" name="query" placeholder="Search the Institute" class="site-search__control form__control form__control--sm" id="midd-site-search" required />
       </div>
       <div class="input-group__button">
         <button type="submit" class="button button--sm site-search__button">
