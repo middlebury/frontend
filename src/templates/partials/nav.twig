@@ -8,7 +8,7 @@
       {% endif %}
 
       <li class="site-nav__item" data-nav-item>
-        <a href="{{item.url}}" class="site-nav__link" data-nav-link>
+        <a href="{{item.url}}"{% if item.label %} aria-label="{{item.label}}"{% endif %} class="site-nav__link" data-nav-link>
           {{item.text}}
 
           {% if has_sub_nav %}
