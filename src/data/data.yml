@@ -68,14 +68,14 @@ site_nav:
               url: /institute/academics/degree-programs/international-trade-economic-diplomacy
             - text: Nonproliferation and Terrorism Studies
               url: /institute/academics/degree-programs/nonproliferation-terrorism-studies
-            - text: Master of Public Administration
-              url: /institute/academics/degree-programs/public-administration
-            - text: TESOL; Teaching Foreign Language
+            - text: Language Education
               url: /institute/academics/degree-programs/language-education
             - text: Translation; Translation and Interpretation; Conference Interpretation
               url: /institute/academics/degree-programs/translation-interpretation
             - text: Translation and Localization Management
               url: /institute/academics/degree-programs/translation-localization-management
+            - text: Master of Public Administration
+              url: /institute/academics/degree-programs/public-administration
         - text: Joint Degree Programs
           url: /institute/academics/joint-degrees
           items:
@@ -471,11 +471,11 @@ image_sizes:
     - 1040x585
     - 1200x675
   # homepage program spotlight
-  program_spotlight:
+  program_spotlight: # 3:4
     srcset:
-    - 400x225
-    - 640x360
-    - 1120x630
+    - 468x624
+    - 582x776
+    sizes: '(max-width: 468px) 100vw, (max-width: 580px) 582px, 468px'
   # related basic content/events/stories
   card:
     srcset:
@@ -573,4 +573,3 @@ image_sizes:
     - 400x225
     sizes: '(max-width: 580px) 128px, (max-width: 960px) 160px, (max-width: 1200px) 400px, 320px'
   # TODO: slidershow with lazy <picture>?
-                                                              
