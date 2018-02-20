@@ -471,11 +471,11 @@ image_sizes:
     - 1040x585
     - 1200x675
   # homepage program spotlight
-  program_spotlight:
+  program_spotlight: # 3:4
     srcset:
-    - 400x225
-    - 640x360
-    - 1120x630
+    - 468x624
+    - 582x776
+    sizes: '(max-width: 468px) 100vw, (max-width: 580px) 582px, 468px'
   # related basic content/events/stories
   card:
     srcset:

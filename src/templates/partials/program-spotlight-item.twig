@@ -1,7 +1,7 @@
 <article class="program-spotlight-item js-spotlight-item-{{id}}">
 
   <figure class="program-spotlight-item__image">
-    <img src="/images/{{image}}" alt="{{title}}">
+    {% include 'partials/img.twig' with { name: 'program_spotlight' } %}
   </figure>
 
   <div class="program-spotlight-item__content">
