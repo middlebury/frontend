@@ -1,4 +1,4 @@
-<article class="program-spotlight-item js-spotlight-item-{{id}}">
+<article class="program-spotlight-item js-spotlight-item-{{id}}" aria-labelledby="midd-spotlight-{{id}}-header">
 
   <figure class="program-spotlight-item__image">
     {% include 'partials/img.twig' with { name: 'program_spotlight' } %}
@@ -19,7 +19,7 @@
         </a>
 
       <div class="program-spotlight-item__header">
-        <h3 class="program-spotlight-item__title">{{title}}</h3>
+        <h3 class="program-spotlight-item__title" id="midd-spotlight-{{id}}-header">{{title}}</h3>
         <p class="program-spotlight-item__text">{{type}}</p>
       </div>
       <div class="program-spotlight-item__body">
@@ -32,7 +32,7 @@
       </div>
 
     </div>
-    <aside class="program-spotlight-item__side program-spotlight-item__side--back" id="midd-program-spotlight-item-aside-{{id}}">
+    <aside class="program-spotlight-item__side program-spotlight-item__side--back" id="midd-program-spotlight-item-aside-{{id}}" aria-labelledby="midd-spotlight-{{id}}-aside">
 
       <button
         class="program-spotlight-item__toggle button button--sm button--secondary"
@@ -46,7 +46,7 @@
       </button>
 
       <div class="program-spotlight-item__header">
-        <h3 class="program-spotlight-item__title">{{title}}</h3>
+        <h3 class="program-spotlight-item__title" id="midd-spotlight-{{id}}-aside">{{title}}</h3>
         <p class="program-spotlight-item__text">{{type}}</p>
       </div>
       <div class="program-spotlight-item__body">

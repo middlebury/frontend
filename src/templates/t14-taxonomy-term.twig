@@ -33,12 +33,12 @@
     {% endfor %}
     {% for i in 0..1 %}
       <li class="list__item">
-        {% include 'partials/story-teaser.twig' %}
+        {% include 'partials/story-teaser.twig' with { id: i } %}
       </li>
     {% endfor %}
     {% for i in 0..1 %}
       <li class="list__item">
-        {% include 'partials/teaser.twig' %}
+        {% include 'partials/teaser.twig' with { id: i } %}
       </li>
     {% endfor %}
   </ol>

@@ -1,4 +1,4 @@
-<article class="profile-spotlight-item">
+<article class="profile-spotlight-item" aria-labelledby="midd-profile-{{ id }}-header">
   <figure class="profile-spotlight-item__media">
     <a href="#">
       {% include 'partials/img.twig' with {
@@ -7,8 +7,8 @@
     </a>
   </figure>
   <div class="profile-spotlight-item__content">
-    <h3 class="profile-spotlight-item__name"><a href="#">{{name}}</a></h3>
-    <p class="profile-spotlight-item__title">{{title}}</p>
-    <p class="profile-spotlight-item__text">{{text}}</p>
+    <h3 class="profile-spotlight-item__name" id="midd-profile-{{ id }}-header"><a href="#">{{item.name}}</a></h3>
+    <p class="profile-spotlight-item__title">{{item.title}}</p>
+    <p class="profile-spotlight-item__text">{{item.text}}</p>
   </div>
 </article>
