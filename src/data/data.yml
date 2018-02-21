@@ -47,10 +47,12 @@ site_nav:
         - text: Career Outcomes
           url: /institute/advancing-your-career/outcomes
         - text: Events
+          label: Career Events
           url: /institute/advancing-your-career/events
         - text: For Employers
           url: /institute/advancing-your-career/employers
         - text: Meet the Team
+          label: Meet the Careers Team
           url: /institute/advancing-your-career/team
     - text: Academics
       url: /institute/academics
@@ -152,6 +154,7 @@ site_nav:
       url: /institute/student-life
       items:
         - text: Meet the Team
+          label: Meet the Student Life Team
           url: /institute/student-life/team
         - text: New Students
           url: /institute/student-life/new-students
@@ -189,6 +192,7 @@ site_nav:
         - text: Carl Fehlandt Scholarship
           url: /institute/giving/carl-fehlandt-scholarship
         - text: Meet the Team
+          label: Meet the Giving Team
           url: /institute/giving/team
 
 footer_nav:
