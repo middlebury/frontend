@@ -68,14 +68,14 @@ site_nav:
               url: /institute/academics/degree-programs/international-trade-economic-diplomacy
             - text: Nonproliferation and Terrorism Studies
               url: /institute/academics/degree-programs/nonproliferation-terrorism-studies
-            - text: Language Education
+            - text: Master of Public Administration
+              url: /institute/academics/degree-programs/public-administration
+            - text: TESOL; Teaching Foreign Language
               url: /institute/academics/degree-programs/language-education
             - text: Translation; Translation and Interpretation; Conference Interpretation
               url: /institute/academics/degree-programs/translation-interpretation
             - text: Translation and Localization Management
               url: /institute/academics/degree-programs/translation-localization-management
-            - text: Master of Public Administration
-              url: /institute/academics/degree-programs/public-administration
         - text: Joint Degree Programs
           url: /institute/academics/joint-degrees
           items:
