@@ -25,7 +25,6 @@ const beeper = require('beeper');
 const args = require('yargs').argv;
 const svgSprites = require('gulp-svg-sprites');
 const gulpIf = require('gulp-if');
-const slug = require('slug');
 const cmq = require('gulp-combine-mq');
 const size = require('gulp-size');
 const rename = require('gulp-rename');
@@ -170,15 +169,7 @@ gulp.task('html', () => {
     )
     .pipe(
       twig({
-        base: './src/templates',
-        filters: [
-          {
-            name: 'slugify',
-            func: function (args) {
-              return slug(args, {lower: true});
-            }
-          }
-        ]
+        base: './src/templates'
       })
     )
     .pipe(prettify())

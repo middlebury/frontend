@@ -1,10 +1,10 @@
 {#TODO: change panel to use grid for panel__body and panel__footer#}
-<section class="panel{% if modifier %} panel--{{modifier}}{% endif %}" aria-labelledby="midd-program-panel-label-{{label|slugify}}">
+<section class="panel{% if modifier %} panel--{{modifier}}{% endif %}" aria-labelledby="{{labelledby}}">
   <div class="panel__media">
     {% include 'partials/img.twig' with { name: 'panel' } %}
   </div>
   <div class="panel__content">
-    <h2 class="panel__label" id="midd-program-panel-label-{{label|slugify}}">{{label}}</h2>
+    <h2 class="panel__label" id="{{labelledby}}">{{label}}</h2>
     <div class="panel__row">
       <div class="panel__primary">
         <h3 class="panel__title">
