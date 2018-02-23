@@ -1,3 +1,5 @@
+import flatpickr from 'flatpickr';
+
 if (typeof flatpickr !== 'undefined') {
   var urlParts = drupalSettings.path.currentPath.split('/');
 
