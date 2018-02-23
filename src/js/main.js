@@ -4,6 +4,7 @@ import objectFitImages from 'object-fit-images';
 
 // import './publications';
 import './chart-loader';
+import './events-datepicker';
 import './modal';
 import './nav';
 import './program-spotlight';
