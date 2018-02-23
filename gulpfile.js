@@ -216,9 +216,6 @@ gulp.task('copy:deps', function () {
     .src(['./node_modules/chart.js/dist/Chart.min.js'])
     .pipe(gulp.dest('./dist/js'));
   gulp
-    .src(['./node_modules/flatpickr/dist/flatpickr.min.css'])
-    .pipe(gulp.dest('./dist/css'));
-  gulp
     .src(['./node_modules/flatpickr/dist/flatpickr.min.js'])
     .pipe(gulp.dest('./dist/js'));
 });
@@ -229,7 +226,7 @@ gulp.task('deploy', ['replace:imageurls'], () => {
     return console.error('No `--themeDir` argument passed');
   }
   return gulp
-    .src(['./dist/css/main.css', './dist/js/bundle.js', './dist/js/Chart.min.js', './dist/css/flatpickr.min.css', './dist/js/flatpickr.min.js', './dist/images/*'], {
+    .src(['./dist/css/main.css', './dist/js/bundle.js', './dist/js/Chart.min.js', './dist/js/flatpickr.min.js', './dist/images/*'], {
       base: './dist'
     })
     .pipe(gulp.dest(dest));
