@@ -13,7 +13,6 @@
 @import '../../node_modules/bootstrap/scss/utilities/screenreaders';
 
 @import '../../node_modules/swiper/dist/css/swiper';
-@import '../../node_modules/flatpickr/dist/flatpickr';
 
 // base
 @import 'base/global';
@@ -42,6 +41,7 @@
 @import 'components/event-card';
 @import 'components/faq';
 // @import 'components/filter';
+@import 'components/datepicker';
 @import 'components/footer-callout';
 @import 'components/footer-menu';
 @import 'components/footer';
