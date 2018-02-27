@@ -1,4 +1,4 @@
-import Pikaday from 'Pikaday';
+import Pikaday from 'pikaday';
 
 let eventsBase = '/';
 let eventsPath = '/';
