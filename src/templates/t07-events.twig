@@ -24,7 +24,10 @@
   {% endembed %}
 
   <div class="d-none d-md-block">
-    <div id="midd-event-date-widget"></div>
+    <div class="form__group">
+      <label for="midd-events-datepicker" class="form__label">Filter by date</label>
+      <input type="text" class="form__control js-events-datepicker d-none" id="midd-events-datepicker" />
+    </div>
 
     {% include 'partials/sidebar-search.twig' %}
 
