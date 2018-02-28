@@ -2,7 +2,7 @@
 }
 
 .form__group {
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
 
 .form__group--has-error {
@@ -18,8 +18,9 @@
 
 .form__label {
   display: block;
-  font-family: $font-family-serif;
-  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: $font-weight-semibold;
+  margin-bottom: 0.5rem;
 }
 
 .form__control {
