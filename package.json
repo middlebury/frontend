@@ -58,6 +58,7 @@
     "intersection-observer": "^0.5.0",
     "normalize.css": "^5.0.0",
     "object-fit-images": "^3.2.3",
+    "pikaday": "^1.7.0",
     "swiper": "^4.1.0"
   }
 }
