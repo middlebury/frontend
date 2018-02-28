@@ -48,6 +48,15 @@
 
 {% block layout_content %}
 
+  {# should only be present if date filter is active #}
+  <div class="alert alert--info mb-5 clearfix">
+    <span>Showing Events for March 2, 2018</span>
+    {# if float right is on link, for some reason more space gets added between the link text and border #}
+    <span class="float-right">
+      <a href="#" class="link-border font-sm ">Show All Events</a>
+    </span>
+  </div>
+
   <ol class="list list--dividers list--md">
     {% for i in 0..7 %}
       <li class="list__item">
