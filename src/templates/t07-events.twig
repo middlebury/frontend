@@ -1,6 +1,7 @@
 {% extends "layout-sidebar.twig" %}
 
 {% set filter_active = true %}
+{% set no_results = false %}
 
 {% set page_header = {
   title: 'Events',
@@ -60,6 +61,10 @@
         <a href="#" class="link-border font-sm">Show All Events</a>
       </span>
     </div>
+  {% endif %}
+
+  {% if no_results %}
+    <p class="lead">There are no events on this date.</p>
   {% endif %}
 
   <ol class="list list--dividers list--md mb-5">
