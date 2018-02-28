@@ -21,6 +21,10 @@ $pd-font-family: $font-family-sans-serif;
 
 @import '../../../node_modules/pikaday/scss/pikaday';
 
+.pika-single {
+  z-index: 2;
+}
+
 .pika-lendar {
   float: none;
   width: inherit;
