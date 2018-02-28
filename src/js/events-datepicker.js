@@ -18,7 +18,6 @@ const picker = new Pikaday({
   field: document.querySelector('.js-events-datepicker'),
   bound: false,
   minDate: new Date(),
-  showDaysInNextAndPreviousMonths: true,
   defaultDate,
   setDefaultDate: !!defaultDate,
   // format: 'YYYY/MM/DD',
