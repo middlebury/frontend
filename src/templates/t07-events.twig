@@ -1,5 +1,7 @@
 {% extends "layout-sidebar.twig" %}
 
+{% set filter_active = true %}
+
 {% set page_header = {
   title: 'Events',
   callout_link_text: 'Sign up for events email',
@@ -27,9 +29,11 @@
     <div class="form__group">
       <label for="midd-events-datepicker" class="form__label">Filter by date</label>
       <input type="text" class="form__control js-events-datepicker d-none" id="midd-events-datepicker" />
-      <div class="pt-2">
-        <a href="#" class="link-border font-sm">Show All Events</a>
-      </div>
+      {% if filter_active %}
+        <div class="pt-2">
+          <a href="#" class="link-border font-sm">Show All Events</a>
+        </div>
+      {% endif %}
     </div>
 
     {% include 'partials/sidebar-search.twig' %}
@@ -48,14 +52,15 @@
 
 {% block layout_content %}
 
-  {# should only be present if date filter is active #}
-  <div class="alert alert--info mb-5 clearfix">
-    <span>Showing Events for March 2, 2018</span>
-    {# if float right is on link, for some reason more space gets added between the link text and border #}
-    <span class="float-right">
-      <a href="#" class="link-border font-sm">Show All Events</a>
-    </span>
-  </div>
+  {% if filter_active %}
+    <div class="alert alert--info mb-5 clearfix">
+      <span>Showing Events for March 2, 2018</span>
+      {# if float right is on link, for some reason more space gets added between the link text and border #}
+      <span class="float-right">
+        <a href="#" class="link-border font-sm">Show All Events</a>
+      </span>
+    </div>
+  {% endif %}
 
   <ol class="list list--dividers list--md mb-5">
     {% for i in 0..7 %}
