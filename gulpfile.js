@@ -130,7 +130,7 @@ gulp.task('scripts:lint', () => {
 
 gulp.task('scripts', function () {
   var b = browserify({
-    entries: './src/js/main.js',
+    entries: './src/js/index.js',
     debug: true,
     transform: [[babelify, {presets: ['es2015']}]]
   });
