@@ -1,3 +1,5 @@
+$program-spotlight-height: 600px;
+
 .program-spotlight {
   margin-bottom: $component-margin-bottom;
 }
@@ -13,6 +15,7 @@
   @include media(sm) {
     text-align: left;
     padding: 8rem 4rem 3rem;
+    height: $program-spotlight-height;
   }
 }
 
@@ -42,7 +45,7 @@
 
 .program-spotlight__content {
   display: flex;
-  height: 600px;
+  height: $program-spotlight-height;
 }
 
 .program-spotlight__item {
