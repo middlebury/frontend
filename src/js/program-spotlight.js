@@ -10,8 +10,8 @@ function randomizeChildren(elem) {
 
 function createProgramSwiper() {
   const swiperWrapper = document.querySelector('.js-swiper-wrapper');
-  
-  if(!swiperWrapper) {
+
+  if (!swiperWrapper) {
     // do nothing if no swiper wrapper
     return;
   }
