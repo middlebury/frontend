@@ -138,7 +138,7 @@ gulp.task('scripts', function () {
   return b
     .bundle()
     .on('error', function (err) {
-      console.error(err.message);
+      console.error(err.message); // eslint-disable-line no-console
       beeper();
       this.emit('end');
     })
@@ -220,7 +220,7 @@ gulp.task('copy:deps', function () {
 gulp.task('deploy', ['replace:imageurls'], () => {
   const dest = args.themeDir || '';
   if (!args.themeDir) {
-    return console.error('No `--themeDir` argument passed');
+    return console.error('No `--themeDir` argument passed'); // eslint-disable-line no-console
   }
   return gulp
     .src(['./dist/css/main.css', './dist/js/bundle.js', './dist/js/Chart.min.js', './dist/images/*'], {
