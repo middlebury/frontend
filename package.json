@@ -6,7 +6,7 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build --production",
-    "build:svg": "gulp svg && gulp copy:svg",
+    "build:icons": "gulp icons && gulp copy:icons",
     "deploy": "gulp deploy",
     "lint": "eslint src/**"
   },

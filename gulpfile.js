@@ -83,7 +83,7 @@ gulp.task('server', () => {
   });
 });
 
-gulp.task('svg', () => {
+gulp.task('icons', () => {
   return gulp
     .src('./src/images/icon-*.svg')
     .pipe(imagemin())
@@ -92,12 +92,12 @@ gulp.task('svg', () => {
         mode: 'symbols'
       })
     )
-    .pipe(gulp.dest('./dist/svg'));
+    .pipe(gulp.dest('./dist/icons'));
 });
 
-gulp.task('copy:svg', () => {
+gulp.task('copy:icons', () => {
   return gulp
-    .src('./dist/svg/svg/symbols.svg')
+    .src('./dist/icons/svg/symbols.svg')
     .pipe(rename('icons.twig'))
     .pipe(gulp.dest('./src/templates/partials'));
 });
