@@ -468,6 +468,7 @@ breakpoints:
 
 # If sizes is not preset, default size should be '(max-width: <LARGESTWIDTH>px), 100vw, <LARGESTWIDTH>px'.
 # Could the default be programmatically be set if the sizes field is blank?
+# majority of the images are 16:9 unless otherwise noted
 image_sizes:
   homepage_hero:
     srcset:
@@ -558,14 +559,14 @@ image_sizes:
     - 640x360
     - 960x540
     - 1040x585
-  top_level:
+  top_level: # 5:2
     srcset:
     - 400x160
     - 640x256
     - 960x384
     - 1280x512
     - 1440x576
-  top_level_teaser:
+  top_level_teaser: # 5:2
     srcset:
     - 160x64
     - 240x96
