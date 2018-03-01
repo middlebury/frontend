@@ -10,13 +10,14 @@
 {% block layout_content %}
 
   {% include 'partials/story-teaser.twig' with {
+    id: 'featured',
     featured: true
   } %}
 
   <ol class="list list--dividers list--lg mb-6">
     {% for i in 0..5 %}
       <li class="list__item">
-        {% include 'partials/story-teaser.twig' %}
+        {% include 'partials/story-teaser.twig' with { id: i } %}
       </li>
     {% endfor %}
   </ol>

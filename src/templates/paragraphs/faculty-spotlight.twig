@@ -10,7 +10,7 @@
             <div class="border-b border-md-b-0 pb-4 pb-md-0 h-100">
           {% endif %}
 
-          {% include 'partials/profile-spotlight-item.twig' with item %}
+          {% include 'partials/profile-spotlight-item.twig' with { id: loop.index, item: item } %}
 
           {% if not loop.last %}
             </div>
