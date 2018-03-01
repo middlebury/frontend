@@ -26,6 +26,8 @@ should display first as large and 2 small if 3 #}
         {% endif %}
 
           {% include 'partials/card.twig' with {
+            id: i,
+            type: 'basic-content',
             image: true,
             image_sizes: image_sizes,
             title: 'some page title',

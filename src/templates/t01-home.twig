@@ -30,6 +30,7 @@
                   {% for item in homepage.latest_news %}
                     <li class="list__item">
                       {% include 'partials/story-teaser-lite.twig' with {
+                        id: loop.index,
                         title: item.title,
                         link: '#',
                         text: item.text

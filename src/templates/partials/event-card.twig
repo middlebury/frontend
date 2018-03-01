@@ -1,4 +1,4 @@
-<article class="event-card">
+<article class="event-card" aria-labelledby="midd-event-{{ id }}-header">
   <div class="event-card__media">
     <a href="{{href}}">
       <figure>
@@ -6,7 +6,7 @@
       </figure>
     </a>
   </div>
-  <h3 class="event-card__title">
+  <h3 class="event-card__title" id="midd-event-{{ id }}-header">
     <a href="#">{{title}}</a>
   </h3>
   <p class="event-card__datetime"><time>{{date}} &middot; {{time}}</time></p>
