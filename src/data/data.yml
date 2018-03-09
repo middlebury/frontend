@@ -78,6 +78,8 @@ site_nav:
               url: /institute/academics/degree-programs/translation-interpretation
             - text: Translation and Localization Management
               url: /institute/academics/degree-programs/translation-localization-management
+            - text: Master of Business Administration
+              url: /institute/academics/degree-programs/business-administration
         - text: Joint Degree Programs
           url: /institute/academics/joint-degrees
           items:
