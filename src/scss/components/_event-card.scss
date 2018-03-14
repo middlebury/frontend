@@ -9,7 +9,7 @@
   font-size: $h4-font-size;
   line-height: $h4-line-height;
   margin-bottom: 0.5rem;
-  word-wrap: break-word;
+  @include break-words;
 }
 
 .event-card__datetime {
