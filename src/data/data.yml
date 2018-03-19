@@ -148,10 +148,6 @@ site_nav:
           url: /institute/admissions/financial-aid
         - text: Admissions Team
           url: /institute/admissions/team
-    - text: News
-      url: /institute/news
-    - text: Events
-      url: /institute/events
     - text: Student Life
       url: /institute/student-life
       items:
@@ -180,6 +176,10 @@ site_nav:
           url: /institute/student-life/community-discounts
         - text: Student Policies
           url: /institute/student-life/student-policies
+    - text: News
+      url: /institute/news
+    - text: Events
+      url: /institute/events
     - text: Give to the Institute
       url: /institute/giving
       items:
