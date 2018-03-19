@@ -20,12 +20,14 @@
         {% include 'paragraphs/related-stories.twig' %}
 
         {% for section in quicklinks %}
+          {% set section = section|merge({'id' : loop.index}) %}
           {% include 'partials/callout-links.twig' with section %}
         {% endfor %}
 
         {% include 'paragraphs/text.twig' %}
 
         {% for section in quicklinks %}
+          {% set section = section|merge({'id' : loop.index}) %}
           {% include 'partials/callout-links.twig' with section %}
         {% endfor %}
 
