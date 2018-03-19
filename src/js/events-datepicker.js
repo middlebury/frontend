@@ -48,15 +48,19 @@ if (dateStr) {
   defaultDate = new Date(year, month, day);
 }
 
-const picker = new Pikaday({
-  field: document.querySelector('.js-events-datepicker'),
-  bound: false,
-  minDate: new Date(),
-  defaultDate,
-  setDefaultDate: !!defaultDate,
-  onSelect(date) {
-    const dateStr = dateToStr(date);
+const datePicker = document.querySelector('.js-events-datepicker');
 
-    location.href = eventsBase + 'events/all/' + dateStr;
-  }
-});
+if (datePicker) {
+  const picker = new Pikaday({
+    field: datePicker,
+    bound: false,
+    minDate: new Date(),
+    defaultDate,
+    setDefaultDate: !!defaultDate,
+    onSelect(date) {
+      const dateStr = dateToStr(date);
+
+      location.href = eventsBase + 'events/all/' + dateStr;
+    }
+  });
+}

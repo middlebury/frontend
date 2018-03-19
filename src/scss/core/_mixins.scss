@@ -32,3 +32,8 @@
   line-height: 20px;
   margin-bottom: $margin-bottom;
 }
+
+@mixin break-words {
+  word-break: break-word;
+  hyphens: auto;
+}
