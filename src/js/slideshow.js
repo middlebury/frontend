@@ -12,8 +12,8 @@ if (elems) {
         type: 'fraction'
       },
       navigation: {
-        nextEl: elem.querySelector('.js-slideshow-next'),
-        prevEl: elem.querySelector('.js-slideshow-prev'),
+        nextEl: elem.querySelector('.js-slideshow-next').removeAttribute('role'),
+        prevEl: elem.querySelector('.js-slideshow-prev').removeAttribute('role'),
         disabledClass: 'is-disabled'
       },
       a11y: true,
