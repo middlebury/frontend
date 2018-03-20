@@ -91,3 +91,10 @@ const pikaTitle = document.querySelector('.pika-title');
 if (pikaTitle) {
   pikaTitle.setAttribute('aria-atomic', 'true');
 }
+
+const pikaTable = document.querySelector('.pika-table');
+
+if (pikaTable) {
+  pikaTable.removeAttribute('cellpadding');
+  pikaTable.removeAttribute('cellspacing');
+}
