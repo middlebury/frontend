@@ -85,3 +85,9 @@ for (let i in selects) {
     }
   }
 }
+
+const pikaTitle = document.querySelector('.pika-title');
+
+if (pikaTitle) {
+  pikaTitle.setAttribute('aria-atomic', 'true');
+}
