@@ -64,3 +64,24 @@ if (datePicker) {
     }
   });
 }
+
+const selects = ['month', 'year'];
+
+for (let i in selects) {
+  if (selects.hasOwnProperty(i)) {
+    let select = 'pika-select-' + selects[i];
+    let selectElem = document.querySelector('.' + select);
+
+    if (selectElem) {
+      selectElem.setAttribute('id', select);
+
+      let labelElem = document.createElement('label');
+      labelElem.setAttribute('class', 'sr-only');
+      labelElem.setAttribute('for', select);
+      labelElem.innerText = selects[i].charAt(0).toUpperCase() + selects[i].slice(1);
+
+      let parentElem = selectElem.parentNode;
+      parentElem.insertBefore(labelElem, selectElem);
+    }
+  }
+}
