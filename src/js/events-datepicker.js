@@ -10,7 +10,7 @@ const getDateObj = dateStr => {
   month = parseInt(month, 10) - 1;
   day = parseInt(day, 10);
 
-  return {day, month, year};
+  return { day, month, year };
 };
 
 const dateToStr = date => {
@@ -41,7 +41,7 @@ const dateStr = urlParts[2];
 let defaultDate = null;
 
 if (dateStr) {
-  const {year, month, day} = getDateObj(dateStr);
+  const { year, month, day } = getDateObj(dateStr);
 
   // have to pass date object instead of string
   // https://github.com/dbushell/Pikaday/issues/764#issuecomment-360286792
@@ -69,18 +69,18 @@ const selects = ['month', 'year'];
 
 for (let i in selects) {
   if (selects.hasOwnProperty(i)) {
-    let select = 'pika-select-' + selects[i];
-    let selectElem = document.querySelector('.' + select);
+    const select = 'pika-select-' + selects[i];
+    const selectElem = document.querySelector('.' + select);
 
     if (selectElem) {
       selectElem.setAttribute('id', select);
 
-      let labelElem = document.createElement('label');
+      const labelElem = document.createElement('label');
       labelElem.setAttribute('class', 'sr-only');
       labelElem.setAttribute('for', select);
       labelElem.innerText = selects[i].charAt(0).toUpperCase() + selects[i].slice(1);
 
-      let parentElem = selectElem.parentNode;
+      const parentElem = selectElem.parentNode;
       parentElem.insertBefore(labelElem, selectElem);
     }
   }
