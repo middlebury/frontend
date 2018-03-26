@@ -1,5 +1,7 @@
 <div class="chart">
-  <h3 class="chart__title">{{title}}</h3>
+  {% if title is not empty %}
+    <h3 class="chart__title">{{title}}</h3>
+  {% endif %}
   {% include 'partials/world.twig' with { id: id } %}
 
   <p>
