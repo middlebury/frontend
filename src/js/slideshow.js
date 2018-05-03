@@ -6,14 +6,17 @@ if (elems) {
   [].forEach.call(elems, elem => {
     const slideshowCaption = elem.querySelector('.js-slideshow-caption');
 
+    const nextEl = elem.querySelector('.js-slideshow-next');
+    const prevEl = elem.querySelector('.js-slideshow-prev');
+
     const slideshow = new Swiper(elem, {
       pagination: {
         el: elem.querySelector('.js-slideshow-pagination'),
         type: 'fraction'
       },
       navigation: {
-        nextEl: elem.querySelector('.js-slideshow-next').removeAttribute('role'),
-        prevEl: elem.querySelector('.js-slideshow-prev').removeAttribute('role'),
+        nextEl,
+        prevEl,
         disabledClass: 'is-disabled'
       },
       a11y: true,
@@ -25,15 +28,15 @@ if (elems) {
       init: false
     });
 
-    var captions = elem.querySelectorAll('figcaption');
+    const captions = elem.querySelectorAll('figcaption');
 
     [].forEach.call(captions, c => (c.style.display = 'none'));
 
     slideshowCaption.innerText = captions[0].innerText;
 
     slideshow.on('slideChangeTransitionEnd', function () {
-      var activeSlide = elem.querySelector('.swiper-slide-active');
-      var caption = activeSlide.querySelector('figcaption');
+      const activeSlide = elem.querySelector('.swiper-slide-active');
+      const caption = activeSlide.querySelector('figcaption');
       slideshowCaption.innerText = caption.innerText;
     });
 
@@ -42,5 +45,8 @@ if (elems) {
     });
 
     slideshow.init();
+
+    nextEl.removeAttribute('role');
+    prevEl.removeAttribute('role');
   });
 }
