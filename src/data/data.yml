@@ -123,6 +123,8 @@ site_nav:
           url: /institute/academics/library
         - text: Course Catalog
           url: /institute/academics/catalog
+        - text: Academic Calendar
+          url: /institute/academics/calendar
     - text: Admissions
       url: /institute/admissions
       items:
