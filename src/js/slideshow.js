@@ -28,16 +28,12 @@ if (elems) {
 
     [].forEach.call(captions, c => (c.style.display = 'none'));
 
-    slideshowCaption.innerText = captions[0].innerText;
+    slideshowCaption.innerHTML = captions[0].textContent;
 
     slideshow.on('slideChangeTransitionEnd', function () {
       const activeSlide = elem.querySelector('.swiper-slide-active');
       const caption = activeSlide.querySelector('figcaption');
-      slideshowCaption.innerText = caption.innerText;
-    });
-
-    slideshow.on('slideChangeTransitionStart', function () {
-      slideshowCaption.innerText = '';
+      slideshowCaption.innerHTML = caption.textContent;
     });
 
     slideshow.init();
