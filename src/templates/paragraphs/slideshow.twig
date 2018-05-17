@@ -1,34 +1,19 @@
+
 {#G5 slideshow#}
+{% set slideshow_example_sizes = ['1280x720', '900x300', '200x200', '720x1280', '2880x1800', '500x500'] %}
+
 <div class="slideshow">
   <h3 class="slideshow__title">Slideshow title</h3>
   <div class="slideshow__container swiper-container js-slideshow">
     <div class="slideshow__content swiper-wrapper">
-      {% for i in 0..2 %}
+      {% for size in slideshow_example_sizes %}
         <div class="slideshow__item swiper-slide">
           <figure class="media media--image">
-            <img src="//placehold.it/1280x720" alt="" class="swiper-lazy">
+            <img src="//placehold.it/{{size}}" alt="" class="swiper-lazy">
             <figcaption class="media__caption">Lorem ipsum dolor sit amet consectetur adipisicing elit</figcaption>
           </figure>
         </div>
       {% endfor %}
-        <div class="slideshow__item swiper-slide">
-          <figure class="media media--image">
-            <img src="//placehold.it/500x500" alt="" class="swiper-lazy">
-            <figcaption class="media__caption">Lorem ipsum dolor adipisicing elit</figcaption>
-          </figure>
-        </div>
-        <div class="slideshow__item swiper-slide">
-          <figure class="media media--image">
-            <img src="//placehold.it/200x200" alt="" class="swiper-lazy">
-            <figcaption class="media__caption">Lorem ipsum dolor adipisicing elit</figcaption>
-          </figure>
-        </div>
-        <div class="slideshow__item swiper-slide">
-          <figure class="media media--image">
-            <img src="//placehold.it/720x1280" alt="" class="swiper-lazy">
-            <figcaption class="media__caption">Lorem ipsum dolor sit amet consectetur adipisicing elit lorem ipsum dolor set (Photo: John Doe)</figcaption>
-          </figure>
-        </div>
     </div>
     <div class="slideshow__body">
       <div class="slideshow__caption">
