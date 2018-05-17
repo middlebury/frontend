@@ -51,6 +51,20 @@ const paths = {
   }
 };
 
+/**
+ * Change output paths if --themeDir is passed.
+ *
+ * This is so frontend can be iterated on and continuously ouput
+ * to a Drupal theme (helpful for frontend changes on dev server).
+ *
+ * Use `gulp dev` in conjunction with this so browser sync server is not started.
+ */
+if (!production && args.themeDir) {
+  paths.styles.dest = args.themeDir + '/css/';
+  paths.scripts.dest = args.themeDir + '/js/';
+  paths.images.dest = args.themeDir + '/images/';
+}
+
 const onError = function (err) {
   notify.onError({
     title: 'Gulp error in ' + err.plugin,
@@ -246,5 +260,7 @@ gulp.task('build', [
   'scripts',
   'copy:deps'
 ]);
+
+gulp.task('dev', ['build', 'watch']);
 
 gulp.task('default', ['build', 'watch', 'server']);
