@@ -2,6 +2,12 @@ import Swiper from 'swiper';
 
 const elems = document.querySelectorAll('.js-slideshow');
 
+function setSlideshowCaption(targetElem, captionElem) {
+  if (captionElem && captionElem.textContent) {
+    targetElem.innerHTML = captionElem.textContent.trim();
+  }
+}
+
 if (elems) {
   [].forEach.call(elems, elem => {
     const slideshowCaption = elem.querySelector('.js-slideshow-caption');
@@ -28,12 +34,12 @@ if (elems) {
 
     [].forEach.call(captions, c => (c.style.display = 'none'));
 
-    slideshowCaption.innerHTML = captions[0].textContent;
+    setSlideshowCaption(slideshowCaption, captions[0]);
 
     slideshow.on('slideChangeTransitionEnd', function () {
       const activeSlide = elem.querySelector('.swiper-slide-active');
       const caption = activeSlide.querySelector('figcaption');
-      slideshowCaption.innerHTML = caption.textContent;
+      setSlideshowCaption(slideshowCaption, caption);
     });
 
     slideshow.init();
