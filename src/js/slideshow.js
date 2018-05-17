@@ -21,10 +21,6 @@ if (elems) {
       },
       a11y: true,
       autoHeight: true,
-      preloadImages: false,
-      lazy: {
-        loadPrevNext: true
-      },
       init: false
     });
 
