@@ -42,9 +42,10 @@ if (elems) {
       setSlideshowCaption(slideshowCaption, caption);
     });
 
-    slideshow.init();
-
-    nextEl.removeAttribute('role');
-    prevEl.removeAttribute('role');
+    window.addEventListener('load', function () {
+      slideshow.init();
+      nextEl.removeAttribute('role');
+      prevEl.removeAttribute('role');
+    });
   });
 }
