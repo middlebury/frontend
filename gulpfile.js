@@ -59,7 +59,7 @@ const paths = {
  *
  * Use `gulp dev` in conjunction with this so browser sync server is not started.
  */
-if (args.themeDir) {
+if (!production && args.themeDir) {
   paths.styles.dest = args.themeDir + '/css/';
   paths.scripts.dest = args.themeDir + '/js/';
   paths.images.dest = args.themeDir + '/images/';

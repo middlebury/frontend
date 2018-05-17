@@ -8,7 +8,7 @@
     "dev": "gulp dev",
     "build": "gulp build --production",
     "build:icons": "gulp icons && gulp copy:icons",
-    "deploy": "gulp deploy",
+    "deploy": "gulp deploy --production",
     "lint": "eslint src/**"
   },
   "repository": {
