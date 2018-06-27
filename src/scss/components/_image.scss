@@ -1,3 +1,33 @@
 .image {
   margin-bottom: $component-margin-bottom;
 }
+
+.image--right {
+  margin-bottom: 2rem;
+  @include media(md) {
+    float: right;
+    margin-left: 2rem;
+  }
+}
+
+.image--left {
+  margin-bottom: 2rem;
+  @include media(md) {
+    float: left;
+    margin-left: 2rem;
+  }
+}
+
+.image--right,
+.image--left {
+  @include media(md) {
+    .media {
+      display: table;
+    }
+
+    .media__caption {
+      display: table-caption;
+      caption-side: bottom;
+    }
+  }
+}
