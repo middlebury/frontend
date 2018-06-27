@@ -1,6 +1,10 @@
-<div class="image">
+<div class="image{% if right %} image--right{% endif %}{% if left %} image--left{% endif %}">
   <figure class="media media--image">
-    {% include 'partials/img.twig' with { name: 'image' } %}
+    {% if right or left %}
+      {% include 'partials/img.twig' with { name: 'profile_teaser' } %}
+    {% else %}
+      {% include 'partials/img.twig' with { name: 'image' } %}
+    {% endif %}
     <figcaption class="media__caption">{{caption|default('Lorem ipsum dolor sit amet, consectetur adipiscing elit (Photo: John Doe)')}}</figcaption>
   </figure>
 </div>
