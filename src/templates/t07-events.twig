@@ -40,14 +40,26 @@
 
     {% include 'partials/sidebar-search.twig' %}
 
-    <a href="#" class="button button--tertiary button--block text-left clearfix mb-1">
-      <span class="float-left">View Academic Calendar</span>
-      <span class="float-right" aria-hidden="true">&rsaquo;</span>
-    </a>
-    <a href="#" class="button button--tertiary button--block text-left clearfix mb-1">
-      <span class="float-left">Commencement</span>
-      <span class="float-right" aria-hidden="true">&rsaquo;</span>
-    </a>
+    <div class="page-nav">
+      <ul class="page-nav__list">
+        <li class="page-nav__item">
+          <a href="#" class="page-nav__link">
+            Plan Your Event
+          </a>
+        </li>
+        <li class="page-nav__item">
+          <a href="#" class="page-nav__link">
+            View Academic Calendar
+          </a>
+        </li>
+        <li class="page-nav__item">
+          <a href="#" class="page-nav__link">
+            Commencement
+          </a>
+        </li>
+      </ul>
+    </div>
+
   </div>
 
 {% endblock %}
