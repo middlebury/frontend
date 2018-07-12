@@ -127,6 +127,12 @@
   margin-bottom: 3rem;
 }
 
+.w-lg-40 {
+  @include media(lg) {
+    width: 40%;
+  }
+}
+
 .color-gray {
   color: $gray;
 }

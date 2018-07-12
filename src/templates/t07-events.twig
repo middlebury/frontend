@@ -80,25 +80,8 @@
     <p class="lead">There are no events on this date.</p>
   {% endif %}
 
-  <ol class="list list--dividers list--md mb-5">
-    {% for i in 0..7 %}
-      <li class="list__item">
-        {% include 'partials/event-teaser.twig' with {
-          id: i,
-          title: 'Building a Sustainable Career in Social Impact – Breaking into the Field',
-          link: '#',
-          time: '6:00 PM',
-          date: 'Mon Jul 25, 2016',
-          local: 'McCone Irvine Auditorium',
-          blurb: 'Four guest speakers will bring to light realities of the true costs of war experienced by today\'s veteran and military community.',
-          metalist: [
-            { text: 'Closed to the Public' },
-            { text: 'Lorem ipsum dolor set' },
-          ]
-        } %}
-      </li>
-    {% endfor %}
-  </ol>
+  {% include 'partials/events-table.twig' %}
+  {% include 'partials/events-table.twig' %}
 
   {% include 'partials/pagination.twig' %}
 
