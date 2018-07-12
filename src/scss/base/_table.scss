@@ -75,3 +75,34 @@
     }
   }
 }
+
+.table--no-mobile-headers {
+  td {
+    padding-bottom: 0.25rem;
+    padding-top: 0.25rem;
+
+    &:first-child {
+      padding-top: 1.5rem;
+      @include media(md) {
+        padding-top: 1rem;
+      }
+    }
+
+    &:last-child {
+      padding-bottom: 1.5rem;
+      @include media(md) {
+        padding-top: 1rem;
+      }
+    }
+
+    @include media(md) {
+      // same as default
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+}
