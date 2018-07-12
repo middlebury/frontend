@@ -1,6 +1,6 @@
 // Only style tables within basic content otherwise these styles override google custom search markup.
 
-// .table,
+.table,
 .typography table {
   width: 100%;
   border-top: 5px solid $border-color;
