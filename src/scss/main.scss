@@ -36,7 +36,6 @@
 @import 'components/chart';
 // @import 'components/drawer';
 @import 'components/event-detail';
-@import 'components/event-teaser-lite';
 @import 'components/event-teaser';
 @import 'components/event-card';
 @import 'components/faq';
@@ -126,4 +125,14 @@
 .profile-listing-title {
   margin-top: $component-margin-bottom;
   margin-bottom: 3rem;
+}
+
+.w-lg-40 {
+  @include media(lg) {
+    width: 40%;
+  }
+}
+
+.color-gray {
+  color: $gray;
 }
