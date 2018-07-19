@@ -41,11 +41,13 @@
   background-image: linear-gradient(to bottom, rgba(black, 0.8), transparent);
 
   @include media(md) {
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
     background-image: linear-gradient(
-      to bottom left,
+      to top,
       rgba(black, 0.8),
-      transparent 75%
+      transparent 50%
     );
   }
 }
@@ -54,14 +56,14 @@
   padding: 2.5rem;
 
   @include media(md) {
-    max-width: 600px;
+    max-width: 500px;
     display: inline-block;
   }
 }
 
 .homepage-hero__title {
-  font-size: $h2-font-size;
-  line-height: $h2-line-height;
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
   margin-bottom: 0.5rem;
 }
 
@@ -71,7 +73,9 @@
 
 .homepage-hero__text {
   color: $white;
+  font-size: 14px;
   display: none;
+  margin-bottom: 1rem;
 
   @include media(sm) {
     display: block;
@@ -79,5 +83,8 @@
 }
 
 .homepage-hero__more-link {
-  margin-top: 2rem;
+  margin-top: 1rem;
+  color: $white;
+  font-size: 14px;
+  @include link-border();
 }
