@@ -52,6 +52,15 @@
   }
 }
 
+.homepage-hero__content--align-top {
+  align-items: flex-start;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(black, 0.8),
+    transparent 50%
+  );
+}
+
 .homepage-hero__body {
   padding: 2.5rem;
 
