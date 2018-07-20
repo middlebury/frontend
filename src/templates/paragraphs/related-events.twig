@@ -15,14 +15,7 @@
             <div class="border-b border-md-b-0 pb-4 pb-md-0">
           {% endif %}
 
-            {% include 'partials/event-card.twig' with {
-              id: i,
-              image: true,
-              title: 'Middlebury Institute’s TESOL/TFL Program: Innovations in Language Learning',
-              date: 'September 24, 2017',
-              time: '4:15 PM',
-              local: 'McCone Irvine Auditorium'
-            } %}
+            {% include 'partials/event-teaser.twig' %}
 
           {% if not loop.last %}
             </div>
