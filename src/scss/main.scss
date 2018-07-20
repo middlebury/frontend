@@ -127,8 +127,8 @@
   margin-bottom: 3rem;
 }
 
-.w-lg-40 {
-  @include media(lg) {
+.w-md-40 {
+  @include media(md) {
     width: 40%;
   }
 }
