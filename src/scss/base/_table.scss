@@ -76,6 +76,10 @@
   }
 }
 
+.table--fixed {
+  table-layout: fixed;
+}
+
 .table--no-mobile-headers {
   td {
     padding-bottom: 0.25rem;
