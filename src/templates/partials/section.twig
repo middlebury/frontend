@@ -2,7 +2,9 @@
   <header class="section__header">
     <h2 class="section__title"{% if labelledby %} id="{{labelledby}}"{% endif %}>{{title}}</h2>
     {% if moreLinkHref and moreLinkText %}
-    <a href="{{moreLinkHref}}" class="section__link">{{moreLinkText}}</a>
+    <div class="section__link">
+      <a href="{{moreLinkHref}}" class="link-border">{{moreLinkText}}</a>
+    </div>
     {% endif %}
   </header>
   {% block content %}{% endblock %}

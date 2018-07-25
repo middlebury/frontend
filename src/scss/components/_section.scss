@@ -17,17 +17,14 @@
 }
 
 .section__title {
-  // TODO: need to not apply margin instead of reseting it to 0
-  @include section-title(0);
+  @include section-title();
 }
 
 .section__link {
-  display: inline-block;
-  font-weight: $font-weight-medium;
   margin-top: 1rem;
-  @include link-border();
 
   @include media(md) {
     margin-top: 0;
+    margin-left: 1rem;
   }
 }
