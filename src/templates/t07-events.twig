@@ -33,21 +33,33 @@
       <input type="text" class="form__control js-events-datepicker d-none" id="midd-events-datepicker" />
       {% if filter_active %}
         <div class="pt-2">
-          <a href="#" class="link-border font-sm">Show All Events</a>
+          <a href="#" class="link-border f2">Show All Events</a>
         </div>
       {% endif %}
     </div>
 
     {% include 'partials/sidebar-search.twig' %}
 
-    <a href="#" class="button button--tertiary button--block text-left clearfix mb-1">
-      <span class="float-left">View Academic Calendar</span>
-      <span class="float-right" aria-hidden="true">&rsaquo;</span>
-    </a>
-    <a href="#" class="button button--tertiary button--block text-left clearfix mb-1">
-      <span class="float-left">Commencement</span>
-      <span class="float-right" aria-hidden="true">&rsaquo;</span>
-    </a>
+    <div class="page-nav">
+      <ul class="page-nav__list">
+        <li class="page-nav__item">
+          <a href="#" class="page-nav__link">
+            Plan Your Event
+          </a>
+        </li>
+        <li class="page-nav__item">
+          <a href="#" class="page-nav__link">
+            View Academic Calendar
+          </a>
+        </li>
+        <li class="page-nav__item">
+          <a href="#" class="page-nav__link">
+            Commencement
+          </a>
+        </li>
+      </ul>
+    </div>
+
   </div>
 
 {% endblock %}
@@ -59,7 +71,7 @@
       <span>Showing Events for March 2, 2018</span>
       {# if float right is on link, for some reason more space gets added between the link text and border #}
       <span class="float-right">
-        <a href="#" class="link-border font-sm">Show All Events</a>
+        <a href="#" class="link-border f2">Show All Events</a>
       </span>
     </div>
   {% endif %}
@@ -68,25 +80,8 @@
     <p class="lead">There are no events on this date.</p>
   {% endif %}
 
-  <ol class="list list--dividers list--md mb-5">
-    {% for i in 0..7 %}
-      <li class="list__item">
-        {% include 'partials/event-teaser.twig' with {
-          id: i,
-          title: 'Building a Sustainable Career in Social Impact – Breaking into the Field',
-          link: '#',
-          time: '6:00 PM',
-          date: 'Mon Jul 25, 2016',
-          local: 'McCone Irvine Auditorium',
-          blurb: 'Four guest speakers will bring to light realities of the true costs of war experienced by today\'s veteran and military community.',
-          metalist: [
-            { text: 'Closed to the Public' },
-            { text: 'Lorem ipsum dolor set' },
-          ]
-        } %}
-      </li>
-    {% endfor %}
-  </ol>
+  {% include 'partials/events-table.twig' %}
+  {% include 'partials/events-table.twig' %}
 
   {% include 'partials/pagination.twig' %}
 

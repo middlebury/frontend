@@ -1,11 +1,10 @@
 // Only style tables within basic content otherwise these styles override google custom search markup.
 
-// .table,
+.table,
 .typography table {
   width: 100%;
   border-top: 5px solid $border-color;
   margin-bottom: 3rem;
-  margin-top: 3rem;
 
   @include media(md) {
     border-top: 0;
@@ -73,6 +72,41 @@
       &:not(:last-of-type) {
         padding-right: 1.5rem;
       }
+    }
+  }
+}
+
+.table--fixed {
+  table-layout: fixed;
+}
+
+.table--no-mobile-headers {
+  td {
+    padding-bottom: 0.25rem;
+    padding-top: 0.25rem;
+
+    &:first-child {
+      padding-top: 1.5rem;
+      @include media(md) {
+        padding-top: 1rem;
+      }
+    }
+
+    &:last-child {
+      padding-bottom: 1.5rem;
+      @include media(md) {
+        padding-top: 1rem;
+      }
+    }
+
+    @include media(md) {
+      // same as default
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    &:before {
+      display: none;
     }
   }
 }

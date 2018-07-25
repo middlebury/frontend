@@ -51,12 +51,7 @@
                 <ol class="list list--lg">
                   {% for i in 0..2 %}
                     <li class="list__item">
-                      {% include 'partials/event-teaser-lite.twig' with {
-                        date: 'Jul 12, 2016',
-                        time: '1:00 PM',
-                        title: 'Museum of Art Lecture Series',
-                        location: 'McCone Irvine Auditorium'
-                      } %}
+                      {% include 'partials/event-teaser.twig' %}
                     </li>
                   {% endfor %}
                 </ol>
