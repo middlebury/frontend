@@ -90,6 +90,7 @@ const pikaTitle = document.querySelector('.pika-title');
 
 if (pikaTitle) {
   pikaTitle.setAttribute('aria-atomic', 'true');
+  pikaTitle.setAttribute('aria-level', '4');
 }
 
 const pikaTable = document.querySelector('.pika-table');
