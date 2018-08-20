@@ -1,10 +1,11 @@
 <nav class="callout-links" aria-labelledby="midd-quick-links-{{id}}">
   <h2 class="callout-links__title" id="midd-quick-links-{{id}}">{{title}}</h2>
-
+  <p class="callout-links__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, eos obcaecati! Voluptatibus nisi fugit error modi libero animi. Veritatis necessitatibus nemo commodi architecto quia possimus tenetur. Eos tenetur exercitationem ex!</p>
   <ul class="callout-links__list">
     {% for item in items %}
       <li class="callout-links__item">
-        <a href="{{item.url}}" class="callout-links__link link-border">{{item.text}}</a>
+        <a href="{{item.url}}" class="callout-links__link">{{item.text}}</a>
+        <p class="callout-links__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
       </li>
     {% endfor %}
   </ul>
