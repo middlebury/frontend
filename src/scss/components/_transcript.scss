@@ -1,0 +1,48 @@
+.transcript {
+  margin-top: 1rem;
+}
+
+.transcript__button {
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  font-size: 14px;
+  font-weight: $font-weight-medium;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: border-color 0.2s;
+
+  &:hover {
+    border-color: $brand-primary;
+    text-decoration: none;
+  }
+}
+
+.transcript__icon {
+  margin-left: 0.5rem;
+  transition: 0.2s;
+
+  .transcript.is-toggled & {
+    transform: rotate(180deg);
+  }
+}
+
+.transcript__body {
+  margin-top: 0.5rem;
+
+  .transcript.has-toggler & {
+    display: none;
+  }
+
+  .transcript.is-toggled & {
+    display: block;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: $paragraph-margin-bottom;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
