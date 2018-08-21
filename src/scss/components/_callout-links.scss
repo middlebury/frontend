@@ -10,7 +10,11 @@ $callout-links-item-margin-bottom: 2rem;
 }
 
 .callout-links__title {
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.callout-links__text {
+  margin-bottom: 1.5rem;
 }
 
 .callout-links__list {
@@ -28,11 +32,18 @@ $callout-links-item-margin-bottom: 2rem;
   }
 
   @include media(md) {
-    @include make-col(3);
+    @include make-col(4);
   }
 }
 
 .callout-links__link {
   font-size: $paragraph-font-size;
   line-height: $paragraph-line-height;
+  margin-bottom: 1rem;
+  @include link-border;
+}
+
+.callout-links__info {
+  font-size: 14px;
+  margin-top: 0.5rem;
 }
