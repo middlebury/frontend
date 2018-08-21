@@ -42,38 +42,3 @@
 
 .video__text {
 }
-
-.video__transcript-button {
-  margin-top: 1rem;
-  display: inline-block;
-}
-
-.video__transcript-icon {
-  // display: none;
-  margin-left: 0.5rem;
-}
-
-.video__transcript-icon--close {
-  display: none;
-  .video__transcript-button.is-toggled & {
-    display: inline-block;
-  }
-}
-
-.video__transcript-icon--open {
-  .video__transcript-button.is-toggled & {
-    display: none;
-  }
-}
-
-.video__transcript {
-  margin-top: 1rem;
-
-  &.has-toggler {
-    display: none;
-  }
-
-  &.is-toggled {
-    display: block;
-  }
-}

@@ -1,0 +1,20 @@
+<figure class="audio">
+  {% if panopto %}
+    <div class="audio__embed">
+      <iframe src="https://midd.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=f9b9f6b5-f52c-40f8-962b-db0b6b214532&v=1" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+    </div>
+  {% else %}
+    <div class="audio__player">
+      <audio controls>
+        <source src="http://soundbible.com/mp3/Tyrannosaurus%20Rex%20Roar-SoundBible.com-807702404.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  {% endif %}
+  <div class="audio__body">
+    <h3 class="audio__title">Audio title</h3>
+    <p class="audio__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus perspiciatis blanditiis aspernatur delectus aliquid, nobis vero vitae labore! Eligendi iure illo minus? Cupiditate repellendus modi illo ipsam dignissimos illum voluptate.</p>
+    {% include '../partials/transcript.twig' %}
+  </div>
+
+</figure>
