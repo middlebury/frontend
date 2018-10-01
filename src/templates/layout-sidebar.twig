@@ -3,14 +3,14 @@
 {% block page %}
 <div class="container">
   <div class="row">
-    <div class="col-md-11 col-md-push-1">
+    <div class="col-md-11 offset-md-1">
 
       <div class="row">
 
         {% set _sidebar = block('layout_sidebar') %}
 
         {% if _sidebar is not empty %}
-          <div class="col-md-4 flex-md-last">
+          <div class="col-md-4 order-md-last">
             <a href="#midd-content" class="sr-only sr-only-focusable">Skip sidebar</a>
             {{ _sidebar|raw }}
           </div>

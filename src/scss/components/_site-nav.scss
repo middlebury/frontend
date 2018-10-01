@@ -20,7 +20,7 @@
     padding-bottom: 90px;
     left: 100%;
     width: calc((100vw - #{$header-width}) * 0.4);
-    max-width: calc((#{$grid-container-width} - #{$header-width}) * 0.4);
+    max-width: calc((#{$container-max-width} - #{$header-width}) * 0.4);
     padding-top: 190px; // TODO: find a solution w/o a magic number
 
     .site-nav__item:hover > & {
@@ -40,7 +40,7 @@
   & & {
     @include media(md) {
       width: calc((100vw - #{$header-width}) * 0.6);
-      max-width: calc((#{$grid-container-width} - #{$header-width}) * 0.6);
+      max-width: calc((#{$container-max-width} - #{$header-width}) * 0.6);
     }
   }
 }
