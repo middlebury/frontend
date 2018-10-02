@@ -1,3 +1,4 @@
+const dotenv = require('dotenv');
 const fs = require('fs');
 const gulp = require('gulp');
 const twig = require('gulp-twig');
@@ -29,6 +30,8 @@ const cmq = require('gulp-combine-mq');
 const size = require('gulp-size');
 const rename = require('gulp-rename');
 
+dotenv.config();
+
 const production = !!args.production;
 
 const paths = {
@@ -59,10 +62,14 @@ const paths = {
  *
  * Use `gulp dev` in conjunction with this so browser sync server is not started.
  */
-if (!production && args.themeDir) {
-  paths.styles.dest = args.themeDir + '/css/';
-  paths.scripts.dest = args.themeDir + '/js/';
-  paths.images.dest = args.themeDir + '/images/';
+
+const { THEME_DIR } = process.env;
+
+if (!production && THEME_DIR) {
+  console.log(`outputing assets into theme_dir`, THEME_DIR)
+  paths.styles.dest = THEME_DIR + '/css/';
+  paths.scripts.dest = THEME_DIR + '/js/';
+  paths.images.dest = THEME_DIR + '/images/';
 }
 
 const onError = function (err) {
