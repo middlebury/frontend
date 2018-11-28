@@ -190,7 +190,12 @@ gulp.task('html', () => {
     )
     .pipe(
       twig({
-        base: './src/templates'
+        base: './src/templates',
+        data: {
+          env: {
+            production
+          }
+        }
       })
     )
     .pipe(prettify())
