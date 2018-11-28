@@ -66,13 +66,13 @@ const paths = {
 const { THEME_DIR } = process.env;
 
 if (!production && THEME_DIR) {
-  console.log(`outputing assets into theme_dir`, THEME_DIR)
+  console.log(`outputing assets into theme_dir`, THEME_DIR);
   paths.styles.dest = THEME_DIR + '/css/';
   paths.scripts.dest = THEME_DIR + '/js/';
   paths.images.dest = THEME_DIR + '/images/';
 }
 
-const onError = function (err) {
+const onError = function(err) {
   notify.onError({
     title: 'Gulp error in ' + err.plugin,
     message: err.toString()
@@ -126,7 +126,7 @@ gulp.task('copy:icons', () => {
 gulp.task('styles', () => {
   return gulp
     .src(paths.styles.src)
-    .pipe(gulpIf(!production, sourcemaps.init({loadMaps: true})))
+    .pipe(gulpIf(!production, sourcemaps.init({ loadMaps: true })))
     .pipe(
       sass({
         onError: browserSync.notify
@@ -137,7 +137,7 @@ gulp.task('styles', () => {
     .pipe(gulpIf(production, cmq()))
     .pipe(gulpIf(production, cssnano()))
     .pipe(gulpIf(!production, sourcemaps.write('./')))
-    .pipe(size({showFiles: true}))
+    .pipe(size({ showFiles: true }))
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(browserSync.stream());
 });
@@ -149,27 +149,27 @@ gulp.task('scripts:lint', () => {
     .pipe(eslint.format());
 });
 
-gulp.task('scripts', function () {
+gulp.task('scripts', function() {
   var b = browserify({
     entries: './src/js/index.js',
     debug: true,
-    transform: [[babelify, {presets: ['es2015']}]]
+    transform: [[babelify, { presets: ['es2015'] }]]
   });
 
   return b
     .bundle()
-    .on('error', function (err) {
+    .on('error', function(err) {
       console.error(err.message); // eslint-disable-line no-console
       beeper();
       this.emit('end');
     })
     .pipe(source('bundle.js'))
     .pipe(buffer())
-    .pipe(gulpIf(!production, sourcemaps.init({loadMaps: true})))
+    .pipe(gulpIf(!production, sourcemaps.init({ loadMaps: true })))
     .pipe(gulpIf(production, uglify()))
     .on('error', gutil.log)
     .pipe(gulpIf(!production, sourcemaps.write('./')))
-    .pipe(size({showFiles: true}))
+    .pipe(size({ showFiles: true }))
     .pipe(gulp.dest(paths.scripts.dest))
     .pipe(browserSync.stream());
 });
@@ -183,7 +183,7 @@ gulp.task('html', () => {
       })
     )
     .pipe(
-      data(function (file) {
+      data(function(file) {
         // TODO: how to import a glob?
         return yaml.safeLoad(fs.readFileSync('./src/data/data.yml', 'utf8'));
       })
@@ -203,10 +203,10 @@ gulp.task('images', () => {
     .src(paths.images.src)
     .pipe(
       imagemin([
-        imagemin.jpegtran({progressive: true}),
-        imagemin.optipng({optimizationLevel: 5}),
+        imagemin.jpegtran({ progressive: true }),
+        imagemin.optipng({ optimizationLevel: 5 }),
         imagemin.svgo({
-          plugins: [{removeDimensions: true}, {cleanupIDs: false}]
+          plugins: [{ removeDimensions: true }, { cleanupIDs: false }]
         })
       ])
     )
@@ -230,7 +230,7 @@ gulp.task('replace:imageurls', () => {
     .pipe(gulp.dest('./dist/css'));
 });
 
-gulp.task('copy:deps', function () {
+gulp.task('copy:deps', function() {
   // NOTE: Chart.bundle.min.js includes Momentjs but so far we are not using time axis
   // http://www.chartjs.org/docs/latest/getting-started/installation.html#bundled-build
   gulp
@@ -245,15 +245,15 @@ gulp.task('deploy', ['replace:imageurls'], () => {
   }
   return gulp
     .src(
-    [
-      './dist/css/main.css',
-      './dist/js/bundle.js',
-      './dist/js/Chart.min.js',
-      './dist/images/*'
-    ],
-    {
-      base: './dist'
-    }
+      [
+        './dist/css/main.css',
+        './dist/js/bundle.js',
+        './dist/js/Chart.min.js',
+        './dist/images/*'
+      ],
+      {
+        base: './dist'
+      }
     )
     .pipe(gulp.dest(dest));
 });
