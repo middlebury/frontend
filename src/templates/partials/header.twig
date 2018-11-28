@@ -8,14 +8,18 @@
       </h1>
     </div>
 
-    <div class="site-header__menu-button">
-      <a href="#midd-site-nav" class="site-menu-button" data-toggle-target=".site-header">
-        <span class="site-menu-button__text site-menu-button__text--open">Menu</span>
-        <span class="site-menu-button__text site-menu-button__text--close">Close</span>
-        <span class="site-menu-button__icon icon icon--hamburger"></span>
-      </a>
-    </div>
+    {% if not pardot %}
+      <div class="site-header__menu-button">
+        <a href="#midd-site-nav" class="site-menu-button" data-toggle-target=".site-header">
+          <span class="site-menu-button__text site-menu-button__text--open">Menu</span>
+          <span class="site-menu-button__text site-menu-button__text--close">Close</span>
+          <span class="site-menu-button__icon icon icon--hamburger"></span>
+        </a>
+      </div>
+    {% endif %}
   </div>
+
+  {% if not pardot %}
 
   <div class="site-header__secondary">
     <div class="site-header__search">
@@ -26,4 +30,6 @@
       {% include 'partials/nav.twig' %}
     </div>
   </div>
+
+  {% endif %}
 </header>

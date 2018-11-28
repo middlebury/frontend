@@ -7,7 +7,16 @@
 
           <div class="page-header__primary">
             {% include 'partials/breadcrumb.twig' with { items: breadcrumb } %}
-            <h1 class="page-header__title" id="midd-page-header-label">{{title}}</h1>
+
+            <h1
+              class="page-header__title"
+              id="midd-page-header-label"
+              {% if pardot %}
+                pardot-region="simple-text" pardot-region-type="simple"
+              {% endif %}
+            >
+              {{title}}
+            </h1>
           </div>
 
           {% if callout_title or callout_link_text %}

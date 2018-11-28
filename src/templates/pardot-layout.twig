@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% if env.production %}
+      <base href="https://learn.middlebury.edu" />
+    {% endif %}
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="%%description%%" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>%%title%%</title>
+    {% if env.production %}
+      <link rel="stylesheet" href="https://learn.middlebury.edu/l/74172/2018-11-27/g916vn/74172/207453/main.css" />
+    {% else %}
+      <link rel="stylesheet" href="/css/pardot.css" />
+    {% endif %}
+    <link
+      rel="stylesheet"
+      href="https://cloud.typography.com/83898/706148/css/fonts.css"
+      media="all"
+    />
+  </head>
+  <body>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      width="0"
+      height="0"
+      style="position:absolute"
+    >
+      <symbol id="icon-arrow-up" viewBox="0 0 20 12">
+        <path d="M10 4l-8 8-2-2L10 0l10 10-2 2z" fill-rule="evenodd"></path>
+      </symbol>
+    </svg>
+    <div class="site-container">
+
+      {% include 'partials/header.twig' with { pardot: true } %}
+
+      <main class="main">
+        <div class="page">
+
+          {% include 'partials/page-header.twig' with { pardot: true, title: 'Page title here' } %}
+
+          <div class="container">
+            <div class="row">
+              <div class="col-md-11 offset-md-1">
+                <div class="row">
+
+                  <div class="col-md-6">
+                    <div class="typography mb-5" pardot-region="text" pardot-region-type="pardot">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos deserunt placeat reiciendis, beatae suscipit aliquam natus magnam laborum sapiente excepturi obcaecati amet error eos ducimus quibusdam explicabo nobis sequi voluptatem.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+
+                    {% if env.production %}
+                      %%content%%
+                    {% else %}
+                      {% include 'partials/pardot-form.twig' %}
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      {% include 'partials/footer.twig' with { pardot: true } %}
+
+    </div>
+  </body>
+</html>
