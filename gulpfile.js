@@ -185,17 +185,20 @@ gulp.task('html', () => {
     .pipe(
       data(function(file) {
         // TODO: how to import a glob?
-        return yaml.safeLoad(fs.readFileSync('./src/data/data.yml', 'utf8'));
+        const yml = yaml.safeLoad(
+          fs.readFileSync('./src/data/data.yml', 'utf8')
+        );
+
+        return Object.assign({}, yml, {
+          env: {
+            production: production === true
+          }
+        });
       })
     )
     .pipe(
       twig({
-        base: './src/templates',
-        data: {
-          env: {
-            production
-          }
-        }
+        base: './src/templates'
       })
     )
     .pipe(prettify())
