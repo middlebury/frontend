@@ -190,6 +190,7 @@ gulp.task('html', () => {
         );
 
         return Object.assign({}, yml, {
+          imagesDir: args.imagesDir,
           env: {
             production: production === true
           }
