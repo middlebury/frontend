@@ -538,8 +538,7 @@ image_sizes:
     - 400x225
     - 640x360
     - 1280x720
-  # publication: this is skipped for now
-  profile_spotlight_item: # 4:3
+  profile_spotlight_item: # 3:4
     srcset:
     - 90x120
     - 144x192

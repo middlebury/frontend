@@ -1,0 +1,32 @@
+<section class="container mb-6 mt-6" aria-labelledby="midd-profile-spotlight-label-1">
+  <h2 class="h1 mb-5" id="midd-profile-spotlight-label-1">In Their Own Words</h2>
+  <p class="mb-5">Students who choose the Middlebury Schools Abroad thrive on the chance to immerse themselves in an authentic and rewarding experience. They gain incredible language proficiency—but also discover a deeper understanding of themselves and the world.</p>
+
+  <ul class="row">
+    {% for item in 0..3 %}
+      <li class="col-md-3">
+        <article
+          class="profile-spotlight-item"
+          aria-labelledby="midd-profile-spotlight-item-label-{{loop.index}}"
+        >
+          <div class="profile-spotlight-item__media">
+            <a href="">
+              {% include 'partials/img.twig' with { name: 'profile_spotlight_item' } %}
+            </a>
+          </div>
+          <div class="profile-spotlight-item__content">
+            <p class="profile-spotlight-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui voluptate earum laboriosam eaque, eum possimus deserunt magnam animi doloremque beatae facilis ab molestiae placeat ratione veniam adipisci quae, quos porro.</p>
+            <h3
+              class="profile-spotlight-item__name"
+              id="midd-profile-spotlight-item-label-{{loop.index}}"
+            >
+              Trey Palmer
+            </h3>
+            <p class="profile-spotlight-item__title">Middlebury College, Buenos Aries, Argentina</p>
+            <a href="" class="link-border f2">Read my story</a>
+          </div>
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
