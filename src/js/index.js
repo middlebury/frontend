@@ -14,3 +14,23 @@ import './toggler';
 import './video';
 
 objectFitImages();
+
+/**
+ * Handles showing the city/state/zip fields on the Pardot form handler
+ */
+function pardotFormHandler() {
+  const select = document.querySelector('.js-pardot-country-select');
+  const fields = document.querySelector('.js-pardot-country-us-fields');
+
+  fields.classList.add('d-none');
+
+  select.onchange = event => {
+    if (event.target.value === 'US') {
+      fields.classList.remove('d-none');
+    } else {
+      fields.classList.add('d-none');
+    }
+  };
+}
+
+pardotFormHandler();

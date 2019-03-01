@@ -1,0 +1,47 @@
+{% extends "layout-sidebar.twig" %}
+
+{% set page_header = {
+  title: 'Masters in Public Administration',
+  breadcrumb: [
+    {
+      text: 'Academics',
+      href: '#',
+    },
+    {
+      text: 'Degree Programs',
+      href: '#',
+    }
+  ],
+  callout_title: '<strong>Application Deadline</strong><br>March 30',
+  callout_link_url: '#',
+  callout_link_text: 'Apply Now'
+} %}
+
+{# For some reason the sidebar is not showing up. Due to conflicts with blocks? #}
+
+{% block layout_sidebar %}
+
+  {% include 'partials/page-nav.twig' with {
+    items: [
+      { text: 'Curriculum', href: '#' },
+      { text: 'Faculty', href: '#' },
+      { text: 'Financing Your Education', href: '#' },
+    ],
+    callouts: [
+      { text: 'Request Information', href: '#' },
+      { text: 'Apply by July 10 for Fall 2017', href: '#' },
+    ]
+  } %}
+
+{% endblock %}
+
+{% block layout_content %}
+
+  {% include 'partials/lead.twig' %}
+
+
+  {% include 'paragraphs/text.twig' %}
+
+  {% include 'partials/pardot-form-handler.twig' %}
+
+{% endblock %}
