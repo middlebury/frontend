@@ -20,6 +20,7 @@
     "url": "https://github.com/middlebury/frontend/issues"
   },
   "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "babelify": "^7.3.0",
     "beeper": "^1.1.1",

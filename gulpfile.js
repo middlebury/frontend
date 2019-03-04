@@ -157,7 +157,8 @@ gulp.task('scripts', function() {
       [
         babelify,
         {
-          presets: ['env']
+          presets: ['env'],
+          plugins: ['transform-class-properties']
         }
       ]
     ]
