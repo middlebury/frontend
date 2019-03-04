@@ -153,7 +153,14 @@ gulp.task('scripts', function() {
   var b = browserify({
     entries: './src/js/index.js',
     debug: true,
-    transform: [[babelify, { presets: ['es2015'] }]]
+    transform: [
+      [
+        babelify,
+        {
+          presets: ['env']
+        }
+      ]
+    ]
   });
 
   return b
