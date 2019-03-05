@@ -22,13 +22,13 @@ function pardotFormHandler() {
   const select = document.querySelector('.js-pardot-country-select');
   const fields = document.querySelector('.js-pardot-country-us-fields');
 
-  fields.classList.add('d-none');
+  fields.style.display = 'none';
 
   select.onchange = event => {
     if (event.target.value === 'US') {
-      fields.classList.remove('d-none');
+      fields.style.display = 'block';
     } else {
-      fields.classList.add('d-none');
+      fields.style.display = 'none';
     }
   };
 }
