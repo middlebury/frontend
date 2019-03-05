@@ -1,0 +1,56 @@
+<div class="form__group">
+  <label for="{{id}}" class="form__label">
+    {{label}}
+    {% if required or requiredLabel %}
+      <span class="form__required">
+        ({{requiredLabel is not empty ? requiredLabel : 'required'}})
+      </span>
+    {% endif %}
+  </label>
+
+  {% if options  %}
+
+    <select
+      name="{{name}}"
+      class="form__control {{inputClass}}"
+      {% if helpId %} aria-describedby="{{helpId}}"{% endif %}
+    >
+      {% for opt in options %}
+        <option
+          value="{{opt.value}}"
+          {% if opt.selected %}
+            selected
+          {% endif %}
+        >
+          {{opt.text}}
+        </option>
+      {% endfor %}
+    </select>
+
+  {% elseif multiline %}
+
+    <textarea
+      id="{{id}}"
+      name="{{name}}"
+      class="form__control {{inputClass}}"
+      {% if helpId %} aria-describedby="{{helpId}}"{% endif %}
+      {{required ? 'required' : ''}}
+    ></textarea>
+
+  {% else %}
+
+    <input
+      id="{{id}}"
+      name="{{name}}"
+      type="{{type}}"
+      class="form__control {{inputClass}}"
+      {% if helpId %} aria-describedby="{{helpId}}"{% endif %}
+      {{required ? 'required' : ''}}
+    />
+
+  {% endif %}
+
+  {% if help %}
+    <p class="form__help-text" id="{{helpId}}">{{help}}</p>
+  {% endif %}
+</div>

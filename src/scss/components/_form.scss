@@ -5,15 +5,22 @@
   margin-bottom: 2rem;
 }
 
+.form__required {
+  font-size: 14px;
+  font-weight: normal;
+  color: $gray;
+}
+
 .form__group--has-error {
   .form__control {
     border-color: $danger;
   }
 }
 
-.form__error-message {
+.form__error-text {
   color: $danger;
   font-size: 14px;
+  margin-top: 0.5rem;
 }
 
 .form__label {
