@@ -42,7 +42,7 @@
     <input
       id="{{id}}"
       name="{{name}}"
-      type="{{type}}"
+      type="{{type|default("text")}}"
       class="form__control {{inputClass}}"
       {% if helpId %} aria-describedby="{{helpId}}"{% endif %}
       {{required ? 'required' : ''}}
