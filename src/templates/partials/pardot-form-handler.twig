@@ -385,23 +385,6 @@
     multiline: true
   } %}
 
-  {% set now = "now"|date("Y") %}
-  {% set later = now + 3 %}
-  {% set year_options = [] %}
-  {% for year in now..later %}
-    {% set year_options = year_options|merge([{
-      value: year,
-      text: year
-    }]) %}
-  {% endfor %}
-
-  {% include 'partials/form-item.twig' with {
-    id: 'midd-pardot-year',
-    label: 'What year are you planning to start your degree?',
-    name: 'year',
-    options: year_options
-  } %}
-
   {# TODO: add options #}
   {% include 'partials/form-item.twig' with {
     id: 'midd-pardot-term',
