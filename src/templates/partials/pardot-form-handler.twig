@@ -38,6 +38,7 @@
     name: 'country',
     label: 'Country',
     inputClass: 'js-pardot-country-select',
+    required: true,
     options: [
       {value: "", selected:true, text: "- None -"},
       {value: "US", text: "United States"},
@@ -384,28 +385,61 @@
     multiline: true
   } %}
 
-  {% set now = "now"|date("Y") %}
-  {% set later = now + 3 %}
-  {% set year_options = [] %}
-  {% for year in now..later %}
-    {% set year_options = year_options|merge([{
-      value: year,
-      text: year
-    }]) %}
-  {% endfor %}
-
   {% include 'partials/form-item.twig' with {
-    id: 'midd-pardot-year',
-    label: 'What year are you planning to start your degree?',
-    name: 'year',
-    options: year_options
+    id: 'midd-pardot-how-heard',
+    name: 'how_heard',
+    label: 'How did you first learn about us?',
+    required: true,
+    options: [
+      {value: "", selected:true, text: "- None -"},
+      {value: "Alumni/Student", text: "Alumni/Student"},
+      {value: "Big Choice Group", text: "Big Choice Group"},
+      {value: "College Counselor/Professor", text: "College Counselor/Professor"},
+      {value: "Employer", text: "Employer"},
+      {value: "Fair/Event", text: "Fair/Event"},
+      {value: "Foreign Affairs", text: "Foreign Affairs"},
+      {value: "Foreign Policy", text: "Foreign Policy"},
+      {value: "Friend/Relative", text: "Friend/Relative"},
+      {value: "GMAT Purchased List", text: "GMAT Purchased List"},
+      {value: "Gradschools.com", text: "Gradschools.com"},
+      {value: "GRE Purchased List", text: "GRE Purchased List"},
+      {value: "Internet", text: "Internet"},
+      {value: "Keystone", text: "Keystone"},
+      {value: "Loose File", text: "Loose File"},
+      {value: "Olark", text: "Olark"},
+      {value: "Other", text: "Other"},
+      {value: "Partner Organization/School", text: "Partner Organization/School"},
+      {value: "Petersons", text: "Petersons"},
+      {value: "Social Media", text: "Social Media"},
+      {value: "TOEFL Purchased List", text: "TOEFL Purchased List"}
+    ]
   } %}
 
-  {# TODO: add options #}
   {% include 'partials/form-item.twig' with {
-    id: 'midd-pardot-term',
-    label: 'Anticipated Start Term',
-    options: [{text:'',value:''}]
+    id: 'midd-pardot-program',
+    name: 'program',
+    label: 'Program of Interest',
+    required: true,
+    options: [
+      {value: "", selected:true, text: "- None -"},
+      {value: "Conference Interpretation", text: "Conference Interpretation"},
+      {value: "International Education Management", text: "International Education Management"},
+      {value: "International Environmental Policy", text: "International Environmental Policy"},
+      {value: "International Policy and Development", text: "International Policy and Development"},
+      {value: "Joint BA/MA Degrees", text: "Joint BA/MA Degrees"},
+      {value: "Joint MPA/International Education Management", text: "Joint MPA/International Education Management"},
+      {value: "Joint MPA/Trade", text: "Joint MPA/Trade"},
+      {value: "Joint International Policy and Development/Trade", text: "Joint International Policy and Development/Trade"},
+      {value: "Master of Public Administration", text: "Master of Public Administration"},
+      {value: "Nonproliferation and Terrorism Studies", text: "Nonproliferation and Terrorism Studies"},
+      {value: "Teaching English to Speakers of Other Languages (TESOL)", text: "Teaching English to Speakers of Other Languages (TESOL)"},
+      {value: "Teaching Foreign Language (TFL)", text: "Teaching Foreign Language (TFL)"},
+      {value: "International Trade and Economic Diplomacy", text: "International Trade and Economic Diplomacy"},
+      {value: "Translation", text: "Translation"},
+      {value: "Translation and Interpretation", text: "Translation and Interpretation"},
+      {value: "Translation and Localization Management", text: "Translation and Localization Management"},
+      {value: "Undecided", text: "Undecided"}
+    ]
   } %}
 
   <div class="form__group">
