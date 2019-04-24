@@ -234,6 +234,8 @@ footer_nav:
         url: http://go.middlebury.edu/sitehelp
       - text: Offices and Services
         url: /institute/offices-services
+      - text: Oracle Cloud
+        url: https://myapps.microsoft.com/gmhec.org
       - text: BannerWeb
         url: https://ssb-prod.ec.middlebury.edu/PNTR/twbkwbis.P_WWWLogin?
       - text: EthicsPoint
