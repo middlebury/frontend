@@ -30,6 +30,7 @@ const rename = require('gulp-rename');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const postcssUrl = require('postcss-url');
 
 dotenv.config();
 
@@ -124,9 +125,16 @@ gulp.task('copy:icons', () => {
     .pipe(gulp.dest('./src/templates/partials'));
 });
 
+const hash = Date.now();
+
 gulp.task('styles', () => {
   let plugins = [
     autoprefixer(),
+    postcssUrl({
+      url({ url }) {
+        return url + '?fv=' + hash;
+      }
+    })
   ];
 
   if (production) {

@@ -46,20 +46,20 @@
 // TODO: change to svg
 .site-header__logo {
   display: block;
-  background-image: url('/images/miis-logo.svg?v2');
+  background-image: url('/images/miis-logo.svg');
   background-repeat: no-repeat;
   width: 213px;
   height: 40px;
   text-indent: -9999px;
 
   @include media(md) {
-    background-image: url('/images/miis-shield.svg?v2');
+    background-image: url('/images/miis-shield.svg');
     width: 52px;
     height: 58px;
 
     .home &,
     .site-header.is-toggled & {
-      background-image: url('/images/miis-logo.svg?v2');
+      background-image: url('/images/miis-logo.svg');
       width: 305px;
       height: 58px;
     }
