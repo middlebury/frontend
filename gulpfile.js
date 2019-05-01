@@ -10,14 +10,12 @@ const buffer = require('vinyl-buffer');
 const gutil = require('gulp-util');
 const uglify = require('gulp-uglify');
 const sourcemaps = require('gulp-sourcemaps');
-const autoprefixer = require('gulp-autoprefixer');
 const plumber = require('gulp-plumber');
 const data = require('gulp-data');
 const notify = require('gulp-notify');
 const eslint = require('gulp-eslint');
 const prettify = require('gulp-prettify');
 const imagemin = require('gulp-imagemin');
-const cssnano = require('gulp-cssnano');
 const replace = require('gulp-replace');
 const yaml = require('js-yaml');
 const del = require('del');
@@ -29,6 +27,9 @@ const gulpIf = require('gulp-if');
 const cmq = require('gulp-combine-mq');
 const size = require('gulp-size');
 const rename = require('gulp-rename');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 
 dotenv.config();
 
@@ -124,6 +125,14 @@ gulp.task('copy:icons', () => {
 });
 
 gulp.task('styles', () => {
+  let plugins = [
+    autoprefixer(),
+  ];
+
+  if (production) {
+    plugins.push(cssnano());
+  }
+
   return gulp
     .src(paths.styles.src)
     .pipe(gulpIf(!production, sourcemaps.init({ loadMaps: true })))
@@ -133,9 +142,8 @@ gulp.task('styles', () => {
       })
     )
     .on('error', sass.logError)
-    .pipe(autoprefixer())
     .pipe(gulpIf(production, cmq()))
-    .pipe(gulpIf(production, cssnano()))
+    .pipe(postcss(plugins))
     .pipe(gulpIf(!production, sourcemaps.write('./')))
     .pipe(size({ showFiles: true }))
     .pipe(gulp.dest(paths.styles.dest))
