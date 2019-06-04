@@ -1,0 +1,6 @@
+.paragraph--button {
+  margin-bottom: 3rem;
+  @include media(md) {
+    margin-bottom: 4rem;
+  }
+}

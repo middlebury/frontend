@@ -109,6 +109,8 @@
 @import 'utils/text';
 @import 'utils/toggler';
 
+@import 'paragraphs';
+
 .link-border {
   @include link-border();
 }
