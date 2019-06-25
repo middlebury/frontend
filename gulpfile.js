@@ -251,7 +251,7 @@ gulp.task('watch', () => {
   gulp.watch('./src/templates/**/*.twig', ['html']);
   gulp.watch(paths.styles.src, ['styles']);
   gulp.watch(paths.images.src, ['images']);
-  gulp.watch(paths.scripts.src, ['scripts', 'scripts:lint']);
+  gulp.watch(paths.scripts.src, ['scripts']);
   gulp.watch('./src/data/*.yml', ['html']);
 });
 
@@ -296,7 +296,6 @@ gulp.task('build', [
   'html',
   'images',
   'styles',
-  'scripts:lint',
   'scripts',
   'copy:deps'
 ]);

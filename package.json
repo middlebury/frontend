@@ -10,7 +10,7 @@
     "build:pardot": "npm run build -- --imagesDir=https://www.middlebury.edu/institute/themes/custom/institute_theme/images/ && gulp replace:imageurls --imagesDir=https://www.middlebury.edu/institute/themes/custom/institute_theme/images/",
     "build:icons": "gulp icons && gulp copy:icons",
     "deploy": "gulp deploy --production",
-    "lint": "eslint src/**"
+    "lint": "eslint src/js/**/*.js"
   },
   "repository": {
     "type": "git",
