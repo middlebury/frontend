@@ -109,7 +109,16 @@ gulp.task('server', () => {
 gulp.task('icons', () => {
   return gulp
     .src('./src/images/icon-*.svg')
-    .pipe(imagemin())
+    .pipe(
+      imagemin([
+        imagemin.gifsicle({ interlaced: true }),
+        imagemin.jpegtran({ progressive: true }),
+        imagemin.optipng({ optimizationLevel: 5 }),
+        imagemin.svgo({
+          plugins: [{ removeViewBox: false }, { cleanupIDs: false }]
+        })
+      ])
+    )
     .pipe(
       svgSprites({
         mode: 'symbols'
