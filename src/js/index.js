@@ -12,6 +12,7 @@ import './responsive-tables';
 import './slideshow';
 import './toggler';
 import './video';
+import './dropdown';
 
 objectFitImages();
 
@@ -21,8 +22,8 @@ objectFitImages();
 function pardotFormHandler() {
   const select = document.querySelector('.js-pardot-country-select');
   const fields = document.querySelector('.js-pardot-country-us-fields');
-  
-  if(!select || !fields) {
+
+  if (!select || !fields) {
     return;
   }
 
