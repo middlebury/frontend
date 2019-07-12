@@ -17,10 +17,19 @@
 }
 
 .site-header__primary {
-  display: flex;
-  align-content: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'logo menu' 'degrees degrees';
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  @include media(sm) {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'logo menu' 'logo degrees';
+  }
+
   @include make-gutters();
 
   @include media(md) {
@@ -29,8 +38,7 @@
 }
 
 .site-header__brand {
-  flex: 1;
-  align-self: center;
+  grid-area: logo;
 
   @include media(md) {
     margin-bottom: 20px;
@@ -45,12 +53,18 @@
 
 // TODO: change to svg
 .site-header__logo {
+  grid-area: logo;
   display: block;
   background-image: url('/images/miis-logo.svg');
   background-repeat: no-repeat;
   width: 213px;
   height: 40px;
   text-indent: -9999px;
+
+  @include media(sm) {
+    width: 375px;
+    height: 72px;
+  }
 
   @include media(md) {
     background-image: url('/images/miis-shield.svg');
@@ -67,9 +81,8 @@
 }
 
 .site-header__menu-button {
-  flex: 0 1 auto;
-  align-self: center;
-  text-align: center;
+  grid-area: menu;
+  justify-self: flex-end;
 
   .site-header.is-toggled & {
     text-align: left;
@@ -85,6 +98,14 @@
     .home & {
       visibility: hidden;
     }
+  }
+}
+
+.site-header__degrees {
+  grid-area: degrees;
+  padding-top: 1rem;
+  @include media(sm) {
+    padding-top: 0;
   }
 }
 

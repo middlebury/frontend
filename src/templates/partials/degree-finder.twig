@@ -1,0 +1,32 @@
+<div class="degree-finder{% if is_popup %} degree-finder--popup{% endif %}">
+
+  <h2 class="degree-finder__title">Explore Our Graduate Degrees and Programs</h2>
+
+  <div class="degree-finder__list">
+
+    <div class="degree-finder__item">
+
+      {% include 'partials/dropdown.twig' with {
+        label: masters.label,
+        items: masters.items
+      } %}
+
+    </div>
+    <div class="degree-finder__item">
+      {% include 'partials/dropdown.twig' with {
+        label: joint.label,
+        items: joint.items
+      } %}
+
+    </div>
+    <div class="degree-finder__item">
+      {% include 'partials/dropdown.twig' with {
+        label: additional.label,
+        items: additional.items
+      } %}
+
+    </div>
+
+  </div>
+</div>
+

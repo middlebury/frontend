@@ -1,3 +1,4 @@
+{% set is_front = true %}
 {% extends "layout.twig" %}
 
 {% set bodyClass = 'home' %}
@@ -5,6 +6,8 @@
 {% block page %}
 
   {% include 'partials/homepage-hero.twig' %}
+
+  {% include 'partials/degree-finder.twig' %}
 
   <div class="container">
 

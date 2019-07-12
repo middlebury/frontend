@@ -3,8 +3,9 @@
   font-size: 14px;
   font-weight: $font-weight-semibold;
   text-transform: uppercase;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: -0.5rem;
   display: inline-block;
 
   &:hover,
@@ -14,6 +15,7 @@
 
   @include media(md) {
     text-align: center;
+    margin-top: 0;
   }
 }
 

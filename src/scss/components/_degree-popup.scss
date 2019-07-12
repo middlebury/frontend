@@ -1,0 +1,85 @@
+.degree-popup {
+  position: relative;
+  // padding: 1rem;
+  width: 100%;
+  flex: 1;
+
+  @include media(md) {
+    // padding: 0.5rem;
+  }
+
+  // hide popup when menu is open
+  .site-header.is-toggled & {
+    display: none;
+  }
+}
+
+.degree-popup__button {
+  display: block;
+  color: $white;
+  border: 1px solid $white;
+  padding: 0.5rem;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  background: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  width: 100%;
+
+  @include media(md) {
+    display: inline-block;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.degree-popup__content {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+  animation-duration: 0.4s;
+  animation-name: slideInRight;
+  z-index: 99;
+
+  @include media(sm) {
+    min-width: 300px;
+  }
+
+  @include media(md) {
+    animation-name: slideInLeft;
+    left: 0;
+    right: auto;
+  }
+
+  &.is-toggled {
+    display: block;
+  }
+}
+
+.degree-popup__close {
+  color: $brand-secondary;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background: none;
+  border: 0;
+  display: inline-block;
+  padding: 1rem;
+}
+
+.degree-popup-overlay {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(black, 0.5);
+
+  &.is-toggled {
+    display: block;
+  }
+}

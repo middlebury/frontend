@@ -1,0 +1,68 @@
+.degree-finder {
+  background: $white;
+  border: 1px solid $gray-light;
+  border-top: 8px solid $brand-secondary;
+  position: relative;
+  z-index: 99;
+
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-top: -7rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: $component-margin-bottom;
+
+  @include media(lg) {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.degree-finder__title {
+  margin-bottom: 1.5rem;
+  // font-size: 26px;
+}
+
+.degree-finder__list {
+  @include media(md) {
+    display: flex;
+  }
+}
+
+.degree-finder__item {
+  @include media(md) {
+    flex: 1;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+
+    @include media(md) {
+      margin-right: 1.5rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.degree-finder--popup {
+  margin: 0;
+  z-index: initial;
+
+  .degree-finder__title {
+    font-size: 24px;
+  }
+
+  .degree-finder__list {
+    display: block;
+  }
+
+  .degree-finder__item {
+    &:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 1.5rem;
+    }
+  }
+}

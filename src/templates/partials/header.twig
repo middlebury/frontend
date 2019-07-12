@@ -16,7 +16,36 @@
           <span class="site-menu-button__icon icon icon--hamburger"></span>
         </a>
       </div>
+
+      {% if not is_front %}
+        <div class="site-header__degrees">
+          <div class="degree-popup">
+            <a
+              href="/institute/academics/degree-programs"
+              class="degree-popup__button"
+              data-toggle-target=".js-degree-popup"
+              data-toggle-linked="degree-popup"
+            >
+              Degrees
+            </a>
+
+            <div class="degree-popup__content js-degree-popup">
+              <button
+                class="degree-popup__close"
+                data-toggle-target=".js-degree-popup"
+                data-toggle-linked="degree-popup"
+              >
+                <span class="sr-only">Close</span>
+                {% include 'partials/icon.twig' with { name: 'close' } %}
+              </button>
+              {% include 'partials/degree-finder.twig' with { is_popup: true } %}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+
     {% endif %}
+
   </div>
 
   {% if not pardot %}
@@ -32,4 +61,6 @@
   </div>
 
   {% endif %}
+
+
 </header>
