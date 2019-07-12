@@ -221,8 +221,11 @@ gulp.task('html', () => {
         const yml = yaml.safeLoad(
           fs.readFileSync('./src/data/data.yml', 'utf8')
         );
+        const programs = yaml.safeLoad(
+          fs.readFileSync('./src/data/programs.yml', 'utf8')
+        );
 
-        return Object.assign({}, yml, {
+        return Object.assign({}, yml, programs, {
           imagesDir: args.imagesDir,
           env: {
             production

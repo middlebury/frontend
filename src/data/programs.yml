@@ -1,0 +1,98 @@
+masters:
+  label: Graduate Degrees
+  items:
+  - label: International Policy and Development
+    href: https://www.middlebury.edu/institute/academics/degree-programs/international-policy-development
+    text: Develop and promote fair and just policy solutions to international social and economic challenges.
+
+  - label: Master of Public Administration
+    href: https://www.middlebury.edu/institute/academics/degree-programs/public-administration
+    text: Identity and help manage international development opportunities for social change.
+
+  - label: International Education Management
+    href: https://www.middlebury.edu/institute/academics/degree-programs/international-education-management
+    text: Prepare for careers in study abroad programs, student services, and government programs such as Fulbright and Education USA.
+
+  - label: International Environmental Policy
+    href: https://www.middlebury.edu/institute/academics/degree-programs/international-environmental-policy
+    text: Develop the critical knowledge and skills to tackle complex environmental challenges, especially those posed by climate change.
+
+  - label: International Trade and Economic Diplomacy
+    href: https://www.middlebury.edu/institute/academics/degree-programs/international-trade-economic-diplomacy
+    text: Explore policy analysis and trade negotiations with a focus on one of the three tracks&mdash;business, government, or civil society.
+
+  - label: Nonproliferation and Terrorism Studies
+    href: https://www.middlebury.edu/institute/academics/degree-programs/nonproliferation-terrorism-studies
+    text: Develop the knowledge and skills to address the spread of weapons of mass destruction (WMD) and respond effectively to terrorism.
+
+  - label: Teaching English to Speakers of Other Languages
+    href: https://www.middlebury.edu/institute/academics/degree-programs/language-education
+    text: Become a leader in ESL language education in the U.S. and abroad through our internationally recognized teacher education program.
+
+  - label: Teaching Foreign Language
+    href: https://www.middlebury.edu/institute/academics/degree-programs/language-education
+    text: Become a leader in foreign language education in the U.S. and abroad through our internationally recognized teacher education program.
+
+  - labels:
+    - label: Translation
+      href: https://www.middlebury.edu/institute/academics/degree-programs/translation-interpretation
+    - label: Translation and Interpretation
+      href: https://www.middlebury.edu/institute/academics/degree-programs/translation-interpretation
+    - label: Conference Interpretation
+      href: https://www.middlebury.edu/institute/academics/degree-programs/translation-interpretation
+    text: Build your skills in translation, consecutive interpretation, and simultaneous interpretation in order to enhance cross-cultural understanding and communication.
+
+  - label: Translation and Localization Management
+    href: https://www.middlebury.edu/institute/academics/degree-programs/translation-localization-management
+    text: Develop the skills for a rapidly growing industry focused on translation, technology, and project management.
+
+joint:
+  label: Joint Graduate Degrees
+  items:
+  - label: Joint MPA/MA in International Education Management
+    href: https://www.middlebury.edu/institute/academics/joint-degrees/joint-mpa-iem/overview
+  - label: Joint BA/MA in International Policy and Development
+    href: https://www.middlebury.edu/institute/academics/joint-degrees/joint-bama/ipd/overview
+  - label: Joint BA/MA in Nonproliferation and Terrorism Studies
+    href: https://www.middlebury.edu/institute/academics/joint-degrees/joint-bama/npts/overview
+  - label: Joint BA/Master of Public Administration
+    href: https://www.middlebury.edu/institute/academics/joint-degrees/joint-bama
+
+additional:
+  label: Additional Programs
+  items:
+  - label: Language Programs
+    href: https://www.middlebury.edu/institute/academics/additional-programs/language
+    programs:
+    - Custom Language Services
+    - Intensive English Programs
+    - Summer Intensive Language Program
+
+  - label: Peace Corps Fellows Programs
+    href: https://www.middlebury.edu/institute/admissions/scholarships/partners/coverdell
+    programs:
+    - Paul D. Coverdell Peace Corps Fellows
+
+  - label: Professional Development
+    href: https://www.middlebury.edu/institute/academics/additional-programs/professional
+    programs:
+    - Teacher Training Programs
+    - Translation and Interpretation Professional Programs
+    - Intercultural Communication Training
+
+  - label: Certificates (from one week to two semesters)
+    href: https://www.middlebury.edu/institute/academics/additional-programs/certificates
+    programs:
+    - Conflict Resolution
+    - Custom Professional Development Trainings/Executive Education
+    - Design, Partnering, Management, and Innovation
+    - Financial Crime Management
+    - Frontier Market Scouts
+    - Intercultural Competence
+    - Language Program Administration
+    - Nonproliferation Studies
+    - Spanish Community Interpreting
+    - Summer Peacebuilding Program
+    - Teaching English to Speakers of Other Languages (TESOL)
+    - Teaching Foreign Language (TFL)
+    - Terrorism Studies
