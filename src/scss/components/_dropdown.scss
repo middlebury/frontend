@@ -70,7 +70,9 @@
   font-weight: $font-weight-medium;
   font-size: 14px;
 
+  &:focus,
   &:hover {
     background: $gray-lighter;
+    outline: 0;
   }
 }
