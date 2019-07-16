@@ -2,6 +2,10 @@
 import 'intersection-observer';
 import objectFitImages from 'object-fit-images';
 
+// polyfills for micromodal ie11 support
+import 'mdn-polyfills/Object.assign';
+import 'mdn-polyfills/Array.from';
+
 // import './publications';
 import './chart-loader';
 import './events-datepicker';
