@@ -110,6 +110,6 @@ class Dropdown {
 
 const elems = $$('[data-dropdown]');
 
-elems.forEach(elem => new Dropdown(elem));
+[].forEach.call(elems, elem => new Dropdown(elem));
 
 export default Dropdown;
