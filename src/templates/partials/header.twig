@@ -23,22 +23,20 @@
             <a
               href="/institute/academics/degree-programs"
               class="degree-popup__button"
-              data-toggle-target=".js-degree-popup"
-              data-toggle-linked="degree-popup"
+              data-degree-popup="midd-degree-popup"
             >
               Degrees
             </a>
 
-            <div class="degree-popup__content js-degree-popup">
-              <button
-                class="degree-popup__close"
-                data-toggle-target=".js-degree-popup"
-                data-toggle-linked="degree-popup"
-              >
-                <span class="sr-only">Close</span>
-                {% include 'partials/icon.twig' with { name: 'close' } %}
-              </button>
-              {% include 'partials/degree-finder.twig' with { is_popup: true } %}
+            <div class="degree-popup__modal" id="midd-degree-popup" role="dialog" aria-hidden="true">
+              <div class="degree-popup__content">
+                <button class="degree-popup__close" data-degree-popup-close>
+                  <span class="sr-only">Close</span>
+                  {% include 'partials/icon.twig' with { name: 'close' } %}
+                </button>
+                {% include 'partials/degree-finder.twig' with { is_popup: true } %}
+              </div>
+              <div class="degree-popup__overlay" data-degree-popup-close tabindex="-1"></div>
             </div>
           </div>
         </div>

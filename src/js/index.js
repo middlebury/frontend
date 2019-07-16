@@ -13,6 +13,7 @@ import './slideshow';
 import './toggler';
 import './video';
 import './dropdown';
+import './degree-popup';
 
 objectFitImages();
 

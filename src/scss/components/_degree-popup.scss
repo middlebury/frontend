@@ -1,16 +1,20 @@
 .degree-popup {
   position: relative;
-  // padding: 1rem;
-  width: 100%;
-  flex: 1;
+}
+
+.degree-popup__modal {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
 
   @include media(md) {
-    // padding: 0.5rem;
+    left: 0;
+    right: auto;
   }
 
-  // hide popup when menu is open
-  .site-header.is-toggled & {
-    display: none;
+  &.is-open {
+    display: block;
   }
 }
 
@@ -18,8 +22,6 @@
   display: block;
   color: $white;
   border: 1px solid $white;
-  padding: 0.5rem;
-  font-size: 12px;
   line-height: 1;
   text-align: center;
   background: 0;
@@ -27,41 +29,47 @@
   font-weight: 600;
   letter-spacing: 0.1em;
   width: 100%;
+  font-size: 12px;
+  padding: 0.5rem 1rem;
 
-  @include media(md) {
+  &:hover {
+    text-decoration: none;
+    @include media(lg) {
+      background: $white;
+      color: $brand-primary;
+    }
+  }
+
+  @include media(sm) {
     display: inline-block;
     width: auto;
-    margin-left: auto;
-    margin-right: auto;
+  }
+
+  @include media(md) {
+    font-size: 10px;
+    padding: 0.5rem;
+  }
+
+  @include media(lg) {
+    font-size: 12px;
   }
 }
 
 .degree-popup__content {
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: none;
-  animation-duration: 0.4s;
-  animation-name: slideInRight;
-  z-index: 99;
+  position: relative;
+  z-index: 100;
 
   @include media(sm) {
     min-width: 300px;
   }
 
   @include media(md) {
-    animation-name: slideInLeft;
-    left: 0;
-    right: auto;
-  }
-
-  &.is-toggled {
-    display: block;
+    animation: slideInLeft 0.3s;
   }
 }
 
 .degree-popup__close {
-  color: $brand-secondary;
+  color: $brand-primary;
   position: absolute;
   top: 0;
   right: 0;
@@ -72,14 +80,13 @@
   padding: 1rem;
 }
 
-.degree-popup-overlay {
-  display: none;
-  position: absolute;
+.degree-popup__overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(black, 0.5);
-
-  &.is-toggled {
-    display: block;
-  }
+  background: rgba(black, 0.75);
+  animation: fadeIn 0.2s;
+  z-index: 99;
 }
