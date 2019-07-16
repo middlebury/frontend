@@ -23,15 +23,45 @@ class Dropdown {
 
     this.btn = $('[data-dropdown-button]', elem);
     this.menu = $('[data-dropdown-menu]', elem);
+    this.items = $$('[data-dropdown-item]', this.menu);
+
+    this.firstItem = this.items[0];
+    this.lastItem = this.items[this.items.length - 1];
 
     this.activeClass = 'is-active';
     this.isOpen = false;
+    this.index = 0;
+
+    this.keyCode = {
+      TAB: 9,
+      RETURN: 13,
+      ESC: 27,
+      SPACE: 32,
+      PAGEUP: 33,
+      PAGEDOWN: 34,
+      END: 35,
+      HOME: 36,
+      LEFT: 37,
+      UP: 38,
+      RIGHT: 39,
+      DOWN: 40
+    };
 
     this.init();
   }
 
   init() {
     this.addListeners();
+
+    this.btn.setAttribute('aria-expanded', false);
+    this.btn.setAttribute('aria-haspopup', true);
+
+    this.menu.setAttribute('role', 'menu');
+    [].forEach.call(this.items, item => item.setAttribute('role', 'menuitem'));
+
+    // remove role from list items so they are not announced
+    const listitems = $$('li', this.menu);
+    [].forEach.call(listitems, item => item.setAttribute('role', 'none'));
   }
 
   addListeners() {
@@ -42,32 +72,101 @@ class Dropdown {
     on(window, 'click', this.handleWindowClick);
     on(window, 'touchstart', this.handleWindowClick);
 
-    on(this.elem, 'keyup', this.handleElemKeyup);
+    on(this.menu, 'keydown', this.handleMenuKeyDown);
 
-    on(this.btn, 'click', this.toggle);
+    on(this.btn, 'click', this.handleBtnClick);
+    on(this.btn, 'keydown', this.handleBtnKeyDown);
+
+    [].forEach.call(this.items, item => {
+      item.setAttribute('tabindex', '-1');
+    });
   }
 
   destroy() {
     off(window, 'click', this.handleWindowClick);
     off(window, 'touchstart', this.handleWindowClick);
 
-    off(this.elem, 'keyup', this.handleElemKeyup);
+    off(this.menu, 'keydown', this.handleMenuKeyDown);
 
-    off(this.btn, 'click', this.toggle);
+    off(this.btn, 'click', this.handleBtnClick);
+    off(this.btn, 'keydown', this.handleBtnKeyDown);
 
-    this.hide();
+    this.hideMenu();
   }
 
-  handleElemKeyup = e => {
-    // TODO: replace 27 with constant esc key
-    if (e.keyCode === 27) {
-      this.hide();
-      this.focusBtn();
+  handleBtnClick = e => {
+    this.toggle();
+  };
+
+  handleBtnKeyDown = event => {
+    if (event.keyCode === this.keyCode.DOWN) {
+      event.preventDefault();
+
+      this.showMenu();
     }
   };
 
-  focusBtn() {
-    this.btn.focus();
+  handleMenuKeyDown = e => {
+    const { keyCode } = e;
+
+    let flag;
+    const { DOWN, UP, PAGEDOWN, PAGEUP, HOME, END } = this.keyCode;
+
+    switch (e.keyCode) {
+      case DOWN:
+        flag = true;
+        this.focusNext();
+        break;
+      case UP:
+        flag = true;
+        this.focusPrev();
+        break;
+      case PAGEUP:
+      case HOME:
+        flag = true;
+        this.focusFirst();
+        break;
+      case PAGEDOWN:
+      case END:
+        flag = true;
+        this.focusLast();
+        break;
+    }
+
+    if (flag) {
+      e.preventDefault();
+    }
+
+    // Close on escape or tab
+    if (keyCode === this.keyCode.ESC || keyCode === this.keyCode.TAB) {
+      this.toggle();
+    }
+
+    // If escape, refocus menu button
+    if (keyCode === this.keyCode.ESC) {
+      e.preventDefault();
+      this.btn.focus();
+    }
+  };
+
+  focusNext() {
+    const index = this.index + 1;
+    if (index > this.items.length - 1) {
+      return this.focusFirst();
+    }
+    const nextEl = this.items[index];
+    nextEl.focus();
+    this.index += 1;
+  }
+
+  focusPrev() {
+    const index = this.index - 1;
+    if (index === -1) {
+      return this.focusLast();
+    }
+    const nextEl = this.items[index];
+    nextEl.focus();
+    this.index -= 1;
   }
 
   handleWindowClick = e => {
@@ -76,35 +175,40 @@ class Dropdown {
     // if the target isn't the button or contains the button, the click is outside
     // the data-dropdown element
     if (event.target !== node && !node.contains(event.target)) {
-      this.hide();
+      this.hideMenu();
     }
   };
 
   toggle = () => {
     if (this.isOpen) {
-      this.hide();
+      this.hideMenu();
     } else {
-      this.show();
-
-      this.focusFirst();
+      this.showMenu();
     }
   };
 
   focusFirst() {
-    const el = $('a', this.menu);
-    if (el) el.focus();
+    this.index = 0;
+    this.firstItem.focus();
   }
 
-  hide() {
+  focusLast() {
+    this.index = this.items.length - 1;
+    this.lastItem.focus();
+  }
+
+  hideMenu() {
     this.elem.classList.remove(this.activeClass);
     this.btn.setAttribute('aria-expanded', 'false');
     this.isOpen = false;
   }
 
-  show() {
+  showMenu() {
     this.elem.classList.add(this.activeClass);
     this.btn.setAttribute('aria-expanded', 'true');
     this.isOpen = true;
+
+    this.focusFirst();
   }
 }
 
