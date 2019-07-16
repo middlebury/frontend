@@ -226,7 +226,7 @@ gulp.task('html', () => {
         );
 
         return Object.assign({}, yml, programs, {
-          imagesDir: args.imagesDir,
+          imagesDir: args.imagesDir || '',
           env: {
             production
           }
