@@ -102,13 +102,14 @@ class Dropdown {
     const { keyCode } = e;
 
     let flag;
-    const { DOWN, UP, PAGEDOWN, PAGEUP, HOME, END } = this.keyCode;
+    const { DOWN, UP, PAGEDOWN, PAGEUP, HOME, END, ESC, TAB } = this.keyCode;
 
     switch (e.keyCode) {
       case DOWN:
         flag = true;
         this.focusNext();
         break;
+
       case UP:
         flag = true;
         this.focusPrev();
@@ -119,26 +120,25 @@ class Dropdown {
         flag = true;
         this.focusFirst();
         break;
+
       case PAGEDOWN:
       case END:
         flag = true;
         this.focusLast();
         break;
+
+      case ESC:
+        // case TAB:
+        this.toggle();
+
+      case ESC:
+        flag = true;
+        this.btn.focus();
+        break;
     }
 
     if (flag) {
       e.preventDefault();
-    }
-
-    // Close on escape or tab
-    if (keyCode === this.keyCode.ESC || keyCode === this.keyCode.TAB) {
-      this.toggle();
-    }
-
-    // If escape, refocus menu button
-    if (keyCode === this.keyCode.ESC) {
-      e.preventDefault();
-      this.btn.focus();
     }
   };
 
