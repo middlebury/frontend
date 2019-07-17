@@ -17,9 +17,14 @@ import { $, $$, on, off } from './utils/dom';
  *   </ul>
  * </div>
  */
+
+let dropdowns = 1;
+
 class Dropdown {
   constructor(elem) {
     this.elem = elem;
+
+    this.id = dropdowns++;
 
     this.btn = $('[data-dropdown-button]', elem);
     this.menu = $('[data-dropdown-menu]', elem);
@@ -58,6 +63,9 @@ class Dropdown {
 
     this.menu.setAttribute('role', 'menu');
     [].forEach.call(this.items, item => item.setAttribute('role', 'menuitem'));
+    const id = `midd-dropdown-${this.id}-btn`;
+    this.btn.setAttribute('id', id);
+    this.menu.setAttribute('aria-labelledby', id);
 
     // remove role from list items so they are not announced
     const listitems = $$('li', this.menu);
