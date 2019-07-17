@@ -129,6 +129,7 @@ class Dropdown {
 
       case ESC:
         // case TAB:
+        e.stopPropagation();
         this.toggle();
 
       case ESC:
