@@ -56,8 +56,6 @@ class Dropdown {
   }
 
   init() {
-    this.addListeners();
-
     this.btn.setAttribute('aria-expanded', false);
     this.btn.setAttribute('aria-haspopup', true);
 
@@ -70,18 +68,10 @@ class Dropdown {
     // remove role from list items so they are not announced
     const listitems = $$('li', this.menu);
     [].forEach.call(listitems, item => item.setAttribute('role', 'none'));
+    this.addListeners();
   }
 
   addListeners() {
-    /**
-     * listen for window clicks/touch so we can close the dropdown on clicks outside
-     * dropdown and button.
-     */
-    on(window, 'click', this.handleWindowClick);
-    on(window, 'touchstart', this.handleWindowClick);
-
-    on(this.menu, 'keydown', this.handleMenuKeyDown);
-
     on(this.btn, 'click', this.handleBtnClick);
     on(this.btn, 'keydown', this.handleBtnKeyDown);
 
@@ -91,11 +81,6 @@ class Dropdown {
   }
 
   destroy() {
-    off(window, 'click', this.handleWindowClick);
-    off(window, 'touchstart', this.handleWindowClick);
-
-    off(this.menu, 'keydown', this.handleMenuKeyDown);
-
     off(this.btn, 'click', this.handleBtnClick);
     off(this.btn, 'keydown', this.handleBtnKeyDown);
 
@@ -129,6 +114,7 @@ class Dropdown {
         flag = true;
         this.focusPrev();
         break;
+
       case PAGEUP:
       case HOME:
         flag = true;
@@ -206,12 +192,24 @@ class Dropdown {
   }
 
   hideMenu() {
+    off(window, 'click', this.handleWindowClick);
+    off(window, 'touchstart', this.handleWindowClick);
+    off(this.menu, 'keydown', this.handleMenuKeyDown);
+
     this.elem.classList.remove(this.activeClass);
     this.btn.setAttribute('aria-expanded', 'false');
     this.isOpen = false;
   }
 
   showMenu() {
+    /**
+     * listen for window clicks/touch so we can close the dropdown on clicks outside
+     * dropdown and button.
+     */
+    on(window, 'click', this.handleWindowClick);
+    on(window, 'touchstart', this.handleWindowClick);
+    on(this.menu, 'keydown', this.handleMenuKeyDown);
+
     this.elem.classList.add(this.activeClass);
     this.btn.setAttribute('aria-expanded', 'true');
     this.isOpen = true;
