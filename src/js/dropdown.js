@@ -57,25 +57,26 @@ class Dropdown {
     this.btn.setAttribute('aria-expanded', false);
     this.btn.setAttribute('aria-haspopup', true);
 
-    this.menu.setAttribute('role', 'menu');
-    [].forEach.call(this.items, item => item.setAttribute('role', 'menuitem'));
     const id = `midd-dropdown-${this.id}-btn`;
     this.btn.setAttribute('id', id);
     this.menu.setAttribute('aria-labelledby', id);
+    // this.menu.setAttribute('role', 'menu');
+
+    // [].forEach.call(this.items, item => {
+    // item.setAttribute('tabindex', '-1');
+    // item.setAttribute('role', 'menuitem');
+    // });
 
     // remove role from list items so they are not announced
-    const listitems = $$('li', this.menu);
-    [].forEach.call(listitems, item => item.setAttribute('role', 'none'));
+    // const listitems = $$('li', this.menu);
+    // [].forEach.call(listitems, item => item.setAttribute('role', 'none'));
+
     this.addListeners();
   }
 
   addListeners() {
     on(this.btn, 'click', this.handleBtnClick);
     on(this.btn, 'keydown', this.handleBtnKeyDown);
-
-    [].forEach.call(this.items, item => {
-      item.setAttribute('tabindex', '-1');
-    });
   }
 
   destroy() {
