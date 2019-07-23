@@ -18,9 +18,10 @@
             {% for item in social_links %}
               <li class="social-links__item">
                 <a href="{{item.href}}" class="social-links__link">
-                  <svg class="icon">
-                    <use xlink:href="#icon-{{item.slug}}" />
-                  </svg>
+                  {% include 'partials/icon.twig' with {
+                    'name': 'item.slug',
+                    'title': 'item.text'
+                  } %}
                 </a>
               </li>
             {% endfor %}
