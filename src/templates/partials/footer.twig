@@ -19,9 +19,9 @@
               <li class="social-links__item">
                 <a href="{{item.href}}" class="social-links__link">
                   {% include 'partials/icon.twig' with {
-                    'name': 'item.slug',
-                    'title': 'item.text'
+                    'name': 'item.slug'
                   } %}
+                  <span class="sr-only">{{item.text}}</span>
                 </a>
               </li>
             {% endfor %}
