@@ -75,6 +75,7 @@ $white: #fff;
 $black: #202020;
 $gray: #767676;
 $gray-light: #dedede;
+$gray-lighter: #f8f8f8;
 
 $danger: #dc3545;
 $info: $lighter-blue;
@@ -239,3 +240,8 @@ $component-margin-bottom: 6rem;
 $list-item-margin-bottom: 0.5rem;
 $list-item-margin-bottom-md: 2rem;
 $list-item-margin-bottom-lg: 3rem;
+
+$chevron-transform: rotate(-180deg);
+$chevron-transition: transform 0.2s ease-in-out;
+
+$z-index-dropdown-list: 200;

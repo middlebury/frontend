@@ -5,6 +5,10 @@
   width: 16px;
   height: 16px;
   vertical-align: middle;
+
+  // Disable pointer-events on svgs so buttons with icons handle clicks correctly.
+  // https://css-tricks.com/slightly-careful-sub-elements-clickable-things/
+  pointer-events: none;
 }
 
 .icon--sm {

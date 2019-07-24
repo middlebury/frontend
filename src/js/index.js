@@ -2,6 +2,10 @@
 import 'intersection-observer';
 import objectFitImages from 'object-fit-images';
 
+// polyfills for micromodal ie11 support
+import 'mdn-polyfills/Object.assign';
+import 'mdn-polyfills/Array.from';
+
 // import './publications';
 import './chart-loader';
 import './events-datepicker';
@@ -12,6 +16,8 @@ import './responsive-tables';
 import './slideshow';
 import './toggler';
 import './video';
+import './dropdown';
+import './degree-popup';
 
 objectFitImages();
 
@@ -21,8 +27,8 @@ objectFitImages();
 function pardotFormHandler() {
   const select = document.querySelector('.js-pardot-country-select');
   const fields = document.querySelector('.js-pardot-country-us-fields');
-  
-  if(!select || !fields) {
+
+  if (!select || !fields) {
     return;
   }
 

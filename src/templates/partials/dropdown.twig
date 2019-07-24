@@ -1,0 +1,15 @@
+<div class="dropdown" data-dropdown>
+  <button class="dropdown__button" data-dropdown-button>
+    {{label}}
+    {% include 'partials/icon.twig' with { name: 'chevron-down', class: 'dropdown__icon' } %}
+  </button>
+  <ul class="dropdown__list" data-dropdown-menu>
+    {% for item in items %}
+      <li class="dropdown__item">
+        <a href="{{item.href}}" class="dropdown__link" data-dropdown-item>
+          {{item.label}}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

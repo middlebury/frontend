@@ -109,7 +109,16 @@ gulp.task('server', () => {
 gulp.task('icons', () => {
   return gulp
     .src('./src/images/icon-*.svg')
-    .pipe(imagemin())
+    .pipe(
+      imagemin([
+        imagemin.gifsicle({ interlaced: true }),
+        imagemin.jpegtran({ progressive: true }),
+        imagemin.optipng({ optimizationLevel: 5 }),
+        imagemin.svgo({
+          plugins: [{ removeViewBox: false }, { cleanupIDs: false }]
+        })
+      ])
+    )
     .pipe(
       svgSprites({
         mode: 'symbols'
@@ -212,9 +221,12 @@ gulp.task('html', () => {
         const yml = yaml.safeLoad(
           fs.readFileSync('./src/data/data.yml', 'utf8')
         );
+        const programs = yaml.safeLoad(
+          fs.readFileSync('./src/data/programs.yml', 'utf8')
+        );
 
-        return Object.assign({}, yml, {
-          imagesDir: args.imagesDir,
+        return Object.assign({}, yml, programs, {
+          imagesDir: args.imagesDir || '',
           env: {
             production
           }
@@ -239,7 +251,11 @@ gulp.task('images', () => {
         imagemin.jpegtran({ progressive: true }),
         imagemin.optipng({ optimizationLevel: 5 }),
         imagemin.svgo({
-          plugins: [{ removeDimensions: true }, { cleanupIDs: false }]
+          plugins: [
+            { removeViewBox: false },
+            { removeDimensions: true },
+            { cleanupIDs: false }
+          ]
         })
       ])
     )
