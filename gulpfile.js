@@ -4,11 +4,6 @@ const gulp = require('gulp');
 const twig = require('gulp-twig');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync');
-const browserify = require('browserify');
-const source = require('vinyl-source-stream');
-const buffer = require('vinyl-buffer');
-const gutil = require('gulp-util');
-const uglify = require('gulp-uglify');
 const sourcemaps = require('gulp-sourcemaps');
 const plumber = require('gulp-plumber');
 const data = require('gulp-data');
@@ -19,7 +14,6 @@ const imagemin = require('gulp-imagemin');
 const replace = require('gulp-replace');
 const yaml = require('js-yaml');
 const del = require('del');
-const babelify = require('babelify');
 const beeper = require('beeper');
 const args = require('yargs').argv;
 const svgSprites = require('gulp-svg-sprites');
@@ -31,6 +25,8 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const postcssUrl = require('postcss-url');
+
+const rollup = require('./rollup.config');
 
 dotenv.config();
 
@@ -174,37 +170,11 @@ gulp.task('scripts:lint', () => {
     .pipe(eslint.format());
 });
 
-gulp.task('scripts', function() {
-  var b = browserify({
-    entries: './src/js/index.js',
-    debug: true,
-    transform: [
-      [
-        babelify,
-        {
-          presets: ['@babel/preset-env'],
-          plugins: ['@babel/plugin-proposal-class-properties']
-        }
-      ]
-    ]
-  });
-
-  return b
-    .bundle()
-    .on('error', function(err) {
-      console.error(err.message); // eslint-disable-line no-console
-      beeper();
-      this.emit('end');
-    })
-    .pipe(source('bundle.js'))
-    .pipe(buffer())
-    .pipe(gulpIf(!production, sourcemaps.init({ loadMaps: true })))
-    .pipe(gulpIf(production, uglify()))
-    .on('error', gutil.log)
-    .pipe(gulpIf(!production, sourcemaps.write('./')))
-    .pipe(size({ showFiles: true }))
-    .pipe(gulp.dest(paths.scripts.dest))
-    .pipe(browserSync.stream());
+gulp.task('scripts', () => {
+  return rollup({
+    input: './src/js/index.js',
+    file: './dist/js/bundle.js'
+  }).then(() => browserSync.reload());
 });
 
 gulp.task('html', () => {
