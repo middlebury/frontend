@@ -47,9 +47,6 @@
 
 .chart-group__item--stats {
   @include media(sm) {
-    @include make-col(6);
-  }
-  @include media(md) {
     @include make-col(4);
   }
 }
