@@ -1,0 +1,38 @@
+.logo-bar {
+  background: $lighter-blue;
+  padding: $spacing-4;
+}
+
+.logo-bar__title {
+  font-family: $font-family-sans-serif;
+  font-weight: $font-weight-semibold;
+  font-size: typescale(2);
+  letter-spacing: $letter-spacing;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: spacing(7);
+}
+
+.logo-bar__list {
+  @include make-row;
+}
+
+.logo-bar__item {
+  opacity: 0.5;
+  @include make-col-ready;
+  margin-bottom: spacing(5);
+  text-align: center;
+
+  @include media(sm) {
+    @include make-col(6);
+    margin-bottom: spacing(7);
+  }
+
+  @include media(md) {
+    @include make-col(2);
+  }
+}
+
+.logo-bar__logo {
+  max-width: 200px;
+}
