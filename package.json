@@ -9,6 +9,7 @@
     "build": "NODE_ENV=production gulp build",
     "build:pardot": "npm run build -- --imagesDir=https://www.middlebury.edu/institute/themes/custom/institute_theme/images/ && gulp replace:imageurls --imagesDir=https://www.middlebury.edu/institute/themes/custom/institute_theme/images/",
     "build:icons": "gulp icons && gulp copy:icons",
+    "now-build": "npm run build && mv dist public",
     "deploy": "gulp deploy",
     "format": "prettier --config ./.prettierrc --write \"src/**/*.{js,scss}\"",
     "lint": "eslint src/js/**/*.js"
