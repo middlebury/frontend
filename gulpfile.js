@@ -30,7 +30,7 @@ const rollup = require('./rollup.config');
 
 dotenv.config();
 
-const production = !!args.production;
+const production = process.env.NODE_ENV === 'production';
 
 const paths = {
   html: {

@@ -6,10 +6,10 @@
   "scripts": {
     "start": "gulp",
     "dev": "gulp dev",
-    "build": "gulp build --production",
+    "build": "NODE_ENV=production gulp build",
     "build:pardot": "npm run build -- --imagesDir=https://www.middlebury.edu/institute/themes/custom/institute_theme/images/ && gulp replace:imageurls --imagesDir=https://www.middlebury.edu/institute/themes/custom/institute_theme/images/",
     "build:icons": "gulp icons && gulp copy:icons",
-    "deploy": "gulp deploy --production",
+    "deploy": "gulp deploy",
     "lint": "eslint src/js/**/*.js"
   },
   "repository": {
