@@ -43,61 +43,6 @@
     {% include 'partials/callout-group.twig' %}
   </div>
 
-  <div class="container">
-    <div class="section">
-      <div class="row">
-        <div class="col-md-6 border-md-r">
-          <div class="mb-5 mb-md-0 pb-5 pb-md-0 border-b border-md-b-0">
-
-            {% embed 'partials/section.twig' with {
-              title: 'Latest News',
-              class: 'mb-0',
-              moreLinkHref: '#',
-              moreLinkText: 'More News'
-            } %}
-              {% block content %}
-                <ol class="list list--dividers list--md">
-                  {% for item in homepage.latest_news %}
-                    <li class="list__item">
-                      {% include 'partials/story-teaser-lite.twig' with {
-                        id: loop.index,
-                        title: item.title,
-                        link: '#',
-                        text: item.text
-                      } %}
-                    </li>
-                  {% endfor %}
-                </ol>
-              {% endblock %}
-            {% endembed %}
-          </div>
-        </div>
-        <div class="col-md-6">
-          {% embed 'partials/section.twig' with {
-            title: 'Upcoming Events',
-            class: 'mb-0',
-            moreLinkHref: '#',
-            moreLinkText: 'More Events'
-          } %}
-            {% block content %}
-              <ol class="list list--dividers list--md">
-                {% for item in homepage.upcoming_events %}
-                  <li class="list__item">
-                    {% include 'partials/event-teaser.twig' with {
-                      date: 'Jul 12, 2016',
-                      time: '1:00 PM',
-                      title: 'Museum of Art Lecture Series',
-                      location: 'McCone Irvine Auditorium'
-                    } %}
-                  </li>
-                {% endfor %}
-              </ol>
-            {% endblock %}
-          {% endembed %}
-        </div>
-      </div>
-    </div>
-  </div>
 
   {% include 'partials/program-spotlight.twig' %}
 
