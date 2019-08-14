@@ -38,8 +38,7 @@ function pardotFormHandler() {
   select.onchange = event => {
     if (event.target.value === 'US') {
       fields.style.display = 'block';
-    }
- else {
+    } else {
       fields.style.display = 'none';
     }
   };

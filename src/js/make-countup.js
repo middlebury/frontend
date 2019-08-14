@@ -10,8 +10,7 @@ function makeCountUp(el) {
 
   if (!countUp.error) {
     countUp.start();
-  }
- else {
+  } else {
     console.error(countUp.error);
   }
 }
