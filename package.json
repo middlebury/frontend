@@ -10,6 +10,7 @@
     "build:pardot": "npm run build -- --imagesDir=https://www.middlebury.edu/institute/themes/custom/institute_theme/images/ && gulp replace:imageurls --imagesDir=https://www.middlebury.edu/institute/themes/custom/institute_theme/images/",
     "build:icons": "gulp icons && gulp copy:icons",
     "deploy": "gulp deploy",
+    "format": "prettier --config ./.prettierrc --write \"src/**/*.{js,scss}\"",
     "lint": "eslint src/js/**/*.js"
   },
   "repository": {
@@ -51,6 +52,7 @@
     "gulp-util": "^3.0.8",
     "js-yaml": "^3.13.1",
     "postcss-url": "^8.0.0",
+    "prettier": "^1.18.2",
     "rollup": "^0.67.0",
     "rollup-plugin-babel": "^4.0.3",
     "rollup-plugin-commonjs": "^9.2.0",
