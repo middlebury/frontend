@@ -18,6 +18,7 @@ import './toggler';
 import './video';
 import './dropdown';
 import './degree-popup';
+import './make-countup';
 
 objectFitImages();
 
@@ -37,7 +38,8 @@ function pardotFormHandler() {
   select.onchange = event => {
     if (event.target.value === 'US') {
       fields.style.display = 'block';
-    } else {
+    }
+ else {
       fields.style.display = 'none';
     }
   };
