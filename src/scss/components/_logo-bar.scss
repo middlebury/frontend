@@ -10,29 +10,32 @@
   letter-spacing: $letter-spacing;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: spacing(7);
+  line-height: $line-height-heading;
 }
 
 .logo-bar__list {
-  @include make-row;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include media(md) {
+    flex-wrap: nowrap;
+  }
 }
 
 .logo-bar__item {
   opacity: 0.5;
-  @include make-col-ready;
-  margin-bottom: spacing(5);
+  margin-top: spacing(7);
   text-align: center;
+  flex: 1 1 100%;
 
   @include media(sm) {
-    @include make-col(6);
-    margin-bottom: spacing(7);
+    flex-basis: 50%;
   }
 
   @include media(md) {
-    @include make-col(2);
+    padding: 0 spacing(3);
+    flex-basis: auto;
+    margin-bottom: 0;
   }
-}
-
-.logo-bar__logo {
-  max-width: 200px;
 }
