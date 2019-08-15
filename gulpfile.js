@@ -8,7 +8,6 @@ const sourcemaps = require('gulp-sourcemaps');
 const plumber = require('gulp-plumber');
 const data = require('gulp-data');
 const notify = require('gulp-notify');
-const eslint = require('gulp-eslint');
 const prettify = require('gulp-prettify');
 const imagemin = require('gulp-imagemin');
 const replace = require('gulp-replace');
@@ -158,13 +157,6 @@ gulp.task('styles', () => {
     .pipe(size({ showFiles: true }))
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(browserSync.stream());
-});
-
-gulp.task('scripts:lint', () => {
-  return gulp
-    .src(paths.scripts.src)
-    .pipe(eslint())
-    .pipe(eslint.format());
 });
 
 gulp.task('scripts', () => {
