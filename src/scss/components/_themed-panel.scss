@@ -33,7 +33,7 @@ $themed-panel-overlay: linear-gradient(to bottom, transparent, #000);
 
     @include media(lg) {
       padding-top: 0;
-      position: initial;
+      position: static;
     }
 
     &:before {
@@ -57,7 +57,7 @@ $themed-panel-overlay: linear-gradient(to bottom, transparent, #000);
 
   @include media(sm) {
     padding-top: 0;
-    position: initial;
+    position: static;
   }
 
   &:before {
