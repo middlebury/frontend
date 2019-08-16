@@ -15,7 +15,7 @@ const yaml = require('js-yaml');
 const del = require('del');
 const beeper = require('beeper');
 const args = require('yargs').argv;
-const svgSprites = require('gulp-svg-sprites');
+const svgSprite = require('gulp-svg-sprite');
 const gulpIf = require('gulp-if');
 const cmq = require('gulp-combine-mq');
 const size = require('gulp-size');
@@ -113,9 +113,9 @@ const icons = () =>
     )
     .pipe(gulp.dest('./dist/icons'));
 
-    .src('./dist/icons/svg/symbols.svg')
 const copyIcons = () =>
   gulp
+    .src('./dist/icons/symbol/svg/sprite.symbol.svg')
     .pipe(rename('icons.twig'))
     .pipe(gulp.dest('./src/templates/partials'));
 
