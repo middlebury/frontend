@@ -78,19 +78,9 @@ const onError = function(err) {
   this.emit('end');
 };
 
-gulp.task('clean', done => {
-  return del(
-    [
-      './dist/**/*.html',
-      './dist/**/*.js',
-      './dist/**/*.css',
-      './dist/images/*'
-    ],
-    done
-  );
-});
+const clean = () => del(['./dist']);
 
-gulp.task('server', () => {
+const serve = () =>
   browserSync.init({
     notify: false,
     server: {
@@ -99,36 +89,39 @@ gulp.task('server', () => {
     open: false,
     directory: true
   });
-});
 
-gulp.task('icons', () => {
-  return gulp
+const icons = () =>
+  gulp
     .src('./src/images/icon-*.svg')
     .pipe(
       imagemin([
         imagemin.svgo({
-          plugins: [{ removeViewBox: false }, { cleanupIDs: false }]
+          plugins: [
+            { removeTitle: true },
+            { removeXMLNS: true },
+            { removeAttrs: { attrs: '(fill|stroke)' } }
+          ]
         })
       ])
     )
     .pipe(
-      svgSprites({
-        mode: 'symbols'
+      svgSprite({
+        mode: {
+          symbol: true
+        }
       })
     )
     .pipe(gulp.dest('./dist/icons'));
-});
 
-gulp.task('copy:icons', () => {
-  return gulp
     .src('./dist/icons/svg/symbols.svg')
+const copyIcons = () =>
+  gulp
     .pipe(rename('icons.twig'))
     .pipe(gulp.dest('./src/templates/partials'));
-});
 
 const hash = Date.now();
 
-gulp.task('styles', () => {
+const styles = () => {
   let plugins = [
     autoprefixer(),
     postcssUrl({
@@ -157,16 +150,15 @@ gulp.task('styles', () => {
     .pipe(size({ showFiles: true }))
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(browserSync.stream());
-});
+};
 
-gulp.task('scripts', () => {
-  return rollup({
+const scripts = () =>
+  rollup({
     input: './src/js/index.js',
     file: './dist/js/bundle.js'
   }).then(() => browserSync.reload());
-});
 
-gulp.task('html', () => {
+const html = () =>
   gulp
     .src(paths.html.src)
     .pipe(
@@ -200,10 +192,9 @@ gulp.task('html', () => {
     .pipe(prettify())
     .pipe(gulp.dest(paths.html.dest))
     .pipe(browserSync.stream());
-});
 
-gulp.task('images', () => {
-  return gulp
+const images = () =>
+  gulp
     .src(paths.images.src)
     .pipe(
       imagemin([
@@ -220,33 +211,31 @@ gulp.task('images', () => {
     )
     .pipe(gulp.dest(paths.images.dest))
     .pipe(browserSync.stream());
-});
 
-gulp.task('watch', () => {
-  gulp.watch('./src/templates/**/*.twig', ['html']);
-  gulp.watch(paths.styles.src, ['styles']);
-  gulp.watch(paths.images.src, ['images']);
-  gulp.watch(paths.scripts.src, ['scripts']);
-  gulp.watch('./src/data/*.yml', ['html']);
-});
+const watch = () => {
+  gulp.watch('./src/templates/**/*.twig', html);
+  gulp.watch(paths.styles.src, styles);
+  gulp.watch(paths.images.src, images);
+  gulp.watch(paths.scripts.src, scripts);
+  gulp.watch('./src/data/*.yml', html);
+};
 
-gulp.task('replace:imageurls', () => {
+const replaceImagePaths = () => {
   const imagesDir = args.imagesDir || '/images/';
   return gulp
     .src('./dist/css/*.css')
     .pipe(replace('/images/', imagesDir))
     .pipe(gulp.dest('./dist/css'));
-});
+};
 
-gulp.task('copy:deps', function() {
+const copyDeps = () =>
   // NOTE: Chart.bundle.min.js includes Momentjs but so far we are not using time axis
   // http://www.chartjs.org/docs/latest/getting-started/installation.html#bundled-build
   gulp
     .src(['./node_modules/chart.js/dist/Chart.min.js'])
     .pipe(gulp.dest('./dist/js'));
-});
 
-gulp.task('deploy', ['replace:imageurls'], () => {
+const deployTheme = () => {
   const dest = args.themeDir || '';
   if (!args.themeDir) {
     return console.error('No `--themeDir` argument passed'); // eslint-disable-line no-console
@@ -264,17 +253,25 @@ gulp.task('deploy', ['replace:imageurls'], () => {
       }
     )
     .pipe(gulp.dest(dest));
-});
+};
 
-gulp.task('build', [
-  'clean',
-  'html',
-  'images',
-  'styles',
-  'scripts',
-  'copy:deps'
-]);
+const buildIcons = gulp.series(icons, copyIcons);
 
-gulp.task('dev', ['build', 'watch']);
+const build = gulp.series(
+  clean,
+  gulp.parallel(buildIcons, copyDeps),
+  gulp.parallel(html, images, styles, scripts)
+);
 
-gulp.task('default', ['build', 'watch', 'server']);
+const dev = gulp.parallel(build, watch, serve);
+
+const deploy = gulp.series(replaceImagePaths, deployTheme);
+
+module.exports = {
+  buildIcons,
+  replaceImagePaths,
+  dev,
+  build,
+  deploy,
+  default: dev
+};
