@@ -49,8 +49,8 @@
 
   @include media(md) {
     // fake column offset with padding plus gutter width
-    padding-left: calc(#{percentage(1 / 12)} + #{$grid-gutter-base-width / 2});
-    padding-right: calc(#{percentage(1 / 12)} + #{$grid-gutter-base-width / 2});
+    padding-left: calc(#{percentage(1 / 6)} + #{$grid-gutter-base-width / 2});
+    padding-right: calc(#{percentage(1 / 6)} + #{$grid-gutter-base-width / 2});
   }
 
   // place after so largest breakpoint overrides
@@ -66,8 +66,8 @@
     // fake column offset with padding plus gutter width
     padding-top: spacing(5);
     padding-bottom: spacing(5);
-    padding-left: calc(#{percentage(1 / 12)} + #{$grid-gutter-base-width / 2});
-    padding-right: calc(#{percentage(1 / 12)} + #{$grid-gutter-base-width / 2});
+    padding-left: calc(#{percentage(1 / 6)} + #{$grid-gutter-base-width / 2});
+    padding-right: calc(#{percentage(1 / 6)} + #{$grid-gutter-base-width / 2});
   }
 
   // place after so largest breakpoint overrides
