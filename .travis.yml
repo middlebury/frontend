@@ -5,10 +5,10 @@ cache:
 notifications:
   email: false
 node_js:
-  - '8.12.0'
+  - 10.16.0
 script:
   - npm run build
-  - gulp replace:imageurls --imagesDir="/institute/themes/custom/institute_theme/images/"
+  - gulp replaceImagePaths --imagesDir="/institute/themes/custom/institute_theme/images/"
 
 # auto deploy dist folder to github branch so frontend deploys can git pull assets instead of rebuilding.
 # See #159

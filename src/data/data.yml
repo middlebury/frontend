@@ -151,6 +151,7 @@ site_nav:
         - text: Admissions Team
           url: /institute/admissions/team
     - text: Student Life
+      util: true
       url: /institute/student-life
       items:
         - text: Meet the Team
@@ -180,10 +181,13 @@ site_nav:
           url: /institute/student-life/student-policies
     - text: News
       url: /institute/news
+      util: true
     - text: Events
       url: /institute/events
+      util: true
     - text: Give to the Institute
       url: /institute/giving
+      util: true
       items:
         - text: Ways to Give
           url: /institute/giving/ways-to-give

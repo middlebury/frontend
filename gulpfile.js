@@ -4,25 +4,18 @@ const gulp = require('gulp');
 const twig = require('gulp-twig');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync');
-const browserify = require('browserify');
-const source = require('vinyl-source-stream');
-const buffer = require('vinyl-buffer');
-const gutil = require('gulp-util');
-const uglify = require('gulp-uglify');
 const sourcemaps = require('gulp-sourcemaps');
 const plumber = require('gulp-plumber');
 const data = require('gulp-data');
 const notify = require('gulp-notify');
-const eslint = require('gulp-eslint');
 const prettify = require('gulp-prettify');
 const imagemin = require('gulp-imagemin');
 const replace = require('gulp-replace');
 const yaml = require('js-yaml');
 const del = require('del');
-const babelify = require('babelify');
 const beeper = require('beeper');
 const args = require('yargs').argv;
-const svgSprites = require('gulp-svg-sprites');
+const svgSprite = require('gulp-svg-sprite');
 const gulpIf = require('gulp-if');
 const cmq = require('gulp-combine-mq');
 const size = require('gulp-size');
@@ -32,9 +25,11 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const postcssUrl = require('postcss-url');
 
+const rollup = require('./rollup.config');
+
 dotenv.config();
 
-const production = !!args.production;
+const production = process.env.NODE_ENV === 'production';
 
 const paths = {
   html: {
@@ -83,19 +78,9 @@ const onError = function(err) {
   this.emit('end');
 };
 
-gulp.task('clean', done => {
-  return del(
-    [
-      './dist/**/*.html',
-      './dist/**/*.js',
-      './dist/**/*.css',
-      './dist/images/*'
-    ],
-    done
-  );
-});
+const clean = () => del(['./dist']);
 
-gulp.task('server', () => {
+const serve = () =>
   browserSync.init({
     notify: false,
     server: {
@@ -104,39 +89,39 @@ gulp.task('server', () => {
     open: false,
     directory: true
   });
-});
 
-gulp.task('icons', () => {
-  return gulp
+const icons = () =>
+  gulp
     .src('./src/images/icon-*.svg')
     .pipe(
       imagemin([
-        imagemin.gifsicle({ interlaced: true }),
-        imagemin.jpegtran({ progressive: true }),
-        imagemin.optipng({ optimizationLevel: 5 }),
         imagemin.svgo({
-          plugins: [{ removeViewBox: false }, { cleanupIDs: false }]
+          plugins: [
+            { removeTitle: true },
+            { removeXMLNS: true },
+            { removeAttrs: { attrs: '(fill|stroke)' } }
+          ]
         })
       ])
     )
     .pipe(
-      svgSprites({
-        mode: 'symbols'
+      svgSprite({
+        mode: {
+          symbol: true
+        }
       })
     )
     .pipe(gulp.dest('./dist/icons'));
-});
 
-gulp.task('copy:icons', () => {
-  return gulp
-    .src('./dist/icons/svg/symbols.svg')
+const copyIcons = () =>
+  gulp
+    .src('./dist/icons/symbol/svg/sprite.symbol.svg')
     .pipe(rename('icons.twig'))
     .pipe(gulp.dest('./src/templates/partials'));
-});
 
 const hash = Date.now();
 
-gulp.task('styles', () => {
+const styles = () => {
   let plugins = [
     autoprefixer(),
     postcssUrl({
@@ -165,49 +150,15 @@ gulp.task('styles', () => {
     .pipe(size({ showFiles: true }))
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(browserSync.stream());
-});
+};
 
-gulp.task('scripts:lint', () => {
-  return gulp
-    .src(paths.scripts.src)
-    .pipe(eslint())
-    .pipe(eslint.format());
-});
+const scripts = () =>
+  rollup({
+    input: './src/js/index.js',
+    file: './dist/js/bundle.js'
+  }).then(() => browserSync.reload());
 
-gulp.task('scripts', function() {
-  var b = browserify({
-    entries: './src/js/index.js',
-    debug: true,
-    transform: [
-      [
-        babelify,
-        {
-          presets: ['@babel/preset-env'],
-          plugins: ['@babel/plugin-proposal-class-properties']
-        }
-      ]
-    ]
-  });
-
-  return b
-    .bundle()
-    .on('error', function(err) {
-      console.error(err.message); // eslint-disable-line no-console
-      beeper();
-      this.emit('end');
-    })
-    .pipe(source('bundle.js'))
-    .pipe(buffer())
-    .pipe(gulpIf(!production, sourcemaps.init({ loadMaps: true })))
-    .pipe(gulpIf(production, uglify()))
-    .on('error', gutil.log)
-    .pipe(gulpIf(!production, sourcemaps.write('./')))
-    .pipe(size({ showFiles: true }))
-    .pipe(gulp.dest(paths.scripts.dest))
-    .pipe(browserSync.stream());
-});
-
-gulp.task('html', () => {
+const html = () =>
   gulp
     .src(paths.html.src)
     .pipe(
@@ -241,10 +192,9 @@ gulp.task('html', () => {
     .pipe(prettify())
     .pipe(gulp.dest(paths.html.dest))
     .pipe(browserSync.stream());
-});
 
-gulp.task('images', () => {
-  return gulp
+const images = () =>
+  gulp
     .src(paths.images.src)
     .pipe(
       imagemin([
@@ -261,33 +211,31 @@ gulp.task('images', () => {
     )
     .pipe(gulp.dest(paths.images.dest))
     .pipe(browserSync.stream());
-});
 
-gulp.task('watch', () => {
-  gulp.watch('./src/templates/**/*.twig', ['html']);
-  gulp.watch(paths.styles.src, ['styles']);
-  gulp.watch(paths.images.src, ['images']);
-  gulp.watch(paths.scripts.src, ['scripts']);
-  gulp.watch('./src/data/*.yml', ['html']);
-});
+const watch = () => {
+  gulp.watch('./src/templates/**/*.twig', html);
+  gulp.watch(paths.styles.src, styles);
+  gulp.watch(paths.images.src, images);
+  gulp.watch(paths.scripts.src, scripts);
+  gulp.watch('./src/data/*.yml', html);
+};
 
-gulp.task('replace:imageurls', () => {
+const replaceImagePaths = () => {
   const imagesDir = args.imagesDir || '/images/';
   return gulp
     .src('./dist/css/*.css')
     .pipe(replace('/images/', imagesDir))
     .pipe(gulp.dest('./dist/css'));
-});
+};
 
-gulp.task('copy:deps', function() {
+const copyDeps = () =>
   // NOTE: Chart.bundle.min.js includes Momentjs but so far we are not using time axis
   // http://www.chartjs.org/docs/latest/getting-started/installation.html#bundled-build
   gulp
     .src(['./node_modules/chart.js/dist/Chart.min.js'])
     .pipe(gulp.dest('./dist/js'));
-});
 
-gulp.task('deploy', ['replace:imageurls'], () => {
+const deployTheme = () => {
   const dest = args.themeDir || '';
   if (!args.themeDir) {
     return console.error('No `--themeDir` argument passed'); // eslint-disable-line no-console
@@ -305,17 +253,25 @@ gulp.task('deploy', ['replace:imageurls'], () => {
       }
     )
     .pipe(gulp.dest(dest));
-});
+};
 
-gulp.task('build', [
-  'clean',
-  'html',
-  'images',
-  'styles',
-  'scripts',
-  'copy:deps'
-]);
+const buildIcons = gulp.series(icons, copyIcons);
 
-gulp.task('dev', ['build', 'watch']);
+const build = gulp.series(
+  clean,
+  gulp.parallel(buildIcons, copyDeps),
+  gulp.parallel(html, images, styles, scripts)
+);
 
-gulp.task('default', ['build', 'watch', 'server']);
+const dev = gulp.parallel(build, watch, serve);
+
+const deploy = gulp.series(replaceImagePaths, deployTheme);
+
+module.exports = {
+  buildIcons,
+  replaceImagePaths,
+  dev,
+  build,
+  deploy,
+  default: dev
+};

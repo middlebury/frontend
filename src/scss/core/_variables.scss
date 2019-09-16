@@ -45,6 +45,37 @@ $spacers: map-merge(
   $spacers
 );
 
+////
+/// NEW Spacing scale from Midd-frontend
+////
+$spacing-0: 0 !default;
+$spacing-1: rem(4) !default;
+$spacing-2: rem(8) !default;
+$spacing-3: rem(16) !default;
+$spacing-4: rem(24) !default;
+$spacing-5: rem(32) !default;
+$spacing-6: rem(40) !default;
+$spacing-7: rem(48) !default;
+$spacing-8: rem(64) !default;
+$spacing-9: rem(96) !default;
+
+$spacing: () !default;
+$spacing: map-merge(
+  (
+    0: $spacing-0,
+    1: $spacing-1,
+    2: $spacing-2,
+    3: $spacing-3,
+    4: $spacing-4,
+    5: $spacing-5,
+    6: $spacing-6,
+    7: $spacing-7,
+    8: $spacing-8,
+    9: $spacing-9
+  ),
+  $spacing
+);
+
 // custom configs
 
 $header-width: 400px;
@@ -58,6 +89,8 @@ $brand-primary-dark: #022543;
 $brand-secondary: #97bbd5;
 $brand-secondary-dark: #174872;
 $brand-tertiary: #0ac3a6;
+
+$navy: #0d395f;
 
 // from styleguide
 $light-blue: #97bbd5;
@@ -93,6 +126,33 @@ $body-color: $black;
 $border-width: 1px;
 $border-color: $line-gray;
 
+// type scale
+$typescale-1: rem(12) !default;
+$typescale-2: rem(14) !default;
+$typescale-3: rem(16) !default;
+$typescale-4: rem(18) !default;
+$typescale-5: rem(20) !default;
+$typescale-6: rem(24) !default;
+$typescale-7: rem(28) !default;
+$typescale-8: rem(36) !default;
+$typescale-9: rem(48) !default;
+$typescale-10: rem(64) !default;
+
+$typescale: () !default;
+$typescale: map-merge(
+  (
+    1: $typescale-1,
+    2: $typescale-2,
+    3: $typescale-3,
+    4: $typescale-4,
+    5: $typescale-5,
+    6: $typescale-6,
+    7: $typescale-7,
+    8: $typescale-8
+  ),
+  $typescale
+);
+
 // prettier-ignore
 $font-family-sans-serif: 'whitney ssm a', 'whitney ssm b', Tahoma, Geneva, sans-serif;
 $font-family-serif: 'sentinel ssm a', 'sentinel ssm b', georgia, serif;
@@ -105,7 +165,23 @@ $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
 $font-size-base: 1rem;
+
 $line-height-base: 1.5;
+$line-height-solid: 1;
+$line-height-heading: 1.4;
+$line-height-body: 1.7;
+
+$line-heights: () !default;
+$line-heights: map-merge(
+  (
+    'body': $line-height-body,
+    'heading': $line-height-heading,
+    'solid': $line-height-solid
+  ),
+  $line-heights
+);
+
+$letter-spacing: 0.1em;
 
 // Headings
 $headings-font-family: $font-family-serif;
@@ -245,3 +321,11 @@ $chevron-transform: rotate(-180deg);
 $chevron-transition: transform 0.2s ease-in-out;
 
 $z-index-dropdown-list: 200;
+
+$z-index-spotlight-image: 1;
+$z-index-spotlight-content: 2;
+
+$z-index-themed-panel: 1;
+$z-index-themed-panel-overlay: 2;
+$z-index-themed-panel-content: 3;
+$z-index-themed-panel-sidebar: 4;

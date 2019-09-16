@@ -5,3 +5,23 @@
 @function rem($target, $base: 16) {
   @return $target / $base * 1rem;
 }
+
+@function from-map($map, $key) {
+  @if map-has-key($map, $key) {
+    @return map-get($map, $key);
+  } @else {
+    @warn '#{$key} is not a step in type scale';
+  }
+}
+
+@function typescale($size) {
+  @return from-map($typescale, $size);
+}
+
+@function spacing($size) {
+  @return from-map($spacing, $size);
+}
+
+@function lineheight($lh) {
+  @return from-map($line-heights, $lh);
+}

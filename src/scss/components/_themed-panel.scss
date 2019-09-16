@@ -1,0 +1,190 @@
+$themed-panel-overlay: linear-gradient(to bottom, transparent, #000);
+
+/*
+ * 1. prevent issues with dropdowns and other z-index layers above this component
+ */
+.themed-panel {
+  background: #000;
+  position: relative; /* 1 */
+  z-index: $z-index-themed-panel; /* 1 */
+
+  @include media(lg) {
+    padding-top: percentage(9 / 16);
+    height: 0;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      display: block;
+      background-image: $themed-panel-overlay;
+      z-index: $z-index-themed-panel-overlay;
+      @include absolute-fill;
+    }
+  }
+}
+
+.themed-panel__main {
+  position: relative;
+
+  @include media(sm) {
+    padding-top: percentage(9 / 16);
+    height: 0;
+    overflow: hidden;
+
+    @include media(lg) {
+      padding-top: 0;
+      position: static;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      background-image: $themed-panel-overlay;
+      z-index: $z-index-themed-panel-overlay;
+      @include absolute-fill;
+
+      @include media(lg) {
+        display: none;
+      }
+    }
+  }
+}
+
+.themed-panel__media {
+  position: relative;
+  padding-top: percentage(9 / 16);
+  overflow: hidden;
+
+  @include media(sm) {
+    padding-top: 0;
+    position: static;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    background-image: $themed-panel-overlay;
+    z-index: $z-index-themed-panel-overlay;
+    @include absolute-fill;
+
+    @include media(sm) {
+      display: none;
+    }
+  }
+
+  img {
+    @include absolute-fill;
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+  }
+}
+
+.themed-panel__title {
+  color: $white;
+  @include h1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: $z-index-themed-panel-content;
+  padding-bottom: spacing(2);
+  padding-top: spacing(4);
+
+  @include make-gutters;
+
+  @include media(sm) {
+    top: 0;
+  }
+
+  @include media(lg) {
+    padding-top: spacing(5);
+    padding-bottom: spacing(5);
+    width: percentage(7 / 12);
+  }
+}
+
+.themed-panel__article {
+  padding-top: spacing(3);
+  @include make-gutters;
+
+  @include media(sm) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: $z-index-themed-panel-content;
+    padding-bottom: spacing(4);
+  }
+
+  @include media(lg) {
+    padding-bottom: spacing(5);
+    width: percentage(7 / 12);
+  }
+}
+
+.themed-panel__secondary {
+  padding-bottom: spacing(5);
+  @include make-gutters();
+
+  @include media(sm) {
+    display: flex;
+  }
+
+  @include media(lg) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: $z-index-themed-panel-sidebar;
+    width: 360px;
+    background: rgba(#000, 0.7);
+  }
+}
+
+.themed-panel__subarticle {
+  border-top: 1px solid $gray;
+  padding-top: spacing(5);
+  margin-top: spacing(5);
+
+  @include media(sm) {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: spacing(4);
+    padding-bottom: spacing(4);
+  }
+
+  @include media(lg) {
+    margin-top: spacing(7);
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &:not(:last-of-type) {
+    @include media(sm) {
+      margin-right: spacing(5);
+    }
+
+    @include media(lg) {
+      margin-right: 0;
+    }
+  }
+}
+
+.themed-panel__heading {
+  color: $white;
+  margin-bottom: spacing(2);
+}
+
+.themed-panel__text {
+  color: $white;
+  font-size: typescale(3);
+}
+
+.themed-panel__cta {
+  color: $white;
+  margin-top: spacing(3);
+  display: inline-block;
+  font-size: typescale(2);
+  @include link-border;
+}

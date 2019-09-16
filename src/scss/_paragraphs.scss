@@ -1,9 +1,40 @@
+@mixin paragraph-space {
+  margin-top: spacing(7);
+  margin-bottom: spacing(7);
+
+  @include media(sm) {
+    margin-top: spacing(8);
+    margin-bottom: spacing(8);
+  }
+
+  @include media(md) {
+    margin-top: spacing(9);
+    margin-bottom: spacing(9);
+  }
+}
+
 .paragraph--button {
   margin-bottom: 3rem;
   position: relative;
   top: -3rem;
-  
+
   @include media(md) {
     margin-bottom: 4rem;
   }
+}
+
+.paragraph--themed-panel {
+  @include paragraph-space;
+}
+
+.paragraph--spotlight {
+  @include paragraph-space;
+}
+
+.paragraph--logo-bar {
+  @include paragraph-space;
+}
+
+.paragraph--chart {
+  @include paragraph-space;
 }
