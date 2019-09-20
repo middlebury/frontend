@@ -38,16 +38,17 @@
   right: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom, rgba(black, 0.8), transparent);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: rgba(0, 0, 0, 0.5);
 
   @include media(md) {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    background-color: transparent;
     background-image: linear-gradient(
-      to top,
-      rgba(black, 0.8),
-      transparent 50%
+      to bottom,
+      transparent 50%,
+      rgba(black, 0.8)
     );
   }
 }
@@ -65,6 +66,7 @@
 
 .homepage-hero__body {
   padding: 2.5rem;
+  padding-bottom: 3.5rem;
 
   @include media(md) {
     max-width: 500px;
@@ -75,7 +77,6 @@
 .homepage-hero__title {
   font-size: $h3-font-size;
   line-height: $h3-line-height;
-  margin-bottom: 0.5rem;
 }
 
 .homepage-hero__link {
@@ -86,12 +87,7 @@
   color: $white;
   font-size: 14px;
   line-height: 24px;
-  display: none;
-  margin-bottom: 1rem;
-
-  @include media(sm) {
-    display: block;
-  }
+  margin-bottom: 1.5rem;
 }
 
 .homepage-hero__more-link {
