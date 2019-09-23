@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="css/pardot-landing.css">
+  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/83898/706148/css/fonts.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <span class="site-title">
+        <img src="images/miis-logo.svg" alt="Logo for Middlebury Institute of International Studies at Monterey" width="200">
+        <span class="sr-only">Middlebury Institute of International Studies at Monterey</span>
+      </span>
+    </div>
+  </header>
+  <main class="site-container container">
+
+    <div class="hero">
+      <h1 class="hero__title">Stop the spread of WMD.</h1>
+      <p class="hero__text">Earn a Master's in Nonproliferation and Terrorism Studies</p>
+    </div>
+
+    <div class="content">
+      <div class="content__main">
+        <div class="typography">
+          <h2>Program Hightlights</h2>
+          <ul>
+            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam odit sed, vitae non corrupti provident, sequi unde totam alias fugiat, veniam officiis? In dolorem perferendis accusamus amet delectus facilis error.</li>
+            <li>Earum, adipisci totam ab eaque possimus rerum molestiae voluptatibus alias accusamus modi. Sunt voluptate at, rerum nostrum quia tempora, ipsum voluptatibus repellendus ipsam sequi vel dolore harum quod, perferendis culpa.</li>
+            <li>Non beatae doloremque soluta incidunt, eaque excepturi delectus voluptas nostrum quidem vel? Earum incidunt, cumque pariatur dignissimos, quasi perspiciatis nihil vero aut quo asperiores eos nam sint facilis illo minima?</li>
+          </ul>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque molestias commodi magni ullam ratione unde suscipit? Quod culpa voluptate alias iste omnis. Fugit velit eligendi fuga temporibus placeat mollitia adipisci!</p>
+        </div>
+      </div>
+
+      <div class="content__form">
+
+        <div class="lp-form">
+          <h3 class="lp-form__title">Get a Free Program Guide</h3>
+
+          {% for i in 0..3 %}
+            <div class="form-group">
+              <label for="">Full name</label>
+              <input type="text" class="form-control">
+            </div>
+          {% endfor %}
+
+          <div class="form-group form-actions">
+            <button type="submit">
+              Get more information &raquo;
+            </button>
+
+          </div>
+
+          <p class="lp-form__text">Your advisor will contact you within one business day to learn more about your career goals.</p>
+
+        </div>
+
+      </div>
+    </div>
+
+    <dl class="stats">
+      <div class="stats__item">
+        <dt class="stats__title">88%</dt>
+        <dd class="stats__text">of students receive scholarships</dd>
+      </div>
+      </div>
+      <div class="stats__item">
+        <dt class="stats__title">350+</dt>
+        <dd class="stats__text">professional internships</dd>
+      </div>
+      <div class="stats__item">
+        <dt class="stats__title">94%</dt>
+        <dd class="stats__text">employed one year after graduation</dd>
+      </div>
+    </dl>
+
+    <figure class="video" data-video>
+      <a href="" class="video__link" data-video-link>
+        <img src="http://placehold.it/1024x576" alt="" class="video__image" pardot-region="editable-image" pardot-region-type="image">
+
+        <figcaption class="video__overlay">
+          <div class="video__content">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" class="video__icon">
+              <path fill="#FFF" fill-rule="evenodd" d="M0 100l100-50L0 0z"/>
+            </svg>
+            <p class="video__text">&ldquo;Important problems with real-world implications&rdquo;</p>
+            <span class="video__cta">Watch Program Overview</span>
+          </div>
+        </figcaption>
+      </a>
+    </figure>
+
+    <figure class="quote">
+      <img src="http://placehold.it/250x250" alt="" pardot-region="editable-image" pardot-region-type="image" class="quote__image">
+      <figcaption class="quote__body">
+        <blockquote class="quote__text">&ldquo;The Institutes exemplary faculty and far-reaching connections are what have made my experiences here amazing.&rdquo;</blockquote>
+        <span class="quote__cite">
+          Kyle Pilutti, Student<br>
+          Nonproliferation and Terrorism Studies
+        </span>
+      </figcaption>
+    </figure>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container site-footer__container">
+      <img src="images/middlebury-logo-white.svg" alt="Logo for Middlebury" width="150">
+      <ul class="site-footer__nav">
+        <li><a href="">Privacy Policy</a></li>
+        <li><a href="">Copyright</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

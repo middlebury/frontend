@@ -1,0 +1,372 @@
+@import 'core/variables';
+@import 'core/mixins';
+@import 'core/functions';
+
+@import 'utils/screenreaders';
+
+$navy-dark: #001231;
+$accent-blue: #65b2e8;
+$yellow: #f3c300;
+
+//
+// base
+//
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1rem;
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+  background: $body-bg;
+  margin: 0;
+}
+
+//
+// layout
+//
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.site-container {
+  background: $white;
+  padding: 0;
+}
+
+.site-header {
+  background: $navy;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.site-footer {
+  background: $navy;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.site-footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-footer__nav {
+  display: flex;
+  list-style: none;
+
+  li {
+    margin-left: 2rem;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+}
+
+//
+// hero
+//
+
+.hero {
+  background: $navy-dark;
+  padding: 2rem;
+  color: $white;
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    display: block;
+    background: $accent-blue;
+    height: 400px;
+    width: 600px;
+    position: absolute;
+    left: 75%;
+    top: 50%;
+    transform: rotate(-20deg);
+    border: 5px solid $white;
+  }
+}
+
+.hero__title {
+  font-size: rem(40);
+  max-width: 340px;
+  line-height: 1.2;
+}
+
+.hero__text {
+  color: $yellow;
+  max-width: 340px;
+  font-size: rem(18);
+  font-weight: 600;
+}
+
+//
+// content and form
+//
+
+.content {
+  margin-bottom: 3rem;
+  @include media(md) {
+    display: flex;
+  }
+}
+
+.content__main {
+  padding: 2rem;
+
+  @include media(md) {
+    flex: 0 0 60%;
+  }
+}
+
+.content__form {
+  @include media(md) {
+    margin-top: 2rem;
+    flex: 0 0 40%;
+  }
+}
+
+//
+// landing page form
+//
+
+.lp-form {
+  background: $navy-dark;
+  padding: 1rem 2rem;
+}
+
+.lp-form__title {
+  color: $white;
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+.lp-form__text {
+  text-align: center;
+  color: $white;
+  font-size: 14px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+
+  label {
+    color: $white;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  input[type='text'] {
+    display: block;
+    padding: 8px;
+    width: 100%;
+  }
+
+  button[type='submit'] {
+    background: $yellow;
+    padding: 0.75rem;
+    text-transform: uppercase;
+    color: $navy;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    font-size: 14px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+  }
+}
+
+.form-actions {
+  text-align: right;
+}
+
+//
+// stats
+//
+
+.stats {
+  background: $accent-blue;
+  color: $white;
+  margin-bottom: 3rem;
+
+  @include media(md) {
+    display: flex;
+  }
+}
+
+.stats__item {
+  padding: 3rem;
+
+  &:not(:last-child) {
+    border-bottom: 4px solid $white;
+    @include media(md) {
+      border-bottom: 0;
+      border-right: 4px solid $white;
+    }
+  }
+
+  @include media(md) {
+    width: calc(100% / 3);
+  }
+}
+
+.stats__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
+.stats__text {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+//
+// video
+//
+
+.video {
+  position: relative;
+  padding-top: percentage(9 / 16);
+  overflow: hidden;
+  background: $black;
+  margin-bottom: 3rem;
+}
+
+.video__link {
+  text-decoration: none;
+  color: $white;
+
+  &:hover {
+    .video__image {
+      opacity: 1;
+    }
+
+    .video__icon {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.video__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: opacity 0.4s;
+  opacity: 0.8;
+}
+
+.video__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video__content {
+  text-align: center;
+  max-width: 500px;
+}
+
+.video__icon {
+  width: 50px;
+  transition: transform 0.4s;
+  margin-bottom: 2rem;
+
+  @include media(md) {
+    width: 100px;
+  }
+}
+
+.video__text {
+  display: block;
+  color: $white;
+  font-size: 32px;
+  font-family: $font-family-serif;
+  margin-bottom: 2rem;
+}
+
+.video__cta {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+//
+// quote
+//
+
+.quote {
+  display: flex;
+  padding-bottom: 3rem; // HACK: use padding else gray body bg shows up since it pushes itself away from footer
+}
+
+.quote__image {
+  display: none;
+  @include media(md) {
+    display: block;
+  }
+}
+
+.quote__text {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  display: block;
+}
+
+.qoute__cite {
+  font-size: 14px;
+}
+
+.quote__body {
+  background: $navy-dark;
+  padding: 2rem;
+  color: $white;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  &:after {
+    content: '';
+    display: block;
+    background: $accent-blue;
+    height: 400px;
+    width: 600px;
+    position: absolute;
+    left: 75%;
+    top: 50%;
+    transform: rotate(-20deg);
+    border: 5px solid $white;
+  }
+}
