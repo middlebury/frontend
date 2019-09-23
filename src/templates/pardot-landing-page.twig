@@ -115,5 +115,41 @@
       </ul>
     </div>
   </footer>
+  <script>
+    (function() {
+
+      function handleVideoClick(event,video,link) {
+        if(link.href.indexOf('vimeo.com/') == -1) {
+          // do nothing on links without proper url
+          return;
+        }
+
+        event.preventDefault();
+
+        var src = link.href
+          .replace('vimeo.com', 'player.vimeo.com')
+          .replace('vimeo.com/', 'vimeo.com/video/') + '?autoplay=1'
+
+        var iframe = document.createElement('iframe');
+        iframe.src = src;
+        iframe.allow = 'autoplay';
+        iframe.frameBorder = '0';
+
+        video.classList.add('has-video');
+        video.innerHTML = '';
+        video.appendChild(iframe);
+      }
+
+      var videos = document.querySelectorAll('[data-video]');
+      [].forEach.call(videos, function(video) {
+
+        var link = video.querySelector('[data-video-link]');
+        link.addEventListener('click', function(event) {
+          handleVideoClick(event,video,link)
+        });
+      });
+
+    })();
+  </script>
 </body>
 </html>
