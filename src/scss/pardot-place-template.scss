@@ -202,6 +202,10 @@ img {
     appearance: none;
   }
 
+  select::-ms-expand {
+    display: none;
+  }
+
   select {
     background-image: url('https://storage.pardot.com/74172/262539/chevron_down.png');
     background-repeat: no-repeat;
