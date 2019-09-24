@@ -26,6 +26,10 @@ body {
   margin: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 //
 // layout
 //
@@ -94,10 +98,16 @@ body {
     height: 400px;
     width: 600px;
     position: absolute;
-    left: 75%;
-    top: 50%;
+    right: -400px;
+    bottom: -300px;
     transform: rotate(-20deg);
     border: 5px solid $white;
+    z-index: 1;
+
+    @include media(md) {
+      right: -200px;
+      bottom: -300px;
+    }
   }
 }
 
@@ -105,6 +115,8 @@ body {
   font-size: rem(40);
   max-width: 340px;
   line-height: 1.2;
+  position: relative;
+  z-index: 2;
 }
 
 .hero__text {
@@ -112,6 +124,8 @@ body {
   max-width: 340px;
   font-size: rem(18);
   font-weight: 600;
+  position: relative;
+  z-index: 2;
 }
 
 //
@@ -130,6 +144,7 @@ body {
 
   @include media(md) {
     flex: 0 0 60%;
+    max-width: 60%;
   }
 }
 
@@ -137,6 +152,7 @@ body {
   @include media(md) {
     margin-top: 2rem;
     flex: 0 0 40%;
+    max-width: 40%;
   }
 }
 
@@ -163,7 +179,9 @@ body {
 
 .form-group {
   margin-bottom: 1rem;
+}
 
+.form {
   label {
     color: $white;
     display: block;
@@ -171,15 +189,34 @@ body {
     margin-bottom: 4px;
   }
 
+  select,
   input[type='text'] {
     display: block;
     padding: 8px;
-    width: 100%;
+    width: 100% !important;
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: 0;
+    border: 0;
+    -webkit-appearance: none;
+    appearance: none;
   }
 
+  select {
+    background-image: url('https://storage.pardot.com/74172/262539/chevron_down.png');
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    padding-right: 3rem;
+  }
+
+  input[type='submit'],
   button[type='submit'] {
-    background: $yellow;
+    background-color: $yellow;
+    background-image: url('https://storage.pardot.com/74172/262543/btn_bars_bg.png');
+    background-position: left center;
+    background-repeat: no-repeat;
     padding: 0.75rem;
+    padding-left: 3rem;
     text-transform: uppercase;
     color: $navy;
     font-weight: 700;
@@ -188,6 +225,24 @@ body {
     line-height: 1;
     border: 0;
     border-radius: 0;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    &:focus,
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .error:not(.form-field),
+  .errors {
+    color: #ffc856;
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+
+  .form-group.error {
+    margin-bottom: 4px;
   }
 }
 
@@ -199,7 +254,7 @@ body {
 // stats
 //
 
-.stats {
+.lp-stats {
   background: $accent-blue;
   color: $white;
   margin-bottom: 3rem;
@@ -209,7 +264,7 @@ body {
   }
 }
 
-.stats__item {
+.lp-stats__item {
   padding: 3rem;
 
   &:not(:last-child) {
@@ -225,14 +280,14 @@ body {
   }
 }
 
-.stats__title {
+.lp-stats__title {
   font-size: 48px;
   font-weight: 700;
   line-height: 1;
   text-align: center;
 }
 
-.stats__text {
+.lp-stats__text {
   font-size: 16px;
   font-weight: 700;
   text-align: center;
@@ -250,6 +305,15 @@ body {
   overflow: hidden;
   background: $black;
   margin-bottom: 3rem;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
 }
 
 .video__link {
@@ -265,6 +329,10 @@ body {
       transform: scale(1.1);
     }
   }
+}
+
+.video__src {
+  display: none;
 }
 
 .video__image {
@@ -297,20 +365,27 @@ body {
 
 .video__icon {
   width: 50px;
+  height: 50px;
   transition: transform 0.4s;
-  margin-bottom: 2rem;
+  // margin-bottom: 1rem;
 
   @include media(md) {
+    margin-bottom: 2rem;
     width: 100px;
+    height: 100px;
   }
 }
 
 .video__text {
   display: block;
   color: $white;
-  font-size: 32px;
+  font-size: 24px;
   font-family: $font-family-serif;
   margin-bottom: 2rem;
+
+  @include media(md) {
+    font-size: 32px;
+  }
 }
 
 .video__cta {
@@ -351,11 +426,11 @@ body {
   position: relative;
   overflow: hidden;
   text-align: center;
-
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  z-index: 2;
 
   &:after {
     content: '';
@@ -364,9 +439,64 @@ body {
     height: 400px;
     width: 600px;
     position: absolute;
-    left: 75%;
-    top: 50%;
-    transform: rotate(-20deg);
+    right: -400px;
+    bottom: -300px;
+    transform: rotate(-30deg);
     border: 5px solid $white;
+    z-index: 1;
+  }
+}
+
+.typography {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1em;
+    font-weight: 700;
+    line-height: 1.2;
+    color: $navy;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  ul,
+  ol {
+    margin-left: 1rem;
+  }
+
+  li {
+    margin-bottom: 1rem;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  a {
+    color: $navy;
+    font-weight: 600;
   }
 }

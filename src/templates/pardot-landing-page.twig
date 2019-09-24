@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+  {# <base href="https://learn.middlebury.edu" > #}
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{title}}</title>
   <link rel="stylesheet" href="css/pardot-landing.css">
+  <link rel="stylesheet" href="https://learn.middlebury.edu/place-design">
   <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/83898/706148/css/fonts.css" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="description" content="%%description%%"/>
+  <title>%%title%%</title>
 </head>
 <body>
   <header class="site-header">
     <div class="container">
       <span class="site-title">
-        <img src="images/miis-logo.svg" alt="Logo for Middlebury Institute of International Studies at Monterey" width="200">
+        <img src="https://storage.pardot.com/74172/262517/miis_logo.svg" alt="Logo for Middlebury Institute of International Studies at Monterey" width="200">
         <span class="sr-only">Middlebury Institute of International Studies at Monterey</span>
       </span>
     </div>
@@ -19,13 +23,13 @@
   <main class="site-container container">
 
     <div class="hero">
-      <h1 class="hero__title">Stop the spread of WMD.</h1>
-      <p class="hero__text">Earn a Master's in Nonproliferation and Terrorism Studies</p>
+      <h1 class="hero__title" pardot-region-type="simple" pardot-region="hero-title">Stop the spread of WMD.</h1>
+      <p class="hero__text" pardot-region-type="simple" pardot-region="hero-text">Earn a Master's in Nonproliferation and Terrorism Studies</p>
     </div>
 
     <div class="content">
       <div class="content__main">
-        <div class="typography">
+        <div class="typography" pardot-region="pardot">
           <h2>Program Hightlights</h2>
           <ul>
             <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam odit sed, vitae non corrupti provident, sequi unde totam alias fugiat, veniam officiis? In dolorem perferendis accusamus amet delectus facilis error.</li>
@@ -39,21 +43,9 @@
       <div class="content__form">
 
         <div class="lp-form">
-          <h3 class="lp-form__title">Get a Free Program Guide</h3>
+          <h3 class="lp-form__title" pardot-region-type="simple" pardot-region="form-title">Get a Free Program Guide</h3>
 
-          {% for i in 0..3 %}
-            <div class="form-group">
-              <label for="">Full name</label>
-              <input type="text" class="form-control">
-            </div>
-          {% endfor %}
-
-          <div class="form-group form-actions">
-            <button type="submit">
-              Get more information &raquo;
-            </button>
-
-          </div>
+          %%content%%
 
           <p class="lp-form__text">Your advisor will contact you within one business day to learn more about your career goals.</p>
 
@@ -62,43 +54,47 @@
       </div>
     </div>
 
-    <dl class="stats">
-      <div class="stats__item">
-        <dt class="stats__title">88%</dt>
-        <dd class="stats__text">of students receive scholarships</dd>
+    <dl class="lp-stats">
+      <div class="lp-stats__item">
+        <dt class="lp-stats__title" pardot-region-type="simple" pardot-region="stat-1-label">88%</dt>
+        <dd class="lp-stats__text" pardot-region-type="simple" pardot-region="stat-1-text">of students receive scholarships</dd>
       </div>
+      <div class="lp-stats__item">
+        <dt class="lp-stats__title" pardot-region-type="simple" pardot-region="stat-2-label">350+</dt>
+        <dd class="lp-stats__text" pardot-region-type="simple" pardot-region="stat-2-text">professional internships</dd>
       </div>
-      <div class="stats__item">
-        <dt class="stats__title">350+</dt>
-        <dd class="stats__text">professional internships</dd>
-      </div>
-      <div class="stats__item">
-        <dt class="stats__title">94%</dt>
-        <dd class="stats__text">employed one year after graduation</dd>
+      <div class="lp-stats__item">
+        <dt class="lp-stats__title" pardot-region-type="simple" pardot-region="stat-3-label">94%</dt>
+        <dd class="lp-stats__text" pardot-region-type="simple" pardot-region="stat-3-text">employed one year after graduation</dd>
       </div>
     </dl>
 
     <figure class="video" data-video>
-      <a href="" class="video__link" data-video-link>
-        <img src="http://placehold.it/1024x576" alt="" class="video__image" pardot-region="editable-image" pardot-region-type="image">
-
+      <a
+        href="https://vimeo.com/150675649"
+        class="video__src"
+        data-video-src
+        pardot-region="video-link"
+        pardot-region-type="link">View video</a>
+      <a href="#" class="video__link" data-video-trigger>
+        <img src="http://placehold.it/1024x576" alt="" class="video__image" pardot-region="video-image" pardot-region-type="image">
         <figcaption class="video__overlay">
           <div class="video__content">
             <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" class="video__icon">
               <path fill="#FFF" fill-rule="evenodd" d="M0 100l100-50L0 0z"/>
             </svg>
-            <p class="video__text">&ldquo;Important problems with real-world implications&rdquo;</p>
-            <span class="video__cta">Watch Program Overview</span>
+            <p class="video__text" pardot-region="video-text" pardot-region-type="simple">&ldquo;Important problems with real-world implications&rdquo;</p>
+            <span class="video__cta" pardot-region="video-cta" pardot-region-type="simple">Watch Program Overview</span>
           </div>
         </figcaption>
       </a>
     </figure>
 
     <figure class="quote">
-      <img src="http://placehold.it/250x250" alt="" pardot-region="editable-image" pardot-region-type="image" class="quote__image">
+      <img src="http://placehold.it/250x250" alt="" pardot-region="quote-image" pardot-region-type="image" class="quote__image">
       <figcaption class="quote__body">
-        <blockquote class="quote__text">&ldquo;The Institutes exemplary faculty and far-reaching connections are what have made my experiences here amazing.&rdquo;</blockquote>
-        <span class="quote__cite">
+        <blockquote class="quote__text" pardot-region="quote-text" pardot-region-type="simple">&ldquo;The Institutes exemplary faculty and far-reaching connections are what have made my experiences here amazing.&rdquo;</blockquote>
+        <span class="quote__cite" pardot-region="quote-cite" pardot-region-type="simple">
           Kyle Pilutti, Student<br>
           Nonproliferation and Terrorism Studies
         </span>
@@ -108,10 +104,10 @@
   </main>
   <footer class="site-footer">
     <div class="container site-footer__container">
-      <img src="images/middlebury-logo-white.svg" alt="Logo for Middlebury" width="150">
+      <img src="https://storage.pardot.com/74172/262515/middlebury_logo_white.svg" alt="Logo for Middlebury" width="150">
       <ul class="site-footer__nav">
-        <li><a href="">Privacy Policy</a></li>
-        <li><a href="">Copyright</a></li>
+        <li><a href="http://www.middlebury.edu/about/privacy">Privacy Policy</a></li>
+        <li><a href="http://www.middlebury.edu/about/copyright">Copyright</a></li>
       </ul>
     </div>
   </footer>
@@ -143,11 +139,20 @@
       var videos = document.querySelectorAll('[data-video]');
       [].forEach.call(videos, function(video) {
 
-        var link = video.querySelector('[data-video-link]');
-        link.addEventListener('click', function(event) {
-          handleVideoClick(event,video,link)
+        var trigger = video.querySelector('[data-video-trigger]');
+        var link = video.querySelector('[data-video-src]');
+        trigger.addEventListener('click', function(event) {
+          handleVideoClick(event, video, link)
         });
       });
+
+      // force display video link if pardot-loaded is in page e.g. user is editing page template content
+      var loaded = document.querySelector('#pardot-loaded')
+      if(loaded) {
+        [].forEach.call(document.querySelectorAll('[data-video-src]'), function(link) {
+          link.style.display = 'block';
+        });
+      }
 
     })();
   </script>
