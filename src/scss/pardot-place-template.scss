@@ -113,19 +113,25 @@ img {
 
 .hero__title {
   font-size: rem(40);
-  max-width: 340px;
   line-height: 1.2;
   position: relative;
   z-index: 2;
+
+  @include media(md) {
+    max-width: 60%;
+  }
 }
 
 .hero__text {
   color: $yellow;
-  max-width: 340px;
   font-size: rem(18);
   font-weight: 600;
   position: relative;
   z-index: 2;
+
+  @include media(md) {
+    max-width: 60%;
+  }
 }
 
 //
