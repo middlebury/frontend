@@ -254,6 +254,11 @@ img {
   .form-group.error {
     margin-bottom: 4px;
   }
+
+  a,
+  .description {
+    color: $white;
+  }
 }
 
 .form-actions {
