@@ -25,7 +25,10 @@ module.exports = module => {
             }
           ]
         ],
-        plugins: ['@babel/plugin-proposal-class-properties']
+        plugins: [
+          ['@babel/transform-react-jsx', { pragma: 'h' }],
+          '@babel/plugin-proposal-class-properties'
+        ]
       }),
       resolve(),
       commonJS(),
