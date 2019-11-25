@@ -19,29 +19,37 @@
 
   {% include 'paragraphs/spotlight.twig' %}
 
-  {% include 'paragraphs/chart-group.twig' with {
-    title: 'Make a Smart Investment in Your Career',
-    text: 'When you earn a master’s degree from the Middlebury Institute, you’ll be prepared to be a leader in high-demand global industries and organizations. With our scholarships, grants, and other aid, you’ll see that our programs are an affordable investment in your future.',
-    items: [
-      {
-        type: 'stats',
-        number: 11,
-        label: 'Graduate Degrees'
-      },
-      {
-        type: 'stats',
-        number: 100,
-        suffix: '+',
-        label: 'Professional Internships'
-      },
-      {
-        type: 'stats',
-        number: 94,
-        suffix: '%',
-        label: 'Employed one year after graduation'
-      }
-    ]
-  } %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+
+        {% include 'paragraphs/chart-group.twig' with {
+          title: 'Make a Smart Investment in Your Career',
+          text: 'When you earn a master’s degree from the Middlebury Institute, you’ll be prepared to be a leader in high-demand global industries and organizations. With our scholarships, grants, and other aid, you’ll see that our programs are an affordable investment in your future.',
+          items: [
+            {
+              type: 'stats',
+              number: 11,
+              label: 'Graduate Degrees'
+            },
+            {
+              type: 'stats',
+              number: 100,
+              suffix: '+',
+              label: 'Professional Internships'
+            },
+            {
+              type: 'stats',
+              number: 94,
+              suffix: '%',
+              label: 'Employed one year after graduation'
+            }
+          ]
+        } %}
+
+      </div>
+    </div>
+  </div>
 
   {% include 'paragraphs/logo-bar.twig' %}
 

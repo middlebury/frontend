@@ -195,6 +195,11 @@ img {
     margin-bottom: 4px;
   }
 
+  // add asterisks to required field labels
+  .required label:after {
+    content: '*';
+  }
+
   select,
   input[type='text'] {
     display: block;
@@ -253,6 +258,11 @@ img {
 
   .form-group.error {
     margin-bottom: 4px;
+  }
+
+  a,
+  .description {
+    color: $white;
   }
 }
 

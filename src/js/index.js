@@ -7,7 +7,7 @@ import 'mdn-polyfills/Object.assign';
 import 'mdn-polyfills/Array.from';
 
 // import './publications';
-import './chart-loader';
+import './charts';
 import './events-datepicker';
 import './modal';
 import './nav';

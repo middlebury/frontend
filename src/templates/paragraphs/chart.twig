@@ -1,23 +1,29 @@
-<div class="chart">
-  <h3 class="chart__title">{{title}}</h3>
-  <div class="chart__container">
-    <canvas id="midd-chart-{{id}}"></canvas>
-  </div>
-</div>
+<div
+  class="chart"
+  {# enum = bar | percentBar | horizontalBar | line | doughnut | pie #}
+  data-chart="{{type|default("bar")}}"
 
-<script>
-  window.addEventListener('load', function() {
+  {# Array<{label:string,data: Array<number>}> #}
+  data-datasets='{{datasets|json_encode()|default('[{"label": "dataset 1", "data": [1,2,3,4,5]}]')}}'
 
-    var selector = '#midd-chart-{{id}}';
+  {# Array<string> #}
+  data-labels='{{labels|json_encode()|default('["label 1", "label 2", "label 3", "label 4"]')}}'
 
-    var options = {
-      type: '{{type}}',
-      data: [{{data}}],
-      label: '{{label}}',
-      labels: [{% for item in labels %}'{{item}}'{% if not loop.last %},{% endif %}{% endfor %}],
-    };
+  {# optional values: #}
 
-    window.loadChart(selector, options);
+  {# title #}
+  data-title="{{title}}" {# string #}
 
-  });
-</script>
+  {# custom y/x labels #}
+  data-y-label="{{yLabel}}" {# string #}
+  data-x-label="{{xLabel}}" {# string #}
+
+  {# manually set a max value for the datasets, so percentage charts can make more sense #}
+  data-max="{{max}}" {# int #}
+  data-min="{{min}}" {# int #}
+
+  {# examples of prefix and suffix #}
+  data-value-prefix="{{prefix}}" {# string #}
+  data-value-suffix="{{suffix}}" {# string #}
+></div>
+
