@@ -8,7 +8,7 @@
   {% endif %}
 
   {% if items.length > 1 %}
-    <div class="chart-group__list{% if items.length >= 3 %} chart-group__list--3+{% elseif items.length == 2 %} chart-group__list--2{% endif %}">
+    <div class="chart-group{% if items.length >= 3 %} chart-group--3+{% elseif items.length == 2 %} chart-group--2{% endif %}">
       {% for item in items %}
         <div class="chart-group__item chart-group__item--{{item.type}}">
           {% if item.type == 'stats' %}

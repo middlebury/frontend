@@ -3,12 +3,6 @@
 ///
 
 .chart-group {
-}
-
-.chart-group__title {
-}
-
-.chart-group__list {
   @include make-row;
 }
 
@@ -16,13 +10,13 @@
   @include make-col-ready;
   margin-bottom: spacing(5);
 
-  .chart-group__list--2 & {
+  .chart-group--2 & {
     @include media(md) {
       @include make-col(6);
     }
   }
 
-  .chart-group__list--3\+ & {
+  .chart-group--3\+ & {
     @include media(md) {
       @include make-col(4);
     }
