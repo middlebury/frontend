@@ -15,8 +15,12 @@
 
 .paragraph--button {
   margin-bottom: 3rem;
-  position: relative;
-  top: -3rem;
+
+  // only pull buttons up after text components
+  .text + & {
+    position: relative;
+    top: -3rem;
+  }
 
   @include media(md) {
     margin-bottom: 4rem;
