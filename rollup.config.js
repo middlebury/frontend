@@ -1,9 +1,8 @@
 const { rollup } = require('rollup');
 const babel = require('rollup-plugin-babel');
-const resolve = require('rollup-plugin-node-resolve');
-const commonJS = require('rollup-plugin-commonjs');
+const resolve = require('@rollup/plugin-node-resolve');
+const commonJS = require('@rollup/plugin-commonjs');
 const { uglify } = require('rollup-plugin-uglify');
-const ignore = require('rollup-plugin-ignore');
 const sizes = require('rollup-plugin-sizes');
 const filesize = require('rollup-plugin-filesize');
 
@@ -13,8 +12,6 @@ module.exports = module => {
   return rollup({
     input: module.input,
     plugins: [
-      // ignore importing optional momentjs, which comes with pikaday
-      ignore(['moment']),
       babel({
         exclude: /node_modules\/(?!(dom7|ssr-window|swiper|micromodal|lozad)\/).*/,
         presets: [
@@ -31,7 +28,10 @@ module.exports = module => {
         ]
       }),
       resolve(),
-      commonJS(),
+      commonJS({
+        // ignore importing optional momentjs, which comes with pikaday
+        ignore: ['moment']
+      }),
       production && uglify(),
       production && sizes(),
       production && filesize()
