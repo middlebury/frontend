@@ -17,13 +17,14 @@ const beeper = require('beeper');
 const args = require('yargs').argv;
 const svgSprite = require('gulp-svg-sprite');
 const gulpIf = require('gulp-if');
-const cmq = require('gulp-combine-mq');
 const size = require('gulp-size');
 const rename = require('gulp-rename');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const postcssUrl = require('postcss-url');
+const mqPacker = require('css-mqpacker');
+const sortCSSMq = require('sort-css-media-queries');
 
 const rollup = require('./rollup.config');
 
@@ -132,7 +133,12 @@ const styles = () => {
   ];
 
   if (production) {
-    plugins.push(cssnano());
+    plugins.push(
+      cssnano(),
+      mqPacker({
+        sort: sortCSSMq
+      })
+    );
   }
 
   return gulp
@@ -144,7 +150,6 @@ const styles = () => {
       })
     )
     .on('error', sass.logError)
-    .pipe(gulpIf(production, cmq()))
     .pipe(postcss(plugins))
     .pipe(gulpIf(!production, sourcemaps.write('./')))
     .pipe(size({ showFiles: true }))
