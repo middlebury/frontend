@@ -11,8 +11,6 @@
   </ul>
 {% endmacro %}
 
-{% import _self as macros %}
-
 <div class="page-nav">
   <button class="page-nav__toggler" id="midd-page-nav-label" data-toggle-target=".js-page-nav">
     <span>Additional Navigation</span>
@@ -29,7 +27,33 @@
   </button>
   <nav class="page-nav__content js-page-nav">
 
-    {{ macros.list(items) }}
+    <ul class="page-nav__list">
+      {% for item in items %}
+        <li class="page-nav__item{% if item.items %} page-nav__item--active{% endif %}">
+          <a href="#" class="page-nav__link{% if item.active %} page-nav__link--active{% endif %}">{{item.text}}</a>
+          {% if item.items %}
+            {{ _self.list(item.items) }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+
+    {% if secondary_label %}
+      <h2 class="page-nav__label">{{secondary_label}}</h2>
+    {% endif %}
+
+    {% if secondary_items %}
+      <ul class="page-nav__list">
+        {% for item in secondary_items %}
+          <li class="page-nav__item{% if item.items %} page-nav__item--active{% endif %}">
+            <a href="#" class="page-nav__link{% if item.cta %} page-nav__link--cta{% endif %}{% if item.active %} page-nav__link--active{% endif %}">{{item.text}}</a>
+            {% if item.items %}
+              {{ _self.list(item.items) }}
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
 
     {% if callouts %}
 

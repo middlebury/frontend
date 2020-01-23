@@ -7,6 +7,27 @@
   ]
 } %}
 
+{% block layout_sidebar %}
+
+  {% include 'partials/page-nav.twig' with {
+    items: [
+      { text: 'Cover Story', href: '#' },
+      { text: 'The View From Segal', href: '#' },
+      { text: 'Five Minutes', href: '#' },
+      { text: 'What I\'ve Learned', href: '#' }
+    ],
+    secondary_label: 'Issues',
+    secondary_items : [
+      { text: 'Winter 2020', href: '#' },
+      { text: 'Spring 2019', href: '#' },
+      { text: 'Faculty sub page 4', href: '#' },
+      { text: 'View All Issues', href: '#', cta: true },
+    ],
+  } %}
+
+
+{% endblock %}
+
 {% block layout_content %}
 
   {% include 'partials/story-teaser.twig' with {

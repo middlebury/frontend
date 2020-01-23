@@ -2,6 +2,14 @@
   margin-bottom: 4rem;
 }
 
+.page-nav__label {
+  border-top: 4px solid $border-color;
+  margin-top: $spacing-4;
+  padding-top: $spacing-2;
+  padding-bottom: $spacing-2;
+  @include section-title;
+}
+
 .page-nav__toggler {
   padding: 1rem;
   border: 1px solid $border-color;
@@ -92,4 +100,9 @@
 .page-nav__link--active {
   color: $green-dark !important; // TODO: somehow remove need for important
   font-weight: $font-weight-semibold;
+}
+
+.page-nav__link--cta {
+  font-weight: $font-weight-bold;
+  font-size: $typescale-2;
 }
