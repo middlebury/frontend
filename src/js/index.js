@@ -1,3 +1,5 @@
+import 'nodelist-foreach-polyfill';
+
 // polyfills
 import 'intersection-observer';
 import objectFitImages from 'object-fit-images';
