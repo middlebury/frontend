@@ -175,3 +175,9 @@
     margin-top: 3rem;
   }
 }
+
+.contains-links {
+  a {
+    @include link-border;
+  }
+}
