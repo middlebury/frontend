@@ -79,6 +79,10 @@
   "resolutions": {
     "js-yaml": "^3.13.1",
     "lodash": "^4.17.11",
-    "minimatch": "^3.0.2"
+    "minimatch": "^3.0.2",
+    "acorn": "^7.1.1",
+    "minimist": "^1.2.2",
+    "kind-of": "^6.0.3",
+    "node-sass": "^4.13.1"
   }
 }
