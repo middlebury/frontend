@@ -42,3 +42,7 @@
 .paragraph--chart {
   @include paragraph-space;
 }
+
+.paragraph {
+  @include paragraph-space;
+}

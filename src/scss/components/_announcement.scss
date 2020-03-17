@@ -1,0 +1,13 @@
+.announcement {
+  background: $lighter-blue;
+  padding: $spacing-5 $spacing-3;
+
+  @include media(md) {
+    padding: $spacing-7 $spacing-5;
+  }
+
+  @include media(lg) {
+    padding-left: $spacing-9;
+    padding-right: $spacing-9;
+  }
+}
