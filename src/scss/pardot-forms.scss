@@ -110,6 +110,7 @@ input[type='checkbox'] {
       margin-right: $spacing-2;
       margin-top: $spacing-2;
       border: 1px solid currentColor;
+      flex-shrink: 0;
     }
   }
 
@@ -145,6 +146,7 @@ input[type='radio'] {
       margin-top: $spacing-2;
       border: 1px solid currentColor;
       border-radius: 100%;
+      flex-shrink: 0;
     }
   }
 
