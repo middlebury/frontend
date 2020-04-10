@@ -40,9 +40,10 @@ input[type='text'] {
 }
 
 select {
-  background-position: calc(100% - 0.5rem) 50%;
+  background-color: $white;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath fill='%230D395F' fill-rule='evenodd' d='M4 8l4-8H0z'/%3E%3C/svg%3E");
+  background-position: right $input-padding-x center;
   background-repeat: no-repeat;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABGdBTUEAALGPC/xhBQAAAFVJREFUGBlj5LVMOMDA8N+eAStgPMjEzMzQgFUOKAiSYwRJYjeF8eDn4wscmEAKsJkCEwObgGkKRDdIHGwCiAHTgc4G8eEA5BaIe+BCDCwIJqopMHEAir4V6oFnt/QAAAAASUVORK5CYII=');
 }
 
 select:focus,
