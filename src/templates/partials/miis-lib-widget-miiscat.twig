@@ -1,0 +1,80 @@
+<form action="https://mbury.iii.com/search/a?a" method="post">
+  <input name="searchscope" type="hidden" value="17" />
+  <input name="SORT" type="hidden" value="D" />
+  <input name="submit" type="hidden" value="Submit" />
+  <input name="submit.x" type="hidden" value="17" />
+  <input name="submit.y" type="hidden" value="0" />
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="lib-catalog-searchtype">Search By</label>
+        <select
+          name="searchtype"
+          class="form-control"
+          id="lib-catalog-searchtype"
+        >
+          <option value="Y">Keyword</option>
+          <option value="t">Title</option>
+          <option value="a">Author</option>
+          <option value="d">Subject</option>
+          <option value="j">Genre</option>
+          <option value="c">LC Call Number</option>
+          <option value="h">Local Call Number</option>
+          <option value="g">Gov Docs Number</option>
+          <option value="i">ISBN/ISSN</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="form-group">
+        <label for="lib-catalog-search">Search MIISCat</label>
+        <div class="input-group">
+          <input
+            id="lib-catalog-search"
+            class="form-control input-group__field"
+            name="searcharg"
+            size="50"
+            type="text"
+            placeholder="Search"
+          />
+          <button type="submit" class="button button--primary">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<div class="row mb-5">
+  <div class="col">
+    <h3 class="h3 f2 mb-3">MIISCat</h3>
+    <dl class="contains-links f2">
+      <dt>
+        <a href="https://mbury.iii.com/search~S17">MIISCat</a>
+      </dt>
+      <dd class="mb-2">Find books, ebooks, DVDs, and more.</dd>
+      <dt>
+        <a href="https://mbury.iii.com/search/X">Advanced Search</a>
+      </dt>
+      <dd class="mb-2">Customize your search.</dd>
+      <dt>
+        <a href="https://mbury.iii.com/patroninfo~S17">My MIISLib</a><br />
+      </dt>
+      <dd class="mb-2">Renew your books.</dd>
+    </dl>
+  </div>
+  <div class="col">
+    <h3 class="h3 f2 mb-3">Beyond MIIS</h3>
+    <dl class="contains-links f2">
+      <dt>
+        <a
+          href="http://proxy.miis.edu/login?url=http://firstsearch.oclc.org/dbname=WorldCat;done=referer;FSIP"
+          >WorldCat Catalog</a
+        >
+      </dt>
+      <dd class="mb-2">Find items in libraries world-wide.</dd>
+      <dt>
+        <a href="https://ill.middlebury.edu/illiad/mio/logon.html">ILL</a>
+      </dt>
+      <dd>Manage your interlibrary loan requests online.</dd>
+    </dl>
+  </div>
+</div>

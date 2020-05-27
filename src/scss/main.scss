@@ -98,6 +98,7 @@
 @import 'components/story-detail';
 @import 'components/story-teaser-lite';
 @import 'components/story-teaser';
+@import 'components/tabs';
 @import 'components/tags';
 @import 'components/teaser';
 @import 'components/text';
@@ -120,6 +121,7 @@
 
 @import 'paragraphs';
 
+.link-underline, // alias for migration
 .link-border {
   @include link-border();
 }
