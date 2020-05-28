@@ -15,7 +15,11 @@
     top: 0;
     height: 100%;
     width: 4rem;
-    background-image: linear-gradient(to right, transparent, #000);
+    background-image: linear-gradient(to right, transparent, $white);
+
+    .tabs--light & {
+      background-image: linear-gradient(to right, transparent, #000);
+    }
 
     @include media(md) {
       display: none;
