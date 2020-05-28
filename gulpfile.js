@@ -127,6 +127,11 @@ const styles = () => {
     autoprefixer(),
     postcssUrl({
       url({ url }) {
+        // dont add hash to data URI images
+        if (url.startsWith('data:')) {
+          return url;
+        }
+
         return url + '?fv=' + hash;
       }
     })
