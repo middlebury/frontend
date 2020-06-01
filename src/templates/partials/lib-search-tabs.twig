@@ -1,0 +1,25 @@
+
+{% set tablist = [
+    { label: 'All', id: 'miis-lib-widget-all' },
+    { label: 'MIISCAT', id: 'miis-lib-widget-miiscat' },
+    { label: 'Guides', id: 'miis-lib-widget-guides' },
+    { label: 'Database', id: 'miis-lib-widget-databases' },
+] %}
+
+{% embed 'partials/tabs.twig' with {
+  tablist: tablist
+}
+%}
+  {% block tabpanels %}
+
+    {% for tab in tablist %}
+
+      {% embed 'partials/tab.twig' with { id: tab.id } %}
+        {% block tabcontent %}
+          {% include 'partials/' ~ tab.id ~ '.twig' %}
+        {% endblock %}
+      {% endembed %}
+    {% endfor %}
+
+  {% endblock %}
+{% endembed %}

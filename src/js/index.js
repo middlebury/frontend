@@ -21,6 +21,7 @@ import './video';
 import './dropdown';
 import './degree-popup';
 import './make-countup';
+import './tabs';
 
 objectFitImages();
 

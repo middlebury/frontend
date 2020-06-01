@@ -1,0 +1,56 @@
+<form
+  class="ebscohostCustomSearchBox"
+  action=""
+  onsubmit="return ebscoHostSearchGo(this);"
+  method="post"
+  style="overflow:hidden;"
+>
+  <input id="ebscohostwindow" name="ebscohostwindow" type="hidden" value="1" />
+  <input
+    id="ebscohosturl"
+    name="ebscohosturl"
+    type="hidden"
+    value="http://search.ebscohost.com/login.aspx?direct=true&scope=site&type=0&site=eds-live&custid=s8984789&groupid=main&profid=eds&lang=en&authtype=ip,guest"
+  />
+  <input
+    id="ebscohostsearchsrc"
+    name="ebscohostsearchsrc"
+    type="hidden"
+    value="db"
+  />
+  <input
+    id="ebscohostsearchmode"
+    name="ebscohostsearchmode"
+    type="hidden"
+    value="+"
+  />
+  <input
+    id="ebscohostkeywords"
+    name="ebscohostkeywords"
+    type="hidden"
+    value=""
+  />
+  <div class="form-group">
+    <label for="lib-summon-search">LibrarySearch</label>
+    <div class="input-group">
+      <input
+        id="ebscohostsearchtext"
+        class="form-control"
+        name="ebscohostsearchtext"
+        type="text"
+        size="40"
+        placeholder="Find articles, books, films, and more."
+      />
+      <button type="submit" class="button button--primary">Search</button>
+    </div>
+    <ul class="d-flex f2 mt-2">
+      <li class="mr-4">
+        <a
+          href="http://search.ebscohost.com/login.aspx?authtype=ip,guest&profile=eds&Groupid=main&custid=s8984789&direct=true&setup=1"
+          class="link-underline"
+          >Advanced Search</a
+        >
+      </li>
+    </ul>
+  </div>
+</form>

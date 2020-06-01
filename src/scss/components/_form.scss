@@ -1,6 +1,7 @@
 .form {
 }
 
+.form-group, // alias for eventual migration
 .form__group {
   margin-bottom: 2rem;
 }
@@ -23,13 +24,17 @@
   margin-top: 0.5rem;
 }
 
+.form-group label,
+.label, // alias for eventual migration
 .form__label {
+  font-family: $font-family-sans-serif;
   display: block;
   font-size: 16px;
   font-weight: $font-weight-semibold;
   margin-bottom: 0.5rem;
 }
 
+.form-control, // alias for eventual migration
 .form__control {
   display: block;
   appearance: none;
@@ -64,12 +69,15 @@
 }
 
 // custom elements
+select.form-control,
 select.form__control {
   background-color: $white;
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAICAYAAAAiJnXPAAAAtElEQVQYlXXOsUpCcRQH4M/LRcMXcAr+W+/gIiRmECERiNBruDf3HioO1RO4uBcUEQ66RYSIhFPQ1HKC66XOcjjn/D44lZRSE0Nc4cv/VccYNzmucYJ79PD9B6jFvYuDDH084hS3qJZAFXcBHjDIsIvFM84xQV4AU5zhKT7aZXHcooNXXGIUYIQLvAT4hEpKqfhKA3Mc4Q2HWKCFzW8os19rtLEKsIx5UwyVEbzjGLPoH+XADz8MIz9yNyrhAAAAAElFTkSuQmCC');
   background-position: right $input-padding-x center;
   background-repeat: no-repeat;
+  padding-right: $spacing-7;
 
+  // remove caret on select in ie10+
   &::-ms-expand {
     display: none;
   }
