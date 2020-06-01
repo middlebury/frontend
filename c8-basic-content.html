@@ -832,6 +832,254 @@
                       </figure>
                     </div>
                     <p class="lead">Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit. Harum a nulla magni molestias? Natus itaque adipisci molestiae mollitia voluptatum fugit illum hic reiciendis, omnis fugiat sapiente vitae, quia nobis eaque!</p>
+                    <div class="paragraph">
+                      <h2 class="mb-4">Search</h2>
+                      <div class="tabs " data-tabs>
+                        <div class="tabs__nav">
+                          <ul class="tabs__list" data-tabs-list>
+                            <li class="tabs__item" data-tabs-item>
+                              <a href="#miis-lib-widget-all" class="tabs__button" data-tabs-tab>All</a>
+                            </li>
+                            <li class="tabs__item" data-tabs-item>
+                              <a href="#miis-lib-widget-miiscat" class="tabs__button" data-tabs-tab>MIISCAT</a>
+                            </li>
+                            <li class="tabs__item" data-tabs-item>
+                              <a href="#miis-lib-widget-guides" class="tabs__button" data-tabs-tab>Guides</a>
+                            </li>
+                            <li class="tabs__item" data-tabs-item>
+                              <a href="#miis-lib-widget-databases" class="tabs__button" data-tabs-tab>Database</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <section class="tabs__panel" id="miis-lib-widget-all" data-tabs-panel>
+                          <form class="ebscohostCustomSearchBox" action="" onsubmit="return ebscoHostSearchGo(this);" method="post" style="overflow:hidden;">
+                            <input id="ebscohostwindow" name="ebscohostwindow" type="hidden" value="1" />
+                            <input id="ebscohosturl" name="ebscohosturl" type="hidden" value="http://search.ebscohost.com/login.aspx?direct=true&scope=site&type=0&site=eds-live&custid=s8984789&groupid=main&profid=eds&lang=en&authtype=ip,guest" />
+                            <input id="ebscohostsearchsrc" name="ebscohostsearchsrc" type="hidden" value="db" />
+                            <input id="ebscohostsearchmode" name="ebscohostsearchmode" type="hidden" value="+" />
+                            <input id="ebscohostkeywords" name="ebscohostkeywords" type="hidden" value="" />
+                            <div class="form-group">
+                              <label for="lib-summon-search">LibrarySearch</label>
+                              <div class="input-group">
+                                <input id="ebscohostsearchtext" class="form-control" name="ebscohostsearchtext" type="text" size="40" placeholder="Find articles, books, films, and more." />
+                                <button type="submit" class="button button--primary">Search</button>
+                              </div>
+                              <ul class="d-flex f2 mt-2">
+                                <li class="mr-4">
+                                  <a href="http://search.ebscohost.com/login.aspx?authtype=ip,guest&profile=eds&Groupid=main&custid=s8984789&direct=true&setup=1" class="link-underline">Advanced Search</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </form>
+                        </section>
+                        <section class="tabs__panel" id="miis-lib-widget-miiscat" data-tabs-panel>
+                          <form action="https://mbury.iii.com/search/a?a" method="post">
+                            <input name="searchscope" type="hidden" value="17" />
+                            <input name="SORT" type="hidden" value="D" />
+                            <input name="submit" type="hidden" value="Submit" />
+                            <input name="submit.x" type="hidden" value="17" />
+                            <input name="submit.y" type="hidden" value="0" />
+                            <div class="row">
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="lib-catalog-searchtype">Search By</label>
+                                  <select name="searchtype" class="form-control" id="lib-catalog-searchtype">
+                                    <option value="Y">Keyword</option>
+                                    <option value="t">Title</option>
+                                    <option value="a">Author</option>
+                                    <option value="d">Subject</option>
+                                    <option value="j">Genre</option>
+                                    <option value="c">LC Call Number</option>
+                                    <option value="h">Local Call Number</option>
+                                    <option value="g">Gov Docs Number</option>
+                                    <option value="i">ISBN/ISSN</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-md-8">
+                                <div class="form-group">
+                                  <label for="lib-catalog-search">Search MIISCat</label>
+                                  <div class="input-group">
+                                    <input id="lib-catalog-search" class="form-control input-group__field" name="searcharg" size="50" type="text" placeholder="Search" />
+                                    <button type="submit" class="button button--primary">Search</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                          <div class="row mb-5">
+                            <div class="col">
+                              <h3 class="h3 f2 mb-3">MIISCat</h3>
+                              <dl class="contains-links f2">
+                                <dt>
+                                  <a href="https://mbury.iii.com/search~S17">MIISCat</a>
+                                </dt>
+                                <dd class="mb-2">Find books, ebooks, DVDs, and more.</dd>
+                                <dt>
+                                  <a href="https://mbury.iii.com/search/X">Advanced Search</a>
+                                </dt>
+                                <dd class="mb-2">Customize your search.</dd>
+                                <dt>
+                                  <a href="https://mbury.iii.com/patroninfo~S17">My MIISLib</a><br />
+                                </dt>
+                                <dd class="mb-2">Renew your books.</dd>
+                              </dl>
+                            </div>
+                            <div class="col">
+                              <h3 class="h3 f2 mb-3">Beyond MIIS</h3>
+                              <dl class="contains-links f2">
+                                <dt>
+                                  <a href="http://proxy.miis.edu/login?url=http://firstsearch.oclc.org/dbname=WorldCat;done=referer;FSIP">WorldCat Catalog</a>
+                                </dt>
+                                <dd class="mb-2">Find items in libraries world-wide.</dd>
+                                <dt>
+                                  <a href="https://ill.middlebury.edu/illiad/mio/logon.html">ILL</a>
+                                </dt>
+                                <dd>Manage your interlibrary loan requests online.</dd>
+                              </dl>
+                            </div>
+                          </div>
+                        </section>
+                        <section class="tabs__panel" id="miis-lib-widget-guides" data-tabs-panel>
+                          <form method="post" action="https://middlebury.libguides.com">
+                            <div class="form-group">
+                              <label for="lib-guides-guide-subject">Subject Guides</label>
+                              <div class="input-group">
+                                <select id="lib-guides-guide-subject" name="gourl" class="form-control">
+                                  <option value="#">Select a subject guide...</option>
+                                  <option value="https://middlebury.libguides.com/iem">International Education Management</option>
+                                  <option value="https://middlebury.libguides.com/iep">International Environmental Policy</option>
+                                  <option value="https://middlebury.libguides.com/ipd">International Policy and Development</option>
+                                  <option value="https://middlebury.libguides.com/ited">International Trade and Economic Diplomacy</option>
+                                  <option value="https://middlebury.libguides.com/npts">Nonproliferation and Terrorism Studies</option>
+                                  <option value="https://middlebury.libguides.com/tesol">Teaching English to Speakers of Other Languages/Teaching Foreign Language</option>
+                                  <option value="https://middlebury.libguides.com/tilm">Translation, Interpretation and Localization Management</option>
+                                  <option value="https://middlebury.libguides.com/writingandrhetoric">Writing and Rhetoric</option>
+                                </select>
+                                <input value="Go" type="submit" class="button button--primary" data-select-url="#lib-guides-guide-subject" />
+                              </div>
+                            </div>
+                          </form>
+                          <form method="post" action="https://middlebury.libguides.com">
+                            <div class="form-group">
+                              <label for="lib-guides-guide-howto">How to find it, use it, cite it</label>
+                              <div class="input-group">
+                                <select id="lib-guides-guide-howto" name="gourl" class="form-control">
+                                  <option value="#">Select a "how to find it, use it, cite it" guide...</option>
+                                  <option value="https://middlebury.libguides.com/bookreviews">Book Reviews</option>
+                                  <option value="https://middlebury.libguides.com/citation">Citation &amp; Style</option>
+                                  <option value="https://go.middlebury.edu/zoteromidd">Zotero @ Middlebury</option>
+                                </select>
+                                <input value="Go" type="submit" class="button button--primary" data-select-url="#lib-guides-guide-howto" />
+                              </div>
+                            </div>
+                          </form>
+                          <form method="post" action="https://middlebury.libguides.com">
+                            <div class="form-group">
+                              <label for="lib-guides-guide-course">Course Guides</label>
+                              <div class="input-group">
+                                <select id="lib-guides-guide-course" name="gourl" class="form-control">
+                                  <option value="#">Select a course guide...</option>
+                                </select>
+                                <input value="Go" type="submit" class="button button--primary" data-select-url="#lib-guides-guide-course" />
+                              </div>
+                            </div>
+                          </form>
+                        </section>
+                        <section class="tabs__panel" id="miis-lib-widget-databases" data-tabs-panel>
+                          <div class="form-group">
+                            <h3 class="label">Browse database by title</h3>
+                            <ul class="d-flex flex-wrap">
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=a&t=39671" class="link-underline"> A </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=b&t=39671" class="link-underline"> B </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=c&t=39671" class="link-underline"> C </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=d&t=39671" class="link-underline"> D </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=e&t=39671" class="link-underline"> E </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=f&t=39671" class="link-underline"> F </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=g&t=39671" class="link-underline"> G </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=h&t=39671" class="link-underline"> H </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=i&t=39671" class="link-underline"> I </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=j&t=39671" class="link-underline"> J </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=k&t=39671" class="link-underline"> K </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=l&t=39671" class="link-underline"> L </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=m&t=39671" class="link-underline"> M </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=n&t=39671" class="link-underline"> N </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=o&t=39671" class="link-underline"> O </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=p&t=39671" class="link-underline"> P </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=q&t=39671" class="link-underline"> Q </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=r&t=39671" class="link-underline"> R </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=s&t=39671" class="link-underline"> S </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=t&t=39671" class="link-underline"> T </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=u&t=39671" class="link-underline"> U </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=v&t=39671" class="link-underline"> V </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=w&t=39671" class="link-underline"> W </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=x&t=39671" class="link-underline"> X </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=y&t=39671" class="link-underline"> Y </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=z&t=39671" class="link-underline"> Z </a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="https://middlebury.libguides.com/az.php?a=" class="link-underline">
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <p class="mb-5 contains-links">
+                            <a href="https://middlebury.libguides.com/MIIS" class="link-underline">Find databases by subject in our research guides</a>
+                          </p>
+                        </section>
+                      </div>
+                    </div>
                     <div class="announcement typography paragraph">
                       <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h2>
                       <p>Lorem ipsum, dolor sit amet <a href="">consectetur</a> adipisicing elit. Rerum commodi qui dolor, voluptas praesentium numquam assumenda harum enim alias nihil recusandae expedita. Ipsam nobis eum porro beatae magni laudantium incidunt?</p>
