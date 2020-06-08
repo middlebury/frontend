@@ -22,6 +22,7 @@ import './dropdown';
 import './degree-popup';
 import './make-countup';
 import './tabs';
+import './select-url';
 
 objectFitImages();
 
