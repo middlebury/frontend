@@ -586,4 +586,7 @@ image_sizes:
     - 320x180
     - 400x225
     sizes: '(max-width: 580px) 128px, (max-width: 960px) 160px, (max-width: 1200px) 400px, 320px'
+  portrait_video:
+    srcset:
+      - 306x554
   # TODO: slidershow with lazy <picture>?
