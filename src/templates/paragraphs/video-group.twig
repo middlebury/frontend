@@ -1,0 +1,33 @@
+<div class="section paragraph" data-digest-content>
+  <div class="section__header">
+    <h2 class="h2 mb-4">
+      Video group
+    </h2>
+    <p class="section__text">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus
+      quam optio ratione labore possimus iusto corrupti vero fugiat explicabo
+      officiis ex, a sunt obcaecati molestias voluptate eum earum ipsam
+      accusantium.
+    </p>
+  </div>
+
+  <div class="row row--sm-gutters">
+    {% for item in 1..4 %}
+
+      {% if orientation == 'portrait' %}
+        <div class="col-sm-6 mb-5">
+          {% include 'partials/video.twig' with {
+            id: loop.index
+          } %}
+        </div>
+      {% else %}
+        <div class="col-sm-6 col-md-4 mb-5">
+          {% include 'partials/portrait-video.twig' with {
+            id: loop.index
+          } %}
+        </div>
+      {% endif %}
+
+    {% endfor %}
+  </div>
+</div>

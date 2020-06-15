@@ -61,7 +61,11 @@
 
   {% include 'paragraphs/lib-search.twig' %}
 
-  {% include 'paragraphs/portrait-video-group.twig' %}
+  {% include 'paragraphs/video-group.twig' %}
+
+  {% include 'paragraphs/video-group.twig' with {
+    orientation: 'portrait'
+  } %}
 
   {% include 'paragraphs/announcement.twig' %}
 
