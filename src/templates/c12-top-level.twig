@@ -19,6 +19,12 @@
 
         {% include 'paragraphs/text.twig' %}
 
+        {% include 'paragraphs/video-group.twig' %}
+
+        {% include 'paragraphs/video-group.twig' with {
+          orientation: 'portrait'
+        } %}
+
         {% include 'paragraphs/image.twig' %}
 
         {% include 'partials/grid-nav.twig' %}
