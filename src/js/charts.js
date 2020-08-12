@@ -41,7 +41,7 @@ class MiddChart {
 
     Chart.defaults.global.defaultFontColor = '#222';
     Chart.defaults.global.defaultFontFamily =
-      'whitney ssm a, whitney ssm b, arial, verdana, sans-serif';
+      'Open Sans, arial, verdana, sans-serif';
     Chart.defaults.global.defaultFontSize = 14;
 
     Chart.defaults.doughnut.cutoutPercentage = 80;

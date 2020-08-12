@@ -5,13 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{title}}</title>
   <link rel="stylesheet" href="css/main.css">
-  {% if env.production %}
-    {# We use the development fonts here since the now.sh domain is whitelisted.  #}
-    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/83898/7327752/css/fonts.css" />
-  {% else %}
-    {# These are the production fonts which are served from our domain, so local development doesnt overload our refresh allowance. #}
-    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/83898/706148/css/fonts.css" />
-  {% endif %}
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body class="{% if bodyClass %}{{bodyClass}}{% endif %}" id="midd-pagetop">
   <nav aria-labelledby="midd-skip-link">
