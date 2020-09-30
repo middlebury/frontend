@@ -1,0 +1,18 @@
+.badge {
+  display: inline-block;
+  font-size: $typescale-1;
+  color: $gray;
+  border: 1px solid currentColor;
+  padding: $spacing-1;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+  line-height: $line-height-solid;
+  font-family: $font-family-sans-serif;
+  letter-spacing: $letter-spacing;
+}
+
+.badge--primary {
+  background: $navy;
+  color: $white;
+  border-color: $navy;
+}
