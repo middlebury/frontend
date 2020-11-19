@@ -9,36 +9,42 @@ function randomizeChildren(elem) {
 }
 
 function createProgramSwiper() {
-  const swiperWrapper = document.querySelector('.js-swiper-wrapper');
+  const swiperWrappers = Array.prototype.slice.apply(
+    document.querySelectorAll('.js-swiper-wrapper')
+  );
 
-  if (!swiperWrapper) {
+  if (!swiperWrappers) {
     // do nothing if no swiper wrapper
     return;
   }
 
-  randomizeChildren(swiperWrapper);
+  swiperWrappers.forEach((swiperWrapper) => {
+    randomizeChildren(swiperWrapper);
 
-  const swiperConfig = {
-    slidesPerView: 3,
-    grabCursor: true,
-    navigation: {
-      nextEl: '.js-program-spotlight-next-button',
-      prevEl: '.js-program-spotlight-prev-button',
-      disabledClass: 'button--disabled'
-    },
-    breakpoints: {
-      [config.breakpoints.md]: {
-        slidesPerView: 1
+    const swiperId = '#' + swiperWrapper.id;
+
+    const swiperConfig = {
+      slidesPerView: 3,
+      grabCursor: true,
+      navigation: {
+        nextEl: swiperId + '-next',
+        prevEl: swiperId + '-prev',
+        disabledClass: 'button--disabled'
       },
-      [config.breakpoints.lg]: {
-        slidesPerView: 2
+      breakpoints: {
+        [config.breakpoints.md]: {
+          slidesPerView: 1
+        },
+        [config.breakpoints.lg]: {
+          slidesPerView: 2
+        }
       }
-    }
-  };
+    };
 
-  const programSwiperElem = document.querySelector('.js-program-spotlight');
+    const programSwiperElem = document.querySelector(swiperId + "-container");
 
-  new Swiper(programSwiperElem, swiperConfig);
+    new Swiper(programSwiperElem, swiperConfig);
+  });
 }
 
 createProgramSwiper();
