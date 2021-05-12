@@ -74,7 +74,7 @@
     "object-fit-images": "^3.2.3",
     "pikaday": "^1.7.0",
     "preact": "^10.0.4",
-    "swiper": "^4.1.0"
+    "swiper": "^6.5.1"
   },
   "resolutions": {
     "js-yaml": "^3.13.1",
